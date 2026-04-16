@@ -1,0 +1,288 @@
+.hero-section {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: stretch;  /* container venää täyteen */
+  background-color: var(--color-white);
+  overflow: visible; /* Ei leikata kuvaa */
+  padding: 4rem 0 0;
+}
+
+.hero-background-shape {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 48%; /* Kavennetaan, jotta ei mene tekstin päälle */
+  height: 120%;
+  background: linear-gradient(135deg, var(--color-background-warm) 0%, rgba(155, 194, 166, 0.6) 100%);
+  border-radius: 50% 0 0 50%;
+  z-index: 0;
+  box-shadow: -10px 0 40px rgba(155, 194, 166, 0.2);
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 1;
+  gap: 3rem;
+  min-height: 80vh;     /* ks. kuva on absoluuttinen, container tarvitsee min-h */
+  padding-right: max(400px, 38%);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 580px;
+  animation: slideInLeft 0.8s ease forwards;
+  position: relative;
+  z-index: 2; /* Varmistetaan tekstin päällimmäisyys */
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  background: linear-gradient(135deg, rgba(230, 190, 186, 0.4) 0%, rgba(230, 190, 186, 0.1) 100%);
+  border: 1px solid rgba(230, 190, 186, 0.5);
+  color: var(--color-primary);
+  font-weight: 600;
+  border-radius: 50px;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.hero-content h1 {
+  font-size: 3.8rem;
+  color: var(--color-primary);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1.5px;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  color: #334155;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.btn-primary {
+  box-shadow: 0 10px 20px rgba(230, 190, 186, 0.4);
+}
+
+.btn-secondary {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.btn-secondary:hover {
+  background-color: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.hero-features {
+  display: flex;
+  gap: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--color-primary);
+}
+
+.feature-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-background-warm);
+  border-radius: 50%;
+}
+
+.hero-image-wrapper {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: min(520px, 42%);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  animation: slideInRight 1s ease forwards;
+  pointer-events: none;
+  /* Varmistetaan että kuva näkyy sivun alareunaan saakka */
+  overflow: visible;
+}
+
+.hero-image-circle {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, var(--color-accent) 0%, rgba(230, 190, 186, 0.6) 100%);
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  box-shadow: 0 0 80px rgba(230, 190, 186, 0.4);
+}
+
+.hero-person-image {
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+  object-fit: contain;
+  object-position: bottom center;
+  filter: drop-shadow(0 30px 40px rgba(0,30,50,0.25));
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 98%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 98%);
+  transform-origin: bottom right;
+}
+
+.hero-floating-card {
+  position: absolute;
+  left: -20px;
+  bottom: 100px;
+  pointer-events: auto;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1.25rem 1.75rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1), 0 0 0 1px rgba(255,255,255,0.5) inset;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: float 4s ease-in-out infinite;
+}
+
+.floating-card-icon {
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, #fff 0%, #fdf2f8 100%);
+  box-shadow: 0 4px 10px rgba(230, 190, 186, 0.3);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.floating-card-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.floating-card-text strong {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+}
+
+.floating-card-text span {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@media (max-width: 1024px) {
+  .hero-section {
+    padding-bottom: 2rem;
+  }
+
+  /* Palautetaan normaali flow-asettelu */
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    padding-right: 0;
+    padding: 0 1.5rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Kuvawrapper takaisin flow'hun */
+  .hero-image-wrapper {
+    position: static;
+    transform: none;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .hero-background-shape {
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    right: 0;
+    border-radius: 0;
+  }
+
+  .hero-floating-card {
+    left: 20px;
+    bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-features {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .hero-image-circle {
+    width: 300px;
+    height: 300px;
+  }
+}
