@@ -1,4 +1,4 @@
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams, Navigate, Link } from 'react-router-dom';
 import { regions } from '../data/regions';
 import { SEO } from '../components/SEO';
 import { Phone, Mail, MapPin } from 'lucide-react';
@@ -17,7 +17,7 @@ const Region = () => {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
     "name": `Famula Kotihoito ${region.name}`,
-    "image": `https://famula.fi${region.image}`,
+    "image": `${window.location.origin}${region.image}`,
     "@id": `https://famula.fi/${region.id}`,
     "url": `https://famula.fi/${region.id}`,
     "telephone": region.phone,
@@ -111,9 +111,9 @@ const Region = () => {
               Meille hoitotyö on ennen kaikkea aitoa välittämistä ja kiireetöntä läsnäoloa pelkän kellotetun suorittamisen sijaan.
               Autamme arjen askareissa ja lähdemme mielellämme turvalliseksi seuraksi vaikkapa kauppa- tai apteekkiasioille.
             </p>
-            <a href="/palvelut" style={{ display: 'inline-block', marginTop: '0.75rem', color: 'var(--color-secondary)', fontWeight: '600', textDecoration: 'none' }}>
+            <Link to="/palvelut" style={{ display: 'inline-block', marginTop: '0.75rem', color: 'var(--color-secondary)', fontWeight: '600', textDecoration: 'none' }}>
               Tutustu palveluihimme →
-            </a>
+            </Link>
           </div>
 
           <div style={{ padding: '2rem', background: 'white', borderRadius: '12px', borderTop: '4px solid var(--color-accent)' }}>

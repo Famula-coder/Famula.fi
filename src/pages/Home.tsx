@@ -412,9 +412,9 @@ const Home = () => {
                 "Perustin Famulan, koska tiesin mitä tarkoittaa kun läheistä ei ole kukaan auttamassa.
                 Me Famulalla emme vain suorita tehtäviä — tuomme mukanamme oikean ihmisen, joka välittää aidosti."
               </blockquote>
-              <a href="/tarinamme" className="founder-story-link">
+              <Link to="/tarinamme" className="founder-story-link">
                 Lue koko tarina <ArrowRight size={18} />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -455,7 +455,7 @@ const Home = () => {
             <div style={{ background: 'white', padding: '2rem', borderRadius: '16px', flex: '1', minWidth: '300px', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
               <h3 style={{ color: 'var(--color-lavender)', fontSize: '1.4rem', marginBottom: '0.5rem' }}>Olen etsimässä hoivaa itselleni</h3>
               <p style={{ color: '#475569' }}>Luotettavaa tukea arkeen ja seuraa kotiin.</p>
-              <a href="/palvelut" className="btn btn-primary" style={{ marginTop: '1rem', display: 'inline-block' }}>Lisätietoa palveluista</a>
+              <Link to="/palvelut" className="btn btn-primary" style={{ marginTop: '1rem', display: 'inline-block' }}>Lisätietoa palveluista</Link>
             </div>
             <div style={{ background: 'white', padding: '2rem', borderRadius: '16px', flex: '1', minWidth: '300px', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
               <h3 style={{ color: 'var(--color-secondary)', fontSize: '1.4rem', marginBottom: '0.5rem' }}>Etsin luotettavaa apua läheiselleni</h3>

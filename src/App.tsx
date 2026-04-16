@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Services from './pages/Services';
@@ -20,11 +20,11 @@ function App() {
       </main>
       <footer className="bg-primary text-center" style={{ padding: '3rem', color: 'white', marginTop: 'auto' }}>
         <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
-          <a href="/keski-suomi" style={{ color: 'white', textDecoration: 'none' }}>Keski-Suomi</a>
-          <a href="/pohjois-savo" style={{ color: 'white', textDecoration: 'none' }}>Pohjois-Savo</a>
-          <a href="/oulu" style={{ color: 'white', textDecoration: 'none' }}>Oulu</a>
-          <a href="/etela-karjala" style={{ color: 'white', textDecoration: 'none' }}>Etelä-Karjala</a>
-          <a href="/uusimaa" style={{ color: 'white', textDecoration: 'none' }}>Uusimaa</a>
+          <Link to="/keski-suomi" style={{ color: 'white', textDecoration: 'none' }}>Keski-Suomi</Link>
+          <Link to="/pohjois-savo" style={{ color: 'white', textDecoration: 'none' }}>Pohjois-Savo</Link>
+          <Link to="/oulu" style={{ color: 'white', textDecoration: 'none' }}>Oulu</Link>
+          <Link to="/etela-karjala" style={{ color: 'white', textDecoration: 'none' }}>Etelä-Karjala</Link>
+          <Link to="/uusimaa" style={{ color: 'white', textDecoration: 'none' }}>Uusimaa</Link>
         </div>
 
         <div style={{
