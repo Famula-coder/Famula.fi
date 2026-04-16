@@ -168,7 +168,6 @@ const Accordion = ({ example }: { example: typeof examples[0] }) => {
             fontSize: '1.05rem',
             lineHeight: '1.7',
             marginBottom: '1.5rem',
-            paddingTop: '0.25rem',
             borderTop: `2px solid ${example.colorLight}`,
             paddingTop: '1.25rem',
           }}>

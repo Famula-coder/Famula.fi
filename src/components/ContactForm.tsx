@@ -1,5 +1,5 @@
 import { useState, FormEvent } from 'react';
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 import { regions } from '../data/regions';
 import { Send, CheckCircle2, AlertCircle } from 'lucide-react';
 import './ContactForm.css';
