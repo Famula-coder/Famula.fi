@@ -306,7 +306,7 @@ const Home = () => {
         .pricing-price {
           font-size: 3.8rem;
           font-weight: 800;
-          color: var(--color-primary);
+          color: var(--color-accent);
           line-height: 1;
           margin-bottom: 0.25rem;
         }
