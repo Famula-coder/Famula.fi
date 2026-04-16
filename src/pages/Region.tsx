@@ -55,13 +55,11 @@ const Region = () => {
                 <MapPin size={16} style={{ display: 'inline', marginRight: '6px' }}/> 
                 Palvelemme alueella: {region.name}
               </div>
-              <h1 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>
-                Lämminhenkinen kotihoito {region.name} – Turvallista arkea omassa kodissa
+               <h1 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>
+                {region.descriptionTitle || `Lämminhenkinen kotihoito ${region.name} – Turvallista arkea omassa kodissa`}
               </h1>
-              <p style={{ fontSize: '1.2rem', color: '#475569', marginBottom: '2rem' }}>
-                Palvelemme asiakkaitamme koko {region.name} alueella. Tarjoamme luotettavaa kotiapua ikääntyville
-                ja tuomme mielenrauhaa myös kauempana asuville omaisille.
-                Olemme aina tavoitettavissa ja viestimme sovitusti kuulumiset.
+              <p style={{ fontSize: '1.2rem', color: '#475569', marginBottom: '2rem', whiteSpace: 'pre-wrap' }}>
+                {region.descriptionText || `Palvelemme asiakkaitamme koko ${region.name} alueella. Tarjoamme luotettavaa kotiapua ikääntyville ja tuomme mielenrauhaa myös kauempana asuville omaisille. Olemme aina tavoitettavissa ja viestimme sovitusti kuulumiset.`}
               </p>
               
               <div style={{ background: 'white', padding: '1.5rem', borderRadius: '12px', boxShadow: '0 4px 15px rgba(0,0,0,0.05)' }}>

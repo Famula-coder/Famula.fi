@@ -7,6 +7,8 @@ export interface RegionData {
   image: string;
   altText: string;
   postalCode: string;
+  descriptionTitle?: string;
+  descriptionText?: string;
 }
 
 export const regions: RegionData[] = [
@@ -19,6 +21,8 @@ export const regions: RegionData[] = [
     image: `${import.meta.env.BASE_URL}Huusko_Leena_original_taustaton.png`,
     altText: 'Hymyilevä kotisairaanhoitaja Leena Huusko Keski-Suomessa',
     postalCode: '40100',
+    descriptionTitle: 'Lämminhenkistä tukea arkeen',
+    descriptionText: 'Famula Keski-Suomi tarjoaa kiireetöntä ja sydämellistä kotihoidon tukipalvelua sekä kotisairaanhoitoa. Olemme läsnä arjen hetkissä – autamme, kuuntelemme ja tuomme seuraa silloin, kun sitä tarvitaan.\n\nMeille tärkeintä on aito kohtaaminen ja turvallinen olo. Kuljemme rinnallasi luotettavasti ja ihmistä kunnioittaen.',
   },
   {
     id: 'pohjois-savo',

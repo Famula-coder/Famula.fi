@@ -262,8 +262,7 @@ const Home = () => {
         /* ── Hinnasto-osio ── */
         .pricing-section {
           padding: 6rem 0;
-          background: var(--color-primary);
-          color: white;
+          background: linear-gradient(135deg, #fdf0ee 0%, #f0f7f1 100%);
         }
         .pricing-inner {
           display: flex;
@@ -276,21 +275,21 @@ const Home = () => {
           display: inline-flex;
           align-items: center;
           gap: 0.4rem;
-          background: rgba(255,255,255,0.1);
+          background: rgba(161,122,116,0.12);
           border-radius: 50px;
           padding: 0.5rem 1.1rem;
           font-size: 0.9rem;
           font-weight: 600;
-          color: rgba(255,255,255,0.8);
+          color: var(--color-brown);
           margin-bottom: 1.25rem;
         }
         .pricing-text h2 {
           font-size: 2.4rem;
-          color: white;
+          color: var(--color-primary);
           margin-bottom: 1rem;
         }
         .pricing-text p {
-          color: rgba(255,255,255,0.75);
+          color: #475569;
           font-size: 1.05rem;
           line-height: 1.7;
         }

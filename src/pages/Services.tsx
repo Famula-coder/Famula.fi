@@ -241,7 +241,7 @@ const Services = () => (
       <div style={{
         position: 'absolute',
         inset: 0,
-        background: 'linear-gradient(135deg, rgba(8,36,52,0.72) 0%, rgba(161,122,116,0.55) 100%)',
+        background: 'linear-gradient(135deg, rgba(8,36,52,0.42) 0%, rgba(161,122,116,0.30) 100%)',
         zIndex: 1,
       }} />
 
