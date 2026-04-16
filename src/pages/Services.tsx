@@ -222,43 +222,47 @@ const Services = () => (
 
     {/* ── HERO ── */}
     <section style={{
-      background: 'linear-gradient(135deg, var(--color-primary) 0%, #0f3a52 100%)',
-      padding: '6rem 0 5rem',
       position: 'relative',
       overflow: 'hidden',
+      minHeight: '420px',
+      display: 'flex',
+      alignItems: 'center',
     }}>
-      {/* Dekoratiiviset pallot */}
+      {/* Taustakuva */}
       <div style={{
-        position: 'absolute', top: '-80px', right: '-60px',
-        width: '360px', height: '360px', borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(155,194,166,0.2) 0%, transparent 70%)',
-        pointerEvents: 'none',
+        position: 'absolute',
+        inset: 0,
+        backgroundImage: `url(${import.meta.env.BASE_URL}header.png)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center 30%',
+        zIndex: 0,
       }} />
+      {/* Lämmin overlay */}
       <div style={{
-        position: 'absolute', bottom: '-40px', left: '-40px',
-        width: '240px', height: '240px', borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(230,190,186,0.2) 0%, transparent 70%)',
-        pointerEvents: 'none',
+        position: 'absolute',
+        inset: 0,
+        background: 'linear-gradient(135deg, rgba(8,36,52,0.72) 0%, rgba(161,122,116,0.55) 100%)',
+        zIndex: 1,
       }} />
 
-      <div className="container" style={{ maxWidth: '820px', position: 'relative', zIndex: 1 }}>
+      <div className="container" style={{ maxWidth: '820px', position: 'relative', zIndex: 2, padding: '6rem 1.5rem 5rem' }}>
         <div style={{
           display: 'inline-flex', alignItems: 'center', gap: '0.45rem',
-          padding: '0.5rem 1.1rem', background: 'rgba(155,194,166,0.2)',
+          padding: '0.5rem 1.1rem', background: 'rgba(230,190,186,0.25)',
           borderRadius: '50px', fontWeight: '600', fontSize: '0.9rem',
-          color: '#9bc2a6', marginBottom: '1.5rem', border: '1px solid rgba(155,194,166,0.3)',
+          color: '#f5d5d3', marginBottom: '1.5rem', border: '1px solid rgba(230,190,186,0.4)',
         }}>
           <Heart size={14} /> Kotihoidon tukipalvelut
         </div>
 
-        <h1 style={{ fontSize: '2.8rem', color: 'white', marginBottom: '1.5rem', lineHeight: '1.2' }}>
+        <h1 style={{ fontSize: '2.8rem', color: 'white', marginBottom: '1.5rem', lineHeight: '1.2', textShadow: '0 2px 12px rgba(0,0,0,0.25)' }}>
           Apua, turvaa ja iloa arkeen
         </h1>
 
-        <p style={{ fontSize: '1.15rem', color: 'rgba(255,255,255,0.8)', lineHeight: '1.75', marginBottom: '1.25rem' }}>
+        <p style={{ fontSize: '1.15rem', color: 'rgba(255,255,255,0.9)', lineHeight: '1.75', marginBottom: '1.25rem' }}>
           Oma koti on maailman rakkain paikka. Haluamme auttaa sinua tai läheistäsi nauttimaan arjesta omassa kodissa mahdollisimman pitkään, turvallisesti ja huolettomasti.
         </p>
-        <p style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.65)', lineHeight: '1.75', marginBottom: '2rem' }}>
+        <p style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.75)', lineHeight: '1.75', marginBottom: '2rem' }}>
           Palvelumme mukautuvat joustavasti elämänvaiheesi mukaan — tuomme mukanamme paitsi apukäsiä käytännön askareisiin, myös kiireetöntä läsnäoloa ja seuraa.
         </p>
 
@@ -266,7 +270,7 @@ const Services = () => (
           <a href="#yhteys" className="btn btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
             Varaa ilmainen tutustumiskäynti <ArrowRight size={18} />
           </a>
-          <a href="tel:0447569399" className="btn btn-outline" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.4)', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+          <a href="tel:0447569399" className="btn btn-outline" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.5)', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
             <Phone size={18} /> 044 756 9399
           </a>
         </div>
