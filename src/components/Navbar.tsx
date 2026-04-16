@@ -23,7 +23,6 @@ const Navbar = () => {
           </div>
           <Link to="/palvelut">Palvelumme</Link>
           <Link to="/tarinamme">Tarinamme</Link>
-          <Link to="/#hinnat" style={{ color: 'var(--color-primary)', fontWeight: 600, textDecoration: 'none', fontSize: '1rem' }}>Hinnat</Link>
         </nav>
         <div className="navbar-actions">
           <a href="tel:0447569399" className="btn btn-outline nav-phone" aria-label="Soita meille: 0447569399">
