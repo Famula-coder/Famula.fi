@@ -8,7 +8,7 @@ const Navbar = () => {
     <header className="navbar-container">
       <div className="container navbar">
         <Link to="/" className="navbar-logo">
-          <img src="/logo.png" alt="Famula Logo" className="logo-img" />
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Famula Logo" className="logo-img" />
           <span className="sr-only">Famula Etusivu</span>
         </Link>
         <nav className="navbar-links">

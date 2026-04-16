@@ -8,37 +8,37 @@ const team = [
   {
     name: 'Valma Linnanmäki',
     title: 'Perustaja & Toimitusjohtaja',
-    img: '/valma.png',
+    img: `${import.meta.env.BASE_URL}valma.png`,
     quote: 'Perustin Famulan, koska jokainen ihminen ansaitsee jonkun joka välittää.',
     tall: true,
   },
   {
     name: 'Alma',
-    img: '/alma.avif',
+    img: `${import.meta.env.BASE_URL}alma.avif`,
     region: '/oulu',
     quote: 'Parasta työssäni on se, kun asiakas odottaa käyntiäni hymyssä suin ja iloisin mielin.',
   },
   {
     name: 'Riina',
-    img: '/riina.avif',
+    img: `${import.meta.env.BASE_URL}riina.avif`,
     region: '/uusimaa',
     quote: 'Nautin arjen pienistä hetkistä – yhteiset juttutuokiot kahvikupin äärellä ovat kultakin kalliimpia.',
   },
   {
     name: 'Julia',
-    img: '/julia.avif',
+    img: `${import.meta.env.BASE_URL}julia.avif`,
     region: '/pohjois-savo',
     quote: 'Teen tätä sydämellä – jokainen kohtaaminen on ainutlaatuinen.',
   },
   {
     name: 'Paula',
-    img: '/paula.avif',
+    img: `${import.meta.env.BASE_URL}paula.avif`,
     region: '/etela-karjala',
     quote: 'Aito läsnäolo on paras lääke, ja sitä annan joka päivä.',
   },
   {
     name: 'Leena',
-    img: '/leena.png',
+    img: `${import.meta.env.BASE_URL}leena.png`,
     region: '/keski-suomi',
     quote: 'Omien läheisteni kautta ymmärrän, kuinka valtavan tärkeää on voida luottaa hoitajaan täysin.',
   },
@@ -401,7 +401,7 @@ const Home = () => {
               <div className="founder-img-bg" />
               <img
                 className="founder-img"
-                src="/valma.png"
+                src={`${import.meta.env.BASE_URL}valma.png`}
                 alt="Valma Linnanmäki, Famulan perustaja"
               />
             </div>

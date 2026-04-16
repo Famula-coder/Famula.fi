@@ -194,7 +194,7 @@ const Story = () => {
 
                 <img
                   className="valma-img"
-                  src="/valma.png"
+                  src={`${import.meta.env.BASE_URL}valma.png`}
                   alt="Valma Linnanmäki – Famula Oy perustaja"
                   style={{
                     WebkitMaskImage: 'linear-gradient(to bottom, black 72%, transparent 100%)',

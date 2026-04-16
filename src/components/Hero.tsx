@@ -43,7 +43,7 @@ const Hero = () => {
         <div className="hero-image-wrapper">
           <div className="hero-image-circle"></div>
           <img 
-            src="/valma.png" 
+            src={`${import.meta.env.BASE_URL}valma.png`} 
             alt="Valma Linnanmäki, Famulan perustaja" 
             className="hero-person-image"
           />
