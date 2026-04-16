@@ -4,23 +4,6 @@ import ContactForm from '../components/ContactForm';
 import { Heart } from 'lucide-react';
 
 const Story = () => {
-  const imgRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const el = imgRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add('valma-visible');
-        }
-      },
-      { threshold: 0.15 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <>
       <SEO
@@ -29,72 +12,12 @@ const Story = () => {
       />
 
       <style>{`
-        @keyframes valmaFadeUp {
-          from { opacity: 0; transform: translateY(70px) scale(0.9); }
-          to   { opacity: 1; transform: translateY(0px) scale(1); }
-        }
-        @keyframes valmaFloat {
-          0%, 100% { transform: translateY(0px) rotate(2deg); }
-          50%       { transform: translateY(-14px) rotate(2deg); }
-        }
-        @keyframes shimmerSlide {
-          0%   { left: -60%; }
-          100% { left: 160%; }
-        }
-        @keyframes orbFloat1 {
-          0%, 100% { transform: translate(0, 0) scale(1); }
-          50%       { transform: translate(12px, -20px) scale(1.08); }
-        }
-        @keyframes orbFloat2 {
-          0%, 100% { transform: translate(0, 0) scale(1); }
-          50%       { transform: translate(-10px, 16px) scale(0.93); }
-        }
-        @keyframes sparkSpin {
-          from { transform: rotate(0deg) scale(1); opacity: 0.7; }
-          50%  { transform: rotate(180deg) scale(1.35); opacity: 1; }
-          to   { transform: rotate(360deg) scale(1); opacity: 0.7; }
-        }
-        @keyframes badgePop {
-          0%   { opacity: 0; transform: translateX(-50%) translateY(10px); }
-          100% { opacity: 1; transform: translateX(-50%) translateY(0); }
-        }
-
-        .valma-wrapper { opacity: 0; }
-        .valma-visible {
-          animation: valmaFadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
-        }
-        .valma-visible .valma-badge {
-          animation: badgePop 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.9s both;
-        }
-
-        .valma-orb-1 { animation: orbFloat1 7s ease-in-out infinite; }
-        .valma-orb-2 { animation: orbFloat2 9s ease-in-out 1s infinite; }
-
-        .valma-shimmer {
-          position: absolute;
-          top: -10%; left: -60%;
-          width: 50%; height: 120%;
-          background: linear-gradient(
-            105deg,
-            transparent 20%,
-            rgba(255,255,255,0.6) 50%,
-            transparent 80%
-          );
-          animation: shimmerSlide 3.5s ease-in-out 1.2s infinite;
-          pointer-events: none;
-          z-index: 5;
-          border-radius: 4px;
-        }
+        .valma-wrapper { opacity: 1; }
 
         .valma-img {
           display: block;
           width: 100%;
-          transition: transform 0.55s cubic-bezier(0.22,1,0.36,1), filter 0.55s ease;
-          cursor: zoom-in;
-        }
-        .valma-img:hover {
-          transform: scale(1.045);
-          filter: drop-shadow(0 30px 60px rgba(0,0,0,0.18)) brightness(1.03);
+          filter: drop-shadow(0 20px 50px rgba(0,0,0,0.13));
         }
 
         .valma-badge {
@@ -103,7 +26,6 @@ const Story = () => {
           left: 50%;
           transform: translateX(-50%);
           z-index: 10;
-          opacity: 0;
           background: rgba(255,255,255,0.93);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
@@ -162,7 +84,6 @@ const Story = () => {
 
             {/* ── VAU-EFEKTI: Valman kuva ── */}
             <div
-              ref={imgRef}
               className="valma-wrapper"
               style={{ flex: '1 1 400px', position: 'relative', minHeight: '580px' }}
             >
@@ -189,8 +110,6 @@ const Story = () => {
 
               {/* Kuvacontainer */}
               <div style={{ position: 'relative', zIndex: 2, overflow: 'hidden', borderRadius: '24px' }}>
-                {/* Shimmer vilkaisu */}
-                <div className="valma-shimmer" />
 
                 <img
                   className="valma-img"
