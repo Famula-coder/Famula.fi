@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react';
 import { SEO } from '../components/SEO';
 import ContactForm from '../components/ContactForm';
 import { Heart } from 'lucide-react';
