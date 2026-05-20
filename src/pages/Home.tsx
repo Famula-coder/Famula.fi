@@ -500,9 +500,11 @@ const Home = () => {
       </section>
 
       {/* ── YHTEYDENOTTOLOMAKE ── */}
-      <section id="yhteys" style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-light-gray)' }}>
-        <ContactForm />
-      </section>
+      {/* <section id="contact-section" style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
+        <div className="container">
+          <ContactForm />
+        </div>
+      </section> */}
     </>
   );
 };

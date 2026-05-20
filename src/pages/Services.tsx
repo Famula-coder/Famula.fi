@@ -417,9 +417,9 @@ const Services = () => (
     </section>
 
     {/* ── YHTEYDENOTTO ── */}
-    <section id="yhteys" style={{ padding: '5rem 1.5rem', background: 'var(--color-light-gray)' }}>
-      <ContactForm />
-    </section>
+    {/* <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
+        <ContactForm />
+      </section> */}
   </>
 );
 

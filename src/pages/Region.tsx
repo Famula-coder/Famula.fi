@@ -164,9 +164,9 @@ const Region = () => {
         </div>
       </div>
 
-      <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
+      {/* <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
         <ContactForm />
-      </section>
+      </section> */}
     </>
   );
 };
