@@ -11,7 +11,7 @@
       // to the new url with only a query string and hash fragment,
       // e.g. http://www.foo.tld/one/two?a=b#c --> http://www.foo.tld/?p=/one/two&q=a/b#c
       // Note: this %26%2F we use for segmentation is common but not essential.
-      var pathSegmentsToKeep = 1;
+      var pathSegmentsToKeep = 0;
 
       var l = window.location;
       l.replace(
