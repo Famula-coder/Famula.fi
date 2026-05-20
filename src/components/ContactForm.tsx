@@ -13,19 +13,21 @@ const ContactForm = () => {
     message: ''
   });
   const [consent, setConsent] = useState(false);
-  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error' | 'activation'>('idle');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const getRecipientEmail = (regionId: string) => {
+    if (regionId === 'testi') return 'heikki.laivamaa@gmail.com';
     if (regionId === 'koko-suomi') return 'valma.linnanmaki@famula.fi';
     const region = regions.find(r => r.id === regionId);
     return region ? region.email : 'valma.linnanmaki@famula.fi';
   };
 
   const getRecipientName = (regionId: string) => {
+    if (regionId === 'testi') return 'Heikki Laivamaa (Testi)';
     if (regionId === 'koko-suomi') return 'Valma Linnanmäki / Päätoimisto';
     const region = regions.find(r => r.id === regionId);
     return region ? `${region.managerName} (${region.name})` : 'Päätoimisto';
@@ -37,37 +39,52 @@ const ContactForm = () => {
 
     setStatus('sending');
 
-    const templateParams = {
-      from_name: formData.name,
-      reply_to: formData.email,
-      phone_number: formData.phone,
-      to_email: getRecipientEmail(formData.regionId),
-      to_name: getRecipientName(formData.regionId),
-      message: formData.message,
-      subject: 'Uusi yhteydenotto / Ilmainen tutustumiskäynti (Famula verkkosivut)'
-    };
+    const recipientEmail = getRecipientEmail(formData.regionId);
 
     try {
-      // HUOM: Nämä tunnukset on vaihdettava oikeisiin EmailJS-tunnuksiisi, kun olet luonut tilin!
-      // Katso ohjeet: https://www.emailjs.com/docs/examples/reactjs/
-      
-      // await emailjs.send(
-      //   'YOUR_SERVICE_ID', 
-      //   'YOUR_TEMPLATE_ID', 
-      //   templateParams, 
-      //   'YOUR_PUBLIC_KEY'
-      // );
-      
-      // Simuloidaan lähetys kehityksen ajaksi
-      console.log("SIMULOITU LÄHETYS EMAILJS KAUTTA:", templateParams);
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      // Lähetetään lomake helposti FormSubmit-palvelun kautta ilman tunnuksia
+      const response = await fetch(`https://formsubmit.co/ajax/${recipientEmail}`, {
+        method: "POST",
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            Nimi: formData.name,
+            Puhelin: formData.phone,
+            Sähköposti: formData.email,
+            Alue: getRecipientName(formData.regionId),
+            Viesti: formData.message,
+            _subject: 'Uusi yhteydenotto / Famula verkkosivut',
+            _template: 'table' // Näyttää tiedot siistinä taulukkona sähköpostissa
+        })
+      });
+
+      let data;
+      try {
+        data = await response.json();
+      } catch (e) {
+        // ignore
+      }
+
+      if (!response.ok || (data && (data.success === "false" || data.success === false))) {
+        const errorMsg = data?.message || 'Lomakkeen lähetys epäonnistui';
+        if (errorMsg.toLowerCase().includes('activate') || errorMsg.toLowerCase().includes('confirm') || response.status === 401 || response.status === 403 || response.status === 400) {
+          throw new Error('ACTIVATION_REQUIRED');
+        }
+        throw new Error(errorMsg);
+      }
       
       setStatus('success');
       setFormData({ name: '', email: '', phone: '', regionId: 'koko-suomi', message: '' });
       setConsent(false);
-    } catch (error) {
+    } catch (error: any) {
       console.error('Email send failed:', error);
-      setStatus('error');
+      if (error.message === 'ACTIVATION_REQUIRED') {
+        setStatus('activation');
+      } else {
+        setStatus('error');
+      }
     }
   };
 
@@ -80,6 +97,35 @@ const ContactForm = () => {
         <button onClick={() => setStatus('idle')} className="btn btn-outline" style={{ marginTop: '1.5rem' }}>
           Lähetä uusi viesti
         </button>
+      </div>
+    );
+  }
+
+  if (status === 'activation') {
+    return (
+      <div className="contact-success-state" style={{ backgroundColor: '#fff3cd', borderColor: '#ffe69c' }}>
+        <AlertCircle size={48} color="#856404" style={{ marginBottom: '1rem' }} />
+        <h3 style={{ color: '#856404' }}>Sähköpostin aktivointi vaaditaan!</h3>
+        <p style={{ color: '#856404' }}>Koska tähän osoitteeseen ({getRecipientEmail(formData.regionId)}) lähetettiin nyt ensimmäistä kertaa, FormSubmit lähetti kyseiseen sähköpostiin vahvistuslinkin turvallisuussyistä.</p>
+        <p style={{ color: '#856404', marginTop: '1rem' }}><strong>Käy sähköpostissasi (tarkista myös roskaposti) ja klikkaa siellä olevaa "Activate Form" -painiketta!</strong></p>
+        
+        <div style={{ padding: '1.5rem', border: '1px dashed #ffe69c', marginTop: '1.5rem', borderRadius: '8px' }}>
+          <p style={{ color: '#856404', margin: 0, marginBottom: '1rem', fontSize: '0.95rem' }}>Eikö viestiä näy? Välillä automaattinen taustalähetys (AJAX) ei onnistu lähettämään ensimmäistä vahvistusta. Klikkaa alla olevaa painiketta pyytääksesi viestin manuaalisesti. Se avaa uuden välilehden FormSubmitin sivulle.</p>
+          
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <form action={`https://formsubmit.co/${getRecipientEmail(formData.regionId)}`} method="POST" target="_blank">
+              <input type="hidden" name="_subject" value="Aktivointi" />
+              <input type="hidden" name="Viesti" value="Tämä on aktivointiviesti." />
+              <button type="submit" className="btn btn-primary" style={{ backgroundColor: '#856404', borderColor: '#856404' }}>
+                Pyydä uusi aktivointiviesti
+              </button>
+            </form>
+
+            <button onClick={() => setStatus('idle')} className="btn btn-outline" style={{ borderColor: '#856404', color: '#856404' }}>
+              Olen klikannut aktivointia, palaa lomakkeelle
+            </button>
+          </div>
+        </div>
       </div>
     );
   }
@@ -141,6 +187,7 @@ const ContactForm = () => {
               onChange={handleChange}
               required
             >
+              <option value="testi">Testi-vastaanottaja (Heikki Laivamaa)</option>
               <option value="koko-suomi">Koko Suomi (Ohjautuu Valmalle)</option>
               {regions.map(region => (
                 <option key={region.id} value={region.id}>

@@ -3,6 +3,7 @@ import { regions } from '../data/regions';
 import { SEO } from '../components/SEO';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
+import { Helmet } from 'react-helmet-async';
 
 const Region = () => {
   const { regionId } = useParams();
@@ -45,6 +46,36 @@ const Region = () => {
         description={`Etsitkö luotettavaa kotisairaanhoitoa alueella ${region.name}? Tarjoamme lämminhenkistä apua ikääntyville omassa kodissa. Ota yhteyttä vetäjäämme: ${region.managerName}.`}
         schema={localBusinessSchema}
       />
+      {regionId === 'keski-suomi' && (
+        <Helmet>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17890084641"></script>
+          <script>
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'AW-17890084641');
+            `}
+          </script>
+        </Helmet>
+      )}
+      {regionId === 'oulu' && (
+        <Helmet>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+          <script>
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'GA_MEASUREMENT_ID', {
+                page_title: document.title,
+                page_location: window.location.href,
+              });
+            `}
+          </script>
+        </Helmet>
+      )}
       
       <div className="bg-light" style={{ padding: '4rem 0' }}>
         <div className="container">

@@ -43,6 +43,7 @@ export const regions: RegionData[] = [
     image: `${import.meta.env.BASE_URL}alma.avif`,
     altText: 'Hymyilevä asiantuntija Alma Marjanen auttaa Oulun alueella',
     postalCode: '90100',
+    descriptionText: 'Famula Oulu tarjoaa juuri sinun tarpeeseen räätälöityä kiireetöntä tukea ja apua arkeen. Tarjoamme sydämmellistä ja kiireetöntä sekä ammattitaitoista kodinhoidon tukipalvelua kodinhoidollisiin tehtäviin monipuolisesti. Tarjoamme myös turvallista saattoapua arjen menoihin niin asiointiin kuin ulkoiluun.\n\nMeille tärkeää on ihmisen yksilöllisyys sekä kiireetön kohtaaminen ja läsnäolo. Meiltä saat ystävän, joka kulkee rinnallasi ja jonka kanssa voit jakaa elämän pieniä ja suuria iloja ja suruja.',
   },
   {
     id: 'etela-karjala',
@@ -53,6 +54,7 @@ export const regions: RegionData[] = [
     image: `${import.meta.env.BASE_URL}paula.avif`,
     altText: 'Kokenut hoitaja Paula Tuikkanen Etelä-Karjalassa',
     postalCode: '53100',
+    descriptionText: 'Turvallinen ja luotettava, sellainen on Famula Etelä-Karjala joka on läsnä arjessasi niin kodinhoidollisissa tehtävissä, seurana kuin saattoapuna.\n\nTarjoamme kotipalveluiden tukipalveluita ammattitaidolla, laadukkaasti ja aina ihmistä kunnioittaen. Teemme työmme  kiireettömästi, lämpimästi kohdaten ja asiakkaan toiveet huomioiden. Kanssamme tunnet olosi turvalliseksi ja kohdatuksi.',
   },
   {
     id: 'uusimaa',
