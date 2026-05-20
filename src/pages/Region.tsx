@@ -2,7 +2,7 @@ import { useParams, Navigate, Link } from 'react-router-dom';
 import { regions } from '../data/regions';
 import { SEO } from '../components/SEO';
 import { Phone, Mail, MapPin } from 'lucide-react';
-import ContactForm from '../components/ContactForm';
+// import ContactForm from '../components/ContactForm';
 import { Helmet } from 'react-helmet-async';
 
 const Region = () => {

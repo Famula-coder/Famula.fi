@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { SEO } from '../components/SEO';
-import ContactForm from '../components/ContactForm';
+// import ContactForm from '../components/ContactForm';
 
 import { Heart, ChevronDown, ShoppingCart, UtensilsCrossed, Sparkles, HandHeart, Footprints, Music2, Clock, CheckCircle2, ArrowRight, Phone } from 'lucide-react';
 

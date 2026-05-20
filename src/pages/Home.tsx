@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
-import ContactForm from '../components/ContactForm';
+// import ContactForm from '../components/ContactForm';
 import { Heart, ExternalLink, ArrowRight } from 'lucide-react';
 
 /* ── Tiimiläiset ── */
