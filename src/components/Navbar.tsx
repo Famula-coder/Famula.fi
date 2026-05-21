@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone, Menu, X } from 'lucide-react';
+import { Phone, Menu, X, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { regions } from '../data/regions';
 import './Navbar.css';
@@ -25,7 +25,9 @@ const Navbar = () => {
         <nav className={`navbar-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
           <Link to="/" onClick={closeMenu}>Etusivu</Link>
           <div className="dropdown">
-            <span style={{ cursor: 'default', fontWeight: 600, color: 'var(--color-primary)' }}>Alueet</span>
+            <span style={{ cursor: 'default', fontWeight: 600, color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>
+              Alueet <ChevronDown size={16} />
+            </span>
             <div className="dropdown-content">
               {regions.map(region => (
                 <Link key={region.id} to={`/${region.id}`} onClick={closeMenu}>{region.name}</Link>
