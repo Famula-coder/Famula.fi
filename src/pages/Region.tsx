@@ -43,8 +43,8 @@ const Region = () => {
   return (
     <>
       <SEO 
-        title={`Luotettava kotihoito ${region.name} | Famula Oy`}
-        description={`Etsitkö luotettavaa kotisairaanhoitoa alueella ${region.name}? Tarjoamme lämminhenkistä apua ikääntyville omassa kodissa. Ota yhteyttä vetäjäämme: ${region.managerName}.`}
+        title={`Luotettava kotihoito ${region.locativeName} | Famula Oy`}
+        description={`Etsitkö luotettavaa kotisairaanhoitoa ${region.locativeName}? Tarjoamme lämminhenkistä apua ikääntyville omassa kodissa. Ota yhteyttä vetäjäämme: ${region.managerName}.`}
         schema={localBusinessSchema}
       />
       {cookieConsent && regionId === 'keski-suomi' && (
@@ -85,17 +85,17 @@ const Region = () => {
             <div style={{ flex: '1 1 400px' }}>
               <div style={{ display: 'inline-block', padding: '0.5rem 1rem', background: 'var(--color-background-warm)', color: 'var(--color-primary)', fontWeight: '600', borderRadius: '50px', marginBottom: '1rem' }}>
                 <MapPin size={16} style={{ display: 'inline', marginRight: '6px' }}/> 
-                Palvelemme alueella: {region.name}
+                Palvelualueemme: {region.name}
               </div>
                <h1 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>
-                {region.descriptionTitle || `Lämminhenkinen kotihoito ${region.name} – Turvallista arkea omassa kodissa`}
+                {region.descriptionTitle || `Lämminhenkistä kotihoitoa ${region.locativeName} – Turvallista arkea omassa kodissa`}
               </h1>
               <p style={{ fontSize: '1.2rem', color: '#475569', marginBottom: '2rem', whiteSpace: 'pre-wrap' }}>
-                {region.descriptionText || `Palvelemme asiakkaitamme koko ${region.name} alueella. Tarjoamme luotettavaa kotiapua ikääntyville ja tuomme mielenrauhaa myös kauempana asuville omaisille. Olemme aina tavoitettavissa ja viestimme sovitusti kuulumiset.`}
+                {region.descriptionText || `Palvelemme asiakkaitamme kattavasti koko ${region.genitiveName} alueella. Tarjoamme luotettavaa kotiapua ikääntyville ja tuomme mielenrauhaa myös kauempana asuville omaisille. Olemme aina tavoitettavissa ja viestimme sovitusti kuulumiset.`}
               </p>
               
               <div style={{ background: 'white', padding: '1.5rem', borderRadius: '12px', boxShadow: '0 4px 15px rgba(0,0,0,0.05)' }}>
-                <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>Aluevetäjäsi {region.name} alueella</h3>
+                <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>Aluevetäjäsi {region.locativeName}</h3>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
                   <img 
                     src={region.image} 
