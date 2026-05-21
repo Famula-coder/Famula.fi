@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import Hero from '../components/Hero';
 // import ContactForm from '../components/ContactForm';
-import { Heart, ExternalLink, ArrowRight } from 'lucide-react';
+import { Heart, ExternalLink, ArrowRight, ChevronDown } from 'lucide-react';
 
 /* ── Tiimiläiset ── */
 const team = [
@@ -46,6 +46,7 @@ const team = [
 ];
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <>
       <SEO 
@@ -496,7 +497,34 @@ const Home = () => {
             <div style={{ background: 'white', padding: '2rem', borderRadius: '16px', flex: '1', minWidth: '300px', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
               <h3 style={{ color: 'var(--color-secondary)', fontSize: '1.4rem', marginBottom: '0.5rem' }}>Etsin luotettavaa apua läheiselleni</h3>
               <p style={{ color: '#475569' }}>Turvaa ja mielenrauhaa kaukana asuvalle omaiselle.</p>
-              <Link to="/palvelut" className="btn" style={{ marginTop: '1rem', display: 'inline-block', border: '2px solid var(--color-secondary)', color: 'var(--color-secondary)', background: 'transparent' }}>Pyydä maksuton arvio</Link>
+              <div style={{ position: 'relative', display: 'inline-block', marginTop: '1rem' }}>
+                <select 
+                  className="btn"
+                  style={{ 
+                    appearance: 'none', 
+                    paddingRight: '2.5rem',
+                    cursor: 'pointer',
+                    border: '2px solid var(--color-secondary)',
+                    color: 'var(--color-secondary)',
+                    background: 'transparent',
+                    fontFamily: 'inherit',
+                    fontSize: '1rem',
+                    fontWeight: '600'
+                  }}
+                  onChange={(e) => {
+                    if (e.target.value) navigate(e.target.value);
+                  }}
+                  defaultValue=""
+                >
+                  <option value="" disabled>Valitse alueesi...</option>
+                  <option value="/keski-suomi">Keski-Suomi</option>
+                  <option value="/pohjois-savo">Pohjois-Savo</option>
+                  <option value="/oulu">Oulu</option>
+                  <option value="/etela-karjala">Etelä-Karjala</option>
+                  <option value="/uusimaa">Uusimaa</option>
+                </select>
+                <ChevronDown size={18} style={{ position: 'absolute', right: '1rem', top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none', color: 'var(--color-secondary)' }} />
+              </div>
             </div>
           </div>
         </div>
