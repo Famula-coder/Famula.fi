@@ -48,7 +48,9 @@ const Hero = () => {
             className="hero-person-image"
           />
           <div className="hero-floating-card">
-            <div className="floating-card-icon">❤️</div>
+            <div className="floating-card-icon">
+              <img src={`${import.meta.env.BASE_URL}Famulasydan.png`} alt="Famula sydän" style={{ width: '24px', height: '24px', objectFit: 'contain' }} />
+            </div>
             <div className="floating-card-text">
               <strong>"Kaikessa autetaan"</strong>
               <span>– Valma Linnanmäki</span>
