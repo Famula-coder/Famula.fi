@@ -17,30 +17,35 @@ const team = [
     name: 'Alma',
     img: `${import.meta.env.BASE_URL}alma.avif`,
     region: '/oulu',
+    regionName: 'Oulu',
     quote: 'Parasta työssäni on se, kun asiakas odottaa käyntiäni hymyssä suin ja iloisin mielin.',
   },
   {
     name: 'Riina',
     img: `${import.meta.env.BASE_URL}riina.avif`,
     region: '/uusimaa',
+    regionName: 'Uusimaa',
     quote: 'Nautin arjen pienistä hetkistä – yhteiset juttutuokiot kahvikupin äärellä ovat kultakin kalliimpia.',
   },
   {
     name: 'Julia',
     img: `${import.meta.env.BASE_URL}julia.avif`,
     region: '/pohjois-savo',
+    regionName: 'Pohjois-Savo',
     quote: 'Teen tätä sydämellä – jokainen kohtaaminen on ainutlaatuinen.',
   },
   {
     name: 'Paula',
     img: `${import.meta.env.BASE_URL}paula.avif`,
     region: '/etela-karjala',
+    regionName: 'Etelä-Karjala',
     quote: 'Aito läsnäolo on paras lääke, ja sitä annan joka päivä.',
   },
   {
     name: 'Leena',
     img: `${import.meta.env.BASE_URL}leena.png`,
     region: '/keski-suomi',
+    regionName: 'Keski-Suomi',
     quote: 'Omien läheisteni kautta ymmärrän, kuinka valtavan tärkeää on voida luottaa hoitajaan täysin.',
   },
 ];
@@ -433,7 +438,9 @@ const Home = () => {
                     />
                   </div>
                   <div className="team-card-body">
-                    <div className="team-card-name">{member.name}</div>
+                    <div className="team-card-name">
+                      {member.name}{member.regionName ? `, ${member.regionName}` : ''}
+                    </div>
                     <p className="team-card-quote">"{member.quote}"</p>
                   </div>
                 </Link>
