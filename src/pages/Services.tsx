@@ -244,38 +244,45 @@ const Services = () => {
       <div style={{
         position: 'absolute',
         inset: 0,
-        background: 'linear-gradient(135deg, rgba(8,36,52,0.85) 0%, rgba(8,36,52,0.65) 100%)',
+        background: 'linear-gradient(135deg, rgba(8,36,52,0.42) 0%, rgba(161,122,116,0.30) 100%)',
         zIndex: 1,
       }} />
 
       <div className="container" style={{ maxWidth: '820px', position: 'relative', zIndex: 2, padding: '6rem 1.5rem 5rem' }}>
         <div style={{
-          display: 'inline-flex', alignItems: 'center', gap: '0.45rem',
-          padding: '0.5rem 1.1rem', background: 'rgba(230,190,186,0.25)',
-          borderRadius: '50px', fontWeight: '600', fontSize: '0.9rem',
-          color: '#f5d5d3', marginBottom: '1.5rem', border: '1px solid rgba(230,190,186,0.4)',
+          background: 'rgba(255, 255, 255, 0.88)',
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
+          padding: '3.5rem 3rem',
+          borderRadius: '24px',
+          boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+          border: '1px solid rgba(255,255,255,0.6)'
         }}>
-          <Heart size={14} /> Kotihoidon tukipalvelut
-        </div>
+          <div style={{
+            display: 'inline-flex', alignItems: 'center', gap: '0.45rem',
+            padding: '0.5rem 1.1rem', background: 'rgba(230,190,186,0.3)',
+            borderRadius: '50px', fontWeight: '600', fontSize: '0.9rem',
+            color: 'var(--color-primary)', marginBottom: '1.5rem', border: '1px solid rgba(230,190,186,0.5)',
+          }}>
+            <Heart size={14} fill="var(--color-primary)" /> Kotihoidon tukipalvelut
+          </div>
 
-        <h1 style={{ fontSize: '2.8rem', color: 'white', marginBottom: '1.5rem', lineHeight: '1.2', textShadow: '0 2px 12px rgba(0,0,0,0.25)' }}>
-          Apua, turvaa ja iloa arkeen
-        </h1>
+          <h1 style={{ fontSize: '2.8rem', color: 'var(--color-primary)', marginBottom: '1.5rem', lineHeight: '1.2' }}>
+            Apua, turvaa ja iloa arkeen
+          </h1>
 
-        <p style={{ fontSize: '1.15rem', color: 'rgba(255,255,255,0.9)', lineHeight: '1.75', marginBottom: '1.25rem' }}>
-          Oma koti on maailman rakkain paikka. Haluamme auttaa sinua tai läheistäsi nauttimaan arjesta omassa kodissa mahdollisimman pitkään, turvallisesti ja huolettomasti.
-        </p>
-        <p style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.75)', lineHeight: '1.75', marginBottom: '2rem' }}>
-          Palvelumme mukautuvat joustavasti elämänvaiheesi mukaan — tuomme mukanamme paitsi apukäsiä käytännön askareisiin, myös kiireetöntä läsnäoloa ja seuraa.
-        </p>
+          <p style={{ fontSize: '1.15rem', color: '#334155', lineHeight: '1.75', marginBottom: '1.25rem' }}>
+            Oma koti on maailman rakkain paikka. Haluamme auttaa sinua tai läheistäsi nauttimaan arjesta omassa kodissa mahdollisimman pitkään, turvallisesti ja huolettomasti.
+          </p>
+          <p style={{ fontSize: '1.05rem', color: '#475569', lineHeight: '1.75', marginBottom: '2rem' }}>
+            Palvelumme mukautuvat joustavasti elämänvaiheesi mukaan — tuomme mukanamme paitsi apukäsiä käytännön askareisiin, myös kiireetöntä läsnäoloa ja seuraa.
+          </p>
 
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          {/* <a href="#yhteys" className="btn btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
-            Varaa ilmainen tutustumiskäynti <ArrowRight size={18} />
-          </a> */}
-          <a href="tel:0447569399" className="btn btn-outline" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.5)', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', backgroundColor: 'var(--color-primary)' }}>
-            <Phone size={18} /> 044 756 9399
-          </a>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <a href="tel:0447569399" className="btn btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+              <Phone size={18} /> 044 756 9399
+            </a>
+          </div>
         </div>
       </div>
     </section>

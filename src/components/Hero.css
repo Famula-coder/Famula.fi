@@ -248,11 +248,7 @@
   }
 
   .hero-background-shape {
-    width: 100%;
-    height: 50%;
-    top: 50%;
-    right: 0;
-    border-radius: 0;
+    display: none; /* Piilotetaan mobiilissa puhtaamman asettelun vuoksi */
   }
 
   .hero-floating-card {
