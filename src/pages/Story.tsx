@@ -112,7 +112,7 @@ const Story = () => {
 
                 <img
                   className="valma-img"
-                  src={`${import.meta.env.BASE_URL}valmajamummo.jpeg`}
+                  src={`${import.meta.env.BASE_URL}valma.png`}
                   alt="Valma Linnanmäki muistelee alkutaivaltaan"
                   style={{
                     filter: 'drop-shadow(0 20px 50px rgba(0,0,0,0.13))',
@@ -128,16 +128,12 @@ const Story = () => {
             </div>
 
           </div>
-        </div>
-      </div>
-
-      {/* ── VUODEN UUSYRITTÄJÄ TIIVISTELMÄ ── */}
-      <section style={{ padding: '6rem 1.5rem', background: 'linear-gradient(135deg, rgba(230,190,186,0.1) 0%, rgba(155,194,166,0.1) 100%)', position: 'relative', overflow: 'hidden' }}>
-        <div className="container" style={{ maxWidth: '900px', position: 'relative', zIndex: 2 }}>
           
-          <div style={{
-            background: 'white',
-            padding: '3rem',
+          {/* ── VUODEN UUSYRITTÄJÄ TIIVISTELMÄ (Integroitu) ── */}
+          <div style={{ marginTop: '5rem', marginBottom: '5rem', maxWidth: '1000px', marginLeft: 'auto', marginRight: 'auto' }}>
+            <div style={{
+              background: 'white',
+              padding: '3rem',
             borderRadius: '24px',
             boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(251, 191, 36, 0.3)',
             position: 'relative',
@@ -189,9 +185,9 @@ const Story = () => {
               </div>
             </div>
           </div>
-
         </div>
-      </section>
+      </div>
+    </div>
 
       {/* <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-white)' }}>
         <ContactForm />
