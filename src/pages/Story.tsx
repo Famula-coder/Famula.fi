@@ -112,8 +112,8 @@ const Story = () => {
 
                 <img
                   className="valma-img"
-                  src={`${import.meta.env.BASE_URL}uusyrittaja.jpg`}
-                  alt="Famulan perustajat palkittiin Vuoden Uusyrittäjänä"
+                  src={`${import.meta.env.BASE_URL}valmajamummo.jpeg`}
+                  alt="Valma Linnanmäki muistelee alkutaivaltaan"
                   style={{
                     filter: 'drop-shadow(0 20px 50px rgba(0,0,0,0.13))',
                   }}
@@ -123,7 +123,7 @@ const Story = () => {
               {/* Nimilaatikko */}
               <div className="valma-badge">
                 <Heart size={15} color="var(--color-secondary)" fill="var(--color-secondary)" />
-                Vuoden Uusyrittäjä 2025
+                Valma Linnanmäki · Perustaja
               </div>
             </div>
 
@@ -137,12 +137,11 @@ const Story = () => {
           
           <div style={{
             background: 'white',
-            padding: '4rem 3rem',
+            padding: '3rem',
             borderRadius: '24px',
             boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(251, 191, 36, 0.3)',
             position: 'relative',
-            overflow: 'hidden',
-            textAlign: 'center'
+            overflow: 'hidden'
           }}>
             {/* Kultainen hehku */}
             <div style={{
@@ -160,23 +159,35 @@ const Story = () => {
               borderRadius: '50%'
             }} />
 
-            <div style={{
-              display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-              width: '80px', height: '80px', borderRadius: '50%',
-              background: '#fef3c7', color: '#d97706', marginBottom: '2rem'
-            }}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 24 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
-            </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '3rem', alignItems: 'center' }}>
+              <div style={{ flex: '1 1 350px', position: 'relative', zIndex: 2 }}>
+                <img 
+                  src={`${import.meta.env.BASE_URL}uusyrittaja.jpg`} 
+                  alt="Vuoden Uusyrittäjä 2025" 
+                  style={{ width: '100%', borderRadius: '16px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} 
+                />
+              </div>
 
-            <h2 style={{ color: 'var(--color-primary)', marginBottom: '1.5rem', fontSize: '2.5rem', lineHeight: '1.2' }}>
-              Kuopiolainen Famula Oy on vuoden 2025 Uusyrittäjä
-            </h2>
-            
-            <p style={{ fontSize: '1.2rem', color: '#475569', lineHeight: '1.8', maxWidth: '700px', margin: '0 auto' }}>
-              Famula Oy on palkittu Suomen uusyrityskeskukset ry:n valtakunnallisena <strong style={{ color: '#b45309' }}>vuoden Uusyrittäjänä</strong>. 
-              Kotihoidon tukipalveluita senioreille tuottava yritys on perustettu vuonna 2022. Yritys on ollut 
-              kannattava ja omavarainen alusta lähtien ja samalla se on hallitusti laajentanut toimintaansa.
-            </p>
+              <div style={{ flex: '1 1 400px', position: 'relative', zIndex: 2, textAlign: 'left' }}>
+                <div style={{
+                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                  width: '60px', height: '60px', borderRadius: '50%',
+                  background: '#fef3c7', color: '#d97706', marginBottom: '1.5rem'
+                }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 24 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                </div>
+
+                <h2 style={{ color: 'var(--color-primary)', marginBottom: '1.5rem', fontSize: '2.5rem', lineHeight: '1.2' }}>
+                  Kuopiolainen Famula Oy on vuoden 2025 Uusyrittäjä
+                </h2>
+                
+                <p style={{ fontSize: '1.15rem', color: '#475569', lineHeight: '1.8' }}>
+                  Famula Oy on palkittu Suomen uusyrityskeskukset ry:n valtakunnallisena <strong style={{ color: '#b45309' }}>vuoden Uusyrittäjänä</strong>. 
+                  Kotihoidon tukipalveluita senioreille tuottava yritys on perustettu vuonna 2022. Yritys on ollut 
+                  kannattava ja omavarainen alusta lähtien ja samalla se on hallitusti laajentanut toimintaansa.
+                </p>
+              </div>
+            </div>
           </div>
 
         </div>
