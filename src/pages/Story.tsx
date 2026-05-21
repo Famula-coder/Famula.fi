@@ -132,16 +132,53 @@ const Story = () => {
       </div>
 
       {/* ── VUODEN UUSYRITTÄJÄ TIIVISTELMÄ ── */}
-      <section style={{ padding: '4rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
-        <div className="container text-center" style={{ maxWidth: '800px' }}>
-          <h2 style={{ color: 'var(--color-primary)', marginBottom: '1.5rem', fontSize: '2rem' }}>
-            Kuopiolainen Famula Oy on Vuoden 2025 Uusyrittäjä
-          </h2>
-          <p style={{ fontSize: '1.15rem', color: '#475569', lineHeight: '1.8' }}>
-            Kuopiolainen Famula Oy on palkittu Suomen uusyrityskeskukset ry:n valtakunnallisena <strong>Vuoden Uusyrittäjänä</strong>. 
-            Kotihoidon tukipalveluita senioreille tuottava yritys on perustettu vuonna 2022. Yritys on ollut 
-            kannattava ja omavarainen alusta lähtien ja samalla se on hallitusti laajentanut toimintaansa.
-          </p>
+      <section style={{ padding: '6rem 1.5rem', background: 'linear-gradient(135deg, rgba(230,190,186,0.1) 0%, rgba(155,194,166,0.1) 100%)', position: 'relative', overflow: 'hidden' }}>
+        <div className="container" style={{ maxWidth: '900px', position: 'relative', zIndex: 2 }}>
+          
+          <div style={{
+            background: 'white',
+            padding: '4rem 3rem',
+            borderRadius: '24px',
+            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(251, 191, 36, 0.3)',
+            position: 'relative',
+            overflow: 'hidden',
+            textAlign: 'center'
+          }}>
+            {/* Kultainen hehku */}
+            <div style={{
+              position: 'absolute', top: 0, left: 0, right: 0, height: '6px',
+              background: 'linear-gradient(90deg, #fbbf24, #f59e0b, #fbbf24)'
+            }} />
+            <div style={{
+              position: 'absolute', top: '-100px', right: '-100px', width: '200px', height: '200px',
+              background: 'radial-gradient(circle, rgba(251,191,36,0.15) 0%, transparent 70%)',
+              borderRadius: '50%'
+            }} />
+            <div style={{
+              position: 'absolute', bottom: '-100px', left: '-100px', width: '200px', height: '200px',
+              background: 'radial-gradient(circle, rgba(251,191,36,0.15) 0%, transparent 70%)',
+              borderRadius: '50%'
+            }} />
+
+            <div style={{
+              display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+              width: '80px', height: '80px', borderRadius: '50%',
+              background: '#fef3c7', color: '#d97706', marginBottom: '2rem'
+            }}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 24 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
+
+            <h2 style={{ color: 'var(--color-primary)', marginBottom: '1.5rem', fontSize: '2.5rem', lineHeight: '1.2' }}>
+              Kuopiolainen Famula Oy on vuoden 2025 Uusyrittäjä
+            </h2>
+            
+            <p style={{ fontSize: '1.2rem', color: '#475569', lineHeight: '1.8', maxWidth: '700px', margin: '0 auto' }}>
+              Famula Oy on palkittu Suomen uusyrityskeskukset ry:n valtakunnallisena <strong style={{ color: '#b45309' }}>vuoden Uusyrittäjänä</strong>. 
+              Kotihoidon tukipalveluita senioreille tuottava yritys on perustettu vuonna 2022. Yritys on ollut 
+              kannattava ja omavarainen alusta lähtien ja samalla se on hallitusti laajentanut toimintaansa.
+            </p>
+          </div>
+
         </div>
       </section>
 
