@@ -97,13 +97,61 @@
 }
 
 @media (max-width: 768px) {
-  .navbar-links, .nav-phone span {
+  .navbar-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    gap: 1.5rem;
+    
+    /* Animation for smooth opening */
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .navbar-links.mobile-open {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-phone-text {
     display: none;
   }
+  
   .nav-phone {
     padding: 0.5rem;
   }
+  
   .mobile-menu-btn {
     display: block;
+  }
+  
+  .dropdown-content {
+    position: relative;
+    box-shadow: none;
+    min-width: 100%;
+    background-color: var(--color-light-gray);
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+    border-radius: 8px;
+    /* Alueet näkyviin mobiilissa aina, tai avautuu hoverilla jos pystyy */
+    display: block; 
+  }
+  
+  .dropdown-content a {
+    padding: 10px 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .dropdown-content a:last-child {
+    border-bottom: none;
   }
 }
