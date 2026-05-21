@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 // import ContactForm from '../components/ContactForm';
 
-import { Heart, ChevronDown, ShoppingCart, UtensilsCrossed, Sparkles, HandHeart, Footprints, Music2, Clock, CheckCircle2, ArrowRight, Phone } from 'lucide-react';
+import { Heart, ChevronDown, ShoppingCart, UtensilsCrossed, Sparkles, HandHeart, Footprints, Music2, Clock, CheckCircle2, Phone } from 'lucide-react';
 
 /* ── Palvelut ── */
 const services = [
@@ -213,7 +214,9 @@ const Accordion = ({ example }: { example: typeof examples[0] }) => {
 };
 
 /* ── Pääkomponentti ── */
-const Services = () => (
+const Services = () => {
+  const navigate = useNavigate();
+  return (
   <>
     <SEO
       title="Palvelumme | Famula Oy"
@@ -395,12 +398,38 @@ const Services = () => (
             Kuulostaako jokin tutulta?
           </h3>
           <p style={{ color: 'rgba(255,255,255,0.75)', marginBottom: '2rem', fontSize: '1.05rem', lineHeight: '1.7', maxWidth: '480px', margin: '0 auto 2rem' }}>
-            Soita tai täytä lomake — ensimmäinen tapaaminen on aina maksuton, eikä sido sinua vielä mihinkään.
+            Valitse alueesi tai soita meille — ensimmäinen tapaaminen on aina maksuton, eikä sido sinua vielä mihinkään.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="#yhteys" className="btn btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
-              Ota yhteyttä <ArrowRight size={18} />
-            </a>
+            <div style={{ position: 'relative' }}>
+              <select 
+                className="btn btn-primary"
+                style={{ 
+                  appearance: 'none', 
+                  paddingRight: '2.5rem',
+                  cursor: 'pointer',
+                  border: 'none',
+                  outline: 'none',
+                  fontFamily: 'inherit',
+                  fontSize: '1rem',
+                  fontWeight: '600',
+                  height: '100%',
+                  minHeight: '3.2rem'
+                }}
+                onChange={(e) => {
+                  if (e.target.value) navigate(e.target.value);
+                }}
+                defaultValue=""
+              >
+                <option value="" disabled>Valitse alueesi...</option>
+                <option value="/keski-suomi">Keski-Suomi</option>
+                <option value="/pohjois-savo">Pohjois-Savo</option>
+                <option value="/oulu">Oulu</option>
+                <option value="/etela-karjala">Etelä-Karjala</option>
+                <option value="/uusimaa">Uusimaa</option>
+              </select>
+              <ChevronDown size={18} style={{ position: 'absolute', right: '1.2rem', top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none', color: 'white' }} />
+            </div>
             <a href="tel:0447569399" style={{
               display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
               padding: '0.875rem 1.75rem', borderRadius: '50px',
@@ -421,6 +450,7 @@ const Services = () => (
         <ContactForm />
       </section> */}
   </>
-);
+  );
+};
 
 export default Services;

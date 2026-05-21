@@ -422,18 +422,20 @@ const Home = () => {
           <div className="team-grid">
             {team.slice(1).map((member) => (
               <div key={member.name} className="team-card">
-                <a href={member.region} className="team-card-img-wrap" style={{ display: 'block', textDecoration: 'none' }}>
-                  <img
-                    className="team-card-img"
-                    src={member.img}
-                    alt={member.name}
-                    loading="lazy"
-                  />
-                </a>
-                <div className="team-card-body">
-                  <div className="team-card-name">{member.name}</div>
-                  <p className="team-card-quote">"{member.quote}"</p>
-                </div>
+                <Link to={member.region || '/'} style={{ display: 'block', textDecoration: 'none', color: 'inherit', height: '100%' }}>
+                  <div className="team-card-img-wrap">
+                    <img
+                      className="team-card-img"
+                      src={member.img}
+                      alt={member.name}
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="team-card-body">
+                    <div className="team-card-name">{member.name}</div>
+                    <p className="team-card-quote">"{member.quote}"</p>
+                  </div>
+                </Link>
               </div>
             ))}
           </div>
