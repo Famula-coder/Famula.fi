@@ -377,7 +377,12 @@ const Services = () => {
           }}>
             <Heart size={14} /> Räätälöityä juuri sinulle
           </div>
-          <h2 style={{ color: 'var(--color-primary)', marginBottom: '0.75rem' }}>
+          <h2 style={{ 
+            color: 'var(--color-primary)', 
+            marginBottom: '0.75rem',
+            wordBreak: 'break-word',
+            hyphens: 'auto'
+          }}>
             Esimerkkejä palvelukokonaisuuksista
           </h2>
           <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.7' }}>
