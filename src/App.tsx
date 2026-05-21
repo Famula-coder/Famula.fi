@@ -1,5 +1,6 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import CookieBanner from './components/CookieBanner';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Region from './pages/Region';
@@ -10,6 +11,7 @@ function App() {
   return (
     <div className="app">
       <Navbar />
+      <CookieBanner />
       <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />

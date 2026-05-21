@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { SEO } from '../components/SEO';
-// import ContactForm from '../components/ContactForm';
+import ContactForm from '../components/ContactForm';
 
 import { Heart, ChevronDown, ShoppingCart, UtensilsCrossed, Sparkles, HandHeart, Footprints, Music2, Clock, CheckCircle2, ArrowRight, Phone } from 'lucide-react';
 
@@ -417,9 +417,9 @@ const Services = () => (
     </section>
 
     {/* ── YHTEYDENOTTO ── */}
-    {/* <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
+    <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
         <ContactForm />
-      </section> */}
+      </section>
   </>
 );
 

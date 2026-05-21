@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
-// import ContactForm from '../components/ContactForm';
+import ContactForm from '../components/ContactForm';
 import { Heart, ExternalLink, ArrowRight } from 'lucide-react';
 
 /* ── Tiimiläiset ── */
@@ -500,11 +500,11 @@ const Home = () => {
       </section>
 
       {/* ── YHTEYDENOTTOLOMAKE ── */}
-      {/* <section id="contact-section" style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
+      <section id="contact-section" style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
         <div className="container">
           <ContactForm />
         </div>
-      </section> */}
+      </section>
     </>
   );
 };

@@ -2,12 +2,13 @@ import { useParams, Navigate, Link } from 'react-router-dom';
 import { regions } from '../data/regions';
 import { SEO } from '../components/SEO';
 import { Phone, Mail, MapPin } from 'lucide-react';
-// import ContactForm from '../components/ContactForm';
+import ContactForm from '../components/ContactForm';
 import { Helmet } from 'react-helmet-async';
 
 const Region = () => {
-  const { regionId } = useParams();
+  const { regionId } = useParams<{ regionId: string }>();
   const region = regions.find(r => r.id === regionId);
+  const cookieConsent = typeof window !== 'undefined' ? localStorage.getItem('cookieConsent') === 'true' : false;
 
   if (!region) {
     return <Navigate to="/" replace />;
@@ -46,7 +47,7 @@ const Region = () => {
         description={`Etsitkö luotettavaa kotisairaanhoitoa alueella ${region.name}? Tarjoamme lämminhenkistä apua ikääntyville omassa kodissa. Ota yhteyttä vetäjäämme: ${region.managerName}.`}
         schema={localBusinessSchema}
       />
-      {regionId === 'keski-suomi' && (
+      {cookieConsent && regionId === 'keski-suomi' && (
         <Helmet>
           <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17890084641"></script>
           <script>
@@ -60,7 +61,7 @@ const Region = () => {
           </script>
         </Helmet>
       )}
-      {regionId === 'oulu' && (
+      {cookieConsent && regionId === 'oulu' && (
         <Helmet>
           <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
           <script>
@@ -164,9 +165,9 @@ const Region = () => {
         </div>
       </div>
 
-      {/* <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
+      <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
         <ContactForm />
-      </section> */}
+      </section>
     </>
   );
 };
