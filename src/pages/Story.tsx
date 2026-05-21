@@ -72,7 +72,7 @@ const Story = () => {
 
                 <p>Tästä lähtikin idea Famulan perustamiselle. Yrityksen alkutaival oli kivinen. Valma haki yritykselle starttirahaa, mutta hakemus evättiin. Hakemuksen hylkäystä perusteltiin sillä, ettei Valman kykyihin selviytyä nuorena yrittäjänä uskottu. Sen sijaan Valmalle ehdotettiin, että hän voisi saada työttömyyskorvausta.</p>
 
-                <p>Takaiskusta ei lannistuttu. Yhdessä aviomiehensä Pauluksen ja Heikki-isän kanssa lähdettiin rakentamaan yhteistä unelmaa.</p>
+                <p>Takaiskusta ei lannistuttu. Yhdessä aviomiehensä Pauluksen ja Heikki-isän kanssa lähdettiin rakentamaan yhteistä unelmaa. Tämä periksiantamaton asenne ja kova työ onkin tuottanut tulosta: vuonna 2025 Famula palkittiin valtakunnallisena Vuoden Uusyrittäjänä!</p>
 
                 <blockquote style={{ fontSize: '1.3rem', fontWeight: '500', color: 'var(--color-primary)', padding: '2rem', background: 'white', borderRadius: '12px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', marginTop: '2rem' }}>
                   "Suomessa on paljon ikäihmisiä, jotka kaipaisivat arkeensa auttajaa. Tätä tarvetta varten perustettiin Famula Oy. Me Famulalla halutaan tarjota kotiavun lisäksi ystävä, joka välittää aidosti."<br />
@@ -112,8 +112,8 @@ const Story = () => {
 
                 <img
                   className="valma-img"
-                  src={`${import.meta.env.BASE_URL}valmajamummo.jpeg`}
-                  alt="Valma Linnanmäki muistelee alkutaivaltaan"
+                  src={`${import.meta.env.BASE_URL}uusyrittaja.jpg`}
+                  alt="Famulan perustajat palkittiin Vuoden Uusyrittäjänä"
                   style={{
                     filter: 'drop-shadow(0 20px 50px rgba(0,0,0,0.13))',
                   }}
@@ -123,13 +123,27 @@ const Story = () => {
               {/* Nimilaatikko */}
               <div className="valma-badge">
                 <Heart size={15} color="var(--color-secondary)" fill="var(--color-secondary)" />
-                Valma Linnanmäki · Perustaja
+                Vuoden Uusyrittäjä 2025
               </div>
             </div>
 
           </div>
         </div>
       </div>
+
+      {/* ── VUODEN UUSYRITTÄJÄ TIIVISTELMÄ ── */}
+      <section style={{ padding: '4rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
+        <div className="container text-center" style={{ maxWidth: '800px' }}>
+          <h2 style={{ color: 'var(--color-primary)', marginBottom: '1.5rem', fontSize: '2rem' }}>
+            Kuopiolainen Famula Oy on Vuoden 2025 Uusyrittäjä
+          </h2>
+          <p style={{ fontSize: '1.15rem', color: '#475569', lineHeight: '1.8' }}>
+            Kuopiolainen Famula Oy on palkittu Suomen uusyrityskeskukset ry:n valtakunnallisena <strong>Vuoden Uusyrittäjänä</strong>. 
+            Kotihoidon tukipalveluita senioreille tuottava yritys on perustettu vuonna 2022. Yritys on ollut 
+            kannattava ja omavarainen alusta lähtien ja samalla se on hallitusti laajentanut toimintaansa.
+          </p>
+        </div>
+      </section>
 
       {/* <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-white)' }}>
         <ContactForm />
