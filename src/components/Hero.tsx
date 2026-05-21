@@ -16,7 +16,7 @@ const Hero = () => {
             mukanamme turvaa ja kiireetöntä läsnäoloa arkeen.
           </p>
           <div className="hero-actions">
-            <Link to="/palvelut" className="btn btn-primary d-inline-flex">
+            <Link to="/#palvelut" className="btn btn-primary d-inline-flex">
               Katso miten voimme auttaa <ArrowRight size={20} style={{ marginLeft: '8px' }} />
             </Link>
             <Link to="/tarinamme" className="btn btn-secondary d-inline-flex">

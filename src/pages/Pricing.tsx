@@ -147,7 +147,7 @@ const Pricing = () => {
           </div>
 
           <div className="calculator-actions">
-            <Link to="/palvelut" className="btn btn-action-primary" style={{ textDecoration: 'none' }}>
+            <Link to="/#palvelut" className="btn btn-action-primary" style={{ textDecoration: 'none' }}>
               Varaa ilmainen tutustumiskäynti
             </Link>
             <a href="tel:0447569399" className="btn btn-action-outline">

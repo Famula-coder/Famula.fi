@@ -3,9 +3,8 @@ import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop';
 import CookieBanner from './components/CookieBanner';
 import Home from './pages/Home';
-import Services from './pages/Services';
-import Region from './pages/Region';
 import Story from './pages/Story';
+import Region from './pages/Region';
 import './App.css';
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
       <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/palvelut" element={<Services />} />
           <Route path="/tarinamme" element={<Story />} />
           <Route path="/:regionId" element={<Region />} />
         </Routes>
