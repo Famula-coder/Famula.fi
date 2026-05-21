@@ -179,34 +179,33 @@ const Accordion = ({ example }: { example: typeof examples[0] }) => {
       {/* Header */}
       <button
         onClick={() => setOpen(!open)}
+        className="accordion-header"
         style={{
           width: '100%',
           background: open ? example.colorLight : 'transparent',
           border: 'none',
-          padding: '1.75rem 2rem',
           cursor: 'pointer',
           display: 'flex',
           alignItems: 'center',
-          gap: '1.25rem',
           textAlign: 'left',
           transition: 'background 0.3s ease',
         }}
       >
         {/* Emoji + Numero-badge */}
-        <span style={{
+        <span 
+          className="accordion-icon"
+          style={{
           flexShrink: 0,
-          width: '52px', height: '52px',
           borderRadius: '16px',
           background: open ? example.color : example.colorLight,
           display: 'flex', alignItems: 'center', justifyContent: 'center',
-          fontSize: '1.5rem',
           transition: 'background 0.3s',
         }}>
           {example.emoji}
         </span>
 
         <div style={{ flex: 1 }}>
-          <div style={{ fontWeight: '700', fontSize: '1.15rem', color: 'var(--color-primary)', marginBottom: '0.3rem' }}>
+          <div className="accordion-title" style={{ fontWeight: '700', color: 'var(--color-primary)', marginBottom: '0.3rem' }}>
             {example.title}
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#64748b', fontSize: '0.9rem' }}>
@@ -232,7 +231,7 @@ const Accordion = ({ example }: { example: typeof examples[0] }) => {
         overflow: 'hidden',
         transition: 'max-height 0.5s cubic-bezier(0.4,0,0.2,1)',
       }}>
-        <div style={{ padding: '0 2rem 2rem' }}>
+        <div className="accordion-content-inner">
           <p style={{
             color: '#475569',
             fontSize: '1.05rem',
@@ -566,6 +565,40 @@ const Home = () => {
         .services-strip {
           background: rgba(155,194,166,0.12);
           padding: 5rem 0;
+        }
+
+        /* ── Accordion Responsive ── */
+        .accordion-header {
+          padding: 1.75rem 2rem;
+          gap: 1.25rem;
+        }
+        .accordion-icon {
+          width: 52px;
+          height: 52px;
+          font-size: 1.5rem;
+        }
+        .accordion-title {
+          font-size: 1.15rem;
+        }
+        .accordion-content-inner {
+          padding: 0 2rem 2rem;
+        }
+        @media (max-width: 600px) {
+          .accordion-header {
+            padding: 1.25rem 1rem;
+            gap: 0.75rem;
+          }
+          .accordion-icon {
+            width: 44px;
+            height: 44px;
+            font-size: 1.25rem;
+          }
+          .accordion-title {
+            font-size: 1rem;
+          }
+          .accordion-content-inner {
+            padding: 0 1rem 1.5rem;
+          }
         }
       `}</style>
 
