@@ -400,12 +400,12 @@ const Services = () => {
           textAlign: 'center',
           color: 'white',
         }}>
-          <div style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>💬</div>
+          <div style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>❤️</div>
           <h3 style={{ color: 'white', marginBottom: '0.75rem', fontSize: '1.5rem' }}>
-            Kuulostaako jokin tutulta?
+            Miten voisimme auttaa juuri sinua?
           </h3>
-          <p style={{ color: 'rgba(255,255,255,0.75)', marginBottom: '2rem', fontSize: '1.05rem', lineHeight: '1.7', maxWidth: '480px', margin: '0 auto 2rem' }}>
-            Valitse alueesi tai soita meille — ensimmäinen tapaaminen on aina maksuton, eikä sido sinua vielä mihinkään.
+          <p style={{ color: 'rgba(255,255,255,0.75)', marginBottom: '2rem', fontSize: '1.05rem', lineHeight: '1.7', maxWidth: '520px', margin: '0 auto 2rem' }}>
+            Valitse alueesi alta tai soita suoraan meille. Tulemme mielellämme ilmaiselle tutustumiskäynnille keskustelemaan tarpeistanne – täysin sitoumuksetta.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <div style={{ position: 'relative' }}>
