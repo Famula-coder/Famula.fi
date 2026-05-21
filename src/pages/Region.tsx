@@ -2,7 +2,7 @@ import { useParams, Navigate, Link } from 'react-router-dom';
 import { regions } from '../data/regions';
 import { SEO } from '../components/SEO';
 import { Phone, Mail, MapPin } from 'lucide-react';
-import ContactForm from '../components/ContactForm';
+// import ContactForm from '../components/ContactForm';
 import { Helmet } from 'react-helmet-async';
 
 const Region = () => {
@@ -165,9 +165,9 @@ const Region = () => {
         </div>
       </div>
 
-      <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
+      {/* <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
         <ContactForm />
-      </section>
+      </section> */}
     </>
   );
 };

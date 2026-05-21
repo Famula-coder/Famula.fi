@@ -1,5 +1,5 @@
 import { SEO } from '../components/SEO';
-import ContactForm from '../components/ContactForm';
+// import ContactForm from '../components/ContactForm';
 import { Heart } from 'lucide-react';
 
 const Story = () => {
@@ -131,9 +131,9 @@ const Story = () => {
         </div>
       </div>
 
-      <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-white)' }}>
+      {/* <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-white)' }}>
         <ContactForm />
-      </section>
+      </section> */}
     </>
   );
 };

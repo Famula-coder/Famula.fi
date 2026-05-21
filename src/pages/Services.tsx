@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { SEO } from '../components/SEO';
-import ContactForm from '../components/ContactForm';
+// import ContactForm from '../components/ContactForm';
 
 import { Heart, ChevronDown, ShoppingCart, UtensilsCrossed, Sparkles, HandHeart, Footprints, Music2, Clock, CheckCircle2, ArrowRight, Phone } from 'lucide-react';
 
@@ -241,7 +241,7 @@ const Services = () => (
       <div style={{
         position: 'absolute',
         inset: 0,
-        background: 'linear-gradient(135deg, rgba(8,36,52,0.42) 0%, rgba(161,122,116,0.30) 100%)',
+        background: 'linear-gradient(135deg, rgba(8,36,52,0.85) 0%, rgba(8,36,52,0.65) 100%)',
         zIndex: 1,
       }} />
 
@@ -267,10 +267,10 @@ const Services = () => (
         </p>
 
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <a href="#yhteys" className="btn btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+          {/* <a href="#yhteys" className="btn btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
             Varaa ilmainen tutustumiskäynti <ArrowRight size={18} />
-          </a>
-          <a href="tel:0447569399" className="btn btn-outline" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.5)', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+          </a> */}
+          <a href="tel:0447569399" className="btn btn-outline" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.5)', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', backgroundColor: 'var(--color-primary)' }}>
             <Phone size={18} /> 044 756 9399
           </a>
         </div>
@@ -417,9 +417,9 @@ const Services = () => (
     </section>
 
     {/* ── YHTEYDENOTTO ── */}
-    <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
+    {/* <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
         <ContactForm />
-      </section>
+      </section> */}
   </>
 );
 
