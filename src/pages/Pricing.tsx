@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import { Calculator, Info, Phone } from 'lucide-react';
 import './Pricing.css'; // Let's also create this file for the exact styling
@@ -146,9 +147,9 @@ const Pricing = () => {
           </div>
 
           <div className="calculator-actions">
-            <button className="btn btn-action-primary">
+            <Link to="/palvelut" className="btn btn-action-primary" style={{ textDecoration: 'none' }}>
               Varaa ilmainen tutustumiskäynti
-            </button>
+            </Link>
             <a href="tel:0447569399" className="btn btn-action-outline">
               <Phone size={18} /> Soita ja kysy lisää
             </a>

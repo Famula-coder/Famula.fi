@@ -10,14 +10,14 @@ const Hero = () => {
       <div className="container hero-container">
         <div className="hero-content">
           <div className="hero-badge">Famula Oy – Kiireetöntä hoivaa</div>
-          <h1>Saat kotiisi ystävän, joka pitää sinusta ja kodistasi huolta</h1>
+          <h1>Luotettava kotipalvelu – Saat kotiisi ystävän, joka pitää sinusta ja kodistasi huolta</h1>
           <p className="hero-description">
             Kohtaamme jokaisen asiakkaan kuin oman läheisemme. Tuomme
             mukanamme turvaa ja kiireetöntä läsnäoloa arkeen.
           </p>
           <div className="hero-actions">
             <Link to="/palvelut" className="btn btn-primary d-inline-flex">
-              Tutustu palveluihin <ArrowRight size={20} style={{ marginLeft: '8px' }} />
+              Katso miten voimme auttaa <ArrowRight size={20} style={{ marginLeft: '8px' }} />
             </Link>
             <Link to="/tarinamme" className="btn btn-secondary d-inline-flex">
               Tarinamme <BookOpen size={20} style={{ marginLeft: '8px' }} />

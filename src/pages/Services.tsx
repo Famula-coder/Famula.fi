@@ -268,7 +268,7 @@ const Services = () => {
           </div>
 
           <h1 style={{ fontSize: '2.8rem', color: 'var(--color-primary)', marginBottom: '1.5rem', lineHeight: '1.2' }}>
-            Apua, turvaa ja iloa arkeen
+            Kotihoidon tukipalvelut – Apua, turvaa ja iloa arkeen
           </h1>
 
           <p style={{ fontSize: '1.15rem', color: '#334155', lineHeight: '1.75', marginBottom: '1.25rem' }}>

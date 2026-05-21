@@ -136,10 +136,9 @@ const Region = () => {
         
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
           <div style={{ padding: '2rem', background: 'white', borderRadius: '12px', borderTop: '4px solid var(--color-secondary)' }}>
-            <h3>Seuranpitoa ja asiointiapua – Tukea arjen kaikkiin hetkiin</h3>
+            <h3>Kotipalvelu ja kotihoito {region.name} – Tukea arjen kaikkiin hetkiin</h3>
             <p>
-              Meille hoitotyö on ennen kaikkea aitoa välittämistä ja kiireetöntä läsnäoloa pelkän kellotetun suorittamisen sijaan.
-              Autamme arjen askareissa ja lähdemme mielellämme turvalliseksi seuraksi vaikkapa kauppa- tai apteekkiasioille.
+              Meille hoitotyö on ennen kaikkea aitoa välittämistä ja kiireetöntä läsnäoloa. Tarjoamme luotettavaa apua arjen askareissa alueella {region.name}, ja lähdemme mielellämme turvalliseksi seuraksi vaikkapa kauppa- tai apteekkiasioille.
             </p>
             <Link to="/palvelut" style={{ display: 'inline-block', marginTop: '0.75rem', color: 'var(--color-secondary)', fontWeight: '600', textDecoration: 'none' }}>
               Tutustu palveluihimme →
@@ -147,19 +146,16 @@ const Region = () => {
           </div>
 
           <div style={{ padding: '2rem', background: 'white', borderRadius: '12px', borderTop: '4px solid var(--color-accent)' }}>
-            <h3>Aktiivinen yhteydenpito omaisiin</h3>
+            <h3>Luotettavaa kotiapua ikääntyville – Pidämme omaiset ajan tasalla</h3>
             <p>
-              Pidämme läheiset aina ajan tasalla. Avoin, säännöllinen ja läpinäkyvä viestintämme tuo turvaa
-              ja vähentää omaisten huolta välimatkasta huolimatta. Meille on tärkeää, että voitte luottaa palveluumme sataprosenttisesti.
+              Tarjoamme turvallista kotiapua ikääntyville alueella {region.name}, ja pidämme läheiset aina ajan tasalla. Avoin viestintämme tuo turvaa ja vähentää huolta välimatkasta huolimatta. Meille on tärkeää, että voitte luottaa palveluumme sataprosenttisesti.
             </p>
           </div>
 
           <div style={{ padding: '2rem', background: 'white', borderRadius: '12px', borderTop: '4px solid var(--color-lavender)' }}>
-            <h3>Sama hoitaja</h3>
+            <h3>Tuttu ja turvallinen hoitaja {region.name} alueella</h3>
             <p>
-              Panostamme henkilökuntamme hyvinvointiin ja ammattitaidon ylläpitämiseen.
-              Famulassa sinua palvelee sama, tuttu hoitaja. Näin luottamuksen rakentaminen on helppoa
-              ja avun vastaanottaminen tuntuu luontevalta ja turvalliselta.
+              Panostamme paikallisen hoitotiimimme ammattitaitoon. Famulassa sinua palvelee alueellasi aina sama, tuttu hoitaja. Näin luottamuksen rakentaminen on helppoa ja avun vastaanottaminen tuntuu luontevalta. Kysy lisää palveluistamme alueella {region.name}!
             </p>
           </div>
         </div>

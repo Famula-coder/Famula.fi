@@ -65,5 +65,7 @@ export const regions: RegionData[] = [
     image: `${import.meta.env.BASE_URL}riina.avif`,
     altText: 'Ammatillinen hoivavastaava Riina Kyllönen Uudenmaan alueella',
     postalCode: '00100',
+    descriptionTitle: 'Lämminhenkistä tukea arkeen',
+    descriptionText: 'Famula Uusimaa tarjoaa kiireetöntä ja sydämellistä kotihoidon tukipalvelua sekä arjen apua koko pääkaupunkiseudulla ja lähialueilla. Olemme läsnä arjen hetkissä – autamme, kuuntelemme ja tuomme seuraa silloin, kun sitä tarvitaan.\n\nMeille tärkeintä on aito kohtaaminen ja turvallinen olo. Kuljemme rinnallasi luotettavasti ja ihmistä kunnioittaen, jotta asuminen omassa kodissa on turvallista mahdollisimman pitkään.',
   }
 ];

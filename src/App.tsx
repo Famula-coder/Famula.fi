@@ -73,6 +73,28 @@ function App() {
           >
             Omavalvontasuunnitelmat
           </a>
+          <span style={{ color: 'rgba(255,255,255,0.3)' }}>·</span>
+          <a
+            href="https://www.facebook.com/Famula.fi/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: 'rgba(255,255,255,0.75)', textDecoration: 'none', transition: 'color 0.2s', display: 'flex', alignItems: 'center', gap: '4px' }}
+            onMouseOver={e => (e.currentTarget.style.color = 'white')}
+            onMouseOut={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.75)')}
+          >
+            Facebook
+          </a>
+          <span style={{ color: 'rgba(255,255,255,0.3)' }}>·</span>
+          <a
+            href="https://www.instagram.com/famula.fi/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: 'rgba(255,255,255,0.75)', textDecoration: 'none', transition: 'color 0.2s', display: 'flex', alignItems: 'center', gap: '4px' }}
+            onMouseOver={e => (e.currentTarget.style.color = 'white')}
+            onMouseOut={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.75)')}
+          >
+            Instagram
+          </a>
         </div>
 
         <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.85rem', margin: 0 }}>

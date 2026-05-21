@@ -40,6 +40,14 @@ const Navbar = () => {
             <Phone size={18} aria-hidden="true" />
             <span className="nav-phone-text">044 756 9399</span>
           </a>
+          <div style={{ display: 'flex', alignItems: 'center', marginLeft: '0.5rem', gap: '0.5rem' }}>
+            <a href="https://www.facebook.com/Famula.fi/" target="_blank" rel="noopener noreferrer" className="nav-social" aria-label="Famulan Facebook" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-primary)', fontWeight: 'bold' }}>
+              FB
+            </a>
+            <a href="https://www.instagram.com/famula.fi/" target="_blank" rel="noopener noreferrer" className="nav-social" aria-label="Famulan Instagram" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-primary)', fontWeight: 'bold' }}>
+              IG
+            </a>
+          </div>
           <button className="mobile-menu-btn" aria-label={isMobileMenuOpen ? "Sulje valikko" : "Avaa valikko"} onClick={toggleMenu}>
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>

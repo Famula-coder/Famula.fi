@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '../components/SEO';
 import Hero from '../components/Hero';
 // import ContactForm from '../components/ContactForm';
 import { Heart, ExternalLink, ArrowRight } from 'lucide-react';
@@ -48,10 +48,10 @@ const team = [
 const Home = () => {
   return (
     <>
-      <Helmet>
-        <title>Famula - Saat kotiisi ystävän, joka pitää sinusta ja kodistasi huolta</title>
-        <meta name="description" content="Etsitkö luotettavaa kotisairaanhoitoa tai kotiapua? Tarjoamme lämminhenkistä apua ikääntyville omassa kodissa. Pidämme myös kaukana asuvat omaiset aina ajan tasalla." />
-      </Helmet>
+      <SEO 
+        title="Famula - Luotettava kotipalvelu ja kotihoito" 
+        description="Etsitkö luotettavaa kotipalvelua tai kotihoitoa? Famula tarjoaa lämminhenkistä apua ikääntyville omassa kodissa. Pidämme omaiset aina ajan tasalla." 
+      />
 
       <style>{`
         /* ── Video-osio ── */
@@ -442,6 +442,40 @@ const Home = () => {
         </div>
       </section>
 
+      {/* ── ASIAKKAAT KERTOVAT ── */}
+      <section style={{ padding: '5rem 0', background: 'var(--color-background-warm)' }}>
+        <div className="container text-center">
+          <h2 style={{ color: 'var(--color-primary)', marginBottom: '3rem' }}>Asiakkaamme kertovat</h2>
+          <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+            
+            <div style={{ background: 'white', padding: '2.5rem', borderRadius: '16px', flex: '1', minWidth: '300px', maxWidth: '350px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', textAlign: 'left' }}>
+              <div style={{ color: '#fbbf24', fontSize: '1.25rem', marginBottom: '1rem' }}>★★★★★</div>
+              <p style={{ fontSize: '1.1rem', color: '#334155', fontStyle: 'italic', marginBottom: '1.5rem', lineHeight: '1.6' }}>
+                "Minä aina odotan näitä päiviä, kun sinä tulet. Siitä tulee niin hyvä mieli, että hykerryttää! Sinä et hoida pelkästään minun kotia, vaan myös minun mieltä."
+              </p>
+              <div style={{ fontWeight: '600', color: 'var(--color-primary)' }}>Asiakas, Kuopio</div>
+            </div>
+
+            <div style={{ background: 'white', padding: '2.5rem', borderRadius: '16px', flex: '1', minWidth: '300px', maxWidth: '350px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', textAlign: 'left' }}>
+              <div style={{ color: '#fbbf24', fontSize: '1.25rem', marginBottom: '1rem' }}>★★★★★</div>
+              <p style={{ fontSize: '1.1rem', color: '#334155', fontStyle: 'italic', marginBottom: '1.5rem', lineHeight: '1.6' }}>
+                "Pyysin teitä asiointiapuun, mutta sainkin samalla apua ihan kaikkeen, mitä keksinkään!"
+              </p>
+              <div style={{ fontWeight: '600', color: 'var(--color-primary)' }}>Asiakas, Lappeenranta</div>
+            </div>
+
+            <div style={{ background: 'white', padding: '2.5rem', borderRadius: '16px', flex: '1', minWidth: '300px', maxWidth: '350px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', textAlign: 'left' }}>
+              <div style={{ color: '#fbbf24', fontSize: '1.25rem', marginBottom: '1rem' }}>★★★★★</div>
+              <p style={{ fontSize: '1.1rem', color: '#334155', fontStyle: 'italic', marginBottom: '1.5rem', lineHeight: '1.6' }}>
+                "Voi että, huolisin sinut tänne vaikka joka päivä minua piristämään!"
+              </p>
+              <div style={{ fontWeight: '600', color: 'var(--color-primary)' }}>Asiakas, Oulu</div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* ── PALVELUKORTIT ── */}
       <section className="services-strip">
         <div className="container text-center">
@@ -462,7 +496,7 @@ const Home = () => {
             <div style={{ background: 'white', padding: '2rem', borderRadius: '16px', flex: '1', minWidth: '300px', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
               <h3 style={{ color: 'var(--color-secondary)', fontSize: '1.4rem', marginBottom: '0.5rem' }}>Etsin luotettavaa apua läheiselleni</h3>
               <p style={{ color: '#475569' }}>Turvaa ja mielenrauhaa kaukana asuvalle omaiselle.</p>
-              <a href="#yhteys" className="btn" style={{ marginTop: '1rem', display: 'inline-block', border: '2px solid var(--color-secondary)', color: 'var(--color-secondary)', background: 'transparent' }}>Ota heti yhteyttä</a>
+              <Link to="/palvelut" className="btn" style={{ marginTop: '1rem', display: 'inline-block', border: '2px solid var(--color-secondary)', color: 'var(--color-secondary)', background: 'transparent' }}>Pyydä maksuton arvio</Link>
             </div>
           </div>
         </div>

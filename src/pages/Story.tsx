@@ -52,7 +52,7 @@ const Story = () => {
                 Mistä kaikki alkoi
               </div>
               <h1 style={{ fontSize: '3rem', marginBottom: '2rem', color: 'var(--color-primary)' }}>
-                Tarinamme – Aidon välittämisen asialla
+                Famulan tarina – Sydämellä tehtyä kotihoitoa
               </h1>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', fontSize: '1.15rem', color: '#334155', lineHeight: '1.7' }}>
