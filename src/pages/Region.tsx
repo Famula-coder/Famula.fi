@@ -1,7 +1,7 @@
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { regions } from '../data/regions';
 import { SEO } from '../components/SEO';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 // import ContactForm from '../components/ContactForm';
 import { Helmet } from 'react-helmet-async';
 
@@ -13,6 +13,10 @@ const Region = () => {
   if (!region) {
     return <Navigate to="/" replace />;
   }
+
+  const cleanPhone = region.phone.replace(/\s/g, '');
+  const whatsappPhone = cleanPhone.startsWith('0') ? `358${cleanPhone.substring(1)}` : cleanPhone;
+  const whatsappUrl = `https://wa.me/${whatsappPhone}?text=Hei!%20Olisin%20kiinnostunut%20Famulan%20palveluista%20alueella%20${region.name}.`;
 
   // Generate LocalBusiness Schema for this specific region
   const localBusinessSchema = {
@@ -175,6 +179,34 @@ const Region = () => {
       {/* <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
         <ContactForm />
       </section> */}
+
+      <a 
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          position: 'fixed',
+          bottom: '2rem',
+          right: '2rem',
+          backgroundColor: '#25D366',
+          color: 'white',
+          padding: '0.8rem 1.2rem',
+          borderRadius: '50px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.5rem',
+          fontWeight: '600',
+          boxShadow: '0 4px 15px rgba(37, 211, 102, 0.4)',
+          textDecoration: 'none',
+          zIndex: 1000,
+          transition: 'transform 0.3s ease'
+        }}
+        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+      >
+        <MessageCircle size={24} />
+        Kysy WhatsAppissa
+      </a>
     </>
   );
 };
