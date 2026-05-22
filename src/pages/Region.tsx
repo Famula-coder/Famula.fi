@@ -77,6 +77,19 @@ const Region = () => {
           </script>
         </Helmet>
       )}
+      {cookieConsent && regionId === 'etela-karjala' && (
+        <Helmet>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17600441591"></script>
+          <script>
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17600441591');
+            `}
+          </script>
+        </Helmet>
+      )}
       
       <div className="bg-light" style={{ padding: '4rem 0' }}>
         <div className="container">
