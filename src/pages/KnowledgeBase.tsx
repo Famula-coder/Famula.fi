@@ -147,7 +147,7 @@ const KnowledgeBase = () => {
             Tietoa ja tukea
           </div>
           <h1 style={{ fontSize: '3rem', color: 'var(--color-primary)', marginBottom: '1.5rem' }}>
-            Tietopankki & Asiakkaiden oppaat
+            Tietopankki ja oppaat
           </h1>
           <p style={{ fontSize: '1.2rem', color: '#475569', lineHeight: '1.7', marginBottom: '3rem' }}>
             Olemme koonneet tänne vastauksia mieltä askarruttaviin kysymyksiin ikääntyvien arjesta, palveluistamme ja esimerkiksi kotitalousvähennyksestä.
