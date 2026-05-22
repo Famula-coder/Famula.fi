@@ -186,26 +186,25 @@ const Region = () => {
         rel="noopener noreferrer"
         style={{
           position: 'fixed',
-          bottom: '2rem',
-          right: '2rem',
+          bottom: '1.5rem',
+          right: '1.5rem',
           backgroundColor: '#25D366',
           color: 'white',
-          padding: '0.8rem 1.2rem',
-          borderRadius: '50px',
+          width: '56px',
+          height: '56px',
+          borderRadius: '50%',
           display: 'flex',
           alignItems: 'center',
-          gap: '0.5rem',
-          fontWeight: '600',
+          justifyContent: 'center',
           boxShadow: '0 4px 15px rgba(37, 211, 102, 0.4)',
-          textDecoration: 'none',
           zIndex: 1000,
           transition: 'transform 0.3s ease'
         }}
-        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
         onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+        title="Kysy WhatsAppissa"
       >
-        <MessageCircle size={24} />
-        Kysy WhatsAppissa
+        <MessageCircle size={28} />
       </a>
     </>
   );
