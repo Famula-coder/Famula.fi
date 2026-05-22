@@ -6,8 +6,8 @@ const Story = () => {
   return (
     <>
       <SEO
-        title="Tarinamme | Famula Oy"
-        description="Lue Famulan perustajan Valma Linnanmäen tarina ja kuinka Famula sai alkunsa halusta auttaa ihmisiä aidosti."
+        title="Tarinamme | Vuoden Uusyrittäjä 2025 | Famula Oy"
+        description="Lue Famulan perustajan Valma Linnanmäen tarina ja kuinka Famula sai alkunsa halusta auttaa ikäihmisiä aidosti ja kiireettömästi."
       />
 
       <style>{`

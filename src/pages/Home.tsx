@@ -264,8 +264,19 @@ const Home = () => {
   return (
     <>
       <SEO 
-        title="Famula - Luotettava kotipalvelu ja kotihoito" 
-        description="Etsitkö luotettavaa kotipalvelua tai kotihoitoa? Famula tarjoaa lämminhenkistä apua ikääntyville omassa kodissa. Pidämme omaiset aina ajan tasalla." 
+        title="Famula | Kiireetöntä kotipalvelua ja hoivaa ikäihmisille" 
+        description="Famulan kotipalvelu tarjoaa luotettavaa, kiireetöntä ja lämminhenkistä apua arkeen. Aina sama, tuttu hoitaja kotiisi. Katso miten voimme auttaa!" 
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Famula Oy",
+          "url": "https://famula.fi",
+          "logo": "https://famula.fi/logo.png",
+          "sameAs": [
+            "https://www.facebook.com/Famula.fi/",
+            "https://www.instagram.com/famula.fi/"
+          ]
+        }}
       />
 
       <style>{`
@@ -617,7 +628,7 @@ const Home = () => {
             <Sparkles size={14} /> Kaikki mitä tarvitset
           </div>
           <h2 style={{ color: 'var(--color-primary)', marginBottom: '0.75rem' }}>
-            Mitä palveluihimme kuuluu?
+            Mitä Famulan kotipalveluun ja kotihoitoon kuuluu?
           </h2>
           <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.7' }}>
             Koostamme juuri sinun näköisesi palvelukokonaisuuden — alla esimerkkejä osa-alueista.

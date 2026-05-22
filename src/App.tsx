@@ -5,6 +5,8 @@ import CookieBanner from './components/CookieBanner';
 import Home from './pages/Home';
 import Story from './pages/Story';
 import Region from './pages/Region';
+import KnowledgeBase from './pages/KnowledgeBase';
+import Article from './pages/Article';
 import './App.css';
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tarinamme" element={<Story />} />
+          <Route path="/tietopankki" element={<KnowledgeBase />} />
+          <Route path="/tietopankki/:slug" element={<Article />} />
           <Route path="/:regionId" element={<Region />} />
         </Routes>
       </main>

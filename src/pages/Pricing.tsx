@@ -30,15 +30,15 @@ const Pricing = () => {
   return (
     <>
       <SEO 
-        title="Hinnoittelu ja Hintalaskuri | Famula" 
-        description="Laske kotihoitopalvelun hinta Famulan hintalaskurilla. Selkeä ja läpinäkyvä hinnoittelu." 
+        title="Kotipalvelun hinnasto ja kotitalousvähennys | Famula Oy" 
+        description="Selkeä ja läpinäkyvä kotipalvelun hinnasto. Autamme sinua hyödyntämään kotitalousvähennyksen täysimääräisesti. Katso hinnat ja tilaa ilmainen arviokäynti!" 
       />
       
       <div className="container" style={{ padding: '4rem 1.5rem', maxWidth: '800px' }}>
         <div className="text-center" style={{ marginBottom: '3rem' }}>
-          <h1 style={{ color: '#e04236', fontSize: '3rem', marginBottom: '1rem' }}>Hinnoittelu</h1>
+          <h1 style={{ color: 'var(--color-primary)', fontSize: '3rem', marginBottom: '1rem' }}>Kotipalvelun hinnasto ja kotitalousvähennys</h1>
           <p style={{ fontSize: '1.25rem', color: '#64748b' }}>
-            Selkeä ja läpinäkyvä hinnoittelu. Yksi tuntihinta.
+            Selkeä ja läpinäkyvä hinnoittelu. Yksi tuntihinta ilman yllättäviä lisäkuluja.
           </p>
         </div>
 

@@ -51,7 +51,8 @@ export const regions: RegionData[] = [
     postalCode: '90100',
     locativeName: 'Oulussa',
     genitiveName: 'Oulun',
-    descriptionText: 'Famula Oulu tarjoaa juuri sinun tarpeeseen räätälöityä kiireetöntä tukea ja apua arkeen. Tarjoamme sydämmellistä ja kiireetöntä sekä ammattitaitoista kodinhoidon tukipalvelua kodinhoidollisiin tehtäviin monipuolisesti. Tarjoamme myös turvallista saattoapua arjen menoihin niin asiointiin kuin ulkoiluun.\n\nMeille tärkeää on ihmisen yksilöllisyys sekä kiireetön kohtaaminen ja läsnäolo. Meiltä saat ystävän, joka kulkee rinnallasi ja jonka kanssa voit jakaa elämän pieniä ja suuria iloja ja suruja.',
+    descriptionTitle: 'Luotettava kotipalvelu ikäihmisille Oulussa – Turvaa ja seuraa arkeen',
+    descriptionText: 'Etsitkö luotettavaa ja kiireetöntä apua ikääntyvälle läheisellesi Oulussa? Famulan kotipalvelu tarjoaa turvallista seuraa, apua kodin askareisiin ja kokonaisvaltaista huolenpitoa omassa kodissa. Meillä hoitaja ei vaihdu jokaisella käynnillä – luonasi käy aina sama, tuttu ja luotettava ammattilainen.\n\nPalvelemme laajasti Oulun alueella ja lähikunnissa. Olipa kyseessä sitten viikoittainen siivousapu, kaupassakäyntiseura tai laajempi päivittäinen tukeminen, räätälöimme palvelun juuri teidän tarpeisiinne sopivaksi. Kaikki palvelumme oikeuttavat kotitalousvähennykseen, ja avustamme mielellämme vähennyksen hakemisessa.',
   },
   {
     id: 'etela-karjala',

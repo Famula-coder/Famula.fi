@@ -36,6 +36,7 @@ const Navbar = () => {
           </div>
           <Link to="/#palvelut" onClick={closeMenu}>Palvelumme</Link>
           <Link to="/tarinamme" onClick={closeMenu}>Tarinamme</Link>
+          <Link to="/tietopankki" onClick={closeMenu}>Tietopankki</Link>
         </nav>
         <div className="navbar-actions">
           <a href="tel:0447569399" className="btn btn-outline nav-phone" aria-label="Soita meille: 0447569399">
