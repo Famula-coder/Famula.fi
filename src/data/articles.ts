@@ -13,7 +13,7 @@ export const articles: Article[] = [
     id: '1',
     slug: 'kotitalousvahennys-2025',
     title: 'Kotitalousvähennys hoiva- ja hoitotyöstä 2025 – Näin hyödynnät edun',
-    category: 'Hinnoittelu',
+    category: 'Kotitalousvähennys',
     excerpt: 'Vuodelle 2025 kotitalousvähennykseen tuli muutoksia. Nyt voit vähentää verotuksessa 35 % yritykseltä ostetun hoiva- tai siivoustyön hinnasta.',
     icon: 'Euro',
     content: `
@@ -310,7 +310,7 @@ export const articles: Article[] = [
     id: '15',
     slug: 'nain-haet-kotitalousvahennysta',
     title: 'Kuinka haet kotitalousvähennystä käytännössä? Vaiheittainen opas',
-    category: 'Hinnoittelu',
+    category: 'Kotitalousvähennys',
     excerpt: 'Kotitalousvähennyksen hakeminen on tehty nykyään erittäin helpoksi. Ota kuitit talteen ja tee ilmoitus OmaVerossa näillä ohjeilla.',
     icon: 'FileText',
     content: `
@@ -338,7 +338,7 @@ export const articles: Article[] = [
     id: '16',
     slug: 'kotitalousvahennys-vanhemmille',
     title: 'Tiesitkö? Voit ostaa kotiapua vanhemmillesi ja saada itse kotitalousvähennyksen',
-    category: 'Omaisille',
+    category: 'Kotitalousvähennys',
     excerpt: 'Moni ei tiedä, että kotitalousvähennyksen voi saada myös omien tai puolison vanhempien kotiin ostetuista palveluista.',
     icon: 'Gift',
     content: `
