@@ -136,7 +136,7 @@ export const articles: Article[] = [
       <p>Ikäihmiselle jatkuva uusien ihmisten kohtaaminen omassa kodissa voi olla ahdistavaa ja stressaavaa. Kysy suoraan, pystyykö yritys takaamaan, että asiakkaan luona käy pääsääntöisesti aina yksi ja sama, nimetty hoitaja. Famulalla tämä on toimintamme peruskivi.</p>
 
       <h3>2. Ovatko luvat ja omavalvonta kunnossa?</h3>
-      <p>Luotettava kotipalvelu on aina aluehallintoviraston (AVI) hyväksymä ja valvoma sosiaalipalvelujen tuottaja. Tämä tarkoittaa, että yrityksellä on vastuuhenkilöt, ajantasainen omavalvontasuunnitelma ja vaadittavat vakuutukset kunnossa.</p>
+      <p>Luotettava kotipalvelu on aina rekisteröity valtakunnalliseen Soteri-rekisteriin, ja se on Lupa- ja valvontaviraston hyväksymä ja valvoma sosiaalipalvelujen tuottaja. Tämä tarkoittaa, että yrityksellä on vastuuhenkilöt, ajantasainen omavalvontasuunnitelma ja vaadittavat vakuutukset kunnossa.</p>
 
       <h3>3. Maksetaanko matka-ajoista tai piilokuluista?</h3>
       <p>Tarkista, mitä tuntihinta oikeasti pitää sisällään. Alkavatko työtunnit juosta siitä, kun hoitaja astuu sisään, vai maksetaanko myös matka-ajasta? Famulalla hinnoittelu on täysin läpinäkyvää, eikä ikäviä yllätyslaskuja tule.</p>
