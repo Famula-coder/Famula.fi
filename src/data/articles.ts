@@ -18,7 +18,7 @@ export const articles: Article[] = [
     icon: 'Euro',
     content: `
       <h2>Mitä kotitalousvähennys tarkoittaa vuonna 2025?</h2>
-      <p>Tiesitkö, että voit saada merkittävän veroedun ostaessasi kotipalvelua itsellesi tai ikääntyville vanhemmillesi? Vuonna 2025 kotitalousvähennys hoiva-, hoito- ja siivoustyöstä on <strong>35 %</strong> työn arvonlisäverollisesta osuudesta.</p>
+      <p>Tiesitkö, että voit saada merkittävän veroedun ostaessasi kotipalvelua tai kotihoitoa itsellesi tai ikääntyville vanhemmillesi? Vuonna 2025 kotitalousvähennys hoiva-, hoito- ja siivoustyöstä on <strong>35 %</strong> työn arvonlisäverollisesta osuudesta.</p>
       
       <h3>Vähennyksen enimmäismäärä ja omavastuu</h3>
       <p>Kotitalousvähennyksen vuotuinen enimmäismäärä on 1 600 euroa henkilöä kohden. Omavastuu on 150 euroa vuodessa. Jos ostat palvelun yhdessä puolisosi kanssa, voitte saada yhteensä jopa 3 200 euron vähennyksen, jos molempien verot riittävät vähennyksen tekemiseen.</p>
@@ -87,14 +87,14 @@ export const articles: Article[] = [
   {
     id: '4',
     slug: 'mita-kotipalvelu-maksaa',
-    title: 'Mitä yksityinen kotipalvelu maksaa? Läpinäkyvät hintaesimerkit',
+    title: 'Mitä yksityinen kotihoito ja kotipalvelu maksaa? Läpinäkyvät hintaesimerkit',
     category: 'Hinnoittelu',
     excerpt: 'Avaamme rehellisesti kotipalvelun hinnoittelua. Kerromme, miksi Famulalla on selkeä tuntihinta ilman yllättäviä piilokuluja.',
     icon: 'Calculator',
     content: `
       <h2>Yksi tuntihinta – ei ikäviä yllätyksiä</h2>
       <p>Monella palveluntarjoajalla laskutus perustuu monimutkaisiin hinnastoihin: viikonloppulisät, kilometrikorvaukset, laskutuslisät ja toimistomaksut nostavat lopullista summaa huomattavasti.</p>
-      <p>Famulalla uskomme reiluuteen ja läpinäkyvyyteen. Sosiaalihuollon tukipalveluina myytävä kotipalvelumme on <strong>arvonlisäverotonta (ALV 0 %)</strong>, ja hinta on kiinteä <strong>39,95 € / tunti</strong>.</p>
+      <p>Famulalla uskomme reiluuteen ja läpinäkyvyyteen. Sosiaalihuollon tukipalveluina myytävä kotipalvelumme ja yksityinen kotihoidon tukipalvelumme on <strong>arvonlisäverotonta (ALV 0 %)</strong>, ja hinta on kiinteä <strong>39,95 € / tunti</strong>.</p>
       
       <h3>Kuinka edullista apu todellisuudessa on?</h3>
       <p>Verottajan myöntämä kotitalousvähennys (35 % vuonna 2025) tarkoittaa, että todellinen kustannus asiakkaalle on merkittävästi pienempi. Jos ostat palvelua esimerkiksi kahdeksi tunniksi viikossa:</p>
@@ -227,7 +227,7 @@ export const articles: Article[] = [
     slug: 'luotettava-siivousapu-ikaihmiselle',
     title: 'Mistä luotettava siivousapu ikäihmiselle? Vinkit valintaan',
     category: 'Palvelut',
-    excerpt: 'Siivousfirma vai yksityinen kotipalvelu? Lue, mitä asioita kannattaa ottaa huomioon, kun tilaat siivousapua ikääntyvälle läheiselle.',
+    excerpt: 'Siivousfirma vai yksityinen kotihoito tai kotipalvelu? Lue, mitä asioita kannattaa ottaa huomioon, kun tilaat siivousapua ikääntyvälle läheiselle.',
     icon: 'Sparkles',
     content: `
       <h2>Siivousfirma vai kotipalvelu? Tässä on ratkaiseva ero</h2>
@@ -240,7 +240,7 @@ export const articles: Article[] = [
         <li><strong>Arjen havainnointi:</strong> Samalla kun siivoamme, havainnoimme asiakkaan yleisvointia, kodin turvallisuutta (kuten mattojen liukkautta) ja jääkaapin sisältöä.</li>
         <li><strong>Tuttu ihminen:</strong> Kotiin ei tule joka kerta eri siivooja, vaan luotettava omahoitaja, josta tulee usein tärkeä viikoittainen ystävä.</li>
       </ul>
-      <p>Jos etsit pelkkää suursiivousta, perinteinen siivousfirma on hyvä valinta. Jos taas kaipaat turvallista seuraa ja arjen apua siivouksen ohessa, valitse yksityinen kotipalvelu.</p>
+      <p>Jos etsit pelkkää suursiivousta, perinteinen siivousfirma on hyvä valinta. Jos taas kaipaat turvallista seuraa ja arjen apua siivouksen ohessa, valitse yksityinen kotihoito tai kotipalvelu.</p>
     `
   },
   {

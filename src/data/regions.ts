@@ -40,7 +40,7 @@ export const regions: RegionData[] = [
     locativeName: 'Pohjois-Savossa',
     genitiveName: 'Pohjois-Savon',
     descriptionTitle: 'Kiireetön kotihoito ja arjen tukipalvelut – Pohjois-Savo',
-    descriptionText: 'Etsitkö luotettavaa kotipalvelua ikäihmiselle Savon sydämessä? Famulan yksityinen kotihoito ja arjen tukipalvelut tuovat avun suoraan kotiovelle Kuopiossa, Siilinjärvellä, Iisalmessa ja Varkaudessa.\n\nPalvelemme lämpimästi ja ammattitaidolla – aina siten, että sinulla on kotonasi tuttu ja turvallinen omahoitaja.',
+    descriptionText: 'Etsitkö luotettavaa kotihoitoa ikäihmiselle Savon sydämessä? Famulan yksityinen kotihoito ja arjen tukipalvelut tuovat avun suoraan kotiovelle Kuopiossa ja Siilinjärvellä.\n\nPalvelemme lämpimästi ja ammattitaidolla – aina siten, että sinulla on kotonasi tuttu ja turvallinen omahoitaja.',
   },
   {
     id: 'oulu',
