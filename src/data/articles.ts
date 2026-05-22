@@ -221,5 +221,47 @@ export const articles: Article[] = [
       </ul>
       <p>Tavoitteemme on, että Famulan palvelun myötä omaisen hartioilta putoaa raskas kivi, ja voitte keskittyä yhdessäoloon ilman jatkuvaa huolta arjen sujumisesta.</p>
     `
+  },
+  {
+    id: '11',
+    slug: 'luotettava-siivousapu-ikaihmiselle',
+    title: 'Mistä luotettava siivousapu ikäihmiselle? Vinkit valintaan',
+    category: 'Palvelut',
+    excerpt: 'Siivousfirma vai yksityinen kotipalvelu? Lue, mitä asioita kannattaa ottaa huomioon, kun tilaat siivousapua ikääntyvälle läheiselle.',
+    icon: 'Sparkles',
+    content: `
+      <h2>Siivousfirma vai kotipalvelu? Tässä on ratkaiseva ero</h2>
+      <p>Kun ikäihmisen kodin puhtaanapito alkaa vaatia ulkopuolista apua, moni omainen etsii netistä perinteistä siivousfirmaa. Vaikka moni siivousyritys tekee erinomaista työtä, ikäihmisen kodissa tarpeet ovat usein laajempia kuin pelkkä pölyjen pyyhkiminen.</p>
+      
+      <h3>Yksityisen kotipalvelun hyödyt siivoustyössä</h3>
+      <p>Kun tilaat Famulan kaltaisen kotipalveluyrityksen tekemään siivousta, saat kaupan päälle paljon muutakin:</p>
+      <ul>
+        <li><strong>Kiireetön kohtaaminen:</strong> Hoitajamme ei juokse kelloa vastaan, vaan meillä on aikaa vaihtaa kuulumiset ja juoda vaikka yhdessä kahvit siivouksen lomassa.</li>
+        <li><strong>Arjen havainnointi:</strong> Samalla kun siivoamme, havainnoimme asiakkaan yleisvointia, kodin turvallisuutta (kuten mattojen liukkautta) ja jääkaapin sisältöä.</li>
+        <li><strong>Tuttu ihminen:</strong> Kotiin ei tule joka kerta eri siivooja, vaan luotettava omahoitaja, josta tulee usein tärkeä viikoittainen ystävä.</li>
+      </ul>
+      <p>Jos etsit pelkkää suursiivousta, perinteinen siivousfirma on hyvä valinta. Jos taas kaipaat turvallista seuraa ja arjen apua siivouksen ohessa, valitse yksityinen kotipalvelu.</p>
+    `
+  },
+  {
+    id: '12',
+    slug: 'omaishoidon-lomitus-yksityiselta',
+    title: 'Omaishoidon lomitus yksityiseltä: Näin se toimii käytännössä',
+    category: 'Omaisille',
+    excerpt: 'Omaishoitaja, muista huolehtia myös itsestäsi! Yksityinen omaishoidon sijaistus antaa sinulle elintärkeän hengähdystauon.',
+    icon: 'Heart',
+    content: `
+      <h2>Omaishoitajan vapaapäivä on elintärkeä</h2>
+      <p>Omaishoitajan työ on sitovaa, ja usein vuorokauden ympäri jatkuva huoli läheisestä uuvuttaa vahvimmankin ihmisen. Kunnalliset vapaapäivät ovat tärkeitä, mutta aina ne eivät riitä, tai niitä on vaikea saada järjestymään joustavasti.</p>
+      
+      <h3>Famula sijaistaa luotettavasti omassa kodissa</h3>
+      <p>Yksityinen omaishoidon lomitus tarjoaa ratkaisun, kun kaipaat omaa aikaa – olipa kyse sitten muutaman tunnin asiointireissusta, teatteri-illasta tai kokonaisesta viikonloppu-vapaasta. Toimimme näin:</p>
+      <ul>
+        <li><strong>Turvallisuus edellä:</strong> Tutustumme asiakkaan tarpeisiin ja lääkitykseen etukäteen. Kotiin tulee aina sama, turvallinen ammattilainen.</li>
+        <li><strong>Aktiivinen arki:</strong> Emme vain "vaahdi", vaan teemme samoja asioita kuin omaishoitajakin – teemme ruokaa, ulkoilemme ja vietämme laatuaikaa yhdessä.</li>
+        <li><strong>Joustavuus:</strong> Voit tilata sijaishoidon juuri silloin kun sitä tarvitset, ilman pitkiä byrokraattisia prosesseja.</li>
+      </ul>
+      <p>Omaishoitajan jaksaminen on koko perheen etu. Älä epäröi pyytää apua!</p>
+    `
   }
 ];

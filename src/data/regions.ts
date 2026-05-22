@@ -25,8 +25,8 @@ export const regions: RegionData[] = [
     postalCode: '40100',
     locativeName: 'Keski-Suomessa',
     genitiveName: 'Keski-Suomen',
-    descriptionTitle: 'Lämminhenkistä tukea arkeen',
-    descriptionText: 'Famula Keski-Suomi tarjoaa kiireetöntä ja sydämellistä kotihoidon tukipalvelua sekä kotisairaanhoitoa. Olemme läsnä arjen hetkissä – autamme, kuuntelemme ja tuomme seuraa silloin, kun sitä tarvitaan.\n\nMeille tärkeintä on aito kohtaaminen ja turvallinen olo. Kuljemme rinnallasi luotettavasti ja ihmistä kunnioittaen.',
+    descriptionTitle: 'Luotettava yksityinen kotipalvelu ja kotihoito – Keski-Suomi',
+    descriptionText: 'Famula Keski-Suomi tarjoaa kiireetöntä ja sydämellistä kotihoidon tukipalvelua Jyväskylässä, Laukaassa, Muuramessa, Äänekoskella ja näiden lähialueilla. Olipa tarpeenasi ikäihmisten arjen apu, siivousapu tai kokonaisvaltainen yksityinen kotihoito, ammattilaisemme ovat tukenasi.\n\nMeille tärkeintä on aito kohtaaminen ja turvallinen olo. Kuljemme rinnallasi luotettavasti ja ihmistä kunnioittaen.',
   },
   {
     id: 'pohjois-savo',
@@ -39,6 +39,8 @@ export const regions: RegionData[] = [
     postalCode: '70100',
     locativeName: 'Pohjois-Savossa',
     genitiveName: 'Pohjois-Savon',
+    descriptionTitle: 'Kiireetön kotihoito ja arjen tukipalvelut – Pohjois-Savo',
+    descriptionText: 'Etsitkö luotettavaa kotipalvelua ikäihmiselle Savon sydämessä? Famulan yksityinen kotihoito ja arjen tukipalvelut tuovat avun suoraan kotiovelle Kuopiossa, Siilinjärvellä, Iisalmessa ja Varkaudessa.\n\nPalvelemme lämpimästi ja ammattitaidolla – aina siten, että sinulla on kotonasi tuttu ja turvallinen omahoitaja.',
   },
   {
     id: 'oulu',
@@ -51,8 +53,8 @@ export const regions: RegionData[] = [
     postalCode: '90100',
     locativeName: 'Oulussa',
     genitiveName: 'Oulun',
-    descriptionTitle: 'Luotettava kotipalvelu ikäihmisille Oulussa – Turvaa ja seuraa arkeen',
-    descriptionText: 'Etsitkö luotettavaa ja kiireetöntä apua ikääntyvälle läheisellesi Oulussa? Famulan kotipalvelu tarjoaa turvallista seuraa, apua kodin askareisiin ja kokonaisvaltaista huolenpitoa omassa kodissa. Meillä hoitaja ei vaihdu jokaisella käynnillä – luonasi käy aina sama, tuttu ja luotettava ammattilainen.\n\nPalvelemme laajasti Oulun alueella ja lähikunnissa. Olipa kyseessä sitten viikoittainen siivousapu, kaupassakäyntiseura tai laajempi päivittäinen tukeminen, räätälöimme palvelun juuri teidän tarpeisiinne sopivaksi. Kaikki palvelumme oikeuttavat kotitalousvähennykseen, ja avustamme mielellämme vähennyksen hakemisessa.',
+    descriptionTitle: 'Luotettava kotipalvelu ja kotihoito ikäihmisille – Oulun seutu',
+    descriptionText: 'Etsitkö kiireetöntä apua ikääntyvälle läheisellesi? Famulan yksityinen kotihoito tarjoaa turvallista seuraa ja arjen tukipalveluita laajasti Oulussa, Kempeleessä, Limingassa ja Muhoksella.\n\nOlipa kyseessä viikoittainen siivousapu, kaupassakäyntiseura tai päivittäinen kotihoidon tukipalvelu, räätälöimme avun juuri teille sopivaksi. Meillä hoitaja ei vaihdu jatkuvasti, vaan luonasi käy aina sama tuttu ammattilainen. Kaikki palvelumme oikeuttavat kotitalousvähennykseen.',
   },
   {
     id: 'etela-karjala',
@@ -65,7 +67,8 @@ export const regions: RegionData[] = [
     postalCode: '53100',
     locativeName: 'Etelä-Karjalassa',
     genitiveName: 'Etelä-Karjalan',
-    descriptionText: 'Turvallinen ja luotettava, sellainen on Famula Etelä-Karjala joka on läsnä arjessasi niin kodinhoidollisissa tehtävissä, seurana kuin saattoapuna.\n\nTarjoamme kotipalveluiden tukipalveluita ammattitaidolla, laadukkaasti ja aina ihmistä kunnioittaen. Teemme työmme  kiireettömästi, lämpimästi kohdaten ja asiakkaan toiveet huomioiden. Kanssamme tunnet olosi turvalliseksi ja kohdatuksi.',
+    descriptionTitle: 'Yksityinen kotihoito ja kotipalvelu – Etelä-Karjala',
+    descriptionText: 'Turvallinen ja luotettava, sellainen on Famula. Tarjoamme laadukasta kotihoitoa ja kotihoidon tukipalveluita Lappeenrannassa, Imatralla, Taipalsaarella ja Ruokolahdella. Ikäihmisten arjen apu on sydämenasiamme koko Etelä-Karjalan alueella.\n\nTeemme työmme kiireettömästi, lämpimästi kohdaten ja asiakkaan toiveet huomioiden. Kanssamme tunnet olosi turvalliseksi.',
   },
   {
     id: 'uusimaa',
@@ -78,7 +81,7 @@ export const regions: RegionData[] = [
     postalCode: '00100',
     locativeName: 'Uudellamaalla',
     genitiveName: 'Uudenmaan',
-    descriptionTitle: 'Lämminhenkistä tukea arkeen',
-    descriptionText: 'Famula Uusimaa tarjoaa kiireetöntä ja sydämellistä kotihoidon tukipalvelua sekä arjen apua koko pääkaupunkiseudulla ja lähialueilla. Olemme läsnä arjen hetkissä – autamme, kuuntelemme ja tuomme seuraa silloin, kun sitä tarvitaan.\n\nMeille tärkeintä on aito kohtaaminen ja turvallinen olo. Kuljemme rinnallasi luotettavasti ja ihmistä kunnioittaen, jotta asuminen omassa kodissa on turvallista mahdollisimman pitkään.',
+    descriptionTitle: 'Luotettava kotihoito ja kotipalvelu – Uusimaa',
+    descriptionText: 'Famula tarjoaa kiireetöntä ja sydämellistä yksityistä kotihoitoa koko pääkaupunkiseudulla. Palvelemme joustavasti ja ihmisläheisesti Helsingissä, Espoossa ja Vantaalla, sekä laajasti kehyskunnissa kuten Keravalla, Tuusulassa, Järvenpäässä ja Kirkkonummella.\n\nMeille tärkeintä on aito kohtaaminen ja turvallinen olo. Kuljemme rinnallasi luotettavasti ja ihmistä kunnioittaen, jotta asuminen omassa kodissa on turvallista ja mukavaa mahdollisimman pitkään.',
   }
 ];
