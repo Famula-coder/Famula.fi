@@ -333,5 +333,30 @@ export const articles: Article[] = [
       <h3>Voit hakea vähennyksen myös omien vanhempiesi puolesta</h3>
       <p>Muistathan, että voit saada kotitalousvähennyksen myös silloin, kun maksat kotipalvelua tai siivousta omien (tai puolisosi) vanhempien tai isovanhempien kotiin. Tällöin työn tilaajana ja maksajana toimit sinä, mutta työ suoritetaan heidän kodissaan.</p>
     `
+  },
+  {
+    id: '16',
+    slug: 'kotitalousvahennys-vanhemmille',
+    title: 'Tiesitkö? Voit ostaa kotiapua vanhemmillesi ja saada itse kotitalousvähennyksen',
+    category: 'Omaisille',
+    excerpt: 'Moni ei tiedä, että kotitalousvähennyksen voi saada myös omien tai puolison vanhempien kotiin ostetuista palveluista.',
+    icon: 'Gift',
+    content: `
+      <h2>Verohyöty jopa silloin, kun apu ostetaan toiseen osoitteeseen</h2>
+      <p>Kun ikääntyvien vanhempien tai isovanhempien arki alkaa vaatia tukea, lapset haluavat usein auttaa palkkaamalla ammattilaisen avuksi. Monelle tulee kuitenkin yllätyksenä, että tällöin <strong>työn tilaaja voi hyödyntää kotitalousvähennyksen omassa verotuksessaan</strong>.</p>
+      
+      <h3>Kuinka tämä toimii käytännössä?</h3>
+      <p>Laki kotitalousvähennyksestä mahdollistaa sen, että voit saada vähennyksen, kun maksat kotihoitoa, kotipalvelua tai siivousta:</p>
+      <ul>
+        <li>Omien vanhempiesi kotiin</li>
+        <li>Puolisosi vanhempien kotiin</li>
+        <li>Omien isovanhempiesi tai puolisosi isovanhempien kotiin</li>
+      </ul>
+      <p>Tällöin <strong>sinä toimit työn tilaajana ja laskun maksajana</strong>, mutta itse työ suoritetaan läheistesi kodissa. Famula toimittaa laskut suoraan sinulle, jolloin voit helposti ilmoittaa ne omassa OmaVero-palvelussasi aivan kuten ilmoittaisit omaankin kotiin ostetut palvelut.</p>
+
+      <h3>Miksi tämä on niin kannattavaa?</h3>
+      <p>Ikäihmisillä itsellään on usein pienet eläkkeet, ja heidän vuotuinen tuloveronsa saattaa olla niin pieni, etteivät he pysty hyödyntämään täyttä kotitalousvähennystä. Työssäkäyvä lapsi sen sijaan maksaa todennäköisesti riittävästi veroja saadakseen koko 35 % vähennyksen (vuonna 2025) hyödynnettyä.</p>
+      <p>Tämä on erinomainen tapa tarjota turvaa ja seuraa omille vanhemmille, ja samalla saada merkittävä taloudellinen hyöty yhteiskunnalta. Älä siis epäröi hankkia apua ajoissa!</p>
+    `
   }
 ];
