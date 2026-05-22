@@ -148,10 +148,38 @@ const Article = () => {
         <div className="article-cta">
           <h3>Heräsikö kysyttävää?</h3>
           <p>Ota yhteyttä alueesi vetäjään, niin katsotaan yhdessä, miten voimme auttaa parhaiten juuri teidän tilanteessanne.</p>
-          <Link to="/alueet" className="cta-button">
-            <Phone size={20} />
-            Katso alueesi yhteystiedot
-          </Link>
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1.5rem', position: 'relative', maxWidth: '300px', margin: '1.5rem auto 0' }}>
+            <select 
+              className="cta-button"
+              style={{ 
+                appearance: 'none', 
+                paddingRight: '2.5rem',
+                cursor: 'pointer',
+                border: 'none',
+                outline: 'none',
+                fontFamily: 'inherit',
+                fontSize: '1rem',
+                fontWeight: '600',
+                width: '100%',
+                margin: 0,
+                textAlign: 'center'
+              }}
+              onChange={(e) => {
+                if (e.target.value) navigate(e.target.value);
+              }}
+              defaultValue=""
+            >
+              <option value="" disabled>Valitse alueesi...</option>
+              <option value="/keski-suomi">Keski-Suomi</option>
+              <option value="/pohjois-savo">Pohjois-Savo</option>
+              <option value="/oulu">Oulu</option>
+              <option value="/etela-karjala">Etelä-Karjala</option>
+              <option value="/uusimaa">Uusimaa</option>
+            </select>
+            <div style={{ position: 'absolute', right: '1.2rem', top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none', color: 'white', display: 'flex' }}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+          </div>
         </div>
       </div>
     </>
