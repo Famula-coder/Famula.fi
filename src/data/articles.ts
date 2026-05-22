@@ -263,5 +263,75 @@ export const articles: Article[] = [
       </ul>
       <p>Omaishoitajan jaksaminen on koko perheen etu. Älä epäröi pyytää apua!</p>
     `
+  },
+  {
+    id: '13',
+    slug: 'muistisairaan-kotihoito',
+    title: 'Muistisairaan kotihoito: Turvallinen arki ja kohtaaminen',
+    category: 'Omaisille',
+    excerpt: 'Miten tukea muistisairasta kotona? Tutun hoitajan ja kiireettömän kohtaamisen merkitys korostuu arjessa.',
+    icon: 'Brain',
+    content: `
+      <h2>Muistisairaan arki vaatii rutiineja ja rauhaa</h2>
+      <p>Muistisairausdiagnoosi muuttaa arkea, ja moni omainen kantaa jatkuvaa huolta läheisensä turvallisuudesta. Vaikka fyysinen toimintakyky olisi vielä hyvä, asioiden unohtelu ja mahdollinen sekavuus tuovat omat haasteensa kotona asumiseen.</p>
+      
+      <h3>Famulan hoitajat kohtaavat ihmisen, ei sairautta</h3>
+      <p>Muistisairaan hoidossa <strong>kiire on pahin vihollinen</strong>. Jos hoitaja vaihtuu jatkuvasti ja asiat tehdään hopulla, sairaus saattaa oireilla voimakkaampana ahdistuksena ja levottomuutena.</p>
+      <ul>
+        <li><strong>Tuttu hoitaja:</strong> Famulalla käyntiin varataan riittävästi aikaa ja kotiin tulee aina sama hoitaja. Tämä luo muistisairaalle turvallisuuden tunteen.</li>
+        <li><strong>Arjen rytmitys:</strong> Autamme ylläpitämään päivärytmiä, muistutamme lääkkeistä ja ruokailuista, ja huolehdimme asunnon turvallisuudesta (kuten levyn sammuttamisesta).</li>
+        <li><strong>Inhimillinen kohtaaminen:</strong> Kohtaamme asiakkaan aina arvostavasti. Emme intä vastaan, vaan haemme ratkaisut ymmärryksen kautta.</li>
+      </ul>
+      <p>Voimme toimia myös omaishoitajan tukena ja tuoda mielenrauhaa silloin, kun et itse pääse paikalle.</p>
+    `
+  },
+  {
+    id: '14',
+    slug: 'kotiutuminen-sairaalasta',
+    title: 'Sairaalasta kotiutuminen: Näin turvaat ikäihmisen toipumisen',
+    category: 'Hyvinvointi',
+    excerpt: 'Sairaalajakson tai leikkauksen jälkeinen kotiutuminen on kriittinen hetki. Oikea apu estää uudet tapaturmat.',
+    icon: 'Activity',
+    content: `
+      <h2>Kotiinpaluu on iloinen, mutta jännittävä asia</h2>
+      <p>Esimerkiksi lonkkaleikkauksen, infektion tai sairauskohtauksen jälkeen sairaalasta kotiutuminen on usein ikäihmiselle sekava vaihe. Sairaalassa apu on ollut napin painalluksen päässä, mutta kotona on pärjättävä jälleen itse. Tilastojen mukaan juuri kotiutumisen jälkeiset viikot ovat suurimman kaatumis- ja tapaturmariskin aikaa.</p>
+      
+      <h3>Väliaikainen tehotuki Famulalta</h3>
+      <p>Kaiken kotiavun ei tarvitse olla vuosikausia kestävää sopimusta. Voit tilata Famulan hoitajan tueksi juuri sairaalasta kotiutumisen jälkeisiksi kriittisiksi viikoiksi:</p>
+      <ul>
+        <li>Olemme vastassa kotona ja varmistamme, että jääkaapissa on ruokaa.</li>
+        <li>Avustamme peseytymisessä, wc-käynneissä ja liikkumisessa silloin, kun voimat ovat vielä vähissä.</li>
+        <li>Seuraamme toipumisen edistymistä, haavojen kuntoa ja huolehdimme kotihoito-ohjeiden noudattamisesta lääkkeiden suhteen.</li>
+      </ul>
+      <p>Kun voimat palautuvat, käyntejä voidaan harventaa tai ne voidaan lopettaa kokonaan – täysin teidän ehdoillanne.</p>
+    `
+  },
+  {
+    id: '15',
+    slug: 'nain-haet-kotitalousvahennysta',
+    title: 'Kuinka haet kotitalousvähennystä käytännössä? Vaiheittainen opas',
+    category: 'Hinnoittelu',
+    excerpt: 'Kotitalousvähennyksen hakeminen on tehty nykyään erittäin helpoksi. Ota kuitit talteen ja tee ilmoitus OmaVerossa näillä ohjeilla.',
+    icon: 'FileText',
+    content: `
+      <h2>Verohyöty taskuun muutamalla klikkauksella</h2>
+      <p>Monia jännittää kotitalousvähennyksen hakeminen, koska verotus asiana voi tuntua monimutkaiselta. Todellisuudessa vähennyksen hakeminen on kuitenkin nopeaa ja yksinkertaista, ja se säästää sinulta satoja tai jopa tuhansia euroja vuodessa!</p>
+      
+      <h3>Vaihe 1: Säästä Famulan laskut</h3>
+      <p>Ensimmäinen askel on pitää tallessa kaikki vuoden aikana maksamasi Famulan kotipalvelu- tai siivouslaskut. Famulan laskuilla on aina eriteltynä <strong>työn osuus</strong>, sillä vain työn osuudesta voi saada vähennyksen (mahdollisista tarvikkeista ei). Jos tilaat palvelua säännöllisesti, toimitamme sinulle halutessasi yhteenvedon koko vuoden maksuista kerralla!</p>
+      
+      <h3>Vaihe 2: Tee ilmoitus OmaVerossa (tai paperilla)</h3>
+      <p>Helpoin tapa ilmoittaa kulut on Verohallinnon sähköinen <strong>OmaVero</strong>-palvelu:</p>
+      <ol>
+        <li>Kirjaudu OmaVeroon pankkitunnuksillasi.</li>
+        <li>Valitse etusivulta kohta <em>"Verokortit ja ennakkovero"</em> ja sieltä <em>"Kotitalousvähennys"</em>.</li>
+        <li>Ilmoita palvelun tuottaneen yrityksen (Famulan) Y-tunnus.</li>
+        <li>Kirjaa laskun loppusumma ja siitä eritelty työn osuus. Järjestelmä laskee 35 % vähennyksen ja 150 euron omavastuun puolestasi täysin automaattisesti!</li>
+      </ol>
+      <p><em>Vinkki:</em> Voit ilmoittaa kulut pitkin vuotta aina, kun olet maksanut laskun, jolloin veroprosenttisi pienenee heti loppuvuodeksi. Voit myös ilmoittaa kaikki kerralla keväällä esitäytetyn veroilmoituksen tarkistamisen yhteydessä, jolloin saat rahat takaisin veronpalautuksena.</p>
+      
+      <h3>Voit hakea vähennyksen myös omien vanhempiesi puolesta</h3>
+      <p>Muistathan, että voit saada kotitalousvähennyksen myös silloin, kun maksat kotipalvelua tai siivousta omien (tai puolisosi) vanhempien tai isovanhempien kotiin. Tällöin työn tilaajana ja maksajana toimit sinä, mutta työ suoritetaan heidän kodissaan.</p>
+    `
   }
 ];
