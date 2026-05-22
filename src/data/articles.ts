@@ -358,5 +358,26 @@ export const articles: Article[] = [
       <p>Ikäihmisillä itsellään on usein pienet eläkkeet, ja heidän vuotuinen tuloveronsa saattaa olla niin pieni, etteivät he pysty hyödyntämään täyttä kotitalousvähennystä. Työssäkäyvä lapsi sen sijaan maksaa todennäköisesti riittävästi veroja saadakseen koko 35 % vähennyksen (vuonna 2025) hyödynnettyä.</p>
       <p>Tämä on erinomainen tapa tarjota turvaa ja seuraa omille vanhemmille, ja samalla saada merkittävä taloudellinen hyöty yhteiskunnalta. Älä siis epäröi hankkia apua ajoissa!</p>
     `
+  },
+  {
+    id: '17',
+    slug: 'seuraa-sairaalaan-tai-hoivakotiin',
+    title: 'Vierailut sairaalaan ja hoivakotiin – Ilahduta läheistäsi kiireettömällä seuralla',
+    category: 'Omaisille',
+    excerpt: 'Voit tilata Famulan hoitajan vierailulle myös sairaalaan tai hoivakotiin lukemaan lehteä, ulkoilemaan ja pitämään seuraa.',
+    icon: 'Sun',
+    content: `
+      <h2>Kun omat resurssit tai aika eivät riitä päivittäisiin vierailuihin</h2>
+      <p>Sairaalajaksot tai asuminen hoivakodissa voivat olla ikäihmiselle yksinäistä aikaa. Julkisen puolen hoitajilla ja lääkäreillä on kädet täynnä työtä, ja aikaa jokaiselle potilaalle tai asukkaalle on varattu harmillisen vähän. Päivät voivat tuntua pitkiltä, jos omaiset asuvat kaukana tai käyvät töissä, eivätkä pääse vierailemaan niin usein kuin haluaisivat.</p>
+      
+      <h3>Famula tuo iloa ja virikkeitä laitoksen arkeen</h3>
+      <p>Tiesitkö, että voit tilata Famulan hoitajan vierailemaan läheisesi luona myös sairaalassa tai hoivakodissa? Emme puutu lääketieteelliseen hoitoon, vaan tarjoamme sitä, mistä laitoksissa on huutava pula: <strong>aikaa ja inhimillistä läsnäoloa</strong>.</p>
+      <ul>
+        <li><strong>Virikkeellinen seura:</strong> Voimme istua alas lukemaan päivän lehteä, keskustella ajankohtaisista asioista tai kuunnella musiikkia.</li>
+        <li><strong>Turvallinen ulkoilu:</strong> Sairaalan tai hoivakodin pihalla piipahtaminen pyörätuolin tai rollaattorin kanssa piristää mieltä valtavasti.</li>
+        <li><strong>Asiointiapu laitoksessa:</strong> Voimme hakea sairaalan kanttiinista pientä herkkua tai kahvia, ja pitää asiakkaalle seuraa kahvitteluhetken ajan.</li>
+      </ul>
+      <p>Säännöllinen ystävän vierailu katkaisee pitkän päivän ja ylläpitää elämäniloa. Voit ilahduttaa läheistäsi tilaamalla meidät käymään, ja samalla saat itsellesi mielenrauhan siitä, ettei hän joudu olemaan yksin.</p>
+    `
   }
 ];
