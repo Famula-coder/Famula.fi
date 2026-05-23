@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 // import ContactForm from '../components/ContactForm';
 import { Heart, ExternalLink, ArrowRight, ChevronDown, ShoppingCart, UtensilsCrossed, Sparkles, HandHeart, Footprints, Music2, Phone, Coffee, User, Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { useRef } from 'react';
+import PricingPackagesList from '../components/PricingPackages';
 
 const testimonials = [
   { text: "Minä aina odotan näitä päiviä, kun sinä tulet. Siitä tulee niin hyvä mieli, että hykerryttää! Sinä et hoida pelkästään minun kotia, vaan myös minun mieltä.", author: "Omainen", city: "Kuopio", tag: "Kotipalvelu ja Seura", icon: <Heart size={20} color="white" /> },
@@ -694,6 +695,29 @@ const Home = () => {
 {/* ── ESIMERKIT / ACCORDION ── */}
     <section style={{ background: 'var(--color-white)', padding: '5rem 0' }}>
       <div className="container" style={{ maxWidth: '820px' }}>
+        <div style={{ textAlign: 'center', maxWidth: '620px', margin: '0 auto 3rem' }}>
+          <div style={{
+            display: 'inline-flex', alignItems: 'center', gap: '0.45rem',
+            padding: '0.5rem 1.1rem', background: 'rgba(230,190,186,0.15)',
+            borderRadius: '50px', fontWeight: '600', fontSize: '0.9rem',
+            color: 'var(--color-brown)', marginBottom: '1rem',
+          }}>
+            <Heart size={14} /> Räätälöityä juuri sinulle
+          </div>
+          <h2 style={{ 
+            color: 'var(--color-primary)', 
+            marginBottom: '0.75rem',
+            wordBreak: 'break-word',
+            hyphens: 'auto'
+          }}>
+            Räätälöimme palvelun juuri teidän tarpeisiinne
+          </h2>
+          <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.7' }}>
+            Meillä ei ole valmiita "liukuhihnapaketteja". Jokainen ihminen ja tilanne on erilainen, joten palvelun sisältö ja tunnit räätälöidään aina tismalleen sinun toiveidesi mukaan. Tässä kolme esimerkkiä siitä, millaisia apukokonaisuuksia asiakkaamme ovat itselleen koonneet.
+          </p>
+        </div>
+
+        <PricingPackagesList />
 
 
         

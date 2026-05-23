@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronDown, Clock, CheckCircle2, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { ChevronDown, Clock, CheckCircle2 } from 'lucide-react';
+import { regions } from '../data/regions';
 
 export const pricingExamples = [
   {
@@ -64,6 +65,7 @@ export const pricingExamples = [
 
 export const PricingAccordion = ({ example }: { example: typeof pricingExamples[0] }) => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div style={{
@@ -174,34 +176,45 @@ export const PricingAccordion = ({ example }: { example: typeof pricingExamples[
               {example.priceNote}
             </div>
             
-            <Link 
-              to="/ota-yhteytta" 
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '0.5rem',
-                background: example.borderColor,
-                color: 'white',
-                padding: '0.9rem 1.5rem',
-                borderRadius: '50px',
-                fontWeight: '600',
-                textDecoration: 'none',
-                transition: 'all 0.2s ease',
-                width: '100%',
-                boxShadow: `0 4px 15px ${example.colorLight}`,
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.filter = 'brightness(1.1)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.filter = 'brightness(1)';
-              }}
-            >
-              Varaa ilmainen tutustumiskäynti <ArrowRight size={18} />
-            </Link>
+            <div style={{ position: 'relative', width: '100%' }}>
+              <select
+                onChange={(e) => {
+                  if (e.target.value) {
+                    navigate(`/${e.target.value}`);
+                  }
+                }}
+                style={{
+                  appearance: 'none',
+                  width: '100%',
+                  background: example.borderColor,
+                  color: 'white',
+                  padding: '0.9rem 1.5rem',
+                  borderRadius: '50px',
+                  fontWeight: '600',
+                  fontSize: '1rem',
+                  border: 'none',
+                  cursor: 'pointer',
+                  boxShadow: `0 4px 15px ${example.colorLight}`,
+                  textAlign: 'center',
+                  transition: 'all 0.2s ease',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                  e.currentTarget.style.filter = 'brightness(1.1)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.filter = 'brightness(1)';
+                }}
+              >
+                <option value="">Varaa ilmainen tutustumiskäynti ▾</option>
+                {regions.map((r) => (
+                  <option key={r.id} value={r.id} style={{ color: 'black' }}>
+                    {r.name}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
         </div>
       </div>
