@@ -135,6 +135,9 @@ const examples = [
       { label: 'Kodin kevyt siistiminen', text: 'Huolehdimme kodin perusilmeestä, jotta sinun on mukava ja raikas olla.' },
       { label: 'Turvallinen verkosto', text: 'Pidämme tarvittaessa säännöllisesti yhteyttä terveydenhuollon ammattilaisiin puolestasi.' },
     ],
+    priceBase: '119,85 € / viikko',
+    priceAfter: '77,90 € / viikko',
+    priceNote: '(sisältää 35% kotitalousvähennyksen, omavastuu 65%)',
   },
   {
     number: '2',
@@ -151,6 +154,9 @@ const examples = [
       { label: 'Puhtaat vaatteet ja raikas koti', text: 'Pyykkihuolto kerran viikossa ja kodin siivous joka toinen viikko.' },
       { label: 'Digiapu ja opastus', text: 'Neuvomme lempeästi älypuhelimen tai tabletin käytössä — yhteydenpiito läheisiin sujuu leikiten!' },
     ],
+    priceBase: '239,70 € / viikko',
+    priceAfter: '155,81 € / viikko',
+    priceNote: '(sisältää 35% kotitalousvähennyksen, omavastuu 65%)',
   },
   {
     number: '3',
@@ -168,6 +174,9 @@ const examples = [
       { label: 'Yhteisiä hetkiä keittiössä', text: 'Valmistamme ruokaa yhdessä toiveidesi mukaan.' },
       { label: 'Ympärivuorokautinen turva', text: 'Kotiin asennettava turvapuhelinpalvelu takaa, että apu on napin painalluksen päässä myös öisin.' },
     ],
+    priceBase: undefined as string | undefined,
+    priceAfter: 'Varaa ilmainen tutustumiskäynti',
+    priceNote: 'Räätälöimme kokonaisvaltaisen huolenpidon yksilöllisesti.',
   },
 ];
 
@@ -235,7 +244,7 @@ const Accordion = ({ example }: { example: typeof examples[0] }) => {
 
       {/* Sisältö */}
       <div style={{
-        maxHeight: open ? '900px' : '0',
+        maxHeight: open ? '2000px' : '0',
         overflow: 'hidden',
         transition: 'max-height 0.5s cubic-bezier(0.4,0,0.2,1)',
       }}>
@@ -260,6 +269,60 @@ const Accordion = ({ example }: { example: typeof examples[0] }) => {
               </li>
             ))}
           </ul>
+          
+          {/* Pricing Box */}
+          <div style={{
+            marginTop: '2rem',
+            padding: '1.5rem',
+            background: 'white',
+            borderRadius: '12px',
+            border: `1px solid ${example.borderColor}40`,
+            boxShadow: '0 4px 20px rgba(0,0,0,0.03)',
+          }}>
+            {example.priceBase && (
+              <div style={{ color: '#64748b', fontSize: '0.95rem', marginBottom: '0.5rem' }}>
+                Arvioitu perushinta (alv 0%): <span style={{ textDecoration: 'line-through' }}>{example.priceBase}</span>
+              </div>
+            )}
+            <div style={{ color: 'var(--color-primary)', fontSize: '1.2rem', fontWeight: '700', marginBottom: '0.2rem' }}>
+              {example.priceBase ? 'Hinta kotitalousvähennyksen (35%) jälkeen:' : 'Pyydä tarjous!'}
+            </div>
+            <div style={{ fontSize: '1.6rem', fontWeight: '800', color: example.borderColor, marginBottom: '0.5rem' }}>
+              {example.priceAfter}
+            </div>
+            <div style={{ fontSize: '0.85rem', color: '#64748b', marginBottom: '1.5rem' }}>
+              {example.priceNote}
+            </div>
+            
+            <Link 
+              to="/ota-yhteytta" 
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '0.5rem',
+                background: example.borderColor,
+                color: 'white',
+                padding: '0.9rem 1.5rem',
+                borderRadius: '50px',
+                fontWeight: '600',
+                textDecoration: 'none',
+                transition: 'all 0.2s ease',
+                width: '100%',
+                boxShadow: `0 4px 15px ${example.colorLight}`,
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.filter = 'brightness(1.1)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.filter = 'brightness(1)';
+              }}
+            >
+              Varaa ilmainen tutustumiskäynti <ArrowRight size={18} />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
