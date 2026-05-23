@@ -2,8 +2,16 @@ import { Link, useNavigate } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import Hero from '../components/Hero';
 // import ContactForm from '../components/ContactForm';
-import { Heart, ExternalLink, ArrowRight, ChevronDown, ShoppingCart, UtensilsCrossed, Sparkles, HandHeart, Footprints, Music2, Clock, CheckCircle2, Phone } from 'lucide-react';
-import { useState } from 'react';
+import { Heart, ExternalLink, ArrowRight, ChevronDown, ShoppingCart, UtensilsCrossed, Sparkles, HandHeart, Footprints, Music2, Clock, CheckCircle2, Phone, Coffee, User, Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { useState, useRef } from 'react';
+
+const testimonials = [
+  { text: "Minä aina odotan näitä päiviä, kun sinä tulet. Siitä tulee niin hyvä mieli, että hykerryttää! Sinä et hoida pelkästään minun kotia, vaan myös minun mieltä.", author: "Omainen", city: "Kuopio", tag: "Kotipalvelu ja Seura", icon: <Heart size={20} color="white" /> },
+  { text: "Saatiin niin monta asiaa hoidettua! Nyt on taas vapaampi hengittää.", author: "Asiakas", city: "Laukaa", tag: "Asiointiapu", icon: <Sparkles size={20} color="white" /> },
+  { text: "Oot sinä melkoinen epeli, kun vesilukonkin korjasit! Olet minun enkelini.", author: "Asiakas", city: "Jyväskylä", tag: "Apumiespalvelu", icon: <Star size={20} color="white" /> },
+  { text: "Pyysin teitä asiointiapuun, mutta sainkin samalla apua ihan kaikkeen, mitä keksinkään!", author: "Asiakas", city: "Lappeenranta", tag: "Kotihoito", icon: <User size={20} color="white" /> },
+  { text: "Voi että, huolisin sinut tänne vaikka joka päivä minua piristämään!", author: "Asiakas", city: "Oulu", tag: "Seura", icon: <Coffee size={20} color="white" /> },
+];
 
 /* ── Tiimiläiset ── */
 const team = [
@@ -261,6 +269,16 @@ const Accordion = ({ example }: { example: typeof examples[0] }) => {
 
 const Home = () => {
   const navigate = useNavigate();
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scrollTestimonials = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const { scrollLeft, clientWidth } = scrollRef.current;
+      const scrollTo = direction === 'left' ? scrollLeft - (clientWidth > 400 ? 400 : clientWidth) : scrollLeft + (clientWidth > 400 ? 400 : clientWidth);
+      scrollRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <SEO 
@@ -478,12 +496,138 @@ const Home = () => {
           margin-bottom: 0.75rem;
         }
         .team-card-quote {
-          font-size: 0.88rem;
-          color: #64748b;
-          line-height: 1.6;
+          font-size: 0.95rem;
+          color: #475569;
           font-style: italic;
-          margin: 0;
+          line-height: 1.5;
         }
+
+        /* Testimonials Carousel */
+        .testimonials-wrapper {
+          position: relative;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        .testimonials-track {
+          display: flex;
+          gap: 2rem;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+          padding: 1rem 0.5rem 3rem 0.5rem;
+        }
+        .testimonials-track::-webkit-scrollbar {
+          display: none;
+        }
+        .testimonial-card {
+          flex: 0 0 350px;
+          scroll-snap-align: center;
+          background: white;
+          border-radius: 20px;
+          padding: 2.5rem 2rem;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          transition: transform 0.3s ease;
+        }
+        .testimonial-card:hover {
+          transform: translateY(-5px);
+        }
+        @media (max-width: 768px) {
+          .testimonial-card {
+            flex: 0 0 85vw;
+          }
+        }
+        .testimonial-quote-icon {
+          position: absolute;
+          top: 1.5rem;
+          right: 1.5rem;
+          color: var(--color-accent);
+          opacity: 0.3;
+        }
+        .testimonial-text {
+          font-size: 1.15rem;
+          color: #334155;
+          line-height: 1.6;
+          margin-bottom: 2rem;
+          flex-grow: 1;
+        }
+        .testimonial-author-row {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          border-top: 1px solid #f1f5f9;
+          padding-top: 1.5rem;
+        }
+        .testimonial-avatar {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background: var(--color-secondary);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+        .testimonial-author-info {
+          display: flex;
+          flex-direction: column;
+        }
+        .testimonial-signature {
+          font-family: 'Caveat', cursive;
+          font-size: 1.7rem;
+          color: var(--color-primary);
+          line-height: 1;
+        }
+        .testimonial-city {
+          font-size: 0.85rem;
+          color: #64748b;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          font-weight: 600;
+        }
+        .testimonial-tag {
+          display: inline-block;
+          background: var(--color-background-warm);
+          color: var(--color-primary);
+          font-size: 0.75rem;
+          font-weight: 700;
+          padding: 0.3rem 0.8rem;
+          border-radius: 50px;
+          margin-bottom: 1.5rem;
+          align-self: flex-start;
+        }
+        .carousel-btn {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background: white;
+          border: 1px solid #e2e8f0;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          color: var(--color-primary);
+          z-index: 10;
+          transition: all 0.2s ease;
+        }
+        .carousel-btn:hover {
+          background: var(--color-primary);
+          color: white;
+        }
+        .carousel-btn.left { left: -25px; }
+        .carousel-btn.right { right: -25px; }
+        @media (max-width: 1250px) {
+          .carousel-btn { display: none; }
+        }
+
+
 
         /* ── Hinnasto-osio ── */
         .pricing-section {
@@ -875,37 +1019,41 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── ASIAKKAAT KERTOVAT ── */}
-      <section style={{ padding: '5rem 0', background: 'var(--color-background-warm)' }}>
+      {/* ── ASIAKKAAT KERTOVAT (DYNAAMINEN KARUSELLI) ── */}
+      <section style={{ padding: '5rem 1.5rem', background: 'var(--color-background-warm)', overflow: 'hidden' }}>
         <div className="container text-center">
           <h2 style={{ color: 'var(--color-primary)', marginBottom: '3rem' }}>Asiakkaamme kertovat</h2>
-          <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+          
+          <div className="testimonials-wrapper">
+            <button className="carousel-btn left" onClick={() => scrollTestimonials('left')} aria-label="Edellinen">
+              <ChevronLeft size={24} />
+            </button>
             
-            <div style={{ background: 'white', padding: '2.5rem', borderRadius: '16px', flex: '1', minWidth: '300px', maxWidth: '350px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', textAlign: 'left' }}>
-              <div style={{ color: '#fbbf24', fontSize: '1.25rem', marginBottom: '1rem' }}>★★★★★</div>
-              <p style={{ fontSize: '1.1rem', color: '#334155', fontStyle: 'italic', marginBottom: '1.5rem', lineHeight: '1.6' }}>
-                "Minä aina odotan näitä päiviä, kun sinä tulet. Siitä tulee niin hyvä mieli, että hykerryttää! Sinä et hoida pelkästään minun kotia, vaan myös minun mieltä."
-              </p>
-              <div style={{ fontWeight: '600', color: 'var(--color-primary)' }}>Asiakas, Kuopio</div>
+            <div className="testimonials-track" ref={scrollRef}>
+              {testimonials.map((t, index) => (
+                <div key={index} className="testimonial-card">
+                  <Quote className="testimonial-quote-icon" size={40} />
+                  <span className="testimonial-tag">{t.tag}</span>
+                  <p className="testimonial-text">"{t.text}"</p>
+                  
+                  <div className="testimonial-author-row">
+                    <div className="testimonial-avatar" style={{ background: index % 2 === 0 ? 'var(--color-secondary)' : 'var(--color-lavender)' }}>
+                      {t.icon}
+                    </div>
+                    <div className="testimonial-author-info text-left">
+                      <span className="testimonial-signature">{t.author}</span>
+                      <span className="testimonial-city">{t.city}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
 
-            <div style={{ background: 'white', padding: '2.5rem', borderRadius: '16px', flex: '1', minWidth: '300px', maxWidth: '350px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', textAlign: 'left' }}>
-              <div style={{ color: '#fbbf24', fontSize: '1.25rem', marginBottom: '1rem' }}>★★★★★</div>
-              <p style={{ fontSize: '1.1rem', color: '#334155', fontStyle: 'italic', marginBottom: '1.5rem', lineHeight: '1.6' }}>
-                "Pyysin teitä asiointiapuun, mutta sainkin samalla apua ihan kaikkeen, mitä keksinkään!"
-              </p>
-              <div style={{ fontWeight: '600', color: 'var(--color-primary)' }}>Asiakas, Lappeenranta</div>
-            </div>
-
-            <div style={{ background: 'white', padding: '2.5rem', borderRadius: '16px', flex: '1', minWidth: '300px', maxWidth: '350px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', textAlign: 'left' }}>
-              <div style={{ color: '#fbbf24', fontSize: '1.25rem', marginBottom: '1rem' }}>★★★★★</div>
-              <p style={{ fontSize: '1.1rem', color: '#334155', fontStyle: 'italic', marginBottom: '1.5rem', lineHeight: '1.6' }}>
-                "Voi että, huolisin sinut tänne vaikka joka päivä minua piristämään!"
-              </p>
-              <div style={{ fontWeight: '600', color: 'var(--color-primary)' }}>Asiakas, Oulu</div>
-            </div>
-
+            <button className="carousel-btn right" onClick={() => scrollTestimonials('right')} aria-label="Seuraava">
+              <ChevronRight size={24} />
+            </button>
           </div>
+          
         </div>
       </section>
 
