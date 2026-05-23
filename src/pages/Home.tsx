@@ -710,10 +710,10 @@ const Home = () => {
             wordBreak: 'break-word',
             hyphens: 'auto'
           }}>
-            Esimerkkejä palvelukokonaisuuksista
+            Räätälöimme palvelun juuri teidän tarpeisiinne
           </h2>
           <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.7' }}>
-            Tässä kolme esimerkkiä siitä, millaisia apukokonaisuuksia asiakkaamme ovat itselleen räätälöineet. Avaa esimerkit ja katso, mikä sopisi sinulle.
+            Meillä ei ole valmiita "liukuhihnapaketteja". Jokainen ihminen ja tilanne on erilainen, joten palvelun sisältö ja tunnit räätälöidään aina tismalleen sinun toiveidesi mukaan. Tässä kolme esimerkkiä siitä, millaisia apukokonaisuuksia asiakkaamme ovat itselleen koonneet.
           </p>
         </div>
 
