@@ -2,6 +2,7 @@ import { useParams, Navigate, Link } from 'react-router-dom';
 import { regions } from '../data/regions';
 import { SEO } from '../components/SEO';
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import PricingPackagesList from '../components/PricingPackages';
 // import ContactForm from '../components/ContactForm';
 import { Helmet } from 'react-helmet-async';
 
@@ -175,6 +176,18 @@ const Region = () => {
           </div>
         </div>
       </div>
+
+      <section style={{ padding: '5rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
+        <div className="container">
+          <div className="text-center" style={{ marginBottom: '3rem' }}>
+            <h2 style={{ color: 'var(--color-primary)' }}>Esimerkkejä palvelukokonaisuuksista alueella {region.locativeName}</h2>
+            <p style={{ color: '#475569', fontSize: '1.05rem', marginTop: '1rem', maxWidth: '700px', margin: '1rem auto 0' }}>
+              Tässä kolme esimerkkiä siitä, millaisia apukokonaisuuksia asiakkaamme ovat itselleen räätälöineet. Avaa esimerkit ja katso, mikä sopisi sinulle.
+            </p>
+          </div>
+          <PricingPackagesList />
+        </div>
+      </section>
 
       {/* <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
         <ContactForm />
