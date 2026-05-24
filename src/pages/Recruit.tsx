@@ -43,6 +43,93 @@ const Recruit = () => {
         </div>
       </section>
 
+      {/* Paikallinen tuntityö */}
+      <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
+        <div className="container" style={{ maxWidth: '800px', textAlign: 'center' }}>
+          <h2 style={{ color: 'var(--color-primary)', marginBottom: '1.5rem' }}>
+            Haluatko auttaa 1-2 ikäihmistä joustavasti?
+          </h2>
+          <p style={{ color: '#475569', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '3rem' }}>
+            Etsitkö merkityksellistä lisäansiota opintojen tai eläkepäivien oheen? Voit toimia meillä myös joustavasti tuntityöntekijänä ja sitoutua auttamaan muutamaa oman alueesi ikäihmistä. Ota yhteyttä suoraan oman paikkakuntasi vetäjään!
+          </p>
+          
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+            {regions.map((region) => (
+              <button
+                key={region.id}
+                onClick={() => navigate(`/${region.id}`)}
+                style={{
+                  background: 'white',
+                  border: '1px solid #e2e8f0',
+                  padding: '1rem 1.5rem',
+                  borderRadius: '50px',
+                  cursor: 'pointer',
+                  fontWeight: '500',
+                  color: 'var(--color-primary)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  transition: 'all 0.2s ease',
+                  boxShadow: '0 2px 10px rgba(0,0,0,0.02)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = 'var(--color-secondary)';
+                  e.currentTarget.style.color = 'var(--color-secondary)';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = '#e2e8f0';
+                  e.currentTarget.style.color = 'var(--color-primary)';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+              >
+                <MapPin size={16} /> {region.name}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Aluevetäjät / Yrittäjät */}
+      <section style={{ padding: '6rem 1.5rem', backgroundColor: 'white' }}>
+        <div className="container" style={{ maxWidth: '900px', textAlign: 'center' }}>
+          <div style={{ display: 'inline-flex', padding: '1rem', background: 'var(--color-lavender)', borderRadius: '50%', marginBottom: '1.5rem' }}>
+            <Star size={32} color="var(--color-primary)" />
+          </div>
+          <h2 style={{ color: 'var(--color-primary)', marginBottom: '1.5rem' }}>
+            Tule vetämään uutta aluetta – Polku yrittäjyyteen ja omistajuuteen
+          </h2>
+          <p style={{ color: '#475569', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '2rem' }}>
+            Haluatko viedä urasi seuraavalle tasolle ja rakentaa jotain omaa, mutta vahvan konseptin ja tiimin tuella? Uusia alueita perustetaan aika ajoin joka puolelle Suomea, ja esimerkiksi Uudellemaalle ja suurempiin kasvukeskuksiin voi mahtua useampia aluevetäjiä.
+          </p>
+          <p style={{ color: '#475569', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '3rem' }}>
+            Etsimme rohkeita ja sydämellisiä sote-ammattilaisia avaamaan Famulalle uusia alueita. Tarjoamme sinulle ainutlaatuisen mahdollisuuden päästä kiinni yrittäjyyteen ja rakentaa selkeä polku jopa omistajuuteen asti. Jos sinulla on paloa johtaa omaa tiimiäsi Famulan arvojen mukaisesti, haluamme ehdottomasti kuulla sinusta!
+          </p>
+          
+          <div style={{ 
+            background: 'var(--color-background-warm)', 
+            padding: '2.5rem', 
+            borderRadius: '20px', 
+            display: 'inline-block',
+            textAlign: 'left',
+            boxShadow: '0 4px 15px rgba(0,0,0,0.03)'
+          }}>
+            <h4 style={{ margin: '0 0 1rem', color: 'var(--color-primary)' }}>Kiinnostuitko aluevetäjyydestä? Ota yhteyttä!</h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#475569' }}>
+                <span style={{ fontWeight: '600' }}>Valma Linnanmäki</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#475569' }}>
+                <a href="mailto:valma.linnanmaki@famula.fi" style={{ color: 'var(--color-primary)', textDecoration: 'none', fontWeight: '600' }}>valma.linnanmaki@famula.fi</a>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#475569' }}>
+                <a href="tel:+358407421115" style={{ color: 'var(--color-primary)', textDecoration: 'none', fontWeight: '600' }}>040 742 1115</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Sote-ammattilaiset */}
       <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
         <div className="container">
@@ -116,93 +203,6 @@ const Recruit = () => {
                 </select>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Aluevetäjät / Yrittäjät */}
-      <section style={{ padding: '6rem 1.5rem', backgroundColor: 'white' }}>
-        <div className="container" style={{ maxWidth: '900px', textAlign: 'center' }}>
-          <div style={{ display: 'inline-flex', padding: '1rem', background: 'var(--color-lavender)', borderRadius: '50%', marginBottom: '1.5rem' }}>
-            <Star size={32} color="var(--color-primary)" />
-          </div>
-          <h2 style={{ color: 'var(--color-primary)', marginBottom: '1.5rem' }}>
-            Tule vetämään uutta aluetta – Polku yrittäjyyteen ja omistajuuteen
-          </h2>
-          <p style={{ color: '#475569', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '2rem' }}>
-            Haluatko viedä urasi seuraavalle tasolle ja rakentaa jotain omaa, mutta vahvan konseptin ja tiimin tuella? Uusia alueita perustetaan aika ajoin joka puolelle Suomea, ja esimerkiksi Uudellemaalle ja suurempiin kasvukeskuksiin voi mahtua useampia aluevetäjiä.
-          </p>
-          <p style={{ color: '#475569', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '3rem' }}>
-            Etsimme rohkeita ja sydämellisiä sote-ammattilaisia avaamaan Famulalle uusia alueita. Tarjoamme sinulle ainutlaatuisen mahdollisuuden päästä kiinni yrittäjyyteen ja rakentaa selkeä polku jopa omistajuuteen asti. Jos sinulla on paloa johtaa omaa tiimiäsi Famulan arvojen mukaisesti, haluamme ehdottomasti kuulla sinusta!
-          </p>
-          
-          <div style={{ 
-            background: 'var(--color-background-warm)', 
-            padding: '2.5rem', 
-            borderRadius: '20px', 
-            display: 'inline-block',
-            textAlign: 'left',
-            boxShadow: '0 4px 15px rgba(0,0,0,0.03)'
-          }}>
-            <h4 style={{ margin: '0 0 1rem', color: 'var(--color-primary)' }}>Kiinnostuitko aluevetäjyydestä? Ota yhteyttä!</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#475569' }}>
-                <span style={{ fontWeight: '600' }}>Valma Linnanmäki</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#475569' }}>
-                <a href="mailto:valma.linnanmaki@famula.fi" style={{ color: 'var(--color-primary)', textDecoration: 'none', fontWeight: '600' }}>valma.linnanmaki@famula.fi</a>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#475569' }}>
-                <a href="tel:+358407421115" style={{ color: 'var(--color-primary)', textDecoration: 'none', fontWeight: '600' }}>040 742 1115</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Paikallinen tuntityö */}
-      <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
-        <div className="container" style={{ maxWidth: '800px', textAlign: 'center' }}>
-          <h2 style={{ color: 'var(--color-primary)', marginBottom: '1.5rem' }}>
-            Haluatko auttaa 1-2 ikäihmistä joustavasti?
-          </h2>
-          <p style={{ color: '#475569', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '3rem' }}>
-            Etsitkö merkityksellistä lisäansiota opintojen tai eläkepäivien oheen? Voit toimia meillä myös joustavasti tuntityöntekijänä ja sitoutua auttamaan muutamaa oman alueesi ikäihmistä. Ota yhteyttä suoraan oman paikkakuntasi vetäjään!
-          </p>
-          
-          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-            {regions.map((region) => (
-              <button
-                key={region.id}
-                onClick={() => navigate(`/${region.id}`)}
-                style={{
-                  background: 'white',
-                  border: '1px solid #e2e8f0',
-                  padding: '1rem 1.5rem',
-                  borderRadius: '50px',
-                  cursor: 'pointer',
-                  fontWeight: '500',
-                  color: 'var(--color-primary)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.5rem',
-                  transition: 'all 0.2s ease',
-                  boxShadow: '0 2px 10px rgba(0,0,0,0.02)'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = 'var(--color-secondary)';
-                  e.currentTarget.style.color = 'var(--color-secondary)';
-                  e.currentTarget.style.transform = 'translateY(-2px)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = '#e2e8f0';
-                  e.currentTarget.style.color = 'var(--color-primary)';
-                  e.currentTarget.style.transform = 'translateY(0)';
-                }}
-              >
-                <MapPin size={16} /> {region.name}
-              </button>
-            ))}
           </div>
         </div>
       </section>
