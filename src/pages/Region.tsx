@@ -1,7 +1,7 @@
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { regions } from '../data/regions';
 import { SEO } from '../components/SEO';
-import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle, Heart, CheckCircle2 } from 'lucide-react';
 // import ContactForm from '../components/ContactForm';
 import { Helmet } from 'react-helmet-async';
 
@@ -176,7 +176,60 @@ const Region = () => {
         </div>
       </div>
 
-
+      {/* ── REKRYTOINTIOSIO ── */}
+      <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
+        <div className="container" style={{ maxWidth: '900px' }}>
+          <div style={{
+            background: 'white',
+            borderRadius: '24px',
+            padding: '4rem 3rem',
+            textAlign: 'center',
+            boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
+            borderTop: '6px solid var(--color-primary)'
+          }}>
+            <h2 style={{ color: 'var(--color-primary)', marginBottom: '1.5rem' }}>
+              Tule tekemään merkityksellistä työtä alueella {region.locativeName}
+            </h2>
+            <p style={{ color: '#475569', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '2rem', maxWidth: '700px', margin: '0 auto 2rem' }}>
+              Etsimme jatkuvasti vahvistusta paikalliseen tiimiimme! 
+              Työskentely Famulassa on erittäin joustavaa: voit olla opiskelija tai eläkeläinen, joka haluaa sitoutua auttamaan vain 1-2 ikäihmistä säännöllisesti tuntipalkalla. 
+              Myös kokeneille ammattilaisille on tarjolla osa- ja kokoaikatyötä.
+            </p>
+            <div style={{ 
+              display: 'flex', 
+              gap: '2rem', 
+              justifyContent: 'center', 
+              flexWrap: 'wrap', 
+              marginBottom: '2.5rem',
+              textAlign: 'left'
+            }}>
+              <div style={{ flex: '1 1 300px', background: 'var(--color-background-warm)', padding: '1.5rem', borderRadius: '12px' }}>
+                <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <Heart size={20} color="var(--color-brown)" /> Joustava työaika
+                </h4>
+                <p style={{ color: '#475569', fontSize: '0.95rem', margin: 0, lineHeight: '1.6' }}>
+                  Päätä itse, kuinka paljon teet. Voit auttaa vain muutamaa ikäihmistä viikossa tai tehdä täysiä tunteja.
+                </p>
+              </div>
+              <div style={{ flex: '1 1 300px', background: 'var(--color-background-warm)', padding: '1.5rem', borderRadius: '12px' }}>
+                <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <CheckCircle2 size={20} color="var(--color-secondary)" /> Asenne ratkaisee
+                </h4>
+                <p style={{ color: '#475569', fontSize: '0.95rem', margin: 0, lineHeight: '1.6' }}>
+                  Sosiaali- tai terveysalan tutkinto on eduksi, mutta aito halu auttaa ja kohdata ihminen on tärkeintä.
+                </p>
+              </div>
+            </div>
+            
+            <p style={{ fontWeight: '600', color: 'var(--color-primary)', fontSize: '1.1rem', marginBottom: '0.75rem' }}>
+              Kiinnostuitko? Kysy avoimista paikoista suoraan aluevetäjältä!
+            </p>
+            <p style={{ color: '#475569', marginBottom: '0' }}>
+              Ota yhteyttä yllä olevilla {region.managerName.split(' ')[0]}n yhteystiedoilla (soita, laita viestiä tai sähköpostia) – odotamme yhteydenottoasi.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
         <ContactForm />
