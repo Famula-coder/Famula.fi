@@ -119,8 +119,15 @@ const Region = () => {
                   />
                   <div>
                     <strong style={{ display: 'block', fontSize: '1.1rem' }}>{region.managerName}</strong>
-                    <span style={{ color: '#64748b' }}>
-                      {region.managerName === 'Leena Huusko' ? 'Palveluesimies & Kehitysjohtaja, Famula Group Oy' : 'Palveluesimies'}
+                    <span style={{ color: '#64748b', display: 'flex', flexDirection: 'column' }}>
+                      {region.managerName === 'Leena Huusko' ? (
+                        <>
+                          <span>Palveluesimies, Famula Keski-Suomi</span>
+                          <span style={{ fontSize: '0.9em' }}>Kehitysjohtaja, Famula Group Oy</span>
+                        </>
+                      ) : (
+                        <span>Palveluesimies</span>
+                      )}
                     </span>
                   </div>
                 </div>
