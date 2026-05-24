@@ -197,7 +197,7 @@ const Region = () => {
             borderTop: '6px solid var(--color-primary)'
           }}>
             <h2 style={{ color: 'var(--color-primary)', marginBottom: '1.5rem' }}>
-              Tule tekemään merkityksellistä työtä alueella {region.locativeName}
+              Tule tekemään merkityksellistä työtä {region.genitiveName} alueella
             </h2>
             <p style={{ color: '#475569', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '2rem', maxWidth: '700px', margin: '0 auto 2rem' }}>
               Etsimme jatkuvasti vahvistusta paikalliseen tiimiimme! 
