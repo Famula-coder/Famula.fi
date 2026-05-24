@@ -36,6 +36,7 @@ const Navbar = () => {
           </div>
           <Link to="/#palvelut" onClick={closeMenu}>Palvelumme</Link>
           <Link to="/tarinamme" onClick={closeMenu}>Tarinamme</Link>
+          <Link to="/toihin-meille" onClick={closeMenu}>Töihin meille</Link>
           <Link to="/tietopankki" onClick={closeMenu}>Tietopankki</Link>
         </nav>
         <div className="navbar-actions">

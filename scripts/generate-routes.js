@@ -28,7 +28,8 @@ const staticRoutes = [
   'tarinamme',
   'tietopankki',
   'palvelut',
-  'ota-yhteytta'
+  'ota-yhteytta',
+  'toihin-meille'
 ];
 
 const allRoutes = [
