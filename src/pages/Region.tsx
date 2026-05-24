@@ -119,7 +119,9 @@ const Region = () => {
                   />
                   <div>
                     <strong style={{ display: 'block', fontSize: '1.1rem' }}>{region.managerName}</strong>
-                    <span style={{ color: '#64748b' }}>Palveluesimies</span>
+                    <span style={{ color: '#64748b' }}>
+                      {region.managerName === 'Leena Huusko' ? 'Palveluesimies & Kehitysjohtaja, Famula Group Oy' : 'Palveluesimies'}
+                    </span>
                   </div>
                 </div>
                 
