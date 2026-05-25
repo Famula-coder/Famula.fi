@@ -41,7 +41,7 @@ const Recruit = () => {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4rem', alignItems: 'center' }}>
             
             {/* Tekstiosa */}
-            <div style={{ flex: '1 1 450px' }}>
+            <div style={{ flex: '1 1 300px' }}>
               <div style={{
                 display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
                 padding: '0.6rem 1.2rem', background: 'rgba(230,190,186,0.3)',

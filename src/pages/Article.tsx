@@ -134,7 +134,7 @@ const Article = () => {
       <div className="article-hero">
         <div className="article-hero-inner">
           <div style={{ marginBottom: '2rem' }}>
-            <Link to="/tietopankki" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: '#64748b', textDecoration: 'none', fontWeight: '500' }}>
+            <Link to="/tietopankki" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--color-primary)', textDecoration: 'none', fontWeight: '600' }}>
               <ArrowLeft size={18} /> Palaa tietopankkiin
             </Link>
           </div>

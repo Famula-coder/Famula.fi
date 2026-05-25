@@ -266,17 +266,17 @@ const Region = () => {
             }}>
               <div style={{ flex: '1 1 300px', background: 'var(--color-background-warm)', padding: '1.5rem', borderRadius: '12px' }}>
                 <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <Heart size={20} color="var(--color-brown)" /> Joustava työaika
+                  <Heart size={20} color="var(--color-primary)" /> Joustava työaika
                 </h4>
-                <p style={{ color: '#475569', fontSize: '0.95rem', margin: 0, lineHeight: '1.6' }}>
+                <p style={{ color: 'var(--color-primary)', fontSize: '0.95rem', margin: 0, lineHeight: '1.6', opacity: 0.9 }}>
                   Päätä itse, kuinka paljon teet. Voit auttaa vain muutamaa ikäihmistä viikossa tai tehdä täysiä tunteja.
                 </p>
               </div>
               <div style={{ flex: '1 1 300px', background: 'var(--color-background-warm)', padding: '1.5rem', borderRadius: '12px' }}>
                 <h4 style={{ color: 'var(--color-primary)', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <CheckCircle2 size={20} color="var(--color-secondary)" /> Asenne ratkaisee
+                  <CheckCircle2 size={20} color="var(--color-primary)" /> Asenne ratkaisee
                 </h4>
-                <p style={{ color: '#475569', fontSize: '0.95rem', margin: 0, lineHeight: '1.6' }}>
+                <p style={{ color: 'var(--color-primary)', fontSize: '0.95rem', margin: 0, lineHeight: '1.6', opacity: 0.9 }}>
                   Sosiaali- tai terveysalan tutkinto on eduksi, mutta aito halu auttaa ja kohdata ihminen on tärkeintä.
                 </p>
               </div>
