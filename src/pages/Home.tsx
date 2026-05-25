@@ -127,8 +127,8 @@ const services = [
     color: 'var(--color-lavender)',
     colorLight: 'rgba(127,104,144,0.1)',
     borderColor: '#7F6890',
-    image: '/images/harrastus.webp',
-    imageAlt: 'Mukavaa yhteistä tekemistä ja harrastamista olohuoneessa'
+    image: '/images/kastellaankukkia.webp',
+    imageAlt: 'Hoitaja auttaa kodin askareissa kastellen kukkia'
   },
   {
     icon: <ShoppingCart size={24} />,
@@ -160,8 +160,8 @@ const services = [
     color: 'var(--color-secondary)',
     colorLight: 'rgba(127,154,131,0.12)',
     borderColor: '#7F9A83',
-    image: '/images/kastellaankukkia.webp',
-    imageAlt: 'Hoitaja auttaa kodin askareissa kastellen kukkia'
+    image: '/images/harrastus.webp',
+    imageAlt: 'Mukavaa yhteistä tekemistä ja harrastamista olohuoneessa'
   }
 ];
 
