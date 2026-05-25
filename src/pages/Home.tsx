@@ -1,9 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import Hero from '../components/Hero';
-// import ContactForm from '../components/ContactForm';
-import { Heart, ExternalLink, ArrowRight, ChevronDown, ShoppingCart, UtensilsCrossed, Sparkles, HandHeart, Footprints, Music2, Phone, Coffee, User, Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
-import { useRef } from 'react';
+import { useState, useRef } from 'react';
+import { Heart, ExternalLink, ArrowRight, ChevronDown, ShoppingCart, UtensilsCrossed, Sparkles, HandHeart, Footprints, Music2, Phone, Coffee, User, Star, ChevronLeft, ChevronRight, Quote, Play, X } from 'lucide-react';
 import PricingPackagesList from '../components/PricingPackages';
 
 const testimonials = [
@@ -93,7 +92,8 @@ const services = [
     colorLight: 'rgba(127,104,144,0.1)',
     borderColor: '#7F6890',
     image: '/images/siivous.webp',
-    imageAlt: 'Famulan hoitaja siivoaa kotia huolellisesti ja kiireettömästi'
+    imageAlt: 'Famulan hoitaja siivoaa kotia huolellisesti ja kiireettömästi',
+    videoId: '2U3Zei7Q7Z4'
   },
   {
     icon: <HandHeart size={24} />,
@@ -115,7 +115,8 @@ const services = [
     colorLight: 'rgba(127,154,131,0.12)',
     borderColor: '#7F9A83',
     image: '/images/kukkienkeruu2.webp',
-    imageAlt: 'Iloinen ulkoiluhetki, ikäihminen ja hoitaja keräämässä kukkia luonnossa'
+    imageAlt: 'Iloinen ulkoiluhetki, ikäihminen ja hoitaja keräämässä kukkia luonnossa',
+    videoId: 'PTeeSlVmxf4'
   },
   {
     icon: <Music2 size={24} />,
@@ -137,7 +138,8 @@ const services = [
     colorLight: 'rgba(230,190,186,0.18)',
     borderColor: '#e6beba',
     image: '/images/katsellaanvalokuvia.webp',
-    imageAlt: 'Hoitaja ja asiakas katselevat yhdessä vanhoja valokuvia ja muistelevat'
+    imageAlt: 'Hoitaja ja asiakas katselevat yhdessä vanhoja valokuvia ja muistelevat',
+    videoId: 'CXMxx_qO5W8'
   }
 ];
 
@@ -147,6 +149,7 @@ const services = [
 const Home = () => {
   const navigate = useNavigate();
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
   const scrollTestimonials = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
@@ -685,6 +688,40 @@ const Home = () => {
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
                   loading="lazy"
                 />
+                {s.videoId && (
+                  <div 
+                    onClick={() => setActiveVideo(s.videoId)}
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      background: 'rgba(0,0,0,0.2)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      cursor: 'pointer',
+                      transition: 'background 0.3s ease'
+                    }}
+                    onMouseEnter={e => e.currentTarget.style.background = 'rgba(0,0,0,0.4)'}
+                    onMouseLeave={e => e.currentTarget.style.background = 'rgba(0,0,0,0.2)'}
+                  >
+                    <div style={{
+                      background: 'white',
+                      width: '48px',
+                      height: '48px',
+                      borderRadius: '50%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+                      color: 'var(--color-primary)'
+                    }}>
+                      <Play size={20} style={{ marginLeft: '4px' }} />
+                    </div>
+                  </div>
+                )}
               </div>
               <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.75rem', flex: 1 }}>
                 <div style={{
@@ -982,6 +1019,64 @@ const Home = () => {
           <ContactForm />
         </div>
       </section> */}
+
+      {/* Video Modal (Lightbox) */}
+      {activeVideo && (
+        <div 
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'rgba(0,0,0,0.85)',
+            zIndex: 9999,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '2rem'
+          }}
+          onClick={() => setActiveVideo(null)}
+        >
+          <button 
+            onClick={() => setActiveVideo(null)}
+            style={{
+              position: 'absolute',
+              top: '20px',
+              right: '20px',
+              background: 'none',
+              border: 'none',
+              color: 'white',
+              cursor: 'pointer',
+              padding: '10px'
+            }}
+          >
+            <X size={32} />
+          </button>
+          <div 
+            onClick={e => e.stopPropagation()}
+            style={{
+              width: '100%',
+              maxWidth: '400px', // Shorts are vertical, keep it narrow
+              aspectRatio: '9/16',
+              background: 'black',
+              borderRadius: '16px',
+              overflow: 'hidden',
+              boxShadow: '0 20px 60px rgba(0,0,0,0.3)'
+            }}
+          >
+            <iframe
+              width="100%"
+              height="100%"
+              src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1`}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      )}
     </>
   );
 };
