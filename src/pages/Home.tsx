@@ -74,18 +74,6 @@ const services = [
     videoId: 'CXMxx_qO5W8'
   },
   {
-    icon: <Sparkles size={24} />,
-    title: 'Kodin siisteys ja vaatehuolto',
-    short: 'Pidämme kotisi raikkaana ja viihtyisänä.',
-    detail: 'Autamme pitämään kodin raikkaana ja viihtyisänä. Teemme ylläpitosiivousta, viemme roskat, vaihdamme lakanat.',
-    color: 'var(--color-lavender)',
-    colorLight: 'rgba(127,104,144,0.1)',
-    borderColor: '#7F6890',
-    image: '/images/siivous.webp',
-    imageAlt: 'Famulan hoitaja siivoaa kotia huolellisesti ja kiireettömästi',
-    videoId: '2U3Zei7Q7Z4'
-  },
-  {
     icon: <Footprints size={24} />,
     title: 'Ulkoilu ja seurustelu',
     short: 'Joskus tärkeintä on vain istahtaa alas kahvikupillisen ääreen ja jutella.',
@@ -96,6 +84,18 @@ const services = [
     image: '/images/talvi_ulkoilu.png',
     imageAlt: 'Hoitaja työntää ikäihmistä pyörätuolissa kauniissa talvisessa maisemassa',
     videoId: 'PTeeSlVmxf4'
+  },
+  {
+    icon: <Sparkles size={24} />,
+    title: 'Kodin siisteys ja vaatehuolto',
+    short: 'Pidämme kotisi raikkaana ja viihtyisänä.',
+    detail: 'Autamme pitämään kodin raikkaana ja viihtyisänä. Teemme ylläpitosiivousta, viemme roskat, vaihdamme lakanat.',
+    color: 'var(--color-lavender)',
+    colorLight: 'rgba(127,104,144,0.1)',
+    borderColor: '#7F6890',
+    image: '/images/siivous.webp',
+    imageAlt: 'Famulan hoitaja siivoaa kotia huolellisesti ja kiireettömästi',
+    videoId: '2U3Zei7Q7Z4'
   },
   {
     icon: <HandHeart size={24} />,
