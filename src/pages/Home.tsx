@@ -105,8 +105,8 @@ const services = [
     color: 'var(--color-brown)',
     colorLight: 'rgba(161,122,116,0.1)',
     borderColor: '#A17A74',
-    image: '/images/henkilokohtainen.png',
-    imageAlt: 'Hoitaja auttaa ystävällisesti ja kunnioittavasti ikäihmistä pukemisessa'
+    image: '/images/keskustelu.webp',
+    imageAlt: 'Sairaanhoitaja ja asiakas keskustelevat terveydentilasta'
   },
   {
     icon: <UtensilsCrossed size={24} />,
@@ -149,8 +149,8 @@ const services = [
     color: 'var(--color-primary)',
     colorLight: 'rgba(8,36,52,0.1)',
     borderColor: '#082434',
-    image: '/images/keskustelu.webp',
-    imageAlt: 'Sairaanhoitaja ja asiakas keskustelevat terveydentilasta'
+    image: '/images/henkilokohtainen.png',
+    imageAlt: 'Hoitaja auttaa ystävällisesti ja kunnioittavasti ikäihmistä pukemisessa'
   },
   {
     icon: <ShieldCheck size={24} />,
