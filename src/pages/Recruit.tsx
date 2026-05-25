@@ -20,7 +20,7 @@ const Recruit = () => {
 
       {/* Hero Section */}
       <section style={{ 
-        padding: '8rem 1.5rem 5rem', 
+        padding: '8rem 1.5rem 7rem', 
         backgroundColor: 'var(--color-primary)',
         color: 'white',
         textAlign: 'center'
@@ -44,12 +44,20 @@ const Recruit = () => {
       </section>
 
       {/* ── KUVABANNERI ── */}
-      <section style={{ padding: '0 1.5rem', marginTop: '-4rem', position: 'relative', zIndex: 10 }}>
-        <div className="container" style={{ maxWidth: '1000px' }}>
+      <section style={{ padding: '0 1.5rem', marginTop: '-5rem', position: 'relative', zIndex: 10 }}>
+        <div className="container" style={{ maxWidth: '1060px' }}>
           <img 
             src="/images/keskustelu.webp" 
             alt="Työntekijä keskustelee tyytyväisenä asiakkaan kanssa olohuoneessa"
-            style={{ width: '100%', borderRadius: '24px', boxShadow: '0 20px 40px rgba(0,0,0,0.15)' }}
+            style={{ 
+              width: '100%', 
+              height: 'auto', 
+              borderRadius: '24px', 
+              boxShadow: '0 20px 50px rgba(0,0,0,0.15)', 
+              aspectRatio: '21/9', 
+              objectFit: 'cover',
+              objectPosition: 'center 40%'
+            }}
           />
         </div>
       </section>
