@@ -73,17 +73,7 @@ const services = [
     imageAlt: 'Hoitaja ja asiakas katselevat yhdessä vanhoja valokuvia ja muistelevat',
     videoId: 'CXMxx_qO5W8'
   },
-  {
-    icon: <ShoppingCart size={24} />,
-    title: 'Kauppa- ja asiointiapu',
-    short: 'Käymme puolestasi kaupassa tai lähdemme seuraksi ja tueksi asioille.',
-    detail: 'Käymme puolestasi ruokakaupassa tai apteekissa, tai lähdemme sinulle turvalliseksi makutuomariksi ja seuraksi asioille.',
-    color: 'var(--color-secondary)',
-    colorLight: 'rgba(127,154,131,0.12)',
-    borderColor: '#7F9A83',
-    image: '/images/kahvihetki.webp',
-    imageAlt: 'Yhdessäoloa ja asiointiapua arkeen, kahvikupit pöydällä'
-  },
+
   {
     icon: <UtensilsCrossed size={24} />,
     title: 'Ruoanlaitto ja ravitsemus',
@@ -140,6 +130,17 @@ const services = [
     borderColor: '#7F6890',
     image: '/images/harrastus.webp',
     imageAlt: 'Mukavaa yhteistä tekemistä ja harrastamista olohuoneessa'
+  },
+  {
+    icon: <ShoppingCart size={24} />,
+    title: 'Kauppa- ja asiointiapu',
+    short: 'Käymme puolestasi kaupassa tai lähdemme seuraksi ja tueksi asioille.',
+    detail: 'Käymme puolestasi ruokakaupassa tai apteekissa, tai lähdemme sinulle turvalliseksi makutuomariksi ja seuraksi asioille.',
+    color: 'var(--color-secondary)',
+    colorLight: 'rgba(127,154,131,0.12)',
+    borderColor: '#7F9A83',
+    image: '/images/kauppa.png',
+    imageAlt: 'Hoitaja ja ikäihminen yhdessä ruokaostoksilla'
   }
 ];
 
