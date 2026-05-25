@@ -93,8 +93,8 @@ const services = [
     color: 'var(--color-secondary)',
     colorLight: 'rgba(127,154,131,0.12)',
     borderColor: '#7F9A83',
-    image: '/images/kukkienkeruu2.webp',
-    imageAlt: 'Iloinen ulkoiluhetki, ikäihminen ja hoitaja keräämässä kukkia luonnossa',
+    image: '/images/talvi_ulkoilu.png',
+    imageAlt: 'Hoitaja työntää ikäihmistä pyörätuolissa kauniissa talvisessa maisemassa',
     videoId: 'PTeeSlVmxf4'
   },
   {
