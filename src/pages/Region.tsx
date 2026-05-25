@@ -296,33 +296,34 @@ const Region = () => {
         <ContactForm />
       </section> */}
 
-      <a 
-        href={whatsappUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="whatsapp-btn"
-        style={{
-          position: 'fixed',
-          bottom: '1.5rem',
-          right: '1.5rem',
-          backgroundColor: '#25D366',
-          color: 'white',
-          width: '56px',
-          height: '56px',
-          borderRadius: '50%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          boxShadow: '0 4px 15px rgba(37, 211, 102, 0.4)',
-          zIndex: 1000,
-          transition: 'transform 0.3s ease'
-        }}
+      <div className="whatsapp-container">
+        <div className="whatsapp-tooltip">
+          Ota yhteyttä lähettämällä WhatsApp-viesti!
+        </div>
+        <a 
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="whatsapp-btn"
+          style={{
+            backgroundColor: '#25D366',
+            color: 'white',
+            width: '56px',
+            height: '56px',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            boxShadow: '0 4px 15px rgba(37, 211, 102, 0.4)',
+            transition: 'transform 0.3s ease'
+          }}
         onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
         onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
         title="Kysy WhatsAppissa"
-      >
-        <MessageCircle size={28} />
-      </a>
+        >
+          <MessageCircle size={28} />
+        </a>
+      </div>
 
       {/* Video Modal (Lightbox) */}
       {activeVideo && (
