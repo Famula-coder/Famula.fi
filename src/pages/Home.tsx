@@ -640,7 +640,66 @@ const Home = () => {
       {/* ── HERO ── */}
       <Hero />
 
-<section id="palvelut" style={{ background: 'var(--color-light-gray)', padding: '5rem 0' }}>
+      {/* ── ARJEN APU VIDEO BANNERI ── */}
+      <section style={{ padding: '4rem 1rem 0', background: 'var(--color-light-gray)' }}>
+        <div className="container" style={{ maxWidth: '1060px' }}>
+          <div 
+            onClick={() => setActiveVideo('rZbbnX3ZD6s')}
+            style={{
+              position: 'relative',
+              width: '100%',
+              height: '400px',
+              borderRadius: '24px',
+              overflow: 'hidden',
+              cursor: 'pointer',
+              boxShadow: '0 12px 40px rgba(0,0,0,0.1)'
+            }}
+          >
+            <img 
+              src="/images/syodaanyhdessa.webp" 
+              alt="Perhe ja hoitaja syömässä yhdessä saman pöydän ääressä" 
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+            />
+            <div style={{
+              position: 'absolute',
+              top: 0, left: 0, right: 0, bottom: 0,
+              background: 'linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%)',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: 'white',
+              transition: 'background 0.3s ease'
+            }}
+            onMouseEnter={e => e.currentTarget.style.background = 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%)'}
+            onMouseLeave={e => e.currentTarget.style.background = 'linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%)'}
+            >
+              <div style={{
+                background: 'var(--color-accent)',
+                width: '80px',
+                height: '80px',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
+                marginBottom: '1.5rem',
+                color: 'white'
+              }}>
+                <Play size={40} style={{ marginLeft: '6px' }} fill="white" />
+              </div>
+              <h2 style={{ fontSize: '2.5rem', fontWeight: '700', margin: 0, textAlign: 'center', textShadow: '0 2px 10px rgba(0,0,0,0.3)' }}>
+                Katso miten voimme auttaa arjessa
+              </h2>
+              <p style={{ fontSize: '1.2rem', marginTop: '0.5rem', opacity: 0.9, textShadow: '0 2px 10px rgba(0,0,0,0.3)' }}>
+                1 minuutin esittely palveluistamme
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="palvelut" style={{ background: 'var(--color-light-gray)', padding: '5rem 0' }}>
       <div className="container" style={{ maxWidth: '1060px' }}>
         <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 3.5rem' }}>
           <div style={{
