@@ -145,8 +145,8 @@ const Region = () => {
 
             <div style={{ flex: '1 1 400px' }}>
               <img 
-                src={region.image} 
-                alt={region.altText} 
+                src="/images/kahvihetki3.webp" 
+                alt="Paikallinen Famula-hoitaja juomassa kahvia asiakkaan kanssa" 
                 style={{ width: '100%', borderRadius: '20px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}
               />
             </div>

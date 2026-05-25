@@ -78,6 +78,19 @@ const Story = () => {
                   "Suomessa on paljon ikäihmisiä, jotka kaipaisivat arkeensa auttajaa. Tätä tarvetta varten perustettiin Famula Oy. Me Famulalla halutaan tarjota kotiavun lisäksi ystävä, joka välittää aidosti."<br />
                   <span style={{ display: 'block', fontSize: '1rem', marginTop: '1rem', color: '#64748b' }}>– Valma Linnanmäki, Perustaja</span>
                 </blockquote>
+                
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginTop: '2rem' }}>
+                  <img 
+                    src="/images/leenajakukkakimppu.webp" 
+                    alt="Famulan perustaja Leena hymyilee kukkakimppu kädessään" 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px', aspectRatio: '4/3', boxShadow: '0 4px 15px rgba(0,0,0,0.05)' }} 
+                  />
+                  <img 
+                    src="/images/ystavanpaiva.webp" 
+                    alt="Lämminhenkinen ystävänpäivän tervehdys Famulalta" 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px', aspectRatio: '4/3', boxShadow: '0 4px 15px rgba(0,0,0,0.05)' }} 
+                  />
+                </div>
               </div>
             </div>
 
