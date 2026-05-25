@@ -1,12 +1,14 @@
+import { useState } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { regions } from '../data/regions';
 import { SEO } from '../components/SEO';
-import { Phone, Mail, MapPin, MessageCircle, Heart, CheckCircle2 } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle, Heart, CheckCircle2, Play, X } from 'lucide-react';
 // import ContactForm from '../components/ContactForm';
 import { Helmet } from 'react-helmet-async';
 
 const Region = () => {
   const { regionId } = useParams<{ regionId: string }>();
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
   const region = regions.find(r => r.id === regionId);
   const cookieConsent = typeof window !== 'undefined' ? localStorage.getItem('cookieConsent') === 'true' : false;
 
@@ -155,6 +157,56 @@ const Region = () => {
         </div>
       </div>
       
+      {/* ── ARJEN APU VIDEO KORTTI ── */}
+      <div className="container" style={{ padding: '2rem 1.5rem 0' }}>
+        <div 
+          onClick={() => setActiveVideo('rZbbnX3ZD6s')}
+          style={{
+            background: 'white',
+            borderRadius: '24px',
+            overflow: 'hidden',
+            cursor: 'pointer',
+            boxShadow: '0 12px 40px rgba(0,0,0,0.08)',
+            display: 'flex',
+            flexDirection: 'column',
+            transition: 'transform 0.3s ease',
+            maxWidth: '900px',
+            margin: '0 auto'
+          }}
+          onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-5px)'}
+          onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
+        >
+          <div style={{ position: 'relative', width: '100%', height: '400px' }}>
+            <img 
+              src="/images/syodaanyhdessa.webp" 
+              alt="Perhe ja hoitaja syömässä yhdessä saman pöydän ääressä" 
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+            />
+            <div style={{
+              position: 'absolute',
+              top: '50%', left: '50%',
+              transform: 'translate(-50%, -50%)',
+              background: 'var(--color-accent)',
+              width: '80px', height: '80px',
+              borderRadius: '50%',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
+              color: 'white'
+            }}>
+              <Play size={40} style={{ marginLeft: '6px' }} fill="white" />
+            </div>
+          </div>
+          <div style={{ padding: '2.5rem 2rem', textAlign: 'center', background: 'white' }}>
+            <h2 style={{ fontSize: '2rem', color: 'var(--color-primary)', marginBottom: '0.5rem' }}>
+              Katso miten voimme auttaa arjessa
+            </h2>
+            <p style={{ fontSize: '1.2rem', color: '#475569', margin: 0 }}>
+              1 minuutin esittely palveluistamme
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div className="container" style={{ padding: '4rem 1.5rem' }}>
         <h2 className="text-center" style={{ marginBottom: '3rem' }}>Miksi valita Famulan paikallinen hoitotiimi {region.locativeName}?</h2>
         
@@ -270,6 +322,57 @@ const Region = () => {
       >
         <MessageCircle size={28} />
       </a>
+
+      {/* Video Modal (Lightbox) */}
+      {activeVideo && (
+        <div 
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'rgba(0,0,0,0.85)',
+            zIndex: 9999,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '2rem'
+          }}
+          onClick={() => setActiveVideo(null)}
+        >
+          <button 
+            style={{
+              position: 'absolute',
+              top: '2rem',
+              right: '2rem',
+              background: 'none',
+              border: 'none',
+              color: 'white',
+              cursor: 'pointer',
+              padding: '0.5rem'
+            }}
+            aria-label="Sulje video"
+          >
+            <X size={32} />
+          </button>
+          <div 
+            style={{ width: '100%', maxWidth: '400px', aspectRatio: '9/16' }}
+            onClick={e => e.stopPropagation()}
+          >
+            <iframe 
+              width="100%" 
+              height="100%" 
+              src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1`} 
+              title="YouTube video player" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowFullScreen
+              style={{ borderRadius: '12px' }}
+            ></iframe>
+          </div>
+        </div>
+      )}
     </>
   );
 };
