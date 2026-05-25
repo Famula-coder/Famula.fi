@@ -300,6 +300,7 @@ const Region = () => {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
+        className="whatsapp-btn"
         style={{
           position: 'fixed',
           bottom: '1.5rem',

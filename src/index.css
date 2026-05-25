@@ -118,3 +118,14 @@ img {
   white-space: nowrap;
   border-width: 0;
 }
+
+@keyframes whatsappAttention {
+  0%, 100% { transform: scale(1); }
+  10%, 30% { transform: scale(1.15) rotate(5deg); }
+  20%, 40% { transform: scale(1.15) rotate(-5deg); }
+  50% { transform: scale(1); }
+}
+
+.whatsapp-btn {
+  animation: whatsappAttention 2.5s ease 2s 1;
+}
