@@ -62,6 +62,18 @@ const team = [
 /* ── Palvelut ── */
 const services = [
   {
+    icon: <Coffee size={24} />,
+    title: 'Seuranpito ja ystäväpalvelu',
+    short: 'Aitoa läsnäoloa ja seuraa arkeen. Teemme asioita yhdessä ja nautimme kiireettömistä hetkistä.',
+    detail: 'Vietämme aikaa yhdessä rupatellen, muistellen tai vain yhdessä ollen.',
+    color: 'var(--color-accent)',
+    colorLight: 'rgba(230,190,186,0.18)',
+    borderColor: '#e6beba',
+    image: '/images/katsellaanvalokuvia.webp',
+    imageAlt: 'Hoitaja ja asiakas katselevat yhdessä vanhoja valokuvia ja muistelevat',
+    videoId: 'CXMxx_qO5W8'
+  },
+  {
     icon: <ShoppingCart size={24} />,
     title: 'Kauppa- ja asiointiapu',
     short: 'Käymme puolestasi kaupassa tai lähdemme seuraksi ja tueksi asioille.',
@@ -69,8 +81,8 @@ const services = [
     color: 'var(--color-secondary)',
     colorLight: 'rgba(127,154,131,0.12)',
     borderColor: '#7F9A83',
-    image: '/images/kastellaankukkia.webp',
-    imageAlt: 'Hoitaja kastelee kukkia ja auttaa kodin askareissa hymyillen'
+    image: '/images/kahvihetki.webp',
+    imageAlt: 'Yhdessäoloa ja asiointiapua arkeen, kahvikupit pöydällä'
   },
   {
     icon: <UtensilsCrossed size={24} />,
@@ -128,18 +140,6 @@ const services = [
     borderColor: '#7F6890',
     image: '/images/harrastus.webp',
     imageAlt: 'Mukavaa yhteistä tekemistä ja harrastamista olohuoneessa'
-  },
-  {
-    icon: <Coffee size={24} />,
-    title: 'Seuranpito ja ystäväpalvelu',
-    short: 'Aitoa läsnäoloa ja seuraa arkeen. Teemme asioita yhdessä ja nautimme kiireettömistä hetkistä.',
-    detail: 'Vietämme aikaa yhdessä rupatellen, muistellen tai vain yhdessä ollen.',
-    color: 'var(--color-accent)',
-    colorLight: 'rgba(230,190,186,0.18)',
-    borderColor: '#e6beba',
-    image: '/images/katsellaanvalokuvia.webp',
-    imageAlt: 'Hoitaja ja asiakas katselevat yhdessä vanhoja valokuvia ja muistelevat',
-    videoId: 'CXMxx_qO5W8'
   }
 ];
 
@@ -640,9 +640,27 @@ const Home = () => {
       {/* ── HERO ── */}
       <Hero />
 
-      {/* ── ARJEN APU VIDEO BANNERI ── */}
-      <section style={{ padding: '4rem 1rem 0', background: 'var(--color-light-gray)' }}>
-        <div className="container" style={{ maxWidth: '1060px' }}>
+      <section id="palvelut" style={{ background: 'var(--color-light-gray)', padding: '5rem 0' }}>
+      <div className="container" style={{ maxWidth: '1060px' }}>
+        <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 3.5rem' }}>
+          <div style={{
+            display: 'inline-flex', alignItems: 'center', gap: '0.45rem',
+            padding: '0.5rem 1.1rem', background: 'rgba(155,194,166,0.15)',
+            borderRadius: '50px', fontWeight: '600', fontSize: '0.9rem',
+            color: 'var(--color-secondary)', marginBottom: '1rem',
+          }}>
+            <Sparkles size={14} /> Kaikki mitä tarvitset
+          </div>
+          <h2 style={{ color: 'var(--color-primary)', marginBottom: '0.75rem' }}>
+            Mitä Famulan kotipalveluun ja kotihoitoon kuuluu?
+          </h2>
+          <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.7' }}>
+            Koostamme juuri sinun näköisesi palvelukokonaisuuden — alla esimerkkejä osa-alueista.
+          </p>
+        </div>
+
+        {/* ── ARJEN APU VIDEO BANNERI TÄHÄN ── */}
+        <div style={{ marginBottom: '4rem' }}>
           <div 
             onClick={() => setActiveVideo('rZbbnX3ZD6s')}
             style={{
@@ -696,26 +714,6 @@ const Home = () => {
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section id="palvelut" style={{ background: 'var(--color-light-gray)', padding: '5rem 0' }}>
-      <div className="container" style={{ maxWidth: '1060px' }}>
-        <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 3.5rem' }}>
-          <div style={{
-            display: 'inline-flex', alignItems: 'center', gap: '0.45rem',
-            padding: '0.5rem 1.1rem', background: 'rgba(155,194,166,0.15)',
-            borderRadius: '50px', fontWeight: '600', fontSize: '0.9rem',
-            color: 'var(--color-secondary)', marginBottom: '1rem',
-          }}>
-            <Sparkles size={14} /> Kaikki mitä tarvitset
-          </div>
-          <h2 style={{ color: 'var(--color-primary)', marginBottom: '0.75rem' }}>
-            Mitä Famulan kotipalveluun ja kotihoitoon kuuluu?
-          </h2>
-          <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.7' }}>
-            Koostamme juuri sinun näköisesi palvelukokonaisuuden — alla esimerkkejä osa-alueista.
-          </p>
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.5rem' }}>

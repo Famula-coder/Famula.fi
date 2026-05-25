@@ -40,10 +40,16 @@ const Recruit = () => {
           <p style={{ fontSize: '1.2rem', opacity: 0.9, lineHeight: '1.6', marginBottom: '3rem', maxWidth: '650px', margin: '0 auto 2rem' }}>
             Etsimme joukkoomme sote-alan ammattilaisia, yrittäjähenkisiä aluevetäjiä sekä paikallisia auttajia, jotka jakavat Famulan arvot: aito välittäminen, kiireettömyys ja ihmisen kohtaaminen.
           </p>
+        </div>
+      </section>
+
+      {/* ── KUVABANNERI ── */}
+      <section style={{ padding: '0 1.5rem', marginTop: '-4rem', position: 'relative', zIndex: 10 }}>
+        <div className="container" style={{ maxWidth: '1000px' }}>
           <img 
             src="/images/keskustelu.webp" 
             alt="Työntekijä keskustelee tyytyväisenä asiakkaan kanssa olohuoneessa"
-            style={{ width: '100%', borderRadius: '24px', boxShadow: '0 20px 40px rgba(0,0,0,0.2)', marginTop: '2rem' }}
+            style={{ width: '100%', borderRadius: '24px', boxShadow: '0 20px 40px rgba(0,0,0,0.15)' }}
           />
         </div>
       </section>
