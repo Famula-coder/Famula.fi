@@ -640,6 +640,17 @@ const Home = () => {
       {/* ── HERO ── */}
       <Hero />
 
+      {/* ── TUNNELMAKUVA BANNERI ── */}
+      <section style={{ padding: '0 1.5rem', marginTop: '-4rem', position: 'relative', zIndex: 10, marginBottom: '2rem' }}>
+        <div className="container" style={{ maxWidth: '1060px' }}>
+          <img 
+            src="/images/kukkienkerauu.webp" 
+            alt="Hoitaja ja asiakas kävelemässä yhdessä luonnossa, hoitajalla kukkakimppu" 
+            style={{ width: '100%', height: 'auto', borderRadius: '24px', boxShadow: '0 20px 50px rgba(0,0,0,0.15)', aspectRatio: '21/9', objectFit: 'cover' }}
+          />
+        </div>
+      </section>
+
       <section id="palvelut" style={{ background: 'var(--color-light-gray)', padding: '5rem 0' }}>
       <div className="container" style={{ maxWidth: '1060px' }}>
         <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 3.5rem' }}>
