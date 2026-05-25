@@ -70,6 +70,8 @@ const services = [
     color: 'var(--color-secondary)',
     colorLight: 'rgba(127,154,131,0.12)',
     borderColor: '#7F9A83',
+    image: '/images/kastellaankukkia.webp',
+    imageAlt: 'Hoitaja kastelee kukkia ja auttaa kodin askareissa hymyillen'
   },
   {
     icon: <UtensilsCrossed size={24} />,
@@ -79,6 +81,8 @@ const services = [
     color: 'var(--color-accent)',
     colorLight: 'rgba(230,190,186,0.18)',
     borderColor: '#e6beba',
+    image: '/images/pilkotaanomenia.webp',
+    imageAlt: 'Hoitaja ja ikäihminen pilkkovat yhdessä omenoita keittiössä'
   },
   {
     icon: <Sparkles size={24} />,
@@ -88,6 +92,8 @@ const services = [
     color: 'var(--color-lavender)',
     colorLight: 'rgba(127,104,144,0.1)',
     borderColor: '#7F6890',
+    image: '/images/siivous.webp',
+    imageAlt: 'Famulan hoitaja siivoaa kotia huolellisesti ja kiireettömästi'
   },
   {
     icon: <HandHeart size={24} />,
@@ -97,6 +103,8 @@ const services = [
     color: 'var(--color-brown)',
     colorLight: 'rgba(161,122,116,0.1)',
     borderColor: '#A17A74',
+    image: '/images/kahvihetkieikasvoja.webp',
+    imageAlt: 'Hienotunteinen avustaminen ja huolenpito, kaksi kättä pitämässä lämpimästi toisistaan'
   },
   {
     icon: <Footprints size={24} />,
@@ -106,6 +114,8 @@ const services = [
     color: 'var(--color-secondary)',
     colorLight: 'rgba(127,154,131,0.12)',
     borderColor: '#7F9A83',
+    image: '/images/kukkienkeruu2.webp',
+    imageAlt: 'Iloinen ulkoiluhetki, ikäihminen ja hoitaja keräämässä kukkia luonnossa'
   },
   {
     icon: <Music2 size={24} />,
@@ -115,7 +125,20 @@ const services = [
     color: 'var(--color-lavender)',
     colorLight: 'rgba(127,104,144,0.1)',
     borderColor: '#7F6890',
+    image: '/images/harrastus.webp',
+    imageAlt: 'Mukavaa yhteistä tekemistä ja harrastamista olohuoneessa'
   },
+  {
+    icon: <Coffee size={24} />,
+    title: 'Seuranpito ja ystäväpalvelu',
+    short: 'Aitoa läsnäoloa ja seuraa arkeen. Teemme asioita yhdessä ja nautimme kiireettömistä hetkistä.',
+    detail: 'Vietämme aikaa yhdessä rupatellen, muistellen tai vain yhdessä ollen.',
+    color: 'var(--color-accent)',
+    colorLight: 'rgba(230,190,186,0.18)',
+    borderColor: '#e6beba',
+    image: '/images/katsellaanvalokuvia.webp',
+    imageAlt: 'Hoitaja ja asiakas katselevat yhdessä vanhoja valokuvia ja muistelevat'
+  }
 ];
 
 
@@ -640,10 +663,10 @@ const Home = () => {
               style={{
                 background: 'white',
                 borderRadius: '20px',
-                padding: '1.75rem',
+                overflow: 'hidden',
                 boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
                 borderTop: `4px solid ${s.borderColor}`,
-                display: 'flex', flexDirection: 'column', gap: '0.75rem',
+                display: 'flex', flexDirection: 'column',
                 transition: 'transform 0.25s ease, box-shadow 0.25s ease',
               }}
               onMouseEnter={e => {
@@ -655,16 +678,27 @@ const Home = () => {
                 (e.currentTarget as HTMLElement).style.boxShadow = '0 4px 20px rgba(0,0,0,0.05)';
               }}
             >
-              <div style={{
-                width: '52px', height: '52px', borderRadius: '14px',
-                background: s.colorLight,
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                color: s.color,
-              }}>
-                {s.icon}
+              <div style={{ height: '180px', width: '100%', position: 'relative' }}>
+                <img 
+                  src={s.image} 
+                  alt={s.imageAlt} 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                  loading="lazy"
+                />
               </div>
-              <div style={{ fontWeight: '700', color: 'var(--color-primary)', fontSize: '1.05rem' }}>{s.title}</div>
-              <div style={{ color: '#64748b', fontSize: '0.95rem', lineHeight: '1.65' }}>{s.short}</div>
+              <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.75rem', flex: 1 }}>
+                <div style={{
+                  width: '42px', height: '42px', borderRadius: '12px',
+                  background: s.colorLight,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  color: s.color,
+                  marginBottom: '0.25rem'
+                }}>
+                  {s.icon}
+                </div>
+                <div style={{ fontWeight: '700', color: 'var(--color-primary)', fontSize: '1.05rem' }}>{s.title}</div>
+                <div style={{ color: '#64748b', fontSize: '0.95rem', lineHeight: '1.65' }}>{s.short}</div>
+              </div>
             </div>
           ))}
         </div>
