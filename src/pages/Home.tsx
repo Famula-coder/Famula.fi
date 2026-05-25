@@ -395,7 +395,8 @@ const Home = () => {
           scroll-snap-type: x mandatory;
           scrollbar-width: none;
           -ms-overflow-style: none;
-          padding: 1rem 0.5rem 3rem 0.5rem;
+          padding: 1rem 1.5rem 4rem 1.5rem;
+          align-items: stretch;
         }
         .testimonials-track::-webkit-scrollbar {
           display: none;
@@ -411,13 +412,20 @@ const Home = () => {
           flex-direction: column;
           position: relative;
           transition: transform 0.3s ease;
+          height: auto;
+          min-height: 100%;
         }
         .testimonial-card:hover {
           transform: translateY(-5px);
         }
         @media (max-width: 768px) {
           .testimonial-card {
-            flex: 0 0 85vw;
+            flex: 0 0 75vw;
+          }
+          .testimonials-track {
+            gap: 1.25rem;
+            padding: 1rem 1rem 4rem 1rem;
+            scroll-padding-left: 1rem;
           }
         }
         .testimonial-quote-icon {
