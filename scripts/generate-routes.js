@@ -46,3 +46,22 @@ allRoutes.forEach(route => {
 });
 
 console.log('✅ All static route fallbacks generated successfully for GitHub Pages!');
+
+// Generate sitemap.xml
+const siteUrl = 'https://famula.fi';
+const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>${siteUrl}/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+${allRoutes.map(route => `  <url>
+    <loc>${siteUrl}/${route}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`).join('\n')}
+</urlset>`;
+
+fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemapContent);
+console.log('✅ sitemap.xml generated successfully!');
