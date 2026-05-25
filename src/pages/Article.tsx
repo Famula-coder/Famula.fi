@@ -1,12 +1,13 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import { articles } from '../data/articles';
-import { ArrowLeft } from 'lucide-react';
-import { useEffect } from 'react';
+import { ArrowLeft, Play, X } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 const Article = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
   
   const article = articles.find(a => a.slug === slug);
 
@@ -143,6 +144,55 @@ const Article = () => {
       </div>
 
       <div className="article-content">
+        {article.videoId && (
+          <div 
+            onClick={() => setActiveVideo(article.videoId!)}
+            style={{
+              background: 'var(--color-background-warm)',
+              borderRadius: '20px',
+              padding: '2rem',
+              marginBottom: '3rem',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '1.5rem',
+              cursor: 'pointer',
+              border: '2px dashed var(--color-secondary)',
+              transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.transform = 'translateY(-4px)';
+              e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.05)';
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = 'none';
+            }}
+          >
+            <div style={{
+              background: 'var(--color-secondary)',
+              width: '60px',
+              height: '60px',
+              borderRadius: '50%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: 'white',
+              flexShrink: 0,
+              boxShadow: '0 4px 15px rgba(0,0,0,0.2)'
+            }}>
+              <Play size={28} style={{ marginLeft: '4px' }} fill="white" />
+            </div>
+            <div>
+              <h3 style={{ margin: '0 0 0.5rem', color: 'var(--color-primary)', fontSize: '1.4rem' }}>
+                Katso video aiheesta
+              </h3>
+              <p style={{ margin: 0, color: '#475569', fontSize: '1rem' }}>
+                1 minuutin pikaohje videomuodossa.
+              </p>
+            </div>
+          </div>
+        )}
+
         <div dangerouslySetInnerHTML={{ __html: article.content }} />
 
         <div className="article-cta">
@@ -182,6 +232,64 @@ const Article = () => {
           </div>
         </div>
       </div>
+
+      {/* Video Modal (Lightbox) */}
+      {activeVideo && (
+        <div 
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'rgba(0,0,0,0.85)',
+            zIndex: 9999,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '2rem'
+          }}
+          onClick={() => setActiveVideo(null)}
+        >
+          <button 
+            onClick={() => setActiveVideo(null)}
+            style={{
+              position: 'absolute',
+              top: '20px',
+              right: '20px',
+              background: 'none',
+              border: 'none',
+              color: 'white',
+              cursor: 'pointer',
+              padding: '10px'
+            }}
+          >
+            <X size={32} />
+          </button>
+          <div 
+            onClick={e => e.stopPropagation()}
+            style={{
+              width: '100%',
+              maxWidth: '400px', // Shorts are vertical, keep it narrow
+              aspectRatio: '9/16',
+              background: 'black',
+              borderRadius: '16px',
+              overflow: 'hidden',
+              boxShadow: '0 20px 60px rgba(0,0,0,0.3)'
+            }}
+          >
+            <iframe
+              width="100%"
+              height="100%"
+              src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1`}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      )}
     </>
   );
 };

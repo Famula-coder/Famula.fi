@@ -6,6 +6,7 @@ export interface Article {
   excerpt: string;
   content: string; // HTML content or Markdown, we will use raw HTML for simplicity
   icon?: string; // Optional icon name
+  videoId?: string; // Optional YouTube video ID
 }
 
 export const articles: Article[] = [
@@ -16,6 +17,7 @@ export const articles: Article[] = [
     category: 'Kotitalousvähennys',
     excerpt: 'Vuodelle 2025 kotitalousvähennykseen tuli muutoksia. Nyt voit vähentää verotuksessa 35 % yritykseltä ostetun hoiva- tai siivoustyön hinnasta.',
     icon: 'Euro',
+    videoId: 'g0n8jXGdlOs',
     content: `
       <h2>Mitä kotitalousvähennys tarkoittaa vuonna 2025?</h2>
       <p>Tiesitkö, että voit saada merkittävän veroedun ostaessasi kotipalvelua tai kotihoitoa itsellesi tai ikääntyville vanhemmillesi? Vuonna 2025 kotitalousvähennys hoiva-, hoito- ja siivoustyöstä on <strong>35 %</strong> työn arvonlisäverollisesta osuudesta.</p>
