@@ -148,8 +148,14 @@
   object-fit: contain;
   object-position: bottom center;
   filter: drop-shadow(0 30px 40px rgba(0,30,50,0.25));
-  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 98%);
-  mask-image: linear-gradient(to bottom, black 80%, transparent 98%);
+  -webkit-mask-image: 
+    linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%),
+    linear-gradient(to bottom, black 70%, transparent 98%);
+  -webkit-mask-composite: source-in;
+  mask-image: 
+    linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%),
+    linear-gradient(to bottom, black 70%, transparent 98%);
+  mask-composite: intersect;
   transform-origin: bottom right;
 }
 
