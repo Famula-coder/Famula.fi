@@ -73,18 +73,6 @@ const services = [
     imageAlt: 'Hoitaja ja asiakas katselevat yhdessä vanhoja valokuvia ja muistelevat',
     videoId: 'CXMxx_qO5W8'
   },
-
-  {
-    icon: <UtensilsCrossed size={24} />,
-    title: 'Ruoanlaitto ja ravitsemus',
-    short: 'Valmistamme maistuvaa kotiruokaa yhdessä tai puolestasi.',
-    detail: 'Valmistamme ravitsevaa ja maistuvaa kotiruokaa yhdessä tai puolestasi.',
-    color: 'var(--color-accent)',
-    colorLight: 'rgba(230,190,186,0.18)',
-    borderColor: '#e6beba',
-    image: '/images/pilkotaanomenia.webp',
-    imageAlt: 'Hoitaja ja ikäihminen pilkkovat yhdessä omenoita keittiössä'
-  },
   {
     icon: <Sparkles size={24} />,
     title: 'Kodin siisteys ja vaatehuolto',
@@ -98,17 +86,6 @@ const services = [
     videoId: '2U3Zei7Q7Z4'
   },
   {
-    icon: <HandHeart size={24} />,
-    title: 'Henkilökohtainen huolenpito',
-    short: 'Avustamme päivittäisissä toimissa hienotunteisesti ja yksityisyyttäsi kunnioittaen.',
-    detail: 'Avustamme peseytymisessä, pukeutumisessa ja muissa päivittäisissä toimissa täysin yksityisyyttäsi kunnioittaen.',
-    color: 'var(--color-brown)',
-    colorLight: 'rgba(161,122,116,0.1)',
-    borderColor: '#A17A74',
-    image: '/images/kahvihetkieikasvoja.webp',
-    imageAlt: 'Hienotunteinen avustaminen ja huolenpito, kaksi kättä pitämässä lämpimästi toisistaan'
-  },
-  {
     icon: <Footprints size={24} />,
     title: 'Ulkoilu ja seurustelu',
     short: 'Joskus tärkeintä on vain istahtaa alas kahvikupillisen ääreen ja jutella.',
@@ -119,6 +96,28 @@ const services = [
     image: '/images/kukkienkeruu2.webp',
     imageAlt: 'Iloinen ulkoiluhetki, ikäihminen ja hoitaja keräämässä kukkia luonnossa',
     videoId: 'PTeeSlVmxf4'
+  },
+  {
+    icon: <HandHeart size={24} />,
+    title: 'Henkilökohtainen huolenpito',
+    short: 'Avustamme päivittäisissä toimissa hienotunteisesti ja yksityisyyttäsi kunnioittaen.',
+    detail: 'Avustamme peseytymisessä, pukeutumisessa ja muissa päivittäisissä toimissa täysin yksityisyyttäsi kunnioittaen.',
+    color: 'var(--color-brown)',
+    colorLight: 'rgba(161,122,116,0.1)',
+    borderColor: '#A17A74',
+    image: '/images/henkilokohtainen.png',
+    imageAlt: 'Hoitaja auttaa ystävällisesti ja kunnioittavasti ikäihmistä pukemisessa'
+  },
+  {
+    icon: <UtensilsCrossed size={24} />,
+    title: 'Ruoanlaitto ja ravitsemus',
+    short: 'Valmistamme maistuvaa kotiruokaa yhdessä tai puolestasi.',
+    detail: 'Valmistamme ravitsevaa ja maistuvaa kotiruokaa yhdessä tai puolestasi.',
+    color: 'var(--color-accent)',
+    colorLight: 'rgba(230,190,186,0.18)',
+    borderColor: '#e6beba',
+    image: '/images/pilkotaanomenia.webp',
+    imageAlt: 'Hoitaja ja ikäihminen pilkkovat yhdessä omenoita keittiössä'
   },
   {
     icon: <Music2 size={24} />,
