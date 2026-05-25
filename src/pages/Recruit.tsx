@@ -20,45 +20,62 @@ const Recruit = () => {
 
       {/* Hero Section */}
       <section style={{ 
-        padding: '8rem 1.5rem 7rem', 
-        backgroundColor: 'var(--color-primary)',
-        color: 'white',
-        textAlign: 'center'
+        padding: '6rem 1.5rem', 
+        backgroundColor: 'var(--color-background-warm)',
+        position: 'relative',
+        overflow: 'hidden'
       }}>
-        <div className="container" style={{ maxWidth: '800px' }}>
-          <div style={{
-            display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
-            padding: '0.5rem 1rem', background: 'rgba(255,255,255,0.1)',
-            borderRadius: '50px', fontWeight: '600', fontSize: '0.9rem',
-            marginBottom: '1.5rem',
-          }}>
-            <Heart size={16} /> Merkityksellistä työtä
-          </div>
-          <h1 style={{ color: 'white', marginBottom: '1.5rem', fontSize: 'clamp(2.5rem, 5vw, 4rem)', lineHeight: '1.1' }}>
-            Tule tekemään työtä, jolla on oikeasti merkitystä.
-          </h1>
-          <p style={{ fontSize: '1.2rem', opacity: 0.9, lineHeight: '1.6', marginBottom: '3rem', maxWidth: '650px', margin: '0 auto 2rem' }}>
-            Etsimme joukkoomme sote-alan ammattilaisia, yrittäjähenkisiä aluevetäjiä sekä paikallisia auttajia, jotka jakavat Famulan arvot: aito välittäminen, kiireettömyys ja ihmisen kohtaaminen.
-          </p>
-        </div>
-      </section>
+        {/* Pehmeitä koristeita taustalle */}
+        <div style={{
+          position: 'absolute', top: '-10%', left: '-5%', width: '300px', height: '300px',
+          background: 'radial-gradient(circle, rgba(230,190,186,0.4) 0%, transparent 70%)',
+          borderRadius: '50%', zIndex: 0
+        }} />
+        <div style={{
+          position: 'absolute', bottom: '-10%', right: '-5%', width: '400px', height: '400px',
+          background: 'radial-gradient(circle, rgba(127,154,131,0.3) 0%, transparent 70%)',
+          borderRadius: '50%', zIndex: 0
+        }} />
 
-      {/* ── KUVABANNERI ── */}
-      <section style={{ padding: '0 1.5rem', marginTop: '-5rem', position: 'relative', zIndex: 10 }}>
-        <div className="container" style={{ maxWidth: '1060px' }}>
-          <img 
-            src="/images/keskustelu.webp" 
-            alt="Työntekijä keskustelee tyytyväisenä asiakkaan kanssa olohuoneessa"
-            style={{ 
-              width: '100%', 
-              height: 'auto', 
-              borderRadius: '24px', 
-              boxShadow: '0 20px 50px rgba(0,0,0,0.15)', 
-              aspectRatio: '21/9', 
-              objectFit: 'cover',
-              objectPosition: 'center 40%'
-            }}
-          />
+        <div className="container" style={{ position: 'relative', zIndex: 1, maxWidth: '1200px' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4rem', alignItems: 'center' }}>
+            
+            {/* Tekstiosa */}
+            <div style={{ flex: '1 1 450px' }}>
+              <div style={{
+                display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+                padding: '0.6rem 1.2rem', background: 'rgba(230,190,186,0.3)',
+                borderRadius: '50px', fontWeight: '600', fontSize: '0.95rem',
+                color: 'var(--color-primary)', marginBottom: '1.5rem',
+              }}>
+                <Heart size={16} color="var(--color-secondary)" fill="var(--color-secondary)" /> Merkityksellistä työtä
+              </div>
+              <h1 style={{ color: 'var(--color-primary)', marginBottom: '1.5rem', fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', lineHeight: '1.1' }}>
+                Tule tekemään työtä, jolla on oikeasti merkitystä.
+              </h1>
+              <p style={{ fontSize: '1.2rem', color: '#475569', lineHeight: '1.7', marginBottom: '2rem' }}>
+                Etsimme joukkoomme sote-alan ammattilaisia, yrittäjähenkisiä aluevetäjiä sekä paikallisia auttajia, jotka jakavat Famulan arvot: aito välittäminen, kiireettömyys ja ihmisen kohtaaminen.
+              </p>
+            </div>
+
+            {/* Kuvaosa */}
+            <div style={{ flex: '1 1 500px', position: 'relative' }}>
+              <img 
+                src="/images/keskustelu.webp" 
+                alt="Työntekijä keskustelee tyytyväisenä asiakkaan kanssa olohuoneessa"
+                style={{ 
+                  width: '100%', 
+                  height: 'auto', 
+                  borderRadius: '24px', 
+                  boxShadow: '0 20px 40px rgba(0,0,0,0.08)', 
+                  aspectRatio: '4/3', 
+                  objectFit: 'cover',
+                  objectPosition: 'center 40%'
+                }}
+              />
+            </div>
+
+          </div>
         </div>
       </section>
 
