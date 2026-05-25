@@ -143,28 +143,28 @@ const Story = () => {
           </div>
           
           {/* ── VUODEN UUSYRITTÄJÄ TIIVISTELMÄ (Integroitu) ── */}
-          <div style={{ marginTop: '5rem', marginBottom: '5rem', maxWidth: '1000px', marginLeft: 'auto', marginRight: 'auto' }}>
+          <div style={{ marginTop: '5rem', marginBottom: '5rem' }}>
             <div style={{
               background: 'white',
               padding: '3rem',
             borderRadius: '24px',
-            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(251, 191, 36, 0.3)',
+            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(230, 190, 186, 0.4)',
             position: 'relative',
             overflow: 'hidden'
           }}>
-            {/* Kultainen hehku */}
+            {/* Teemavärinen hehku */}
             <div style={{
               position: 'absolute', top: 0, left: 0, right: 0, height: '6px',
-              background: 'linear-gradient(90deg, #fbbf24, #f59e0b, #fbbf24)'
+              background: 'var(--color-accent)'
             }} />
             <div style={{
               position: 'absolute', top: '-100px', right: '-100px', width: '200px', height: '200px',
-              background: 'radial-gradient(circle, rgba(251,191,36,0.15) 0%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(230, 190, 186, 0.25) 0%, transparent 70%)',
               borderRadius: '50%'
             }} />
             <div style={{
               position: 'absolute', bottom: '-100px', left: '-100px', width: '200px', height: '200px',
-              background: 'radial-gradient(circle, rgba(251,191,36,0.15) 0%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(127, 154, 131, 0.15) 0%, transparent 70%)',
               borderRadius: '50%'
             }} />
 
@@ -181,7 +181,7 @@ const Story = () => {
                 <div style={{
                   display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
                   width: '60px', height: '60px', borderRadius: '50%',
-                  background: '#fef3c7', color: '#d97706', marginBottom: '1.5rem'
+                  background: 'rgba(230, 190, 186, 0.25)', color: 'var(--color-primary)', marginBottom: '1.5rem'
                 }}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 24 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
                 </div>
@@ -191,7 +191,7 @@ const Story = () => {
                 </h2>
                 
                 <p style={{ fontSize: '1.15rem', color: '#475569', lineHeight: '1.8' }}>
-                  Famula Oy on palkittu Suomen uusyrityskeskukset ry:n valtakunnallisena <strong style={{ color: '#b45309' }}>vuoden Uusyrittäjänä</strong>. 
+                  Famula Oy on palkittu Suomen uusyrityskeskukset ry:n valtakunnallisena <strong style={{ color: 'var(--color-primary)' }}>vuoden Uusyrittäjänä</strong>. 
                   Kotihoidon tukipalveluita senioreille tuottava yritys on perustettu vuonna 2022. Yritys on ollut 
                   kannattava ja omavarainen alusta lähtien ja samalla se on hallitusti laajentanut toimintaansa.
                 </p>
