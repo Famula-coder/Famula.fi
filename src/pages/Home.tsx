@@ -648,16 +648,7 @@ const Home = () => {
       {/* ── HERO ── */}
       <Hero />
 
-      {/* ── TUNNELMAKUVA BANNERI ── */}
-      <section style={{ padding: '2rem 1.5rem', position: 'relative', zIndex: 1, marginBottom: '1rem' }}>
-        <div className="container" style={{ maxWidth: '1060px' }}>
-          <img 
-            src="/images/ystavanpaiva.webp" 
-            alt="Lämminhenkinen kuva Famulan arjesta" 
-            style={{ width: '100%', height: 'auto', borderRadius: '24px', boxShadow: '0 20px 50px rgba(0,0,0,0.15)', aspectRatio: '21/9', objectFit: 'cover' }}
-          />
-        </div>
-      </section>
+
 
       <section id="palvelut" style={{ background: 'var(--color-light-gray)', padding: '5rem 0' }}>
       <div className="container" style={{ maxWidth: '1060px' }}>
