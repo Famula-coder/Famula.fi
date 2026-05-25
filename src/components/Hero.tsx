@@ -43,8 +43,8 @@ const Hero = () => {
         <div className="hero-image-wrapper">
           <div className="hero-image-circle"></div>
           <img 
-            src="/images/kukkienkerauu.webp" 
-            alt="Hoitaja ja asiakas kävelemässä ulkona, hoitajalla kukkimppu" 
+            src={`${import.meta.env.BASE_URL}valma.png`} 
+            alt="Valma Linnanmäki, Famulan perustaja" 
             className="hero-person-image"
           />
           <div className="hero-floating-card">
@@ -52,8 +52,8 @@ const Hero = () => {
               <img src={`${import.meta.env.BASE_URL}Famulasydan.png`} alt="Famula sydän" style={{ width: '24px', height: '24px', objectFit: 'contain' }} />
             </div>
             <div className="floating-card-text">
-              <strong>Aitoa välittämistä</strong>
-              <span>Turvallista seuraa arkeen</span>
+              <strong>"Kaikessa autetaan"</strong>
+              <span>– Valma Linnanmäki</span>
             </div>
           </div>
         </div>
