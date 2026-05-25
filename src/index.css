@@ -144,13 +144,13 @@ img {
 }
 
 .whatsapp-tooltip {
-  background: white;
-  color: var(--color-primary);
+  background: #25D366;
+  color: white;
   padding: 0.75rem 1.2rem;
   border-radius: 50px;
   font-weight: 600;
   font-size: 0.95rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
   transform-origin: right center;
   animation: tooltipDisappear 8s ease forwards;
   white-space: nowrap;

@@ -298,7 +298,7 @@ const Region = () => {
 
       <div className="whatsapp-container">
         <div className="whatsapp-tooltip">
-          Ota yhteyttä lähettämällä WhatsApp-viesti!
+          Jätä soittopyyntö!
         </div>
         <a 
           href={whatsappUrl}

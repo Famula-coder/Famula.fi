@@ -2,7 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import Hero from '../components/Hero';
 import { useState, useRef } from 'react';
-import { Heart, ExternalLink, ArrowRight, ChevronDown, ShoppingCart, UtensilsCrossed, Sparkles, HandHeart, Footprints, Music2, Phone, Coffee, User, Star, ChevronLeft, ChevronRight, Quote, Play, X } from 'lucide-react';
+import { Heart, ExternalLink, ArrowRight, ChevronDown, ShoppingCart, UtensilsCrossed, Sparkles, HandHeart, Footprints, Music2, Phone, Coffee, User, Star, ChevronLeft, ChevronRight, Quote, Play, X, Stethoscope, ShieldCheck } from 'lucide-react';
 import PricingPackagesList from '../components/PricingPackages';
 
 const testimonials = [
@@ -140,6 +140,28 @@ const services = [
     borderColor: '#7F9A83',
     image: '/images/kauppa2.jpg',
     imageAlt: 'Hoitaja ja ikäihminen ostoskärryjen kanssa ruokakaupassa'
+  },
+  {
+    icon: <Stethoscope size={24} />,
+    title: 'Lääke- ja sairaanhoito',
+    short: 'Kriittinen tuki kotona asumiseen turvallisesti, ammattilaisen toteuttamana.',
+    detail: 'Huolehdimme lääkkeiden jaosta ja antamisesta ajallaan. Seuraamme vointia (mm. verenpaine ja verensokeri), teemme haavanhoidot ja injektiot luotettavasti.',
+    color: 'var(--color-primary)',
+    colorLight: 'rgba(8,36,52,0.1)',
+    borderColor: '#082434',
+    image: '/images/keskustelu.webp',
+    imageAlt: 'Sairaanhoitaja ja asiakas keskustelevat terveydentilasta'
+  },
+  {
+    icon: <ShieldCheck size={24} />,
+    title: 'Perushoiva ja arjen tuki',
+    short: 'Takaamme elämänlaadun ja inhimillisen arjen, kun omat voimat alkavat iän myötä vähentyä.',
+    detail: 'Avustamme lempeästi päivittäisissä perusasioissa, kuten pukeutumisessa, peseytymisessä sekä kodin arjen pyörittämisessä luoden turvallisuuden tunnetta.',
+    color: 'var(--color-secondary)',
+    colorLight: 'rgba(127,154,131,0.12)',
+    borderColor: '#7F9A83',
+    image: '/images/kastellaankukkia.webp',
+    imageAlt: 'Hoitaja auttaa kodin askareissa kastellen kukkia'
   }
 ];
 
