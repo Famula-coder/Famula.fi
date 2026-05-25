@@ -641,11 +641,11 @@ const Home = () => {
       <Hero />
 
       {/* ── TUNNELMAKUVA BANNERI ── */}
-      <section style={{ padding: '0 1.5rem', marginTop: '-4rem', position: 'relative', zIndex: 10, marginBottom: '2rem' }}>
+      <section style={{ padding: '2rem 1.5rem', position: 'relative', zIndex: 1, marginBottom: '1rem' }}>
         <div className="container" style={{ maxWidth: '1060px' }}>
           <img 
-            src="/images/kukkienkerauu.webp" 
-            alt="Hoitaja ja asiakas kävelemässä yhdessä luonnossa, hoitajalla kukkakimppu" 
+            src="/images/ystavanpaiva.webp" 
+            alt="Lämminhenkinen kuva Famulan arjesta" 
             style={{ width: '100%', height: 'auto', borderRadius: '24px', boxShadow: '0 20px 50px rgba(0,0,0,0.15)', aspectRatio: '21/9', objectFit: 'cover' }}
           />
         </div>
