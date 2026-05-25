@@ -21,7 +21,7 @@ const Recruit = () => {
       {/* Hero Section */}
       <section style={{ 
         padding: '6rem 1.5rem', 
-        backgroundColor: 'var(--color-background-warm)',
+        backgroundColor: 'white',
         position: 'relative',
         overflow: 'hidden'
       }}>

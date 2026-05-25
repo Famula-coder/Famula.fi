@@ -26,7 +26,7 @@ function App() {
           <Route path="/:regionId" element={<Region />} />
         </Routes>
       </main>
-      <footer className="bg-primary text-center" style={{ padding: '3rem', color: 'white', marginTop: 'auto' }}>
+      <footer className="text-center" style={{ backgroundColor: 'var(--color-secondary)', padding: '3rem', color: 'white', marginTop: 'auto' }}>
         <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
           <Link to="/keski-suomi" style={{ color: 'white', textDecoration: 'none' }}>Keski-Suomi</Link>
           <Link to="/pohjois-savo" style={{ color: 'white', textDecoration: 'none' }}>Pohjois-Savo</Link>
