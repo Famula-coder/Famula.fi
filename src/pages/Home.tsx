@@ -138,8 +138,8 @@ const services = [
     color: 'var(--color-secondary)',
     colorLight: 'rgba(127,154,131,0.12)',
     borderColor: '#7F9A83',
-    image: '/images/kauppa.png',
-    imageAlt: 'Hoitaja ja ikäihminen yhdessä ruokaostoksilla'
+    image: '/images/kauppa2.jpg',
+    imageAlt: 'Hoitaja ja ikäihminen ostoskärryjen kanssa ruokakaupassa'
   }
 ];
 
