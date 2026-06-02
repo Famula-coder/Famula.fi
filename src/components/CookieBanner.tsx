@@ -14,7 +14,14 @@ const CookieBanner = () => {
   const handleAccept = () => {
     localStorage.setItem('cookieConsent', 'true');
     setIsVisible(false);
-    window.location.reload(); // Ladataan sivu uudelleen jotta seurantakoodit aktivoituvat
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'analytics_storage': 'granted'
+      });
+    }
   };
 
   const handleDecline = () => {

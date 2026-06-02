@@ -10,7 +10,6 @@ const Region = () => {
   const { regionId } = useParams<{ regionId: string }>();
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
   const region = regions.find(r => r.id === regionId);
-  const cookieConsent = typeof window !== 'undefined' ? localStorage.getItem('cookieConsent') === 'true' : false;
 
   if (!region) {
     return <Navigate to="/" replace />;
@@ -53,7 +52,7 @@ const Region = () => {
         description={`Etsitkö luotettavaa kotisairaanhoitoa ${region.locativeName}? Tarjoamme lämminhenkistä apua ikääntyville omassa kodissa. Ota yhteyttä vetäjäämme: ${region.managerName}.`}
         schema={localBusinessSchema}
       />
-      {cookieConsent && regionId === 'keski-suomi' && (
+      {regionId === 'keski-suomi' && (
         <Helmet>
           <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17890084641"></script>
           <script>
@@ -67,7 +66,7 @@ const Region = () => {
           </script>
         </Helmet>
       )}
-      {cookieConsent && regionId === 'oulu' && (
+      {regionId === 'oulu' && (
         <Helmet>
           <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17590986359"></script>
           <script>
@@ -81,7 +80,7 @@ const Region = () => {
           </script>
         </Helmet>
       )}
-      {cookieConsent && regionId === 'etela-karjala' && (
+      {regionId === 'etela-karjala' && (
         <Helmet>
           <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17600441591"></script>
           <script>
