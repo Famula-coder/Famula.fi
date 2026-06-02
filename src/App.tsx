@@ -78,6 +78,25 @@ function App() {
             Omavalvontasuunnitelmat
           </a>
           <span style={{ color: 'rgba(255,255,255,0.3)' }}>·</span>
+          <button
+            onClick={() => window.dispatchEvent(new Event('openCookieBanner'))}
+            style={{ 
+              background: 'none', 
+              border: 'none', 
+              padding: 0, 
+              color: 'rgba(255,255,255,0.75)', 
+              cursor: 'pointer',
+              textDecoration: 'none', 
+              transition: 'color 0.2s',
+              fontFamily: 'inherit',
+              fontSize: 'inherit'
+            }}
+            onMouseOver={e => (e.currentTarget.style.color = 'white')}
+            onMouseOut={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.75)')}
+          >
+            Evästeasetukset
+          </button>
+          <span style={{ color: 'rgba(255,255,255,0.3)' }}>·</span>
           <a
             href="https://www.facebook.com/Famula.fi/"
             target="_blank"
