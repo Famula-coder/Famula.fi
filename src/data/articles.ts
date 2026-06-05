@@ -381,5 +381,82 @@ export const articles: Article[] = [
       </ul>
       <p>Säännöllinen ystävän vierailu katkaisee pitkän päivän ja ylläpitää elämäniloa. Voit ilahduttaa läheistäsi tilaamalla meidät käymään, ja samalla saat itsellesi mielenrauhan siitä, ettei hän joudu olemaan yksin.</p>
     `
+  },
+  {
+    id: '18',
+    slug: 'ikaihmisen-kaatumisen-ehkaisy-kodin-turvallisuus',
+    title: 'Ikäihmisen kaatumisen ehkäisy – 5 vinkkiä kodin turvallisuuden parantamiseen',
+    category: 'Turvallisuus',
+    excerpt: 'Kaatuminen on omaisten suurin pelko. Kokosimme 5 käytännön vinkkiä, joilla ikäihmisen kodin turvallisuutta voi parantaa välittömästi.',
+    icon: 'ShieldCheck',
+    content: `
+      <h2>Arjen tapaturmat pelottavat syystäkin</h2>
+      <p>Ikääntyessä tasapaino ja lihasvoima heikkenevät, ja jopa pieni kompastuminen omassa olohuoneessa voi johtaa kohtalokkaaseen lonkkamurtumaan. Vanhuksen kaatumisen ehkäisy onkin usein omaisten suurin yksittäinen huolenaihe, kun mietitään läheisen turvallisuutta kotona.</p>
+      
+      <h3>5 konkreettista vinkkiä kodin turvallisuuden parantamiseen:</h3>
+      <ol>
+        <li><strong>Poista liukkaat matot ja kynnykset:</strong> Kodin sisustus kannattaa käydä läpi kriittisin silmin. Kiinnitä mattojen alle liukuesteet tai poista turhat pikkumatot kokonaan. Jos mahdollista, madalla tai poista kynnykset apuvälineiden (kuten rollaattorin) käytön helpottamiseksi.</li>
+        <li><strong>Paranna valaistusta:</strong> Heikentynyt näkö on yksi suurimmista syistä kaatumisiin. Huolehdi, että erityisesti yöaikaiset reitit makuuhuoneesta vessaan on valaistu hyvin. Liiketunnistimella toimivat yövalot ovat erinomainen ja edullinen apu.</li>
+        <li><strong>Kylpyhuoneen turvavarusteet:</strong> Liukas kylpyhuoneen lattia on kodin vaarallisin paikka. Asenna tukikahvat wc-istuimen ja suihkun yhteyteen, ja hanki suihkuun tukeva suihkutuoli ja lattialle liukuestematto.</li>
+        <li><strong>Tavarat käden ulottuville:</strong> Kiipeily jakkaroille on ikäihmiselle ehdoton turvallisuusriski. Järjestä keittiön kaapit niin, että päivittäin tarvittavat astiat ja ruokatarvikkeet ovat helposti saatavilla alatasolla.</li>
+        <li><strong>Sopivat jalkineet:</strong> Varmista, että ikäihminen käyttää sisällä tukevia, luistamattomia sisäkenkiä tai jarrusukkia pelkkien villasukkien sijaan.</li>
+      </ol>
+
+      <h2>Famulan hoitaja on "turvallinen käsivarsi"</h2>
+      <p>Pelkät fyysiset muutokset kodissa eivät kuitenkaan aina riitä poistamaan kaatumisen riskiä. Suurin turva kodin askareissa, ulkoilussa ja suihkukäynneillä on <strong>toisen ihmisen läsnäolo</strong>.</p>
+      <p>Famulan yksityinen kotipalvelu tuo ikäihmisen arkeen sen tärkeimmän turvaverkon: tutun hoitajan, joka toimii konkreettisena tukena ja turvallisena käsivartena. Kun hoitajamme on mukana kauppareissulla tai talvisella kävelylenkillä, kaatumisriski pienenee merkittävästi ja askel pysyy varmana.</p>
+    `
+  },
+  {
+    id: '19',
+    slug: 'ikaihmisen-huono-ruokahalu-ja-ravitsemus',
+    title: 'Ikäihmisen huono ruokahalu – Miten turvata riittävä ravitsemus kotona?',
+    category: 'Hyvinvointi',
+    excerpt: 'Kun ruoka ei maistu ja paino putoaa, omainen huolestuu. Lue, miten yksinäisyyden poistaminen ja kiireetön ruokailuseura palauttavat ruokahalun.',
+    icon: 'UtensilsCrossed',
+    content: `
+      <h2>Ruoka ei maistu yksin syötynä</h2>
+      <p>Vanhuksen huono ruokahalu ja siitä seuraava tahaton laihtuminen on erittäin yleinen huolenaihe omaisten keskuudessa. Ravitsemuksen heikentyessä myös lihasvoima ja mieliala laskevat nopeasti, mikä puolestaan vaikeuttaa kotona pärjäämistä.</p>
+      <p>Syitä ruokahaluttomuuteen on useita: makuaistin heikkeneminen, lääkkeiden sivuvaikutukset tai pureskelun vaikeus. Yksi suurimmista ja usein unohdetuista syistä on kuitenkin <strong>yksinäisyys</strong>. Kuka meistä nauttisi ruokailusta yksin, hiljaisessa keittiössä päivästä ja viikosta toiseen?</p>
+
+      <h3>Vinkkejä ikäihmisen ravitsemuksen tukemiseen:</h3>
+      <ul>
+        <li><strong>Pienet, energiatiheät ateriat:</strong> Suuret annokset voivat viedä ruokahalun jo pelkällä koollaan. Tarjoa 5–6 pientä, mutta energia- ja proteiinipitoista ateriaa päivän aikana.</li>
+        <li><strong>Helppo purtava:</strong> Suosi pehmeitä, helposti pureskeltavia ja nieltäviä ruokia (esim. keitot, soseet, uunikalat).</li>
+        <li><strong>Makujen voimistaminen:</strong> Koska ikääntyessä makuaisti heikkenee, ruoan maustamiseen (kuten yrttien käyttöön) kannattaa kiinnittää erityistä huomiota.</li>
+      </ul>
+
+      <h2>Yhdessä syöminen on paras lääke</h2>
+      <p>Pelkkä mikroaterioiden tuominen jääkaappiin ei useinkaan riitä ratkaisemaan ongelmaa, jos vanhus ei muista tai jaksa niitä lämmittää.</p>
+      <p>Tässä Famulan kiireetön kotihoito pääsee loistamaan. Me emme vain tuo ruokaa ovelle, vaan teemme ruokailusta tapahtuman. Hoitajamme voivat laittaa ruokaa paikan päällä asiakkaan keittiössä, jolloin asunnon täyttävä, tuttu <strong>ruoan tuoksu herättää ruokahalun</strong> luonnollisesti. Mikä tärkeintä, hoitajamme istuvat alas pöytään ja syövät yhdessä asiakkaan kanssa. Yhteiset juttuhetket ja rauhallinen ilmapiiri tekevät ihmeitä – yhdessä syödessä ruoka yksinkertaisesti maistuu paremmalta.</p>
+    `
+  },
+  {
+    id: '20',
+    slug: 'milloin-palvelutaloon-vanhuksen-kotona-asumisen-tukeminen',
+    title: 'Milloin palvelutaloon? Keinoja, joilla vanhuksen kotona asumista voi pitkittää turvallisesti',
+    category: 'Omaisille',
+    excerpt: 'Milloin omat rahkeet tai kunnan kotihoito eivät enää riitä? Palveluasumista voi usein lykätä jopa vuosilla oikeanlaisen yksityisen kotipalvelun tuella.',
+    icon: 'Home',
+    content: `
+      <h2>Vaikea päätös edessä?</h2>
+      <p>"Milloin on oikea aika muuttaa palvelutaloon?" Tämä kysymys risteilee monen omaisen mielessä, kun vanhemman turvallisuus kotona alkaa huolestuttaa. Usein omaiset uupuvat yrityksessään hoitaa omat työnsä, perheensä sekä huolehtia samaan aikaan ikääntyvän vanhemman päivittäisistä asioista.</p>
+      <p>Palveluasuminen ei kuitenkaan ole ainoa, saati aina paras tai edullisin, vaihtoehto silloin, kun avuntarve lisääntyy.</p>
+
+      <h3>Merkkejä siitä, että nykyiset järjestelyt eivät ehkä riitä:</h3>
+      <ul>
+        <li>Toistuvat kaatumiset tai lääkevirheet.</li>
+        <li>Omaisen jatkuva, stressaava huoli ja fyysinen uupumus.</li>
+        <li>Kunnallisen kotihoidon käynnit ovat liian lyhyitä (esim. 15 minuuttia) eikä vanhus ehdi kertoa asioistaan.</li>
+        <li>Vanhus kokee turvattomuutta tai masennusta yksinolosta.</li>
+      </ul>
+
+      <h2>Palveluasumista voi lykätä oikealla tuella</h2>
+      <p>Moni kuvittelee, että vaihtoehdot ovat ainoastaan "yksin pärjääminen" tai "laitokseen muuttaminen". Totuus on, että kotona asumista voidaan jatkaa turvallisesti ja mielekkäästi todella pitkään yhdistämällä julkisia ja yksityisiä palveluita fiksusti.</p>
+      
+      <p><strong>Famulan yksityinen kotihoito täyttää julkisen puolen jättämät aukot:</strong></p>
+      <p>Kunnat pystyvät hoitamaan erinomaisesti välttämättömän sairaanhoidon ja lääkejaon. Se, mikä kotona pärjäämisen usein kuitenkin ratkaisee, on arjen mielekkyys: se, että koti on siisti, jääkaapissa on hyvää ruokaa, ja kotona käy <strong>sama tuttu ystävä</strong>, jolla on aikaa kuunnella, lähteä ulos kävelylle ja tuoda turvaa.</p>
+      <p>Räätälöidyllä, kiireettömällä kotipalvelulla asiakas voi jatkaa elämäänsä omassa, rakkaassa kodissaan. Tämä ratkaisu on paitsi inhimillisempi asiakkaalle, usein myös huomattavasti edullisempi ja joustavampi ratkaisu palvelutaloon verrattuna. Näin tuomme mielenrauhan myös teille omaisille.</p>
+    `
   }
 ];
