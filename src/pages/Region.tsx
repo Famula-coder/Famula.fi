@@ -48,8 +48,8 @@ const Region = () => {
   return (
     <>
       <SEO 
-        title={`Luotettava kotihoito ${region.locativeName} | Famula Oy`}
-        description={`Etsitkö luotettavaa kotisairaanhoitoa ${region.locativeName}? Tarjoamme lämminhenkistä apua ikääntyville omassa kodissa. Ota yhteyttä vetäjäämme: ${region.managerName}.`}
+        title={`Yksityinen kotihoito ja kotipalvelu ${region.locativeName} | Famula Oy`}
+        description={`Etsitkö luotettavaa kotisairaanhoitoa tai apua vanhukselle ${region.locativeName}? Tarjoamme lämminhenkistä apua ikäihmisen omassa kodissa. Ota yhteyttä vetäjäämme: ${region.managerName}.`}
         schema={localBusinessSchema}
       />
       {regionId === 'keski-suomi' && (
@@ -213,7 +213,7 @@ const Region = () => {
           <div style={{ padding: '2rem', background: 'white', borderRadius: '12px', borderTop: '4px solid var(--color-secondary)' }}>
             <h3>Luotettavaa kotiapua ja seuraa {region.locativeName}</h3>
             <p>
-              Meille hoitotyö on ennen kaikkea aitoa välittämistä ja kiireetöntä läsnäoloa. Autamme arjen askareissa ja lähdemme mielellämme turvalliseksi seuraksi vaikkapa kauppa- tai apteekkiasioille. Tavoitteemme on tuoda helpotusta ja iloa päiviisi juuri siellä, missä sitä eniten kaipaat.
+              Laadukas yksityinen vanhustenhoito ja kotipalvelu tarkoittaa meille ennen kaikkea kiireetöntä kohtaamista. Jokainen ikäihminen ansaitsee tulla aidosti kuulluksi. Autamme arjen askareissa ja lähdemme mielellämme turvalliseksi seuraksi vaikkapa kauppa- tai apteekkiasioille. Tavoitteemme on tuoda helpotusta ja iloa päiviisi juuri siellä, missä sitä eniten kaipaat.
             </p>
             <Link to="/#palvelut" style={{ display: 'inline-block', marginTop: '0.75rem', color: 'var(--color-secondary)', fontWeight: '600', textDecoration: 'none' }}>
               Tutustu palveluihimme →

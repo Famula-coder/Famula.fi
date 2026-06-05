@@ -426,7 +426,7 @@ export const articles: Article[] = [
         <li><strong>Makujen voimistaminen:</strong> Koska ikääntyessä makuaisti heikkenee, ruoan maustamiseen (kuten yrttien käyttöön) kannattaa kiinnittää erityistä huomiota.</li>
       </ul>
 
-      <h2>Yhdessä syöminen on paras lääke</h2>
+      <h2>Vanhuksen ravitsemuksen turvaaminen kotona</h2>
       <p>Pelkkä mikroaterioiden tuominen jääkaappiin ei useinkaan riitä ratkaisemaan ongelmaa, jos vanhus ei muista tai jaksa niitä lämmittää.</p>
       <p>Tässä Famulan kiireetön kotihoito pääsee loistamaan. Me emme vain tuo ruokaa ovelle, vaan teemme ruokailusta tapahtuman. Hoitajamme voivat laittaa ruokaa paikan päällä asiakkaan keittiössä, jolloin asunnon täyttävä, tuttu <strong>ruoan tuoksu herättää ruokahalun</strong> luonnollisesti. Mikä tärkeintä, hoitajamme istuvat alas pöytään ja syövät yhdessä asiakkaan kanssa. Yhteiset juttuhetket ja rauhallinen ilmapiiri tekevät ihmeitä – yhdessä syödessä ruoka yksinkertaisesti maistuu paremmalta.</p>
     `
@@ -443,7 +443,7 @@ export const articles: Article[] = [
       <p>"Milloin on oikea aika muuttaa palvelutaloon?" Tämä kysymys risteilee monen omaisen mielessä, kun vanhemman turvallisuus kotona alkaa huolestuttaa. Usein omaiset uupuvat yrityksessään hoitaa omat työnsä, perheensä sekä huolehtia samaan aikaan ikääntyvän vanhemman päivittäisistä asioista.</p>
       <p>Palveluasuminen ei kuitenkaan ole ainoa, saati aina paras tai edullisin, vaihtoehto silloin, kun avuntarve lisääntyy.</p>
 
-      <h3>Merkkejä siitä, että nykyiset järjestelyt eivät ehkä riitä:</h3>
+      <h3>Turvallinen koti vanhukselle – milloin on aika hakea ulkopuolista apua?</h3>
       <ul>
         <li>Toistuvat kaatumiset tai lääkevirheet.</li>
         <li>Omaisen jatkuva, stressaava huoli ja fyysinen uupumus.</li>

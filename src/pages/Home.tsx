@@ -65,7 +65,7 @@ const services = [
     icon: <Coffee size={24} />,
     title: 'Seuranpito ja ystäväpalvelu',
     short: 'Aitoa läsnäoloa ja seuraa arkeen. Teemme asioita yhdessä ja nautimme kiireettömistä hetkistä.',
-    detail: 'Vietämme aikaa yhdessä rupatellen, muistellen tai vain yhdessä ollen.',
+    detail: 'Vietämme aikaa yhdessä rupatellen, muistellen tai vain yhdessä ollen. Toimimme kiireettömänä seuranpitäjänä ja ulkoiluapuna ikäihmiselle.',
     color: 'var(--color-accent)',
     colorLight: 'rgba(230,190,186,0.18)',
     borderColor: '#e6beba',
@@ -82,14 +82,14 @@ const services = [
     colorLight: 'rgba(127,154,131,0.12)',
     borderColor: '#7F9A83',
     image: '/images/talvi_ulkoilu.png',
-    imageAlt: 'Hoitaja työntää ikäihmistä pyörätuolissa kauniissa talvisessa maisemassa',
+    imageAlt: 'Turvallista seuraa vanhukselle ulkoillessa talvisessa maisemassa',
     videoId: 'PTeeSlVmxf4'
   },
   {
     icon: <Sparkles size={24} />,
     title: 'Kodin siisteys ja vaatehuolto',
     short: 'Pidämme kotisi raikkaana ja viihtyisänä.',
-    detail: 'Autamme pitämään kodin raikkaana ja viihtyisänä. Teemme ylläpitosiivousta, viemme roskat, vaihdamme lakanat.',
+    detail: 'Autamme pitämään kodin raikkaana ja viihtyisänä. Kevyt siivousapu ikäihmiselle on tärkeä osa arjen turvallisuutta.',
     color: 'var(--color-lavender)',
     colorLight: 'rgba(127,104,144,0.1)',
     borderColor: '#7F6890',
@@ -117,7 +117,7 @@ const services = [
     colorLight: 'rgba(230,190,186,0.18)',
     borderColor: '#e6beba',
     image: '/images/pilkotaanomenia.webp',
-    imageAlt: 'Hoitaja ja ikäihminen pilkkovat yhdessä omenoita keittiössä'
+    imageAlt: 'Hoitaja auttaa vanhusta ruoanlaitossa kotona'
   },
   {
     icon: <Music2 size={24} />,
@@ -134,7 +134,7 @@ const services = [
     icon: <ShoppingCart size={24} />,
     title: 'Kauppa- ja asiointiapu',
     short: 'Käymme puolestasi kaupassa tai lähdemme seuraksi ja tueksi asioille.',
-    detail: 'Käymme puolestasi ruokakaupassa tai apteekissa, tai lähdemme sinulle turvalliseksi makutuomariksi ja seuraksi asioille.',
+    detail: 'Käymme puolestasi ruokakaupassa tai apteekissa, tai lähdemme turvalliseksi asiointiavuksi ikäihmiselle.',
     color: 'var(--color-secondary)',
     colorLight: 'rgba(127,154,131,0.12)',
     borderColor: '#7F9A83',
@@ -184,8 +184,8 @@ const Home = () => {
   return (
     <>
       <SEO 
-        title="Famula | Kiireetöntä kotipalvelua ja hoivaa ikäihmisille" 
-        description="Famulan kotipalvelu tarjoaa luotettavaa, kiireetöntä ja lämminhenkistä apua arkeen. Aina sama, tuttu hoitaja kotiisi. Katso miten voimme auttaa!" 
+        title="Yksityinen kotihoito ja kotipalvelu ikäihmisille | Famula" 
+        description="Famulan yksityinen kotihoito tarjoaa luotettavaa kotiapua ja hoivapalveluita ikäihmisille. Aina sama, tuttu hoitaja kotiisi. Katso miten voimme auttaa!" 
         schema={{
           "@context": "https://schema.org",
           "@type": "Organization",
@@ -787,6 +787,9 @@ const Home = () => {
             <div style={{ fontWeight: '700', fontSize: '1.15rem', color: 'var(--color-primary)', marginBottom: '0.5rem' }}>
               Aina sinun ehdoillasi
             </div>
+            <p style={{ color: '#475569', lineHeight: '1.7', margin: 0, fontSize: '1rem', marginBottom: '0.75rem' }}>
+              Moni huolestunut omainen etsii luotettavaa kotiapua vanhemmalleen tai vanhukselle. Me Famulalla ymmärrämme tämän huolen ja tarjoamme ikäihmisille kiireetöntä tukea arkeen.
+            </p>
             <p style={{ color: '#475569', lineHeight: '1.7', margin: 0, fontSize: '1rem' }}>
               Palvelu alkaa aina <strong>ilmaisella tutustumiskäynnillä</strong>, jossa kuuntelemme toiveitasi ja suunnittelemme yhdessä juuri sinun arkeasi parhaiten tukevan kokonaisuuden. Meille on kunnia-asia olla luottamuksesi arvoisia.
             </p>
