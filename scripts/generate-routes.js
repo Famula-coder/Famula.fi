@@ -57,7 +57,7 @@ const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
     <priority>1.0</priority>
   </url>
 ${allRoutes.map(route => `  <url>
-    <loc>${siteUrl}/${route}</loc>
+    <loc>${siteUrl}/${route}/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>`).join('\n')}
