@@ -30,14 +30,14 @@ const Navbar = () => {
             </span>
             <div className="dropdown-content">
               {regions.map(region => (
-                <Link key={region.id} to={`/${region.id}`} onClick={closeMenu}>{region.name}</Link>
+                <Link key={region.id} to={`/${region.id}/`} onClick={closeMenu}>{region.name}</Link>
               ))}
             </div>
           </div>
           <Link to="/#palvelut" onClick={closeMenu}>Palvelumme</Link>
-          <Link to="/tarinamme" onClick={closeMenu}>Tarinamme</Link>
-          <Link to="/toihin-meille" onClick={closeMenu}>Töihin meille</Link>
-          <Link to="/tietopankki" onClick={closeMenu}>Tietopankki</Link>
+          <Link to="/tarinamme/" onClick={closeMenu}>Tarinamme</Link>
+          <Link to="/toihin-meille/" onClick={closeMenu}>Töihin meille</Link>
+          <Link to="/tietopankki/" onClick={closeMenu}>Tietopankki</Link>
         </nav>
         <div className="navbar-actions">
           <a href="tel:0447569399" className="btn btn-outline nav-phone" aria-label="Soita meille: 0447569399">

@@ -945,7 +945,7 @@ const Home = () => {
                 "Perustin Famulan, koska tiesin mitä tarkoittaa kun läheistä ei ole kukaan auttamassa.
                 Me Famulalla emme vain suorita tehtäviä — tuomme mukanamme oikean ihmisen, joka välittää aidosti."
               </blockquote>
-              <Link to="/tarinamme" className="founder-story-link">
+              <Link to="/tarinamme/" className="founder-story-link">
                 Lue koko tarina <ArrowRight size={18} />
               </Link>
             </div>

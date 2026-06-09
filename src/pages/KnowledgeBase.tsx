@@ -172,7 +172,7 @@ const KnowledgeBase = () => {
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           const IconComp = (Icons as any)[article.icon || 'FileText'];
           return (
-            <Link to={`/tietopankki/${article.slug}`} key={article.id} className="article-card">
+            <Link to={`/tietopankki/${article.slug}/`} key={article.id} className="article-card">
               <div className="card-icon-wrapper">
                 {IconComp && <IconComp size={24} />}
               </div>
