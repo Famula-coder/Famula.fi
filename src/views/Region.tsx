@@ -255,16 +255,14 @@ const Region = () => {
       {/* <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
         <ContactForm />
       </section> */}
-      {region.omavalvontaUrl && (
+      {region.hasOmavalvonta && (
         <div style={{ textAlign: 'center', padding: '2rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
-          <a 
-            href={region.omavalvontaUrl} 
-            target="_blank" 
-            rel="noopener noreferrer"
+          <Link 
+            href={`/${region.id}/omavalvonta`}
             style={{ fontSize: '0.875rem', color: 'var(--color-text-light)', textDecoration: 'underline' }}
           >
             Omavalvontasuunnitelma
-          </a>
+          </Link>
         </div>
       )}
 

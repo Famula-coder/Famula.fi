@@ -12,7 +12,7 @@ export interface RegionData {
   genitiveName: string;
   descriptionTitle?: string;
   descriptionText?: string;
-  omavalvontaUrl?: string;
+  hasOmavalvonta?: boolean;
 }
 
 export const regions: RegionData[] = [
@@ -29,7 +29,7 @@ export const regions: RegionData[] = [
     genitiveName: 'Keski-Suomen',
     descriptionTitle: 'Luotettava yksityinen kotipalvelu ja kotihoito – Keski-Suomi',
     descriptionText: 'Famula Keski-Suomi tarjoaa kiireetöntä ja sydämellistä kotihoidon tukipalvelua Jyväskylässä, Laukaassa, Muuramessa, Äänekoskella ja näiden lähialueilla. Olipa tarpeenasi ikäihmisten arjen apu, siivousapu tai kokonaisvaltainen yksityinen kotihoito, ammattilaisemme ovat tukenasi.\n\nMeille tärkeintä on aito kohtaaminen ja turvallinen olo. Kuljemme rinnallasi luotettavasti ja ihmistä kunnioittaen.',
-    omavalvontaUrl: 'https://famula-asiakirjahallinta--famula-asiakirjahallinta.europe-west4.hosted.app/p/pub_doc-1780465674916',
+    hasOmavalvonta: true,
   },
   {
     id: 'pohjois-savo',
@@ -44,6 +44,7 @@ export const regions: RegionData[] = [
     genitiveName: 'Pohjois-Savon',
     descriptionTitle: 'Kiireetön kotihoito ja arjen tukipalvelut – Pohjois-Savo',
     descriptionText: 'Etsitkö luotettavaa kotihoitoa ikäihmiselle Savon sydämessä? Famulan yksityinen kotihoito ja arjen tukipalvelut tuovat avun suoraan kotiovelle Kuopiossa ja Siilinjärvellä.\n\nPalvelemme lämpimästi ja ammattitaidolla – aina siten, että sinulla on kotonasi tuttu ja turvallinen omahoitaja.',
+    hasOmavalvonta: true,
   },
   {
     id: 'oulu',
@@ -58,7 +59,7 @@ export const regions: RegionData[] = [
     genitiveName: 'Oulun',
     descriptionTitle: 'Luotettava kotipalvelu ja kotihoito ikäihmisille – Oulun seutu',
     descriptionText: 'Etsitkö kiireetöntä apua ikääntyvälle läheisellesi? Famulan yksityinen kotihoito tarjoaa turvallista seuraa ja arjen tukipalveluita laajasti Oulussa, Kempeleessä, Limingassa ja Muhoksella.\n\nOlipa kyseessä viikoittainen siivousapu, kaupassakäyntiseura tai päivittäinen kotihoidon tukipalvelu, räätälöimme avun juuri teille sopivaksi. Meillä hoitaja ei vaihdu jatkuvasti, vaan luonasi käy aina sama tuttu ammattilainen. Kaikki palvelumme oikeuttavat kotitalousvähennykseen.',
-    omavalvontaUrl: 'https://famula-asiakirjahallinta--famula-asiakirjahallinta.europe-west4.hosted.app/p/pub_doc-1780465674916',
+    hasOmavalvonta: true,
   },
   {
     id: 'etela-karjala',
@@ -73,7 +74,7 @@ export const regions: RegionData[] = [
     genitiveName: 'Etelä-Karjalan',
     descriptionTitle: 'Yksityinen kotihoito ja kotipalvelu – Etelä-Karjala',
     descriptionText: 'Turvallinen ja luotettava, sellainen on Famula. Tarjoamme laadukasta kotihoitoa ja kotihoidon tukipalveluita Lappeenrannassa, Imatralla, Taipalsaarella ja Ruokolahdella. Ikäihmisten arjen apu on sydämenasiamme koko Etelä-Karjalan alueella.\n\nTeemme työmme kiireettömästi, lämpimästi kohdaten ja asiakkaan toiveet huomioiden. Kanssamme tunnet olosi turvalliseksi.',
-    omavalvontaUrl: 'https://famula-asiakirjahallinta--famula-asiakirjahallinta.europe-west4.hosted.app/p/pub_doc-1780465674916',
+    hasOmavalvonta: true,
   },
   {
     id: 'uusimaa',
