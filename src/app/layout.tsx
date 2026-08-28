@@ -25,13 +25,6 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://famula.fi'),
   title: "Famula | Kiireetöntä kotipalvelua ja hoivaa ikäihmisille",
   description: "Famulan kotipalvelu tarjoaa luotettavaa, kiireetöntä ja lämminhenkistä apua arkeen. Aina sama, tuttu hoitaja kotiisi.",
-  icons: {
-    icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon.png', type: 'image/png' },
-    ],
-    apple: '/favicon.png',
-  }
 };
 
 export default function RootLayout({
