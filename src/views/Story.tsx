@@ -1,21 +1,19 @@
 "use client";
 import Image from 'next/image';
 
-
-// import ContactForm from '../components/ContactForm';
 import { Heart } from 'lucide-react';
 
 const Story = () => {
   return (
     <>
-      
-
       <style>{`
         .valma-wrapper { opacity: 1; }
 
         .valma-img {
           display: block;
           width: 100%;
+          max-height: 560px;
+          object-fit: contain;
           filter: drop-shadow(0 20px 50px rgba(0,0,0,0.13));
         }
 
@@ -61,13 +59,13 @@ const Story = () => {
                 <p>Yrityksen tarina sai alkunsa, kun Valman opiskeluhaaveet saivat takaiskun kroonisen migreenin takia.</p>
 
                 <blockquote style={{ fontSize: '1.25rem', fontStyle: 'italic', color: 'var(--color-primary)', paddingLeft: '1.5rem', borderLeft: '4px solid var(--color-secondary)', margin: '1rem 0' }}>
-                  "Olen koko ikäni tiennyt, että haluan auttaa ihmisiä työkseni. Tarkoitukseni olikin hakea lääkikseen lukiosta päästyäni. Kaikki ei kuitenkaan mennyt kuten suunnittelin. Aloin saada päivittäin rajuja migreenikohtauksia, joiden vuoksi opiskelut oli pakko laittaa tauolle."
+                  &quot;Olen koko ikäni tiennyt, että haluan auttaa ihmisiä työkseni. Tarkoitukseni olikin hakea lääkikseen lukiosta päästyäni. Kaikki ei kuitenkaan mennyt kuten suunnittelin. Aloin saada päivittäin rajuja migreenikohtauksia, joiden vuoksi opiskelut oli pakko laittaa tauolle.&quot;
                 </blockquote>
 
                 <p>Migreenin vietyä opiskelumahdollisuudet joutui Valma pohtimaan, mitä voisi elämässään tehdä.</p>
 
                 <blockquote style={{ fontSize: '1.25rem', fontStyle: 'italic', color: 'var(--color-primary)', paddingLeft: '1.5rem', borderLeft: '4px solid var(--color-accent)', margin: '1rem 0' }}>
-                  "Minulla on ihana pikkusisko, nimeltään Aili. Aililla on Downin oireyhtymä. Toimin hänen omaishoitajanaan kolmen vuoden ajan. Ymmärsin, että vaikken voisikaan opiskella, voin silti auttaa ihmisiä."
+                  &quot;Minulla on ihana pikkusisko, nimeltään Aili. Aililla on Downin oireyhtymä. Toimin hänen omaishoitajanaan kolmen vuoden ajan. Ymmärsin, että vaikken voisikaan opiskella, voin silti auttaa ihmisiä.&quot;
                 </blockquote>
 
                 <p>Tästä lähtikin idea Famulan perustamiselle. Yrityksen alkutaival oli kivinen. Valma haki yritykselle starttirahaa, mutta hakemus evättiin. Hakemuksen hylkäystä perusteltiin sillä, ettei Valman kykyihin selviytyä nuorena yrittäjänä uskottu. Sen sijaan Valmalle ehdotettiin, että hän voisi saada työttömyyskorvausta.</p>
@@ -75,18 +73,18 @@ const Story = () => {
                 <p>Takaiskusta ei lannistuttu. Yhdessä aviomiehensä Pauluksen ja Heikki-isän kanssa lähdettiin rakentamaan yhteistä unelmaa. Tämä periksiantamaton asenne ja kova työ onkin tuottanut tulosta: vuonna 2025 Famula palkittiin valtakunnallisena Vuoden Uusyrittäjänä!</p>
 
                 <blockquote style={{ fontSize: '1.3rem', fontWeight: '500', color: 'var(--color-primary)', padding: '2rem', background: 'white', borderRadius: '12px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', marginTop: '2rem' }}>
-                  "Suomessa on paljon ikäihmisiä, jotka kaipaisivat arkeensa auttajaa. Tätä tarvetta varten perustettiin Famula Oy. Me Famulalla halutaan tarjota kotiavun lisäksi ystävä, joka välittää aidosti."<br />
+                  &quot;Suomessa on paljon ikäihmisiä, jotka kaipaisivat arkeensa auttajaa. Tätä tarvetta varten perustettiin Famula Oy. Me Famulalla halutaan tarjota kotiavun lisäksi ystävä, joka välittää aidosti.&quot;<br />
                   <span style={{ display: 'block', fontSize: '1rem', marginTop: '1rem', color: '#64748b' }}>– Valma Linnanmäki, Perustaja</span>
                 </blockquote>
-                
+
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginTop: '2rem' }}>
-                  <Image 
-                    src={"/images/leenajakukkakimppu.webp"} 
-                    alt="Famulan perustaja Leena hymyilee kukkakimppu kädessään" 
+                  <Image
+                    src={"/images/leenajakukkakimppu.webp"}
+                    alt="Famulan perustaja Leena hymyilee kukkakimppu kädessään"
                     style={{ objectFit: 'cover', borderRadius: '16px', aspectRatio: '4/3', boxShadow: '0 4px 15px rgba(0,0,0,0.05)' }} width={800} height={800} />
-                  <Image 
-                    src={"/images/ystavanpaiva.webp"} 
-                    alt="Lämminhenkinen ystävänpäivän tervehdys Famulalta" 
+                  <Image
+                    src={"/images/ystavanpaiva.webp"}
+                    alt="Lämminhenkinen ystävänpäivän tervehdys Famulalta"
                     style={{ objectFit: 'cover', borderRadius: '16px', aspectRatio: '4/3', boxShadow: '0 4px 15px rgba(0,0,0,0.05)' }} width={800} height={800} />
                 </div>
               </div>
@@ -120,13 +118,14 @@ const Story = () => {
 
               {/* Kuvacontainer */}
               <div style={{ position: 'relative', zIndex: 2, overflow: 'hidden', borderRadius: '24px' }}>
-
                 <Image
                   className="valma-img"
                   src={`/valma.png`}
                   alt="Valma Linnanmäki muistelee alkutaivaltaan"
                   style={{
                     filter: 'drop-shadow(0 20px 50px rgba(0,0,0,0.13))',
+                    maxHeight: '560px',
+                    objectFit: 'contain',
                   }} width={800} height={800} />
               </div>
 
@@ -138,69 +137,66 @@ const Story = () => {
             </div>
 
           </div>
-          
+
           {/* ── VUODEN UUSYRITTÄJÄ TIIVISTELMÄ (Integroitu) ── */}
           <div style={{ marginTop: '5rem', marginBottom: '5rem' }}>
             <div style={{
               background: 'white',
               padding: '3rem',
-            borderRadius: '24px',
-            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(230, 190, 186, 0.4)',
-            position: 'relative',
-            overflow: 'hidden'
-          }}>
-            {/* Teemavärinen hehku */}
-            <div style={{
-              position: 'absolute', top: 0, left: 0, right: 0, height: '6px',
-              background: 'var(--color-accent)'
-            }} />
-            <div style={{
-              position: 'absolute', top: '-100px', right: '-100px', width: '200px', height: '200px',
-              background: 'radial-gradient(circle, rgba(230, 190, 186, 0.25) 0%, transparent 70%)',
-              borderRadius: '50%'
-            }} />
-            <div style={{
-              position: 'absolute', bottom: '-100px', left: '-100px', width: '200px', height: '200px',
-              background: 'radial-gradient(circle, rgba(127, 154, 131, 0.15) 0%, transparent 70%)',
-              borderRadius: '50%'
-            }} />
+              borderRadius: '24px',
+              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(230, 190, 186, 0.4)',
+              position: 'relative',
+              overflow: 'hidden'
+            }}>
+              {/* Teemavärinen hehku */}
+              <div style={{
+                position: 'absolute', top: 0, left: 0, right: 0, height: '6px',
+                background: 'var(--color-accent)'
+              }} />
+              <div style={{
+                position: 'absolute', top: '-100px', right: '-100px', width: '200px', height: '200px',
+                background: 'radial-gradient(circle, rgba(230, 190, 186, 0.25) 0%, transparent 70%)',
+                borderRadius: '50%'
+              }} />
+              <div style={{
+                position: 'absolute', bottom: '-100px', left: '-100px', width: '200px', height: '200px',
+                background: 'radial-gradient(circle, rgba(127, 154, 131, 0.15) 0%, transparent 70%)',
+                borderRadius: '50%'
+              }} />
 
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '3rem', alignItems: 'center' }}>
-              <div style={{ flex: '1 1 350px', position: 'relative', zIndex: 2 }}>
-                <Image 
-                  src={`/uusyrittaja.jpg`} 
-                  alt="Vuoden Uusyrittäjä 2025" 
-                  style={{  borderRadius: '16px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} width={800} height={800} />
-              </div>
-
-              <div style={{ flex: '1 1 400px', position: 'relative', zIndex: 2, textAlign: 'left' }}>
-                <div style={{
-                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                  width: '60px', height: '60px', borderRadius: '50%',
-                  background: 'rgba(230, 190, 186, 0.25)', color: 'var(--color-primary)', marginBottom: '1.5rem'
-                }}>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 24 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '3rem', alignItems: 'center' }}>
+                <div style={{ flex: '1 1 350px', position: 'relative', zIndex: 2 }}>
+                  <Image
+                    src={`/uusyrittaja.jpg`}
+                    alt="Vuoden Uusyrittäjä 2025"
+                    style={{ borderRadius: '16px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} width={800} height={800} />
                 </div>
 
-                <h2 style={{ color: 'var(--color-primary)', marginBottom: '1.5rem', fontSize: '2.5rem', lineHeight: '1.2' }}>
-                  Kuopiolainen Famula Oy on vuoden 2025 Uusyrittäjä
-                </h2>
-                
-                <p style={{ fontSize: '1.15rem', color: '#475569', lineHeight: '1.8' }}>
-                  Famula Oy on palkittu Suomen uusyrityskeskukset ry:n valtakunnallisena <strong style={{ color: 'var(--color-primary)' }}>vuoden Uusyrittäjänä</strong>. 
-                  Kotihoidon tukipalveluita senioreille tuottava yritys on perustettu vuonna 2022. Yritys on ollut 
-                  kannattava ja omavarainen alusta lähtien ja samalla se on hallitusti laajentanut toimintaansa.
-                </p>
+                <div style={{ flex: '1 1 400px', position: 'relative', zIndex: 2, textAlign: 'left' }}>
+                  <div style={{
+                    display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                    width: '60px', height: '60px', borderRadius: '50%',
+                    background: 'rgba(230, 190, 186, 0.25)', color: 'var(--color-primary)', marginBottom: '1.5rem'
+                  }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  </div>
+
+                  <h2 style={{ color: 'var(--color-primary)', marginBottom: '1.5rem', fontSize: '2.5rem', lineHeight: '1.2' }}>
+                    Kuopiolainen Famula Oy on vuoden 2025 Uusyrittäjä
+                  </h2>
+
+                  <p style={{ fontSize: '1.15rem', color: '#475569', lineHeight: '1.8' }}>
+                    Famula Oy on palkittu Suomen uusyrityskeskukset ry:n valtakunnallisena <strong style={{ color: 'var(--color-primary)' }}>vuoden Uusyrittäjänä</strong>.
+                    Kotihoidon tukipalveluita senioreille tuottava yritys on perustettu vuonna 2022. Yritys on ollut
+                    kannattava ja omavarainen alusta lähtien ja samalla se on hallitusti laajentanut toimintaansa.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
-    </div>
-
-      {/* <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-white)' }}>
-        <ContactForm />
-      </section> */}
     </>
   );
 };
