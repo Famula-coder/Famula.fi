@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Varmuuskopiot ja paikalliset suunnittelupaperit
+famula-next/
+RULES.md
+SEO.md
+AGENTS.md
+CLAUDE.md
+tulevaisuus.md
