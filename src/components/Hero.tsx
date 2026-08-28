@@ -52,7 +52,7 @@ const Hero = () => {
             className="hero-person-image" width={800} height={800} />
           <div className="hero-floating-card">
             <div className="floating-card-icon">
-              <Image src={`/Famulasydan.png`} alt="" aria-hidden="true" width={24} height={24} style={{ objectFit: 'contain' }} />
+              <Image src={`/images/famulasydan.png`} alt="" aria-hidden="true" width={24} height={24} style={{ objectFit: 'contain' }} />
             </div>
             <div className="floating-card-text">
               <strong>"Kaikessa autetaan"</strong>
