@@ -255,6 +255,18 @@ const Region = () => {
       {/* <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
         <ContactForm />
       </section> */}
+      {region.omavalvontaUrl && (
+        <div style={{ textAlign: 'center', padding: '2rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
+          <a 
+            href={region.omavalvontaUrl} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ fontSize: '0.875rem', color: 'var(--color-text-light)', textDecoration: 'underline' }}
+          >
+            Omavalvontasuunnitelma
+          </a>
+        </div>
+      )}
 
       <div className="whatsapp-container">
         <div className="whatsapp-tooltip">

@@ -69,10 +69,6 @@ export default function RootLayout({
                 Tietosuojaseloste sosiaalihuollon asiakkaille
               </a>
               <span style={{ color: 'rgba(255,255,255,0.3)' }}>·</span>
-              <a href="https://drive.google.com/drive/folders/1S_qB2e4bGDWe-fZXP5Xl2B6hvNXFMHNg?usp=drive_link" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.75)', textDecoration: 'none' }}>
-                Omavalvontasuunnitelmat
-              </a>
-              <span style={{ color: 'rgba(255,255,255,0.3)' }}>·</span>
               <a href="https://www.facebook.com/Famula.fi/" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.75)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '4px' }}>
                 Facebook
               </a>
