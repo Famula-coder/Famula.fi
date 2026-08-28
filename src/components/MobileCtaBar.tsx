@@ -4,7 +4,7 @@ import { Phone, MessageCircle } from 'lucide-react';
 
 // Haetaan aluesivujen puhelinnumero tai käytetään yleistä numeroa
 const GENERAL_PHONE = "0408063737";
-const WHATSAPP_NUMBER = "358408063737";
+const WHATSAPP_NUMBER = "358409648668";
 const WHATSAPP_MSG = "Hei!%20Olisin%20kiinnostunut%20Famulan%20palveluista.";
 
 const MobileCtaBar = () => {
