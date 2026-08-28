@@ -1,0 +1,174 @@
+.cookie-banner-overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  pointer-events: none; /* Allows clicking through overlay padding */
+}
+
+.cookie-banner {
+  background-color: var(--color-background-warm);
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  pointer-events: auto; /* Re-enables clicking on the banner */
+}
+
+@media (min-width: 768px) {
+  .cookie-banner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.cookie-banner-content h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+}
+
+.cookie-banner-content p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  opacity: 0.9;
+}
+
+.cookie-banner-actions {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 500px) {
+  .cookie-banner-actions {
+    flex-direction: column;
+  }
+  .cookie-banner-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.cookie-link {
+  color: var(--color-primary);
+  text-decoration: underline;
+  font-weight: 700;
+  transition: opacity 0.2s;
+}
+
+.cookie-link:hover, .cookie-link:focus {
+  opacity: 0.7;
+}
+
+.cookie-settings {
+  width: 100%;
+}
+
+.cookie-settings h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+}
+
+.settings-desc {
+  margin-bottom: 1.5rem !important;
+}
+
+.cookie-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  gap: 1rem;
+}
+
+.cookie-option:last-of-type {
+  border-bottom: none;
+}
+
+.cookie-option-info strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--color-primary);
+}
+
+.cookie-option-info p {
+  margin: 0;
+  font-size: 0.85rem !important;
+  opacity: 0.8;
+}
+
+/* Toggle Switch Styles */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--color-primary);
+}
+
+input:focus-visible + .slider {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+.slider.disabled {
+  background-color: var(--color-primary);
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.slider.disabled:before {
+  transform: translateX(24px);
+}
