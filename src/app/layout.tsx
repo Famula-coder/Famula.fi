@@ -61,7 +61,7 @@ export default function RootLayout({
               borderTop: '1px solid rgba(255,255,255,0.15)',
               fontSize: '0.875rem',
             }}>
-              <a href="https://oma.easygdpr.fi/file/public/privacy-policies/152161cd-d72e-46e1-b50d-3ece0eb40686" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.75)', textDecoration: 'none' }}>
+              <a href="https://famula-asiakirjahallinta--famula-asiakirjahallinta.europe-west4.hosted.app/p/pub_doc-1777552123067-h23awcnzj" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.75)', textDecoration: 'none' }}>
                 Tietosuojaseloste
               </a>
               <span style={{ color: 'rgba(255,255,255,0.3)' }}>·</span>

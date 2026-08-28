@@ -234,7 +234,7 @@ const ContactForm = () => {
             <span className="checkbox-text">
               Hyväksyn, että antamiani tietoja käsitellään yhteydenoton hoitamiseksi Famulan{' '}
               <a
-                href="https://oma.easygdpr.fi/file/public/privacy-policies/152161cd-d72e-46e1-b50d-3ece0eb40686"
+                href="https://famula-asiakirjahallinta--famula-asiakirjahallinta.europe-west4.hosted.app/p/pub_doc-1777552123067-h23awcnzj"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: 'var(--color-secondary)', textDecoration: 'underline' }}
