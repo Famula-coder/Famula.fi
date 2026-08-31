@@ -36,7 +36,7 @@ const Pricing = () => {
       
       <div className="container" style={{ padding: '4rem 1.5rem', maxWidth: '800px' }}>
         <div className="text-center" style={{ marginBottom: '3rem' }}>
-          <h1 style={{ color: 'var(--color-primary)', fontSize: '3rem', marginBottom: '1rem' }}>Yksityisen kotihoidon ja kotipalvelun hinta</h1>
+          <h1 style={{ color: 'var(--color-primary)', fontSize: 'clamp(1.75rem, 7vw, 3rem)', marginBottom: '1rem' }}>Yksityisen kotihoidon ja kotipalvelun hinta</h1>
           <p style={{ fontSize: '1.25rem', color: '#64748b' }}>
             Selkeä ja läpinäkyvä hinnoittelu. Yksi tuntihinta ilman yllättäviä lisäkuluja.
           </p>

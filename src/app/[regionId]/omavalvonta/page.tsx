@@ -38,7 +38,7 @@ export default async function OmavalvontaPage({ params }: PageProps) {
 
   return (
     <div style={{ backgroundColor: 'var(--color-background-warm)', minHeight: '100vh', paddingBottom: '4rem' }}>
-      <div className="container" style={{ paddingTop: '8rem' }}>
+      <div className="container" style={{ paddingTop: 'clamp(4rem, 15vw, 8rem)' }}>
         
         <div style={{ marginBottom: '2rem' }}>
           <Link href={`/${regionId}`} className="btn btn-outline" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', backgroundColor: 'white' }}>
@@ -46,11 +46,11 @@ export default async function OmavalvontaPage({ params }: PageProps) {
           </Link>
         </div>
 
-        <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: '3rem', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
+        <div style={{ backgroundColor: 'white', borderRadius: '16px', padding: 'clamp(1.25rem, 5vw, 3rem)', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem', marginBottom: '2rem' }}>
             <div>
               <div className="hero-badge" style={{ marginBottom: '1rem' }}>Lakisääteinen asiakirja</div>
-              <h1 style={{ color: 'var(--color-primary)', margin: 0, fontSize: '2.5rem' }}>Omavalvontasuunnitelma</h1>
+              <h1 style={{ color: 'var(--color-primary)', margin: 0, fontSize: 'clamp(1.5rem, 7vw, 2.5rem)', overflowWrap: 'break-word' }}>Omavalvontasuunnitelma</h1>
               <p style={{ color: 'var(--color-text-light)', fontSize: '1.25rem', marginTop: '0.5rem' }}>Famula {region.name}</p>
             </div>
             
