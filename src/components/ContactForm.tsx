@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from 'react';
-import { regions } from '../data/regions';
+import { regions, visibleRegions } from '../data/regions';
 import { Send, CheckCircle2, AlertCircle } from 'lucide-react';
 import './ContactForm.css';
 
@@ -201,7 +201,7 @@ const ContactForm = () => {
               required
             >
               <option value="koko-suomi">Koko Suomi (Ohjautuu Valmalle)</option>
-              {regions.filter(region => !region.hidden).map(region => (
+              {visibleRegions.map(region => (
                 <option key={region.id} value={region.id}>
                   {region.name} (Vetäjä: {region.managerName})
                 </option>

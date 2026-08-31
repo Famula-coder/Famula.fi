@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import { Heart, Clock, Star, MapPin, Smile } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import { regions } from '../data/regions';
+import { visibleRegions } from '../data/regions';
 import { useEffect } from 'react';
 
 const Recruit = () => {
@@ -89,7 +89,7 @@ const Recruit = () => {
           </p>
           
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-            {regions.map((region) => (
+            {visibleRegions.map((region) => (
               <button
                 key={region.id}
                 onClick={() => navigate.push(`/${region.id}`)}
@@ -230,7 +230,7 @@ const Recruit = () => {
                   }}
                 >
                   <option value="">Valitse oma alueesi...</option>
-                  {regions.filter(r => !r.hidden).map((r) => (
+                  {visibleRegions.map((r) => (
                     <option key={r.id} value={r.id} style={{ color: 'black' }}>
                       {r.name}
                     </option>

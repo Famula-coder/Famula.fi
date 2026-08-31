@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { ChevronDown, Clock, CheckCircle2 } from 'lucide-react';
-import { regions } from '../data/regions';
+import { visibleRegions } from '../data/regions';
 
 export const pricingExamples = [
   {
@@ -210,7 +210,7 @@ export const PricingAccordion = ({ example }: { example: typeof pricingExamples[
                 }}
               >
                 <option value="">Varaa ilmainen tutustumiskäynti ▾</option>
-                {regions.map((r) => (
+                {visibleRegions.map((r) => (
                   <option key={r.id} value={r.id} style={{ color: 'black' }}>
                     {r.name}
                   </option>

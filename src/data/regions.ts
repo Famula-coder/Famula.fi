@@ -13,6 +13,10 @@ export interface RegionData {
   descriptionTitle?: string;
   descriptionText?: string;
   hasOmavalvonta?: boolean;
+  /** Alueen suurin kaupunki - käytetään hakukoneille (schema.org addressLocality). */
+  mainCity?: string;
+  /** Kunnat joissa alue oikeasti palvelee (schema.org areaServed). */
+  areaServed?: string[];
 }
 
 export const regions: RegionData[] = [
@@ -28,8 +32,10 @@ export const regions: RegionData[] = [
     locativeName: 'Keski-Suomessa',
     genitiveName: 'Keski-Suomen',
     descriptionTitle: 'Luotettava yksityinen kotipalvelu ja kotihoito – Keski-Suomi',
-    descriptionText: 'Famula Keski-Suomi tarjoaa kiireetöntä ja sydämellistä kotihoidon tukipalvelua Jyväskylässä, Laukaassa, Muuramessa, Äänekoskella ja näiden lähialueilla. Olipa tarpeenasi ikäihmisten arjen apu, siivousapu tai kokonaisvaltainen yksityinen kotihoito, ammattilaisemme ovat tukenasi.\n\nMeille tärkeintä on aito kohtaaminen ja turvallinen olo. Kuljemme rinnallasi luotettavasti ja ihmistä kunnioittaen.',
+    descriptionText: 'Famula Keski-Suomi tarjoaa kiireetöntä ja sydämellistä kotihoidon tukipalvelua Jyväskylässä, Jämsässä, Laukaassa, Muuramessa, Äänekoskella ja näiden lähialueilla. Olipa tarpeenasi ikäihmisten arjen apu, siivousapu tai kokonaisvaltainen yksityinen kotihoito, ammattilaisemme ovat tukenasi.\n\nMeille tärkeintä on aito kohtaaminen ja turvallinen olo. Kuljemme rinnallasi luotettavasti ja ihmistä kunnioittaen.',
     hasOmavalvonta: true,
+    mainCity: 'Jyväskylä',
+    areaServed: ['Jyväskylä', 'Jämsä', 'Laukaa', 'Muurame', 'Äänekoski'],
   },
   {
     id: 'pohjois-savo',
@@ -45,6 +51,8 @@ export const regions: RegionData[] = [
     descriptionTitle: 'Kiireetön kotihoito ja arjen tukipalvelut – Pohjois-Savo',
     descriptionText: 'Etsitkö luotettavaa kotihoitoa ikäihmiselle Savon sydämessä? Famulan yksityinen kotihoito ja arjen tukipalvelut tuovat avun suoraan kotiovelle Kuopiossa ja Siilinjärvellä.\n\nPalvelemme lämpimästi ja ammattitaidolla – aina siten, että sinulla on kotonasi tuttu ja turvallinen omahoitaja.',
     hasOmavalvonta: true,
+    mainCity: 'Kuopio',
+    areaServed: ['Kuopio', 'Siilinjärvi'],
   },
   {
     id: 'oulu',
@@ -60,6 +68,8 @@ export const regions: RegionData[] = [
     descriptionTitle: 'Luotettava kotipalvelu ja kotihoito ikäihmisille – Oulun seutu',
     descriptionText: 'Etsitkö kiireetöntä apua ikääntyvälle läheisellesi? Famulan yksityinen kotihoito tarjoaa turvallista seuraa ja arjen tukipalveluita laajasti Oulussa, Kempeleessä, Limingassa ja Muhoksella.\n\nOlipa kyseessä viikoittainen siivousapu, kaupassakäyntiseura tai päivittäinen kotihoidon tukipalvelu, räätälöimme avun juuri teille sopivaksi. Meillä hoitaja ei vaihdu jatkuvasti, vaan luonasi käy aina sama tuttu ammattilainen. Kaikki palvelumme oikeuttavat kotitalousvähennykseen.',
     hasOmavalvonta: true,
+    mainCity: 'Oulu',
+    areaServed: ['Oulu', 'Kempele', 'Liminka', 'Muhos'],
   },
   {
     id: 'etela-karjala',
@@ -75,6 +85,8 @@ export const regions: RegionData[] = [
     descriptionTitle: 'Yksityinen kotihoito ja kotipalvelu – Etelä-Karjala',
     descriptionText: 'Turvallinen ja luotettava, sellainen on Famula. Tarjoamme laadukasta kotihoitoa ja kotihoidon tukipalveluita Lappeenrannassa, Imatralla, Taipalsaarella ja Ruokolahdella. Ikäihmisten arjen apu on sydämenasiamme koko Etelä-Karjalan alueella.\n\nTeemme työmme kiireettömästi, lämpimästi kohdaten ja asiakkaan toiveet huomioiden. Kanssamme tunnet olosi turvalliseksi.',
     hasOmavalvonta: true,
+    mainCity: 'Lappeenranta',
+    areaServed: ['Lappeenranta', 'Imatra', 'Taipalsaari', 'Ruokolahti'],
   },
   {
     id: 'uusimaa',
@@ -92,3 +104,6 @@ export const regions: RegionData[] = [
     descriptionText: 'Famula tarjoaa kiireetöntä ja sydämellistä yksityistä kotihoitoa koko pääkaupunkiseudulla. Palvelemme joustavasti ja ihmisläheisesti Helsingissä, Espoossa ja Vantaalla, sekä laajasti kehyskunnissa kuten Keravalla, Tuusulassa, Järvenpäässä ja Kirkkonummella.\n\nMeille tärkeintä on aito kohtaaminen ja turvallinen olo. Kuljemme rinnallasi luotettavasti ja ihmistä kunnioittaen, jotta asuminen omassa kodissa on turvallista ja mukavaa mahdollisimman pitkään.',
   }
 ];
+
+/** Alueet joita näytetään käyttäjille - jättää pois piilotetut (esim. ei vielä aktiivinen palvelualue). */
+export const visibleRegions: RegionData[] = regions.filter(region => !region.hidden);

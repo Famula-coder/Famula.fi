@@ -246,14 +246,33 @@ img {
     color: white;
   }
 
-  /* Varmistetaan ettei sisältö jää sticky barin alle */
-  body {
+  /* Varmistetaan ettei sisältö jää sticky barin alle - vain sivuilla joilla baari on näkyvissä */
+  body:has(.mobile-cta-bar) {
     padding-bottom: 80px;
   }
 
   /* Piilotetaan kelluva WhatsApp-painike mobiilissa kun bari on näkyvissä */
   .whatsapp-container {
     display: none;
+  }
+}
+
+/* Omavalvonta-PDF: <object>-upotus ei ole luotettava puhelimissa, näytetään sen sijaan avaa-painike */
+.omavalvonta-pdf-mobile-cta {
+  display: block;
+}
+
+.omavalvonta-pdf-embed {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .omavalvonta-pdf-mobile-cta {
+    display: none;
+  }
+
+  .omavalvonta-pdf-embed {
+    display: block;
   }
 }
 

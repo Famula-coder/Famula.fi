@@ -3,16 +3,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Phone, Menu, X, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
-import { regions } from '../data/regions';
+import { visibleRegions } from '../data/regions';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isRegionsOpen, setIsRegionsOpen] = useState(false);
 
   const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const closeMenu = () => setIsMobileMenuOpen(false);
-
-  const visibleRegions = regions.filter(r => !r.hidden);
+  const closeRegions = () => setIsRegionsOpen(false);
 
   return (
     <header className="navbar-container">
@@ -23,13 +23,18 @@ const Navbar = () => {
         </Link>
         <nav className={`navbar-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
           <Link href="/" onClick={closeMenu}>Etusivu</Link>
-          <div className="dropdown">
-            <span style={{ cursor: 'default', fontWeight: 600, color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>
+          <div className={`dropdown ${isRegionsOpen ? 'open' : ''}`}>
+            <button
+              type="button"
+              onClick={() => setIsRegionsOpen(!isRegionsOpen)}
+              aria-expanded={isRegionsOpen}
+              style={{ cursor: 'pointer', fontWeight: 600, color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px', background: 'none', border: 'none', padding: 0, font: 'inherit' }}
+            >
               Alueet <ChevronDown size={16} />
-            </span>
+            </button>
             <div className="dropdown-content">
               {visibleRegions.map(region => (
-                <Link key={region.id} href={`/${region.id}/`} onClick={closeMenu}>{region.name}</Link>
+                <Link key={region.id} href={`/${region.id}/`} onClick={() => { closeMenu(); closeRegions(); }}>{region.name}</Link>
               ))}
             </div>
           </div>
