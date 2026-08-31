@@ -4,9 +4,11 @@ import Link from 'next/link';
 import { ArrowLeft, Download } from 'lucide-react';
 
 export function generateStaticParams() {
-  return regions.map((region) => ({
-    regionId: region.id,
-  }));
+  return regions
+    .filter((region) => !region.hidden && region.hasOmavalvonta)
+    .map((region) => ({
+      regionId: region.id,
+    }));
 }
 
 interface PageProps {
@@ -62,18 +64,39 @@ export default async function OmavalvontaPage({ params }: PageProps) {
             </a>
           </div>
 
-          <div style={{ 
-            border: '1px solid rgba(0,0,0,0.1)', 
-            borderRadius: '8px', 
+          <div className="omavalvonta-pdf-mobile-cta" style={{
+            border: '1px dashed rgba(0,0,0,0.15)',
+            borderRadius: '8px',
+            backgroundColor: '#f8f9fa',
+            padding: '3rem 1.5rem',
+            textAlign: 'center'
+          }}>
+            <p style={{ marginBottom: '1.5rem', color: 'var(--color-text-light)' }}>
+              PDF-esikatselu ei toimi luotettavasti kaikilla puhelimilla. Avaa asiakirja sen sijaan omaan välilehteen.
+            </p>
+            <a
+              href={pdfUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
+            >
+              <Download size={20} /> Avaa omavalvontasuunnitelma
+            </a>
+          </div>
+
+          <div className="omavalvonta-pdf-embed" style={{
+            border: '1px solid rgba(0,0,0,0.1)',
+            borderRadius: '8px',
             overflow: 'hidden',
             backgroundColor: '#f8f9fa',
             height: '80vh',
             minHeight: '600px'
           }}>
-            <object 
-              data={pdfUrl} 
-              type="application/pdf" 
-              width="100%" 
+            <object
+              data={pdfUrl}
+              type="application/pdf"
+              width="100%"
               height="100%"
             >
               <div style={{ padding: '3rem', textAlign: 'center' }}>

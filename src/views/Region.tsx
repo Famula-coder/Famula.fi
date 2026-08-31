@@ -37,10 +37,13 @@ const Region = () => {
     "email": region.email,
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": region.name,
+      "addressLocality": region.mainCity || region.name,
       "postalCode": region.postalCode,
       "addressCountry": "FI"
     },
+    ...(region.areaServed && {
+      "areaServed": region.areaServed.map(city => ({ "@type": "City", "name": city })),
+    }),
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": [
@@ -53,20 +56,24 @@ const Region = () => {
 
   return (
     <>
-      
-      
-      
-      
-      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
       <div className="bg-light" style={{ padding: '4rem 0' }}>
         <div className="container">
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '3rem', alignItems: 'center' }}>
             
             <div style={{ flex: '1 1 400px' }}>
               <div style={{ display: 'inline-block', padding: '0.5rem 1rem', background: 'var(--color-background-warm)', color: 'var(--color-primary)', fontWeight: '600', borderRadius: '50px', marginBottom: '1rem' }}>
-                <MapPin size={16} style={{ display: 'inline', marginRight: '6px' }}/> 
+                <MapPin size={16} style={{ display: 'inline', marginRight: '6px' }}/>
                 Palvelualueemme: {region.name}
               </div>
+              {region.areaServed && (
+                <p style={{ color: '#64748b', fontSize: '0.95rem', marginBottom: '1rem' }}>
+                  Palvelemme kotikäynnein: {region.areaServed.join(', ')}
+                </p>
+              )}
                <h1 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>
                 {region.descriptionTitle || `Lämminhenkistä kotihoitoa ${region.locativeName} – Turvallista arkea omassa kodissa`}
               </h1>

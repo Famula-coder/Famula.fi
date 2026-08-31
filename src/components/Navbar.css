@@ -84,7 +84,8 @@
   color: var(--color-secondary);
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown.open .dropdown-content {
   display: block;
 }
 

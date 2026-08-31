@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
 import Region from '../../views/Region';
-import { regions } from '../../data/regions';
+import { regions, visibleRegions } from '../../data/regions';
 
 export function generateStaticParams() {
-  return regions.map((region) => ({
+  return visibleRegions.map((region) => ({
     regionId: region.id,
   }));
 }
@@ -14,13 +14,28 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { regionId } = await params;
-  const readableName = regionId.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+  const region = regions.find(r => r.id === regionId);
+
+  if (!region) {
+    return { title: 'Famula' };
+  }
+
+  const title = region.descriptionTitle
+    ? `${region.descriptionTitle} | Famula`
+    : `Kotihoito ja kotipalvelu ${region.name} | Famula`;
+  const description = region.descriptionText
+    ? region.descriptionText.split('\n\n')[0]
+    : `Famulan luotettava ja kiireetön kotipalvelu alueella ${region.name}. Tutustu paikalliseen tiimiimme.`;
+
   return {
-    title: `Kotihoito ja kotipalvelu ${readableName} | Famula`,
-    description: `Famulan luotettava ja kiireetön kotipalvelu alueella ${readableName}. Tutustu paikalliseen tiimiimme.`,
+    title,
+    description,
     alternates: {
       canonical: `https://famula.fi/${regionId}`,
-    }
+    },
+    openGraph: {
+      images: [region.image],
+    },
   };
 }
 

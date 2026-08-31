@@ -14,11 +14,21 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
+  const article = articles.find(a => a.slug === slug);
+
+  if (!article) {
+    return { title: 'Famulan tietopankki' };
+  }
+
   return {
-    title: `${slug.replace(/-/g, ' ')} | Famulan tietopankki`,
+    title: `${article.title} | Famulan tietopankki`,
+    description: article.excerpt,
     alternates: {
       canonical: `https://famula.fi/tietopankki/${slug}`,
-    }
+    },
+    openGraph: {
+      description: article.excerpt,
+    },
   };
 }
 
