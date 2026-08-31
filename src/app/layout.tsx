@@ -78,6 +78,9 @@ export default function RootLayout({
               </a>
             </div>
 
+            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', margin: '0 0 0.5rem' }}>
+              Soteri-rekisteröity palveluntuottaja · Alalla vuodesta 2022
+            </p>
             <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.85rem', margin: 0 }}>
               &copy; {new Date().getFullYear()} Famula Oy. Kaikki oikeudet pidätetään.
             </p>
