@@ -4,6 +4,7 @@ import "../index.css";
 import "../App.css";
 import "./globals.css";
 import Link from 'next/link';
+import { Heart } from 'lucide-react';
 
 import Navbar from '../components/Navbar';
 import CookieBanner from '../components/CookieBanner';
@@ -42,6 +43,11 @@ export default function RootLayout({
             {children}
           </main>
           <footer className="text-center" style={{ backgroundColor: 'var(--color-secondary)', padding: '3rem', color: 'white', marginTop: 'auto' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', marginBottom: '2rem' }}>
+              <Heart size={22} color="white" fill="white" />
+              <span style={{ fontFamily: 'var(--font-caveat)', fontSize: '1.75rem', color: 'white' }}>Famula</span>
+            </div>
+
             <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
               <Link href="/keski-suomi/" style={{ color: 'white', textDecoration: 'none' }}>Keski-Suomi</Link>
               <Link href="/pohjois-savo/" style={{ color: 'white', textDecoration: 'none' }}>Pohjois-Savo</Link>

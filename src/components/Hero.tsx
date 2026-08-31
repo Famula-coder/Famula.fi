@@ -27,21 +27,6 @@ const Hero = () => {
               Tarinamme <BookOpen size={20} style={{ marginLeft: '8px' }} />
             </Link>
           </div>
-          
-          <div className="hero-features">
-            <div className="feature-item">
-              <div className="feature-dot"></div>
-              <span>Aina tuttu hoitaja</span>
-            </div>
-            <div className="feature-item">
-              <div className="feature-dot"></div>
-              <span>Kiireetön kohtaaminen</span>
-            </div>
-            <div className="feature-item">
-              <div className="feature-dot"></div>
-              <span>Aito välittäminen</span>
-            </div>
-          </div>
         </div>
         
         <div className="hero-image-wrapper">

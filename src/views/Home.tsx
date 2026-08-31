@@ -111,9 +111,9 @@ const services = [
     title: 'Henkilökohtainen huolenpito',
     short: 'Avustamme päivittäisissä toimissa hienotunteisesti ja yksityisyyttäsi kunnioittaen.',
     detail: 'Avustamme peseytymisessä, pukeutumisessa ja muissa päivittäisissä toimissa täysin yksityisyyttäsi kunnioittaen.',
-    color: 'var(--color-brown)',
-    colorLight: 'rgba(161,122,116,0.1)',
-    borderColor: '#A17A74',
+    color: 'var(--color-primary)',
+    colorLight: 'rgba(8,36,52,0.08)',
+    borderColor: '#082434',
     image: '/images/keskustelu.webp',
     imageAlt: 'Sairaanhoitaja ja asiakas keskustelevat terveydentilasta'
   },
@@ -550,12 +550,12 @@ const Home = () => {
           display: inline-flex;
           align-items: center;
           gap: 0.4rem;
-          background: rgba(161,122,116,0.12);
+          background: rgba(155,194,166,0.15);
           border-radius: 50px;
           padding: 0.5rem 1.1rem;
           font-size: 0.9rem;
           font-weight: 600;
-          color: var(--color-brown);
+          color: var(--color-secondary);
           margin-bottom: 1.25rem;
         }
         .pricing-text h2 {
@@ -796,14 +796,14 @@ const Home = () => {
 
     
 {/* ── ESIMERKIT / ACCORDION ── */}
-    <section style={{ background: 'var(--color-white)', padding: '5rem 0' }}>
+    <section style={{ background: 'var(--color-light-gray)', padding: '5rem 0' }}>
       <div className="container" style={{ maxWidth: '820px' }}>
         <div style={{ textAlign: 'center', maxWidth: '620px', margin: '0 auto 3rem' }}>
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: '0.45rem',
             padding: '0.5rem 1.1rem', background: 'rgba(230,190,186,0.15)',
             borderRadius: '50px', fontWeight: '600', fontSize: '0.9rem',
-            color: 'var(--color-brown)', marginBottom: '1rem',
+            color: 'var(--color-primary)', marginBottom: '1rem',
           }}>
             <Heart size={14} /> Räätälöityä juuri sinulle
           </div>
