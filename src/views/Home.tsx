@@ -709,10 +709,12 @@ const Home = () => {
               }}
             >
               <div style={{ height: '180px', width: '100%', position: 'relative' }}>
-                <img 
-                  src={s.image} 
-                  alt={s.imageAlt} 
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                <Image
+                  src={s.image}
+                  alt={s.imageAlt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  style={{ objectFit: 'cover' }}
                   loading="lazy"
                 />
                 {s.videoId && (
@@ -814,7 +816,7 @@ const Home = () => {
             Räätälöimme palvelun juuri teidän tarpeisiinne
           </h2>
           <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.7' }}>
-            Meillä ei ole valmiita "liukuhihnapaketteja". Jokainen ihminen ja tilanne on erilainen, joten palvelun sisältö ja tunnit räätälöidään aina tismalleen sinun toiveidesi mukaan. Tässä kolme esimerkkiä siitä, millaisia apukokonaisuuksia asiakkaamme ovat itselleen koonneet.
+            Meillä ei ole valmiita &ldquo;liukuhihnapaketteja&rdquo;. Jokainen ihminen ja tilanne on erilainen, joten palvelun sisältö ja tunnit räätälöidään aina tismalleen sinun toiveidesi mukaan. Tässä kolme esimerkkiä siitä, millaisia apukokonaisuuksia asiakkaamme ovat itselleen koonneet.
           </p>
         </div>
 
@@ -926,18 +928,20 @@ const Home = () => {
           <div className="founder-card">
             <div className="founder-img-wrap">
               <div className="founder-img-bg" />
-              <img
+              <Image
                 className="founder-img"
                 src={`${import.meta.env.BASE_URL}valma.png`}
                 alt="Valma Linnanmäki, Famulan perustaja"
+                width={200}
+                height={200}
               />
             </div>
             <div className="founder-text">
               <div className="founder-name">Valma Linnanmäki</div>
               <div className="founder-role">Perustaja &amp; Toimitusjohtaja</div>
               <blockquote className="founder-quote">
-                "Perustin Famulan, koska tiesin mitä tarkoittaa kun läheistä ei ole kukaan auttamassa.
-                Me Famulalla emme vain suorita tehtäviä — tuomme mukanamme oikean ihmisen, joka välittää aidosti."
+                &ldquo;Perustin Famulan, koska tiesin mitä tarkoittaa kun läheistä ei ole kukaan auttamassa.
+                Me Famulalla emme vain suorita tehtäviä — tuomme mukanamme oikean ihmisen, joka välittää aidosti.&rdquo;
               </blockquote>
               <Link href="/tarinamme/" className="founder-story-link">
                 Lue koko tarina <ArrowRight size={18} />
@@ -951,10 +955,12 @@ const Home = () => {
               <div key={member.name} className="team-card">
                 <Link href={member.region || '/'} style={{ display: 'block', textDecoration: 'none', color: 'inherit', height: '100%' }}>
                   <div className="team-card-img-wrap">
-                    <img
+                    <Image
                       className="team-card-img"
                       src={member.img}
                       alt={member.name}
+                      fill
+                      sizes="(max-width: 768px) 50vw, 25vw"
                       loading="lazy"
                     />
                   </div>
@@ -962,7 +968,7 @@ const Home = () => {
                     <div className="team-card-name">
                       {member.name}{member.regionName ? `, ${member.regionName}` : ''}
                     </div>
-                    <p className="team-card-quote">"{member.quote}"</p>
+                    <p className="team-card-quote">&ldquo;{member.quote}&rdquo;</p>
                   </div>
                 </Link>
               </div>
@@ -986,7 +992,7 @@ const Home = () => {
                 <div key={index} className="testimonial-card">
                   <Quote className="testimonial-quote-icon" size={40} />
                   <span className="testimonial-tag">{t.tag}</span>
-                  <p className="testimonial-text">"{t.text}"</p>
+                  <p className="testimonial-text">&ldquo;{t.text}&rdquo;</p>
                   
                   <div className="testimonial-author-row">
                     <div className="testimonial-avatar" style={{ background: index % 2 === 0 ? 'var(--color-secondary)' : 'var(--color-lavender)' }}>

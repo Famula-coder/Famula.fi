@@ -3,6 +3,12 @@
 import { useState, useEffect } from 'react';
 import './CookieBanner.css';
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 const CookieBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
@@ -10,8 +16,13 @@ const CookieBanner = () => {
   const [marketingConsent, setMarketingConsent] = useState(true);
 
   useEffect(() => {
+    // Suoritetaan tarkoituksella effektissä (ei lazy-initointina), koska sivu on
+    // staattisesti buildattu (output: 'export') - build-aikana ei ole localStoragea,
+    // joten palvelimen ja selaimen ensimmäisen renderöinnin pitää täsmätä (molemmat "false").
+    // Todellinen tila luetaan vasta hydratoinnin jälkeen.
     const consent = localStorage.getItem('cookieConsent');
     if (consent === null) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- katso yllä oleva selitys
       setIsVisible(true);
     } else {
       // Load previous preferences if they exist (stored as JSON)
@@ -21,7 +32,7 @@ const CookieBanner = () => {
           const parsed = JSON.parse(prefs);
           setAnalyticsConsent(parsed.analytics);
           setMarketingConsent(parsed.marketing);
-        } catch (e) {
+        } catch {
           // ignore parsing error
         }
       }
@@ -37,8 +48,8 @@ const CookieBanner = () => {
   }, []);
 
   const updateGtagConsent = (analytics: boolean, marketing: boolean) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('consent', 'update', {
+    if (typeof window !== 'undefined') {
+      window.gtag?.('consent', 'update', {
         'ad_storage': marketing ? 'granted' : 'denied',
         'ad_user_data': marketing ? 'granted' : 'denied',
         'ad_personalization': marketing ? 'granted' : 'denied',

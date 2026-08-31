@@ -62,7 +62,7 @@ const ContactForm = () => {
       let data: { success?: boolean | string; message?: string } | undefined;
       try {
         data = await response.json() as { success?: boolean | string; message?: string };
-      } catch (_e) {
+      } catch {
         // ignore JSON parse errors
       }
 
