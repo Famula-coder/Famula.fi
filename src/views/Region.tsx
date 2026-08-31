@@ -265,7 +265,7 @@ const Region = () => {
       {region.hasOmavalvonta && (
         <div style={{ textAlign: 'center', padding: '2rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
           <p style={{ fontSize: '0.875rem', color: 'var(--color-text-light)', marginBottom: '0.5rem' }}>
-            Soteri-rekisteröity palveluntuottaja
+            Soteriin rekisteröity palveluntuottaja (Lupa- ja valvontavirasto)
           </p>
           <Link
             href={`/${region.id}/omavalvonta`}

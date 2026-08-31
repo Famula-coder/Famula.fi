@@ -4,7 +4,7 @@ import './TrustBar.css';
 const trustItems = [
   { icon: Calendar, text: 'Alalla vuodesta 2022' },
   { icon: Users, text: 'Yli 100 tyytyväistä asiakasta' },
-  { icon: ShieldCheck, text: 'Soteri-rekisteröity palveluntuottaja' },
+  { icon: ShieldCheck, text: 'Soteriin rekisteröity palveluntuottaja (Lupa- ja valvontavirasto)' },
   { icon: Euro, text: 'Oikeuttaa kotitalousvähennykseen' },
 ];
 
