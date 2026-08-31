@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     canonical: 'https://famula.fi/',
   },
   openGraph: {
-    images: ['/Famulasydan.png'],
+    images: ['/images/famulasydan.png'],
   }
 };
 
@@ -18,7 +18,7 @@ export default function HomePage() {
     "@type": "Organization",
     "name": "Famula Oy",
     "url": "https://famula.fi",
-    "logo": "https://famula.fi/Famulasydan.png",
+    "logo": "https://famula.fi/images/famulasydan.png",
     "sameAs": [
       "https://www.facebook.com/Famula.fi/",
       "https://www.instagram.com/famula.fi/"

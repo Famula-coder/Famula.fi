@@ -7,12 +7,14 @@ export interface Article {
   content: string; // HTML content or Markdown, we will use raw HTML for simplicity
   icon?: string; // Optional icon name
   videoId?: string; // Optional YouTube video ID
+  publishedDate: string; // ISO-muotoinen julkaisupäivä (YYYY-MM-DD), käytetään BlogPosting-skeemassa
 }
 
 export const articles: Article[] = [
   {
     id: '1',
     slug: 'kotitalousvahennys-2025',
+    publishedDate: '2026-01-08',
     title: 'Kotitalousvähennys hoiva- ja hoitotyöstä 2026 – Näin hyödynnät edun',
     category: 'Kotitalousvähennys',
     excerpt: 'Vuodelle 2026 kotitalousvähennykseen tuli parannuksia. Nyt voit vähentää verotuksessa 40 % yritykseltä ostetun hoiva- tai siivoustyön hinnasta, ja enimmäismäärä nousi 2 100 euroon.',
@@ -41,6 +43,7 @@ export const articles: Article[] = [
   {
     id: '2',
     slug: 'ikantyvan-vanhemman-kotiapu',
+    publishedDate: '2026-01-22',
     title: 'Mistä tietää, että ikääntyvä vanhempi tarvitsee kotiapua?',
     category: 'Omaisille',
     excerpt: 'Kun kunnallisen kotihoidon kriteerit eivät vielä täyty, mutta apua tarvitaan. Tarkkaile näitä viittä varoitusmerkkiä.',
@@ -65,6 +68,7 @@ export const articles: Article[] = [
   {
     id: '3',
     slug: 'yksityinen-kotipalvelu-vs-kunnallinen-kotihoito',
+    publishedDate: '2026-02-05',
     title: 'Mitä eroa on kunnallisella kotihoidolla ja yksityisellä kotipalvelulla?',
     category: 'Hyvinvointi',
     excerpt: 'Kunnallinen kotihoito tarjoaa elintärkeää hoivaa, mutta usein aikasidonnaisesti. Yksityinen kotipalvelu panostaa kiireettömyyteen.',
@@ -89,6 +93,7 @@ export const articles: Article[] = [
   {
     id: '4',
     slug: 'mita-kotipalvelu-maksaa',
+    publishedDate: '2026-02-19',
     title: 'Mitä yksityinen kotihoito ja kotipalvelu maksaa? Läpinäkyvät hintaesimerkit',
     category: 'Hinnoittelu',
     excerpt: 'Avaamme rehellisesti kotipalvelun hinnoittelua. Kerromme, miksi Famulalla on selkeä tuntihinta ilman yllättäviä piilokuluja.',
@@ -108,6 +113,7 @@ export const articles: Article[] = [
   {
     id: '5',
     slug: 'asiointiapu-ikaihmisille',
+    publishedDate: '2026-03-05',
     title: 'Asiointiapu ikäihmisille: Turvallinen seura kauppaan ja apteekkiin',
     category: 'Palvelut',
     excerpt: 'Monelle ikäihmiselle pelkkä kotiinkuljetus ei riitä. Famulan asiointiavussa tuttu hoitaja lähtee mukaan tueksi ja seuraksi.',
@@ -126,6 +132,7 @@ export const articles: Article[] = [
   {
     id: '6',
     slug: 'nain-valitset-luotettavan-kotipalvelun',
+    publishedDate: '2026-03-19',
     title: 'Kuinka valita luotettava kotipalveluyritys ikäihmiselle? 3 tärkeää vinkkiä',
     category: 'Omaisille',
     excerpt: 'Vinkkejä palveluntarjoajan vertailuun. Tarkista hoitajien vaihtuvuus, luvat ja kohtaamisen aitous.',
@@ -147,6 +154,7 @@ export const articles: Article[] = [
   {
     id: '7',
     slug: 'yksinaisyyden-torjunta',
+    publishedDate: '2026-04-02',
     title: 'Yksinäisyyden torjunta: Säännöllinen seura on lääkettä ikäihmiselle',
     category: 'Hyvinvointi',
     excerpt: 'Yksinäisyys on merkittävä terveysriski ikääntyessä. Säännöllinen ystävän kohtaaminen pitää mielen virkeänä.',
@@ -164,6 +172,7 @@ export const articles: Article[] = [
   {
     id: '8',
     slug: 'turvallinen-laakehoito-kotona',
+    publishedDate: '2026-04-16',
     title: 'Turvallinen lääkehoito kotona: Näin Famula auttaa',
     category: 'Palvelut',
     excerpt: 'Teemme saumatonta yhteistyötä omaisten ja kotisairaanhoidon kanssa lääkitysturvallisuuden varmistamiseksi.',
@@ -184,6 +193,7 @@ export const articles: Article[] = [
   {
     id: '9',
     slug: 'kevyt-siivous-ja-pyykkihuolto',
+    publishedDate: '2026-04-30',
     title: 'Kodinhoito ja siivous: Puhdas koti on osa hyvää hoivaa',
     category: 'Palvelut',
     excerpt: 'Ikääntyessä siivous käy raskaaksi. Famulan käynneillä hoivaan voidaan aina yhdistää kodin askareita.',
@@ -206,6 +216,7 @@ export const articles: Article[] = [
   {
     id: '10',
     slug: 'saannollinen-yhteydenpito-omaisiin',
+    publishedDate: '2026-05-14',
     title: 'Mielenrauhaa omaisille: Famulan avoin viestintä',
     category: 'Omaisille',
     excerpt: 'Moni asiakkaistamme on toisella paikkakunnalla asuva omainen. Avaamme kuinka viestimme ja tuomme mielenrauhan.',
@@ -227,6 +238,7 @@ export const articles: Article[] = [
   {
     id: '11',
     slug: 'luotettava-siivousapu-ikaihmiselle',
+    publishedDate: '2026-05-28',
     title: 'Mistä luotettava siivousapu ikäihmiselle? Vinkit valintaan',
     category: 'Palvelut',
     excerpt: 'Siivousfirma vai yksityinen kotihoito tai kotipalvelu? Lue, mitä asioita kannattaa ottaa huomioon, kun tilaat siivousapua ikääntyvälle läheiselle.',
@@ -248,6 +260,7 @@ export const articles: Article[] = [
   {
     id: '12',
     slug: 'omaishoidon-lomitus-yksityiselta',
+    publishedDate: '2026-06-11',
     title: 'Omaishoidon lomitus yksityiseltä: Näin se toimii käytännössä',
     category: 'Omaisille',
     excerpt: 'Omaishoitaja, muista huolehtia myös itsestäsi! Yksityinen omaishoidon sijaistus antaa sinulle elintärkeän hengähdystauon.',
@@ -269,6 +282,7 @@ export const articles: Article[] = [
   {
     id: '13',
     slug: 'muistisairaan-kotihoito',
+    publishedDate: '2026-06-25',
     title: 'Muistisairaan kotihoito: Turvallinen arki ja kohtaaminen',
     category: 'Omaisille',
     excerpt: 'Miten tukea muistisairasta kotona? Tutun hoitajan ja kiireettömän kohtaamisen merkitys korostuu arjessa.',
@@ -290,6 +304,7 @@ export const articles: Article[] = [
   {
     id: '14',
     slug: 'kotiutuminen-sairaalasta',
+    publishedDate: '2026-07-09',
     title: 'Sairaalasta kotiutuminen: Näin turvaat ikäihmisen toipumisen',
     category: 'Hyvinvointi',
     excerpt: 'Sairaalajakson tai leikkauksen jälkeinen kotiutuminen on kriittinen hetki. Oikea apu estää uudet tapaturmat.',
@@ -311,6 +326,7 @@ export const articles: Article[] = [
   {
     id: '15',
     slug: 'nain-haet-kotitalousvahennysta',
+    publishedDate: '2026-07-23',
     title: 'Kuinka haet kotitalousvähennystä käytännössä? Vaiheittainen opas',
     category: 'Kotitalousvähennys',
     excerpt: 'Kotitalousvähennyksen hakeminen on tehty nykyään erittäin helpoksi. Ota kuitit talteen ja tee ilmoitus OmaVerossa näillä ohjeilla.',
@@ -339,6 +355,7 @@ export const articles: Article[] = [
   {
     id: '16',
     slug: 'kotitalousvahennys-vanhemmille',
+    publishedDate: '2026-08-06',
     title: 'Tiesitkö? Voit ostaa kotiapua vanhemmillesi ja saada itse kotitalousvähennyksen',
     category: 'Kotitalousvähennys',
     excerpt: 'Moni ei tiedä, että kotitalousvähennyksen voi saada myös omien tai puolison vanhempien kotiin ostetuista palveluista.',
@@ -364,6 +381,7 @@ export const articles: Article[] = [
   {
     id: '17',
     slug: 'seuraa-sairaalaan-tai-hoivakotiin',
+    publishedDate: '2026-08-13',
     title: 'Vierailut sairaalaan ja hoivakotiin – Ilahduta läheistäsi kiireettömällä seuralla',
     category: 'Omaisille',
     excerpt: 'Voit tilata Famulan hoitajan vierailulle myös sairaalaan tai hoivakotiin lukemaan lehteä, ulkoilemaan ja pitämään seuraa.',
@@ -385,6 +403,7 @@ export const articles: Article[] = [
   {
     id: '18',
     slug: 'ikaihmisen-kaatumisen-ehkaisy-kodin-turvallisuus',
+    publishedDate: '2026-08-18',
     title: 'Ikäihmisen kaatumisen ehkäisy – 5 vinkkiä kodin turvallisuuden parantamiseen',
     category: 'Turvallisuus',
     excerpt: 'Kaatuminen on omaisten suurin pelko. Kokosimme 5 käytännön vinkkiä, joilla ikäihmisen kodin turvallisuutta voi parantaa välittömästi.',
@@ -410,6 +429,7 @@ export const articles: Article[] = [
   {
     id: '19',
     slug: 'ikaihmisen-huono-ruokahalu-ja-ravitsemus',
+    publishedDate: '2026-08-22',
     title: 'Ikäihmisen huono ruokahalu – Miten turvata riittävä ravitsemus kotona?',
     category: 'Hyvinvointi',
     excerpt: 'Kun ruoka ei maistu ja paino putoaa, omainen huolestuu. Lue, miten yksinäisyyden poistaminen ja kiireetön ruokailuseura palauttavat ruokahalun.',
@@ -434,6 +454,7 @@ export const articles: Article[] = [
   {
     id: '20',
     slug: 'milloin-palvelutaloon-vanhuksen-kotona-asumisen-tukeminen',
+    publishedDate: '2026-08-27',
     title: 'Milloin palvelutaloon? Keinoja, joilla vanhuksen kotona asumista voi pitkittää turvallisesti',
     category: 'Omaisille',
     excerpt: 'Milloin omat rahkeet tai kunnan kotihoito eivät enää riitä? Palveluasumista voi usein lykätä jopa vuosilla oikeanlaisen yksityisen kotipalvelun tuella.',

@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description: 'Famula syntyi halusta auttaa. Lue tarinamme ja tutustu ihaniin työntekijöihimme, jotka tuovat iloa ja turvaa arkeesi.',
   alternates: {
     canonical: 'https://famula.fi/tarinamme',
+  },
+  openGraph: {
+    images: ['/valma.png'],
   }
 };
 
