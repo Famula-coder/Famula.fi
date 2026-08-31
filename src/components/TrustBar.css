@@ -1,7 +1,39 @@
 .trust-bar {
+  position: relative;
+  z-index: 1;
   background: var(--color-white);
   padding: 1.5rem 0;
   border-bottom: 1px solid var(--color-light-gray);
+}
+
+.trust-soft-features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.trust-soft-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--color-primary);
+}
+
+.trust-soft-dot {
+  width: 8px;
+  height: 8px;
+  min-width: 8px;
+  background-color: var(--color-background-warm);
+  border-radius: 50%;
+}
+
+.trust-bar-divider {
+  height: 1px;
+  background: var(--color-light-gray);
+  margin: 1.25rem 0;
 }
 
 .trust-bar-inner {
@@ -35,6 +67,12 @@
 }
 
 @media (min-width: 900px) {
+  .trust-soft-features {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
   .trust-bar-inner {
     flex-direction: row;
     justify-content: space-between;
