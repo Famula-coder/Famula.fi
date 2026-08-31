@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 
 
 import Hero from '../components/Hero';
+import TrustBar from '../components/TrustBar';
 import { useState, useRef } from 'react';
 import { Heart, ExternalLink, ArrowRight, ChevronDown, ShoppingCart, UtensilsCrossed, Sparkles, HandHeart, Footprints, Music2, Phone, Coffee, User, Star, ChevronLeft, ChevronRight, Quote, Play, X, Stethoscope, ShieldCheck } from 'lucide-react';
 import PricingPackagesList from '../components/PricingPackages';
@@ -663,8 +664,7 @@ const Home = () => {
 
       {/* ── HERO ── */}
       <Hero />
-
-
+      <TrustBar />
 
       <section id="palvelut" style={{ background: 'var(--color-light-gray)', padding: '5rem 0' }}>
       <div className="container" style={{ maxWidth: '1060px' }}>
