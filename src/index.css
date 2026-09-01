@@ -120,48 +120,6 @@ img {
   border-width: 0;
 }
 
-@keyframes whatsappAttention {
-  0%, 100% { transform: scale(1); }
-  10%, 30% { transform: scale(1.15) rotate(5deg); }
-  20%, 40% { transform: scale(1.15) rotate(-5deg); }
-  50% { transform: scale(1); }
-}
-
-@keyframes tooltipDisappear {
-  0% { opacity: 0; transform: translateX(20px); }
-  10% { opacity: 1; transform: translateX(0); }
-  85% { opacity: 1; transform: scale(1); }
-  100% { opacity: 0; transform: scale(0.5); pointer-events: none; }
-}
-
-.whatsapp-container {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  z-index: 1000;
-}
-
-.whatsapp-tooltip {
-  background: #25D366;
-  color: white;
-  padding: 0.75rem 1.2rem;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-  transform-origin: right center;
-  animation: tooltipDisappear 8s ease forwards;
-  white-space: nowrap;
-  pointer-events: none;
-}
-
-.whatsapp-btn {
-  animation: whatsappAttention 2.5s ease 2s 1;
-}
-
 /* === SCROLL ANIMATIONS === */
 @keyframes fadeInUp {
   from {
@@ -217,7 +175,24 @@ img {
     box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
   }
 
-  .mobile-cta-bar a {
+  .mobile-cta-bar .cta-region-select select {
+    height: 100%;
+    max-width: 110px;
+    padding: 0 0.75rem;
+    border-radius: 12px;
+    border: none;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    font-weight: 600;
+    font-size: 0.85rem;
+    font-family: inherit;
+  }
+
+  .mobile-cta-bar .cta-region-select select option {
+    color: var(--color-primary);
+  }
+
+  .mobile-cta-bar .cta-call {
     flex: 1;
     display: flex;
     align-items: center;
@@ -228,31 +203,18 @@ img {
     font-weight: 700;
     font-size: 0.95rem;
     text-decoration: none;
+    background: var(--color-accent);
+    color: var(--color-primary);
     transition: transform 0.2s ease;
   }
 
-  .mobile-cta-bar a:active {
+  .mobile-cta-bar .cta-call:active {
     transform: scale(0.97);
-  }
-
-  .mobile-cta-bar .cta-call {
-    background: var(--color-accent);
-    color: var(--color-primary);
-  }
-
-  .mobile-cta-bar .cta-whatsapp {
-    background: #25D366;
-    color: white;
   }
 
   /* Varmistetaan ettei sisältö jää sticky barin alle - vain sivuilla joilla baari on näkyvissä */
   body:has(.mobile-cta-bar) {
     padding-bottom: 80px;
-  }
-
-  /* Piilotetaan kelluva WhatsApp-painike mobiilissa kun bari on näkyvissä */
-  .whatsapp-container {
-    display: none;
   }
 }
 

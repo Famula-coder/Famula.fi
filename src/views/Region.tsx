@@ -6,8 +6,7 @@ import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { regions } from '../data/regions';
 
-import { Phone, Mail, MapPin, MessageCircle, Heart, CheckCircle2, Play, X } from 'lucide-react';
-// import ContactForm from '../components/ContactForm';
+import { Phone, Mail, MapPin, Heart, CheckCircle2, Play, X } from 'lucide-react';
 
 
 const Region = () => {
@@ -20,10 +19,6 @@ const Region = () => {
   if (!region) {
     if (typeof window !== 'undefined') { router.replace('/'); } return null;
   }
-
-  const cleanPhone = region.phone.replace(/\s/g, '');
-  const whatsappPhone = cleanPhone.startsWith('0') ? `358${cleanPhone.substring(1)}` : cleanPhone;
-  const whatsappUrl = `https://wa.me/${whatsappPhone}?text=Hei!%20Olisin%20kiinnostunut%20Famulan%20palveluista%20alueella%20${region.name}.`;
 
   // Generate LocalBusiness Schema for this specific region
   const localBusinessSchema = {
@@ -259,10 +254,7 @@ const Region = () => {
         </div>
       </section>
 
-      {/* <section style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
-        <ContactForm />
-      </section> */}
-      {region.hasOmavalvonta && (
+      {region.hasOmavalvonta && (
         <div style={{ textAlign: 'center', padding: '2rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
           <p style={{ fontSize: '0.875rem', color: 'var(--color-text-light)', marginBottom: '0.5rem' }}>
             Soteriin rekisteröity palveluntuottaja (Lupa- ja valvontavirasto)
@@ -275,35 +267,6 @@ const Region = () => {
           </Link>
         </div>
       )}
-
-      <div className="whatsapp-container">
-        <div className="whatsapp-tooltip">
-          Jätä soittopyyntö!
-        </div>
-        <a 
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="whatsapp-btn"
-          style={{
-            backgroundColor: '#25D366',
-            color: 'white',
-            width: '56px',
-            height: '56px',
-            borderRadius: '50%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            boxShadow: '0 4px 15px rgba(37, 211, 102, 0.4)',
-            transition: 'transform 0.3s ease'
-          }}
-        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
-        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-        title="Kysy WhatsAppissa"
-        >
-          <MessageCircle size={28} />
-        </a>
-      </div>
 
       {/* Video Modal (Lightbox) */}
       {activeVideo && (
