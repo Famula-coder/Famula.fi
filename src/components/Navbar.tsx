@@ -52,11 +52,12 @@ const Navbar = () => {
         <div className="navbar-actions">
           <CallCtaButton
             phone={phone}
-            label="Varaa ilmainen tutustumiskäynti"
+            label={phone}
             icon={<Phone size={18} aria-hidden="true" />}
-            className="btn btn-primary nav-cta"
-            labelClassName="nav-cta-text"
-            ariaLabel={`Varaa ilmainen tutustumiskäynti, soita: ${phone}`}
+            className="btn btn-outline nav-phone"
+            labelClassName="nav-phone-text"
+            ariaLabel={`Soita meille: ${phone}`}
+            copiedLabel="Kopioitu ✓"
           />
           <div style={{ display: 'flex', alignItems: 'center', marginLeft: '0.5rem', gap: '0.5rem' }}>
             <a href="https://www.facebook.com/Famula.fi/" target="_blank" rel="noopener noreferrer" className="nav-social" aria-label="Famulan Facebook" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-primary)', fontWeight: 'bold' }}>
