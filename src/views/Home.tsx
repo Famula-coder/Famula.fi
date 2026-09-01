@@ -666,6 +666,44 @@ const Home = () => {
       <Hero />
       <TrustBar />
 
+      {/* ── ASIAKKAAT KERTOVAT (DYNAAMINEN KARUSELLI) ── */}
+      <section style={{ padding: '5rem 1.5rem', background: 'var(--color-background-warm)', overflow: 'hidden' }}>
+        <div className="container text-center">
+          <h2 style={{ color: 'var(--color-primary)', marginBottom: '3rem' }}>Asiakkaamme kertovat</h2>
+
+          <div className="testimonials-wrapper">
+            <button className="carousel-btn left" onClick={() => scrollTestimonials('left')} aria-label="Edellinen">
+              <ChevronLeft size={24} />
+            </button>
+
+            <div className="testimonials-track" ref={scrollRef}>
+              {testimonials.map((t, index) => (
+                <div key={index} className="testimonial-card">
+                  <Quote className="testimonial-quote-icon" size={40} />
+                  <span className="testimonial-tag">{t.tag}</span>
+                  <p className="testimonial-text">&ldquo;{t.text}&rdquo;</p>
+
+                  <div className="testimonial-author-row">
+                    <div className="testimonial-avatar" style={{ background: index % 2 === 0 ? 'var(--color-secondary)' : 'var(--color-lavender)' }}>
+                      {t.icon}
+                    </div>
+                    <div className="testimonial-author-info text-left">
+                      <span className="testimonial-signature">{t.author}</span>
+                      <span className="testimonial-city">{t.city}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <button className="carousel-btn right" onClick={() => scrollTestimonials('right')} aria-label="Seuraava">
+              <ChevronRight size={24} />
+            </button>
+          </div>
+
+        </div>
+      </section>
+
       <section id="palvelut" style={{ background: 'var(--color-light-gray)', padding: '5rem 0' }}>
       <div className="container" style={{ maxWidth: '1060px' }}>
         <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 3.5rem' }}>
@@ -977,45 +1015,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── ASIAKKAAT KERTOVAT (DYNAAMINEN KARUSELLI) ── */}
-      <section style={{ padding: '5rem 1.5rem', background: 'var(--color-background-warm)', overflow: 'hidden' }}>
-        <div className="container text-center">
-          <h2 style={{ color: 'var(--color-primary)', marginBottom: '3rem' }}>Asiakkaamme kertovat</h2>
-          
-          <div className="testimonials-wrapper">
-            <button className="carousel-btn left" onClick={() => scrollTestimonials('left')} aria-label="Edellinen">
-              <ChevronLeft size={24} />
-            </button>
-            
-            <div className="testimonials-track" ref={scrollRef}>
-              {testimonials.map((t, index) => (
-                <div key={index} className="testimonial-card">
-                  <Quote className="testimonial-quote-icon" size={40} />
-                  <span className="testimonial-tag">{t.tag}</span>
-                  <p className="testimonial-text">&ldquo;{t.text}&rdquo;</p>
-                  
-                  <div className="testimonial-author-row">
-                    <div className="testimonial-avatar" style={{ background: index % 2 === 0 ? 'var(--color-secondary)' : 'var(--color-lavender)' }}>
-                      {t.icon}
-                    </div>
-                    <div className="testimonial-author-info text-left">
-                      <span className="testimonial-signature">{t.author}</span>
-                      <span className="testimonial-city">{t.city}</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <button className="carousel-btn right" onClick={() => scrollTestimonials('right')} aria-label="Seuraava">
-              <ChevronRight size={24} />
-            </button>
-          </div>
-          
-        </div>
-      </section>
-
-      {/* ── PALVELUKORTIT ── */}
       {/* ── HINNASTO ── */}
       <section id="hinnat" className="pricing-section">
         <div className="container pricing-inner">
