@@ -1119,13 +1119,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── YHTEYDENOTTOLOMAKE ── */}
-      {/* <section id="contact-section" style={{ padding: '6rem 1.5rem', backgroundColor: 'var(--color-background-warm)' }}>
-        <div className="container">
-          <ContactForm />
-        </div>
-      </section> */}
-
       {/* Video Modal (Lightbox) */}
       {activeVideo && (
         <div 

@@ -48,11 +48,11 @@
   gap: 1rem;
 }
 
-.nav-phone {
+.nav-cta {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1.25rem;
+  white-space: nowrap;
 }
 
 .dropdown {
@@ -140,11 +140,11 @@
     visibility: visible;
   }
 
-  .nav-phone-text {
+  .nav-cta-text {
     display: none;
   }
-  
-  .nav-phone {
+
+  .nav-cta {
     padding: 0.5rem;
   }
   

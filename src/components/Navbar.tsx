@@ -1,14 +1,19 @@
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Phone, Menu, X, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { visibleRegions } from '../data/regions';
+import { GENERAL_PHONE, getRegionFromPathname, toTelHref } from '../lib/phone';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isRegionsOpen, setIsRegionsOpen] = useState(false);
+  const pathname = usePathname();
+  const region = getRegionFromPathname(pathname);
+  const phone = region?.phone ?? GENERAL_PHONE;
 
   const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const closeMenu = () => setIsMobileMenuOpen(false);
@@ -44,9 +49,9 @@ const Navbar = () => {
           <Link href="/tietopankki/" onClick={closeMenu}>Tietopankki</Link>
         </nav>
         <div className="navbar-actions">
-          <a href="tel:0447569399" className="btn btn-outline nav-phone" aria-label="Soita meille: 0447569399">
+          <a href={toTelHref(phone)} className="btn btn-primary nav-cta" aria-label={`Varaa ilmainen tutustumiskäynti, soita: ${phone}`}>
             <Phone size={18} aria-hidden="true" />
-            <span className="nav-phone-text">044 756 9399</span>
+            <span className="nav-cta-text">Varaa ilmainen tutustumiskäynti</span>
           </a>
           <div style={{ display: 'flex', alignItems: 'center', marginLeft: '0.5rem', gap: '0.5rem' }}>
             <a href="https://www.facebook.com/Famula.fi/" target="_blank" rel="noopener noreferrer" className="nav-social" aria-label="Famulan Facebook" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-primary)', fontWeight: 'bold' }}>

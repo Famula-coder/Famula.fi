@@ -1,31 +1,58 @@
 "use client";
 import { usePathname } from 'next/navigation';
-import { Phone, MessageCircle } from 'lucide-react';
+import { useEffect, useState, type ChangeEvent } from 'react';
+import { Phone } from 'lucide-react';
+import { visibleRegions } from '../data/regions';
+import { GENERAL_PHONE, getRegionFromPathname, toTelHref } from '../lib/phone';
 
-const GENERAL_PHONE = "0447569399";
-const WHATSAPP_NUMBER = "358447569399";
-const WHATSAPP_MSG = "Hei!%20Olisin%20kiinnostunut%20Famulan%20palveluista.";
+const STORAGE_KEY = 'famula-valittu-alue';
 
 const MobileCtaBar = () => {
   const pathname = usePathname();
+  const pageRegion = getRegionFromPathname(pathname);
+  const [selectedRegionId, setSelectedRegionId] = useState('');
 
-  // Näytetään vain etusivulla – alueiden omilla sivuilla on omat numerot
-  if (pathname !== '/') return null;
+  useEffect(() => {
+    if (pageRegion) return;
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      // Luetaan muistettu valinta vasta hydraation jälkeen, ettei SSR- ja
+      // client-render eroa toisistaan - siksi setState täällä on tarkoituksellista.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      if (stored) setSelectedRegionId(stored);
+    } catch {
+      // localStorage voi olla estetty selaimen asetuksista - jatketaan ilman muistia
+    }
+  }, [pageRegion]);
+
+  const selectedRegion = visibleRegions.find((r) => r.id === selectedRegionId);
+  const phone = pageRegion?.phone ?? selectedRegion?.phone ?? GENERAL_PHONE;
+
+  const handleSelect = (e: ChangeEvent<HTMLSelectElement>) => {
+    const value = e.target.value;
+    setSelectedRegionId(value);
+    try {
+      localStorage.setItem(STORAGE_KEY, value);
+    } catch {
+      // ei voida tallentaa - ei vaikuta soittopainikkeen toimintaan
+    }
+  };
 
   return (
     <div className="mobile-cta-bar">
-      <a href={`tel:${GENERAL_PHONE}`} className="cta-call">
+      {!pageRegion && (
+        <div className="cta-region-select">
+          <select value={selectedRegionId} onChange={handleSelect} aria-label="Valitse alueesi">
+            <option value="">Alueesi ▾</option>
+            {visibleRegions.map((r) => (
+              <option key={r.id} value={r.id}>{r.name}</option>
+            ))}
+          </select>
+        </div>
+      )}
+      <a href={toTelHref(phone)} className="cta-call">
         <Phone size={18} />
-        Soita meille
-      </a>
-      <a
-        href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="cta-whatsapp"
-      >
-        <MessageCircle size={18} />
-        WhatsApp
+        Varaa käynti
       </a>
     </div>
   );

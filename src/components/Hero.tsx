@@ -1,8 +1,9 @@
 "use client";
 import Image from 'next/image';
 
-import { ArrowRight, BookOpen } from 'lucide-react';
+import { Phone, BookOpen } from 'lucide-react';
 import Link from 'next/link';
+import { GENERAL_PHONE, toTelHref } from '../lib/phone';
 
 import './Hero.css';
 
@@ -10,7 +11,7 @@ const Hero = () => {
   return (
     <section className="hero-section">
       <div className="hero-background-shape"></div>
-      
+
       <div className="container hero-container">
         <div className="hero-content">
           <div className="hero-badge">Famula Oy – Kiireetöntä hoivaa</div>
@@ -20,9 +21,9 @@ const Hero = () => {
             mukanamme turvaa ja kiireetöntä läsnäoloa arkeen.
           </p>
           <div className="hero-actions">
-            <Link href="/#palvelut" className="btn btn-primary d-inline-flex">
-              Katso miten voimme auttaa <ArrowRight size={20} style={{ marginLeft: '8px' }} />
-            </Link>
+            <a href={toTelHref(GENERAL_PHONE)} className="btn btn-primary d-inline-flex">
+              <Phone size={20} style={{ marginRight: '8px' }} /> Varaa ilmainen tutustumiskäynti
+            </a>
             <Link href="/tarinamme/" className="btn btn-secondary d-inline-flex">
               Tarinamme <BookOpen size={20} style={{ marginLeft: '8px' }} />
             </Link>
