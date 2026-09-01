@@ -3,7 +3,8 @@ import Image from 'next/image';
 
 import { Phone, BookOpen } from 'lucide-react';
 import Link from 'next/link';
-import { GENERAL_PHONE, toTelHref } from '../lib/phone';
+import { GENERAL_PHONE } from '../lib/phone';
+import CallCtaButton from './CallCtaButton';
 
 import './Hero.css';
 
@@ -21,9 +22,12 @@ const Hero = () => {
             mukanamme turvaa ja kiireetöntä läsnäoloa arkeen.
           </p>
           <div className="hero-actions">
-            <a href={toTelHref(GENERAL_PHONE)} className="btn btn-primary d-inline-flex">
-              <Phone size={20} style={{ marginRight: '8px' }} /> Varaa ilmainen tutustumiskäynti
-            </a>
+            <CallCtaButton
+              phone={GENERAL_PHONE}
+              label="Varaa ilmainen tutustumiskäynti"
+              icon={<Phone size={20} style={{ marginRight: '8px' }} />}
+              className="btn btn-primary d-inline-flex"
+            />
             <Link href="/tarinamme/" className="btn btn-secondary d-inline-flex">
               Tarinamme <BookOpen size={20} style={{ marginLeft: '8px' }} />
             </Link>
