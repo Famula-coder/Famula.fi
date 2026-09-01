@@ -9,6 +9,7 @@ interface CallCtaButtonProps {
   className?: string;
   labelClassName?: string;
   ariaLabel?: string;
+  copiedLabel?: string;
 }
 
 /**
@@ -17,7 +18,7 @@ interface CallCtaButtonProps {
  * jonkin puheluita hallitsevan sovelluksen (esim. FaceTime) - kopioidaan sen sijaan
  * numero leikepöydälle ja näytetään se painikkeen tekstissä.
  */
-const CallCtaButton = ({ phone, label, icon, className, labelClassName, ariaLabel }: CallCtaButtonProps) => {
+const CallCtaButton = ({ phone, label, icon, className, labelClassName, ariaLabel, copiedLabel }: CallCtaButtonProps) => {
   const [copied, setCopied] = useState(false);
 
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
@@ -33,7 +34,7 @@ const CallCtaButton = ({ phone, label, icon, className, labelClassName, ariaLabe
   return (
     <a href={toTelHref(phone)} className={className} onClick={handleClick} aria-label={ariaLabel}>
       {icon}
-      <span className={labelClassName}>{copied ? `Numero kopioitu: ${phone}` : label}</span>
+      <span className={labelClassName}>{copied ? (copiedLabel ?? `Numero kopioitu: ${phone}`) : label}</span>
     </a>
   );
 };
