@@ -181,6 +181,7 @@ const Home = () => {
   const navigate = useRouter();
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   const scrollTestimonials = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
@@ -188,6 +189,33 @@ const Home = () => {
       const scrollTo = direction === 'left' ? scrollLeft - (clientWidth > 400 ? 400 : clientWidth) : scrollLeft + (clientWidth > 400 ? 400 : clientWidth);
       scrollRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
     }
+  };
+
+  const scrollToTestimonial = (index: number) => {
+    const track = scrollRef.current;
+    const card = track?.children[index] as HTMLElement | undefined;
+    if (!track || !card) return;
+    const trackRect = track.getBoundingClientRect();
+    const cardRect = card.getBoundingClientRect();
+    const delta = (cardRect.left + cardRect.width / 2) - (trackRect.left + trackRect.width / 2);
+    track.scrollTo({ left: track.scrollLeft + delta, behavior: 'smooth' });
+  };
+
+  const handleTestimonialsScroll = () => {
+    const track = scrollRef.current;
+    if (!track) return;
+    const centerX = track.getBoundingClientRect().left + track.getBoundingClientRect().width / 2;
+    let closestIndex = 0;
+    let closestDistance = Infinity;
+    Array.from(track.children).forEach((child, index) => {
+      const rect = (child as HTMLElement).getBoundingClientRect();
+      const distance = Math.abs(rect.left + rect.width / 2 - centerX);
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = index;
+      }
+    });
+    setActiveTestimonial(closestIndex);
   };
 
   return (
@@ -412,7 +440,7 @@ const Home = () => {
           scroll-snap-type: x mandatory;
           scrollbar-width: none;
           -ms-overflow-style: none;
-          padding: 1rem 1.5rem 4rem 1.5rem;
+          padding: 1rem 1.5rem;
           align-items: stretch;
         }
         .testimonials-track::-webkit-scrollbar {
@@ -441,7 +469,7 @@ const Home = () => {
           }
           .testimonials-track {
             gap: 1.25rem;
-            padding: 1rem 1rem 4rem 1rem;
+            padding: 1rem 1rem;
             scroll-padding-left: 1rem;
           }
         }
@@ -530,6 +558,35 @@ const Home = () => {
         .carousel-btn.right { right: -25px; }
         @media (max-width: 1250px) {
           .carousel-btn { display: none; }
+        }
+        .testimonials-dots {
+          display: flex;
+          justify-content: center;
+          gap: 0.4rem;
+          margin-top: 0.5rem;
+        }
+        .testimonial-dot {
+          width: 44px;
+          height: 44px;
+          padding: 0;
+          border: none;
+          background: transparent;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+        .testimonial-dot::after {
+          content: '';
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: #cbd5e1;
+          transition: background 0.2s ease, transform 0.2s ease;
+        }
+        .testimonial-dot.active::after {
+          background: var(--color-primary);
+          transform: scale(1.3);
         }
 
 
@@ -676,7 +733,7 @@ const Home = () => {
               <ChevronLeft size={24} />
             </button>
 
-            <div className="testimonials-track" ref={scrollRef}>
+            <div className="testimonials-track" ref={scrollRef} onScroll={handleTestimonialsScroll}>
               {testimonials.map((t, index) => (
                 <div key={index} className="testimonial-card">
                   <Quote className="testimonial-quote-icon" size={40} />
@@ -699,6 +756,20 @@ const Home = () => {
             <button className="carousel-btn right" onClick={() => scrollTestimonials('right')} aria-label="Seuraava">
               <ChevronRight size={24} />
             </button>
+          </div>
+
+          <div className="testimonials-dots" role="tablist" aria-label="Suosittelut">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                type="button"
+                role="tab"
+                aria-selected={index === activeTestimonial}
+                aria-label={`Näytä suosittelu ${index + 1}`}
+                className={`testimonial-dot${index === activeTestimonial ? ' active' : ''}`}
+                onClick={() => scrollToTestimonial(index)}
+              />
+            ))}
           </div>
 
         </div>
