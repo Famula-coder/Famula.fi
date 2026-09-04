@@ -1,9 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import { ChevronDown, Clock, CheckCircle2 } from 'lucide-react';
-import { visibleRegions } from '../data/regions';
 
 export const pricingExamples = [
   {
@@ -14,7 +12,7 @@ export const pricingExamples = [
     borderColor: '#7F9A83',
     title: 'Kevyttä tukea ja turvaa arkeen',
     duration: 'Noin 3 tuntia viikossa',
-    intro: '3 tuntia yhteistä aikaa asiakkaan kanssa. Sama hoitaja aina.',
+    intro: '3 tuntia yhteistä aikaa asiakkaan kanssa.',
     items: [
       { label: 'Viikoittainen kuulumisten vaihto ja läsnäolo', text: 'Varmistamme, että kaikki on hyvin ja tuomme turvaa arkeen.' },
       { label: 'Kodin säännöllinen siivous', text: 'Huolehdimme puhtaasta ja raikkaasta kodista.' },
@@ -33,7 +31,7 @@ export const pricingExamples = [
     borderColor: '#e6beba',
     title: 'Sujuvuutta ja helpotusta rutiineihin',
     duration: 'Noin 6 tuntia viikossa',
-    intro: '6 tuntia turvallista läsnäoloa ja vankempaa apua arkeen. Sama hoitaja aina.',
+    intro: '6 tuntia turvallista läsnäoloa ja vankempaa apua arkeen.',
     items: [
       { label: 'Perusteellisempi arjen tuki ja voinnin seuranta', text: 'Sisältää tarvittaessa kotisairaanhoidollisia toimia, esim. lääkkeiden jako ja verenpaineen mittaus.' },
       { label: 'Ravitsemuksesta huolehtiminen', text: 'Aterioiden suunnittelu, tilaaminen ja yhdessä syöminen.' },
@@ -52,7 +50,7 @@ export const pricingExamples = [
     borderColor: '#7F6890',
     title: 'Kokonaisvaltaista huolenpitoa ja elämäniloa',
     duration: 'Esim. 10 tuntia viikossa',
-    intro: '10 tuntia intensiivistä tukea ja läsnäoloa, joka mahdollistaa turvallisen kotona asumisen pitkään. Sama hoitaja aina.',
+    intro: '10 tuntia intensiivistä tukea ja läsnäoloa, joka mahdollistaa turvallisen kotona asumisen pitkään.',
     items: [
       { label: 'Säännölliset arjen rutiinit', text: 'Apu peseytymisessä, aamupalan valmistuksessa tai iltatoimissa tarpeen mukaan.' },
       { label: 'Laajennettu kotisairaanhoito ja asiointi', text: 'Tiivis voinnin seuranta, lääkärikäynneillä saattaminen ja asiantunteva apu.' },
@@ -67,7 +65,6 @@ export const pricingExamples = [
 
 export const PricingAccordion = ({ example }: { example: typeof pricingExamples[0] }) => {
   const [open, setOpen] = useState(false);
-  const navigate = useRouter();
 
   return (
     <div style={{
@@ -174,48 +171,8 @@ export const PricingAccordion = ({ example }: { example: typeof pricingExamples[
             <div style={{ fontSize: '1.6rem', fontWeight: '800', color: example.borderColor, marginBottom: '0.5rem' }}>
               {example.priceAfter}
             </div>
-            <div style={{ fontSize: '0.85rem', color: '#64748b', marginBottom: '1.5rem' }}>
+            <div style={{ fontSize: '0.85rem', color: '#64748b' }}>
               {example.priceNote}
-            </div>
-            
-            <div style={{ position: 'relative', width: '100%' }}>
-              <select
-                onChange={(e) => {
-                  if (e.target.value) {
-                    navigate.push(`/${e.target.value}`);
-                  }
-                }}
-                style={{
-                  appearance: 'none',
-                  width: '100%',
-                  background: example.borderColor,
-                  color: 'white',
-                  padding: '0.9rem 1.5rem',
-                  borderRadius: '50px',
-                  fontWeight: '600',
-                  fontSize: '1rem',
-                  border: 'none',
-                  cursor: 'pointer',
-                  boxShadow: `0 4px 15px ${example.colorLight}`,
-                  textAlign: 'center',
-                  transition: 'all 0.2s ease',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-2px)';
-                  e.currentTarget.style.filter = 'brightness(1.1)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.filter = 'brightness(1)';
-                }}
-              >
-                <option value="">Varaa ilmainen tutustumiskäynti ▾</option>
-                {visibleRegions.map((r) => (
-                  <option key={r.id} value={r.id} style={{ color: 'black' }}>
-                    {r.name}
-                  </option>
-                ))}
-              </select>
             </div>
           </div>
         </div>
