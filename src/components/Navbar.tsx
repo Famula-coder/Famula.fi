@@ -5,7 +5,8 @@ import { usePathname } from 'next/navigation';
 import { Phone, Menu, X, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { visibleRegions } from '../data/regions';
-import { GENERAL_PHONE, getRegionFromPathname, toTelHref } from '../lib/phone';
+import { GENERAL_PHONE, getRegionFromPathname } from '../lib/phone';
+import CallCtaButton from './CallCtaButton';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -49,10 +50,15 @@ const Navbar = () => {
           <Link href="/tietopankki/" onClick={closeMenu}>Tietopankki</Link>
         </nav>
         <div className="navbar-actions">
-          <a href={toTelHref(phone)} className="btn btn-primary nav-cta" aria-label={`Varaa ilmainen tutustumiskäynti, soita: ${phone}`}>
-            <Phone size={18} aria-hidden="true" />
-            <span className="nav-cta-text">{phone}</span>
-          </a>
+          <CallCtaButton
+            phone={phone}
+            label={phone}
+            icon={<Phone size={18} aria-hidden="true" />}
+            className="btn btn-outline nav-phone"
+            labelClassName="nav-phone-text"
+            ariaLabel={`Soita meille: ${phone}`}
+            copiedLabel="Kopioitu ✓"
+          />
           <div style={{ display: 'flex', alignItems: 'center', marginLeft: '0.5rem', gap: '0.5rem' }}>
             <a href="https://www.facebook.com/Famula.fi/" target="_blank" rel="noopener noreferrer" className="nav-social" aria-label="Famulan Facebook" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-primary)', fontWeight: 'bold' }}>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
