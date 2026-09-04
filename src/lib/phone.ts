@@ -1,7 +1,7 @@
 import { regions } from '../data/regions';
 
 /** Pääkonttorin yleinen numero - käytetään kun sivulla ei ole aluekontekstia eikä käyttäjä ole valinnut aluetta. */
-export const GENERAL_PHONE = '0447569399';
+export const GENERAL_PHONE = '044 756 9399';
 
 /** Selvittää URL-polun ensimmäisestä segmentistä, ollaanko jonkin alueen omalla sivulla (esim. /oulu, /oulu/omavalvonta). */
 export function getRegionFromPathname(pathname: string) {

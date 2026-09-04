@@ -32,9 +32,9 @@ const Hero = () => {
         
         <div className="hero-image-wrapper">
           <div className="hero-image-circle"></div>
-          <Image 
-            src={`/valma.png`} 
-            alt="Valma Linnanmäki, Famulan perustaja" 
+          <Image
+            src={`/valma.png`}
+            alt="Valma Linnanmäki, Famulan perustaja"
             className="hero-person-image" width={800} height={800} />
           <div className="hero-floating-card">
             <div className="floating-card-icon">

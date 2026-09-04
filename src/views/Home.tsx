@@ -223,41 +223,7 @@ const Home = () => {
       
 
       <style>{`
-        /* ── Video-osio ── */
-        .video-section {
-          padding: 5rem 0;
-          background: var(--color-white);
-        }
-        .video-section-inner {
-          display: flex;
-          align-items: center;
-          gap: 4rem;
-          flex-wrap: wrap;
-        }
-        .video-text { flex: 1 1 320px; }
-        .video-text .eyebrow {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.45rem;
-          padding: 0.5rem 1.1rem;
-          background: var(--color-light-gray);
-          border-radius: 50px;
-          font-weight: 600;
-          font-size: 0.9rem;
-          color: var(--color-secondary);
-          margin-bottom: 1.25rem;
-        }
-        .video-text h2 {
-          font-size: 2.2rem;
-          color: var(--color-primary);
-          margin-bottom: 1.25rem;
-          line-height: 1.25;
-        }
-        .video-text p {
-          color: #475569;
-          font-size: 1.1rem;
-          line-height: 1.7;
-        }
+        /* ── Video-upotus (yhdistetyssä luottamus-osiossa) ── */
         .video-embed-wrapper {
           flex: 1.4 1 420px;
           border-radius: 20px;
@@ -273,9 +239,9 @@ const Home = () => {
           display: block;
         }
 
-        /* ── Välittäminen-osio ── */
+        /* ── Luottamus-osio (perustaja + video + asiakaskertomukset + tiimi) ── */
         .caring-section {
-          padding: 6rem 0;
+          padding: 5rem 0;
           background: var(--color-light-gray);
         }
         .caring-header {
@@ -283,7 +249,7 @@ const Home = () => {
           max-width: 680px;
           margin: 0 auto 4rem;
         }
-        .caring-header .eyebrow {
+        .caring-section .eyebrow {
           display: inline-flex;
           align-items: center;
           gap: 0.45rem;
@@ -591,102 +557,6 @@ const Home = () => {
 
 
 
-        /* ── Hinnasto-osio ── */
-        .pricing-section {
-          padding: 6rem 0;
-          background: linear-gradient(135deg, #fdf0ee 0%, #f0f7f1 100%);
-        }
-        .pricing-inner {
-          display: flex;
-          align-items: center;
-          gap: 4rem;
-          flex-wrap: wrap;
-        }
-        .pricing-text { flex: 1 1 340px; }
-        .pricing-text .eyebrow {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.4rem;
-          background: rgba(155,194,166,0.15);
-          border-radius: 50px;
-          padding: 0.5rem 1.1rem;
-          font-size: 0.9rem;
-          font-weight: 600;
-          color: var(--color-secondary);
-          margin-bottom: 1.25rem;
-        }
-        .pricing-text h2 {
-          font-size: 2.4rem;
-          color: var(--color-primary);
-          margin-bottom: 1rem;
-        }
-        .pricing-text p {
-          color: #475569;
-          font-size: 1.05rem;
-          line-height: 1.7;
-        }
-        .pricing-card {
-          flex: 0 0 auto;
-          background: white;
-          border-radius: 24px;
-          padding: 2.5rem 3rem;
-          text-align: center;
-          box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-          min-width: 280px;
-          max-width: 100%;
-          box-sizing: border-box;
-        }
-        @media (max-width: 480px) {
-          .pricing-card {
-            min-width: 0;
-            width: 100%;
-            padding: 2rem 1.5rem;
-          }
-        }
-        .pricing-price {
-          font-size: 3.8rem;
-          font-weight: 800;
-          color: var(--color-accent);
-          line-height: 1;
-          margin-bottom: 0.25rem;
-        }
-        .pricing-unit {
-          font-size: 1rem;
-          color: #64748b;
-          margin-bottom: 0.5rem;
-        }
-        .pricing-note {
-          display: inline-block;
-          background: rgba(155,194,166,0.15);
-          color: var(--color-secondary);
-          border-radius: 50px;
-          padding: 0.35rem 1rem;
-          font-size: 0.85rem;
-          font-weight: 600;
-          margin-bottom: 1.75rem;
-        }
-        .pricing-divider {
-          border: none;
-          border-top: 1px solid #e2e8f0;
-          margin-bottom: 1.5rem;
-        }
-        .pricing-deduction-link {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.4rem;
-          color: var(--color-primary);
-          font-weight: 600;
-          font-size: 0.95rem;
-          text-decoration: none;
-          background: rgba(155,194,166,0.12);
-          border-radius: 50px;
-          padding: 0.6rem 1.2rem;
-          transition: background 0.2s ease;
-        }
-        .pricing-deduction-link:hover {
-          background: rgba(155,194,166,0.25);
-        }
-
         /* ── Palvelukortit-osio ── */
         .services-strip {
           background: rgba(155,194,166,0.12);
@@ -732,12 +602,63 @@ const Home = () => {
       <Hero />
       <TrustBar />
 
-      {/* ── ASIAKKAAT KERTOVAT (DYNAAMINEN KARUSELLI) ── */}
-      <section style={{ padding: '5rem 1.5rem', background: 'var(--color-background-warm)', overflow: 'hidden' }}>
-        <div className="container text-center">
-          <h2 style={{ color: 'var(--color-primary)', marginBottom: '3rem' }}>Asiakkaamme kertovat</h2>
+      {/* ── LUOTETTAVUUS: PERUSTAJA + VIDEO + ASIAKASKERTOMUKSET + TIIMI ── */}
+      <section className="caring-section">
+        <div className="container">
+          <div className="caring-header">
+            <div className="eyebrow">
+              <Heart size={14} /> Ihmiset Famulan takana
+            </div>
+            <h2>Sama, tuttu hoitaja — kysy vaikka meidän asiakkailtamme</h2>
+            <p>
+              Jokainen Famulan hoitaja on valittu tehtäväänsä suurella sydämellä.
+              Tutustumme asiakkaaseemme aina rauhassa ennen palvelun aloitusta, ja luonasi käy jatkossa aina sama, tuttu ihminen.
+            </p>
+          </div>
 
-          <div className="testimonials-wrapper">
+          {/* Perustaja-kortti */}
+          <div className="founder-card">
+            <div className="founder-img-wrap">
+              <div className="founder-img-bg" />
+              <Image
+                className="founder-img"
+                src="/valma.png"
+                alt="Valma Linnanmäki, Famulan perustaja"
+                width={200}
+                height={200}
+              />
+            </div>
+            <div className="founder-text">
+              <div className="founder-name">Valma Linnanmäki</div>
+              <div className="founder-role">Perustaja &amp; Toimitusjohtaja</div>
+              <blockquote className="founder-quote">
+                &ldquo;Perustin Famulan, koska tiesin mitä tarkoittaa kun läheistä ei ole kukaan auttamassa.
+                Me Famulalla emme vain suorita tehtäviä — tuomme mukanamme oikean ihmisen, joka välittää aidosti.&rdquo;
+              </blockquote>
+              <Link href="/tarinamme/" className="founder-story-link">
+                Lue koko tarina <ArrowRight size={18} />
+              </Link>
+            </div>
+          </div>
+
+          {/* Lyhyt videoesittely */}
+          <div className="video-embed-wrapper" style={{ maxWidth: '700px', margin: '0 auto' }}>
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/pICF_LhldPU?rel=0&modestbranding=1"
+              title="Famula – Kiireetöntä hoivaa kotiin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <p style={{ textAlign: 'center', color: '#64748b', fontSize: '0.95rem', fontWeight: '600', marginTop: '1rem', marginBottom: '3rem' }}>
+            ▶ Katso 1 minuutin esittely arjestamme
+          </p>
+
+          {/* Asiakaskertomukset */}
+          <div className="eyebrow" style={{ marginBottom: '1.25rem' }}>
+            <Heart size={14} /> Tässä muutama sana niiltä, joita saamme auttaa
+          </div>
+          <div className="testimonials-wrapper" style={{ marginBottom: '1.5rem' }}>
             <button className="carousel-btn left" onClick={() => scrollTestimonials('left')} aria-label="Edellinen">
               <ChevronLeft size={24} />
             </button>
@@ -767,7 +688,7 @@ const Home = () => {
             </button>
           </div>
 
-          <div className="testimonials-dots" role="tablist" aria-label="Suosittelut">
+          <div className="testimonials-dots" role="tablist" aria-label="Suosittelut" style={{ marginBottom: '3.5rem' }}>
             {testimonials.map((_, index) => (
               <button
                 key={index}
@@ -781,6 +702,34 @@ const Home = () => {
             ))}
           </div>
 
+          {/* Tiimikortit */}
+          <div className="eyebrow" style={{ marginBottom: '1.25rem' }}>
+            <Heart size={14} /> Tapaa alueesi hoitaja
+          </div>
+          <div className="team-grid">
+            {team.slice(1).map((member) => (
+              <div key={member.name} className="team-card">
+                <Link href={member.region || '/'} style={{ display: 'block', textDecoration: 'none', color: 'inherit', height: '100%' }}>
+                  <div className="team-card-img-wrap">
+                    <Image
+                      className="team-card-img"
+                      src={member.img}
+                      alt={member.name}
+                      fill
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="team-card-body">
+                    <div className="team-card-name">
+                      {member.name}{member.regionName ? `, ${member.regionName}` : ''}
+                    </div>
+                    <p className="team-card-quote">&ldquo;{member.quote}&rdquo;</p>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -799,7 +748,7 @@ const Home = () => {
             Mitä Famulan kotipalveluun ja kotihoitoon kuuluu?
           </h2>
           <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.7' }}>
-            Koostamme juuri sinun näköisesi palvelukokonaisuuden — alla esimerkkejä osa-alueista.
+            Koostamme juuri sinun näköisesi palvelukokonaisuuden — alla esimerkkejä osa-alueista. Palvelu alkaa aina ilmaisella tutustumiskäynnillä, jossa kuuntelemme toiveitasi ja suunnittelemme yhdessä arkeasi parhaiten tukevan kokonaisuuden.
           </p>
         </div>
 
@@ -886,29 +835,6 @@ const Home = () => {
             </div>
           ))}
         </div>
-
-        {/* Aina sinun ehdoillasi */}
-        <div style={{
-          marginTop: '3rem',
-          background: 'linear-gradient(135deg, rgba(155,194,166,0.18) 0%, rgba(230,190,186,0.15) 100%)',
-          borderRadius: '20px',
-          padding: '2rem 2.5rem',
-          display: 'flex', gap: '1.25rem', alignItems: 'flex-start',
-          border: '1px solid rgba(155,194,166,0.25)',
-        }}>
-          <Heart size={28} color="var(--color-secondary)" style={{ flexShrink: 0, marginTop: '2px' }} />
-          <div>
-            <div style={{ fontWeight: '700', fontSize: '1.15rem', color: 'var(--color-primary)', marginBottom: '0.5rem' }}>
-              Aina sinun ehdoillasi
-            </div>
-            <p style={{ color: '#475569', lineHeight: '1.7', margin: 0, fontSize: '1rem', marginBottom: '0.75rem' }}>
-              Moni huolestunut omainen etsii luotettavaa kotiapua vanhemmalleen tai vanhukselle. Me Famulalla ymmärrämme tämän huolen ja tarjoamme ikäihmisille kiireetöntä tukea arkeen.
-            </p>
-            <p style={{ color: '#475569', lineHeight: '1.7', margin: 0, fontSize: '1rem' }}>
-              Palvelu alkaa aina <strong>ilmaisella tutustumiskäynnillä</strong>, jossa kuuntelemme toiveitasi ja suunnittelemme yhdessä juuri sinun arkeasi parhaiten tukevan kokonaisuuden. Meille on kunnia-asia olla luottamuksesi arvoisia.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -934,14 +860,25 @@ const Home = () => {
             Räätälöimme palvelun juuri teidän tarpeisiinne
           </h2>
           <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.7' }}>
-            Meillä ei ole valmiita &ldquo;liukuhihnapaketteja&rdquo;. Jokainen ihminen ja tilanne on erilainen, joten palvelun sisältö ja tunnit räätälöidään aina tismalleen sinun toiveidesi mukaan. Tässä kolme esimerkkiä siitä, millaisia apukokonaisuuksia asiakkaamme ovat itselleen koonneet.
+            Meillä ei ole valmiita &ldquo;liukuhihnapaketteja&rdquo;. Jokainen ihminen ja tilanne on erilainen, joten palvelun sisältö ja tunnit räätälöidään aina tismalleen sinun toiveidesi mukaan. Tässä kolme esimerkkiä siitä, millaisia apukokonaisuuksia asiakkaamme ovat itselleen koonneet — jokaiseen niistä kuuluu aina sama, tuttu hoitaja.
           </p>
         </div>
 
         <PricingPackagesList />
 
+        {/* Kompakti hintahuomautus */}
+        <p style={{ textAlign: 'center', color: '#475569', fontSize: '0.95rem', marginTop: '2rem' }}>
+          Sosiaalihuollon asiakkaille tuntihinta on kiinteästi <strong>39,95 € (alv 0 %)</strong>. Yksityisasiakkaana voit hyödyntää kotitalousvähennyksen —{' '}
+          <a
+            href="https://www.vero.fi/henkiloasiakkaat/vahennykset/kotitalousvahennys/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem', color: 'var(--color-primary)', fontWeight: '600', textDecoration: 'none' }}
+          >
+            <ExternalLink size={14} /> lue lisää →
+          </a>
+        </p>
 
-        
 {/* CTA */}
         <div style={{
           marginTop: '3.5rem',
@@ -1002,131 +939,6 @@ const Home = () => {
 
       </div>
     </section>
-
-      {/* ── VIDEO-OSIO ── */}
-      <section className="video-section">
-        <div className="container video-section-inner">
-          <div className="video-text">
-            <div className="eyebrow">
-              <Heart size={14} /> Tutustumiseen
-            </div>
-            <h2>Katso, miten Famula toimii arjessa</h2>
-            <p>
-              Famulassa aito välittäminen näkyy jokaisessa kohtaamisessa.
-              Tule tutustumaan: ensimmäinen käynti on aina maksuton, eikä se sido sinua vielä mihinkään.
-              Suunnittelemme palvelut vasta, kun olemme yhdessä todenneet ne sinulle sopiviksi.
-            </p>
-          </div>
-          <div className="video-embed-wrapper">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/pICF_LhldPU?rel=0&modestbranding=1"
-              title="Famula – Kiireetöntä hoivaa kotiin"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* ── VÄLITTÄMINEN – PERUSTAJA + TIIMI ── */}
-      <section className="caring-section">
-        <div className="container">
-          <div className="caring-header">
-            <div className="eyebrow">
-              <Heart size={14} /> Ihmiset Famulan takana
-            </div>
-            <h2>Välittäminen on meille enemmän kuin työtä</h2>
-            <p>
-              Jokainen Famulan hoitaja on valittu tehtäväänsä suurella sydämellä.
-              Tunnemme asiakkaamme ja heidän tarpeensa, sillä tutustumme aina rauhassa jo ennen palvelun aloitusta.
-            </p>
-          </div>
-
-          {/* Perustaja-kortti */}
-          <div className="founder-card">
-            <div className="founder-img-wrap">
-              <div className="founder-img-bg" />
-              <Image
-                className="founder-img"
-                src="/valma.png"
-                alt="Valma Linnanmäki, Famulan perustaja"
-                width={200}
-                height={200}
-              />
-            </div>
-            <div className="founder-text">
-              <div className="founder-name">Valma Linnanmäki</div>
-              <div className="founder-role">Perustaja &amp; Toimitusjohtaja</div>
-              <blockquote className="founder-quote">
-                &ldquo;Perustin Famulan, koska tiesin mitä tarkoittaa kun läheistä ei ole kukaan auttamassa.
-                Me Famulalla emme vain suorita tehtäviä — tuomme mukanamme oikean ihmisen, joka välittää aidosti.&rdquo;
-              </blockquote>
-              <Link href="/tarinamme/" className="founder-story-link">
-                Lue koko tarina <ArrowRight size={18} />
-              </Link>
-            </div>
-          </div>
-
-          {/* Tiimikortit */}
-          <div className="team-grid">
-            {team.slice(1).map((member) => (
-              <div key={member.name} className="team-card">
-                <Link href={member.region || '/'} style={{ display: 'block', textDecoration: 'none', color: 'inherit', height: '100%' }}>
-                  <div className="team-card-img-wrap">
-                    <Image
-                      className="team-card-img"
-                      src={member.img}
-                      alt={member.name}
-                      fill
-                      sizes="(max-width: 768px) 50vw, 25vw"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="team-card-body">
-                    <div className="team-card-name">
-                      {member.name}{member.regionName ? `, ${member.regionName}` : ''}
-                    </div>
-                    <p className="team-card-quote">&ldquo;{member.quote}&rdquo;</p>
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── HINNASTO ── */}
-      <section id="hinnat" className="pricing-section">
-        <div className="container pricing-inner">
-          <div className="pricing-text">
-            <div className="eyebrow">💰 Selkeä hinnoittelu</div>
-            <h2>Reilu hinta,<br />ei piilomaksuja</h2>
-            <p>
-              Tarjoamme apua ja tukea ihan jokaiselle! Palvelemme niin yksityisasiakkaita
-              kuin sosiaalihuollon asiakkaita. Hinnoittelumme on aina kiinteä ja täysin läpinäkyvä.
-            </p>
-            <p style={{ marginTop: '1rem' }}>
-              Muistathan myös, että voit saada palveluistamme kotitalousvähennyksen –
-              hyödynnä etu täysimääräisesti!
-            </p>
-          </div>
-          <div className="pricing-card">
-            <div className="pricing-price">39,95€</div>
-            <div className="pricing-unit">tunnilta (alv 0%)</div>
-            <div className="pricing-note">Sosiaalihuollon asiakkaille</div>
-            <hr className="pricing-divider" />
-            <a
-              href="https://www.vero.fi/henkiloasiakkaat/vahennykset/kotitalousvahennys/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="pricing-deduction-link"
-            >
-              <ExternalLink size={15} />
-              Muista kotitalousvähennys →
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* Video Modal (Lightbox) */}
       {activeVideo && (

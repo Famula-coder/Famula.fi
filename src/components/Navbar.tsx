@@ -51,7 +51,7 @@ const Navbar = () => {
         <div className="navbar-actions">
           <a href={toTelHref(phone)} className="btn btn-primary nav-cta" aria-label={`Varaa ilmainen tutustumiskäynti, soita: ${phone}`}>
             <Phone size={18} aria-hidden="true" />
-            <span className="nav-cta-text">Varaa ilmainen tutustumiskäynti</span>
+            <span className="nav-cta-text">{phone}</span>
           </a>
           <div style={{ display: 'flex', alignItems: 'center', marginLeft: '0.5rem', gap: '0.5rem' }}>
             <a href="https://www.facebook.com/Famula.fi/" target="_blank" rel="noopener noreferrer" className="nav-social" aria-label="Famulan Facebook" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-primary)', fontWeight: 'bold' }}>
