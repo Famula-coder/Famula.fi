@@ -6,6 +6,11 @@
   z-index: 100;
 }
 
+/* Kun mobiilivalikko on auki, sen pitää näkyä evästebannerin (z-index 5000) päällä */
+.navbar-container.menu-open {
+  z-index: 6000;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;

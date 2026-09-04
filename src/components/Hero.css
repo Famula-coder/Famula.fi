@@ -11,7 +11,7 @@
 .hero-background-shape {
   position: absolute;
   top: -10%;
-  right: -5%;
+  right: 0;
   width: 48%; /* Kavennetaan, jotta ei mene tekstin päälle */
   height: 120%;
   background: linear-gradient(135deg, var(--color-background-warm) 0%, rgba(155, 194, 166, 0.6) 100%);
