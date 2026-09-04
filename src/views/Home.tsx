@@ -633,6 +633,15 @@ const Home = () => {
           text-align: center;
           box-shadow: 0 20px 60px rgba(0,0,0,0.2);
           min-width: 280px;
+          max-width: 100%;
+          box-sizing: border-box;
+        }
+        @media (max-width: 480px) {
+          .pricing-card {
+            min-width: 0;
+            width: 100%;
+            padding: 2rem 1.5rem;
+          }
         }
         .pricing-price {
           font-size: 3.8rem;
@@ -1039,7 +1048,7 @@ const Home = () => {
               <div className="founder-img-bg" />
               <Image
                 className="founder-img"
-                src={`${import.meta.env.BASE_URL}valma.png`}
+                src="/valma.png"
                 alt="Valma Linnanmäki, Famulan perustaja"
                 width={200}
                 height={200}

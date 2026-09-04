@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   padding: 1.5rem;
-  z-index: 9999;
+  z-index: 5000; /* alle avoimen mobiilivalikon (ks. Navbar.css .menu-open), mutta yli mobile-cta-barin */
   display: flex;
   justify-content: center;
   pointer-events: none; /* Allows clicking through overlay padding */

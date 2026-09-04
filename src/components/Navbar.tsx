@@ -20,7 +20,7 @@ const Navbar = () => {
   const closeRegions = () => setIsRegionsOpen(false);
 
   return (
-    <header className="navbar-container">
+    <header className={`navbar-container ${isMobileMenuOpen ? 'menu-open' : ''}`}>
       <div className="container navbar">
         <Link href="/" className="navbar-logo" onClick={closeMenu}>
           <Image src={`/logo.png`} alt="Famula Logo" className="logo-img" width={800} height={800} />
