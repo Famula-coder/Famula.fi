@@ -616,31 +616,6 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Perustaja-kortti */}
-          <div className="founder-card">
-            <div className="founder-img-wrap">
-              <div className="founder-img-bg" />
-              <Image
-                className="founder-img"
-                src="/valma.png"
-                alt="Valma Linnanmäki, Famulan perustaja"
-                width={200}
-                height={200}
-              />
-            </div>
-            <div className="founder-text">
-              <div className="founder-name">Valma Linnanmäki</div>
-              <div className="founder-role">Perustaja &amp; Toimitusjohtaja</div>
-              <blockquote className="founder-quote">
-                &ldquo;Perustin Famulan, koska tiesin mitä tarkoittaa kun läheistä ei ole kukaan auttamassa.
-                Me Famulalla emme vain suorita tehtäviä — tuomme mukanamme oikean ihmisen, joka välittää aidosti.&rdquo;
-              </blockquote>
-              <Link href="/tarinamme/" className="founder-story-link">
-                Lue koko tarina <ArrowRight size={18} />
-              </Link>
-            </div>
-          </div>
-
           {/* Lyhyt videoesittely */}
           <div className="video-embed-wrapper" style={{ maxWidth: '700px', margin: '0 auto' }}>
             <iframe
@@ -729,6 +704,31 @@ const Home = () => {
                 </Link>
               </div>
             ))}
+          </div>
+
+          {/* Perustaja-kortti */}
+          <div className="founder-card" style={{ marginTop: '3rem', marginBottom: 0 }}>
+            <div className="founder-img-wrap">
+              <div className="founder-img-bg" />
+              <Image
+                className="founder-img"
+                src="/valma.png"
+                alt="Valma Linnanmäki, Famulan perustaja"
+                width={200}
+                height={200}
+              />
+            </div>
+            <div className="founder-text">
+              <div className="founder-name">Valma Linnanmäki</div>
+              <div className="founder-role">Perustaja &amp; Toimitusjohtaja</div>
+              <blockquote className="founder-quote">
+                &ldquo;Perustin Famulan, koska tiesin mitä tarkoittaa kun läheistä ei ole kukaan auttamassa.
+                Me Famulalla emme vain suorita tehtäviä — tuomme mukanamme oikean ihmisen, joka välittää aidosti.&rdquo;
+              </blockquote>
+              <Link href="/tarinamme/" className="founder-story-link">
+                Lue koko tarina <ArrowRight size={18} />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
