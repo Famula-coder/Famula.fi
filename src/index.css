@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light;
   --color-primary: #082434; /* Syvä siniharmaa */
   --color-secondary: #6aad80; /* Eloisampi vihreä */
   --color-accent: #e8a8a0;   /* Vahvempi ruusu */
