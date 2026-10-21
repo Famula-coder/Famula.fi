@@ -26,8 +26,8 @@ const Region = () => {
     "@type": "MedicalBusiness",
     "name": `Famula Kotihoito ${region.name}`,
     "image": `${"https://famula.fi"}${region.image}`,
-    "@id": `https://famula.fi/${region.id}`,
-    "url": `https://famula.fi/${region.id}`,
+    "@id": `https://famula.fi/${region.id}/`,
+    "url": `https://famula.fi/${region.id}/`,
     "telephone": region.phone,
     "email": region.email,
     "address": {
