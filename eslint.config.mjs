@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Claude Coden rinnakkaisten istuntojen työkansiot (sisältävät omat buildinsa)
+    ".claude/**",
   ]),
 ]);
 
