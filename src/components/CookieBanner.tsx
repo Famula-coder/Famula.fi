@@ -12,7 +12,7 @@ declare global {
 const CookieBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-  // Oletuksena pois päältä: GDPR:n mukaan valmiiksi ruksattu ruutu ei ole pätevä suostumus.
+  // Oletuksena false: GDPR:n mukaan valmiiksi ruksattu ruutu ei ole pätevä suostumus (Planet49).
   const [analyticsConsent, setAnalyticsConsent] = useState(false);
   const [marketingConsent, setMarketingConsent] = useState(false);
 

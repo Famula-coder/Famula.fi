@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title,
     description,
     alternates: {
-      canonical: `https://famula.fi/${regionId}`,
+      canonical: `https://famula.fi/${regionId}/`,
     },
     openGraph: {
       images: [region.image],

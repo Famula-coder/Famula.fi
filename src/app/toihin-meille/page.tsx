@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Töihin meille | Famula',
   description: 'Etsitkö merkityksellistä työtä ikäihmisten parissa? Tule osaksi Famulan lämminhenkistä tiimiä.',
   alternates: {
-    canonical: 'https://famula.fi/toihin-meille',
+    canonical: 'https://famula.fi/toihin-meille/',
   },
   openGraph: {
     images: ['/images/keskustelu.webp'],

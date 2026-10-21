@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${article.title} | Famulan tietopankki`,
     description: article.excerpt,
     alternates: {
-      canonical: `https://famula.fi/tietopankki/${slug}`,
+      canonical: `https://famula.fi/tietopankki/${slug}/`,
     },
     openGraph: {
       type: 'article',
@@ -49,7 +49,7 @@ export default async function ArticlePage({ params }: PageProps) {
     "image": "https://famula.fi/images/famulasydan.png",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://famula.fi/tietopankki/${slug}`,
+      "@id": `https://famula.fi/tietopankki/${slug}/`,
     },
     "author": {
       "@type": "Organization",
