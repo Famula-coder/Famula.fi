@@ -31,8 +31,8 @@ const CookieBanner = () => {
       if (prefs) {
         try {
           const parsed = JSON.parse(prefs);
-          setAnalyticsConsent(parsed.analytics);
-          setMarketingConsent(parsed.marketing);
+          setAnalyticsConsent(parsed.analytics === true);
+          setMarketingConsent(parsed.marketing === true);
         } catch {
           // ignore parsing error
         }
