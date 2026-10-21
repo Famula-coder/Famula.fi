@@ -17,7 +17,7 @@ export default function HomePage() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Famula Oy",
-    "url": "https://famula.fi",
+    "url": "https://famula.fi/",
     "logo": "https://famula.fi/images/famulasydan.png",
     "sameAs": [
       "https://www.facebook.com/Famula.fi/",
