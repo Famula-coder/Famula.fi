@@ -12,8 +12,9 @@ declare global {
 const CookieBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-  const [analyticsConsent, setAnalyticsConsent] = useState(true);
-  const [marketingConsent, setMarketingConsent] = useState(true);
+  // Oletuksena false: GDPR:n mukaan valmiiksi ruksattu ruutu ei ole pätevä suostumus (Planet49).
+  const [analyticsConsent, setAnalyticsConsent] = useState(false);
+  const [marketingConsent, setMarketingConsent] = useState(false);
 
   useEffect(() => {
     // Suoritetaan tarkoituksella effektissä (ei lazy-initointina), koska sivu on
