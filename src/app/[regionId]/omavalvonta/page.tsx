@@ -23,6 +23,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `Omavalvontasuunnitelma ${name} | Famula`,
     description: `Lue Famulan omavalvontasuunnitelma alueella ${name}. Tutustu laadunvarmistukseemme ja toimintatapoihimme.`,
+    alternates: {
+      canonical: `https://famula.fi/${regionId}/omavalvonta/`,
+    },
   };
 }
 
