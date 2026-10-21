@@ -12,8 +12,9 @@ declare global {
 const CookieBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-  const [analyticsConsent, setAnalyticsConsent] = useState(true);
-  const [marketingConsent, setMarketingConsent] = useState(true);
+  // Oletuksena pois päältä: GDPR:n mukaan valmiiksi ruksattu ruutu ei ole pätevä suostumus.
+  const [analyticsConsent, setAnalyticsConsent] = useState(false);
+  const [marketingConsent, setMarketingConsent] = useState(false);
 
   useEffect(() => {
     // Suoritetaan tarkoituksella effektissä (ei lazy-initointina), koska sivu on
@@ -30,8 +31,8 @@ const CookieBanner = () => {
       if (prefs) {
         try {
           const parsed = JSON.parse(prefs);
-          setAnalyticsConsent(parsed.analytics);
-          setMarketingConsent(parsed.marketing);
+          setAnalyticsConsent(parsed.analytics === true);
+          setMarketingConsent(parsed.marketing === true);
         } catch {
           // ignore parsing error
         }
