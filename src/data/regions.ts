@@ -17,6 +17,8 @@ export interface RegionData {
   mainCity?: string;
   /** Kunnat joissa alue oikeasti palvelee (schema.org areaServed). */
   areaServed?: string[];
+  /** Alueellisen Google Tag Managerin container-ID (esim. erillinen kampanjaseuranta). */
+  gtmId?: string;
 }
 
 export const regions: RegionData[] = [
@@ -53,6 +55,7 @@ export const regions: RegionData[] = [
     hasOmavalvonta: true,
     mainCity: 'Kuopio',
     areaServed: ['Kuopio', 'Siilinjärvi'],
+    gtmId: 'GTM-P2X86LXL',
   },
   {
     id: 'oulu',
