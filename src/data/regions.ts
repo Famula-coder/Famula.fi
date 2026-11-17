@@ -94,6 +94,7 @@ export const regions: RegionData[] = [
     hasOmavalvonta: true,
     mainCity: 'Lappeenranta',
     areaServed: ['Lappeenranta', 'Imatra', 'Taipalsaari', 'Ruokolahti'],
+    googleAdsId: 'AW-17600441591',
   },
   {
     id: 'uusimaa',
