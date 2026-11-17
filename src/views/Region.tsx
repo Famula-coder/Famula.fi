@@ -1,5 +1,6 @@
 "use client";
 import Image from 'next/image';
+import Script from 'next/script';
 
 import { useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
@@ -51,6 +52,28 @@ const Region = () => {
 
   return (
     <>
+      {region.gtmId && (
+        <>
+          <Script id="gtm-init" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+              });
+              gtag('js', new Date());
+            `}
+          </Script>
+          <Script
+            id="gtm-script"
+            strategy="afterInteractive"
+            src={`https://www.googletagmanager.com/gtm.js?id=${region.gtmId}`}
+          />
+        </>
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
