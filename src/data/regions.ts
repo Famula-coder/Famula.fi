@@ -19,6 +19,8 @@ export interface RegionData {
   areaServed?: string[];
   /** Alueellisen Google Tag Managerin container-ID (esim. erillinen kampanjaseuranta). */
   gtmId?: string;
+  /** Google Adsin konversioseuranta-ID (gtag.js, esim. "AW-XXXXXXXXXX"). */
+  googleAdsId?: string;
 }
 
 export const regions: RegionData[] = [
@@ -38,6 +40,7 @@ export const regions: RegionData[] = [
     hasOmavalvonta: true,
     mainCity: 'Jyväskylä',
     areaServed: ['Jyväskylä', 'Jämsä', 'Laukaa', 'Muurame', 'Äänekoski'],
+    googleAdsId: 'AW-17890084641',
   },
   {
     id: 'pohjois-savo',
@@ -73,6 +76,7 @@ export const regions: RegionData[] = [
     hasOmavalvonta: true,
     mainCity: 'Oulu',
     areaServed: ['Oulu', 'Kempele', 'Liminka', 'Muhos'],
+    googleAdsId: 'AW-17590986359',
   },
   {
     id: 'etela-karjala',
@@ -90,6 +94,7 @@ export const regions: RegionData[] = [
     hasOmavalvonta: true,
     mainCity: 'Lappeenranta',
     areaServed: ['Lappeenranta', 'Imatra', 'Taipalsaari', 'Ruokolahti'],
+    googleAdsId: 'AW-17600441591',
   },
   {
     id: 'uusimaa',
