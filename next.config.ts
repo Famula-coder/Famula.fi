@@ -5,7 +5,10 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true, // Required for next/image with output: 'export'
-  }
+  },
+  experimental: {
+    agentUpgrade: "security",
+  },
 };
 
 export default nextConfig;
