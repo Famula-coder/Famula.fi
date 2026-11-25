@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ShieldCheck, FileText, Calendar, Users, Heart, Euro, type LucideIcon } from 'lucide-react';
+import { ShieldCheck, FileText, Umbrella, Calendar, Users, Heart, Euro, type LucideIcon } from 'lucide-react';
 import type { RegionData } from '../../data/regions';
 
 interface TrustFact {
@@ -15,6 +15,7 @@ const RegionTrust = ({ region }: { region: RegionData }) => {
     ...(region.hasOmavalvonta
       ? [{ icon: FileText, title: 'Julkinen omavalvontasuunnitelma', text: 'Kerromme avoimesti, miten varmistamme palvelun laadun ja turvallisuuden.', href: `/${region.id}/omavalvonta/` }]
       : []),
+    { icon: Umbrella, title: 'Vakuutettu toiminta', text: 'Jokaisella Famulan alueyhtiöllä on voimassa oleva vastuuvakuutus.' },
     { icon: Calendar, title: 'Alalla vuodesta 2022', text: 'Kotimainen yritys, joka on keskittynyt ikäihmisten arjen tukemiseen.' },
     { icon: Users, title: 'Yli 100 asiakasta', text: 'Asiakkaamme ja heidän omaisensa luottavat meihin eri puolilla Suomea.' },
     { icon: Heart, title: 'Aina sama, tuttu hoitaja', text: 'Tutustumme rauhassa ennen palvelun aloitusta, eikä hoitaja vaihdu käynnistä toiseen.' },

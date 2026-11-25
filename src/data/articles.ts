@@ -62,7 +62,7 @@ export const articles: Article[] = [
       </ol>
 
       <h2>Ennaltaehkäisevä apu on kultaa kalliimpaa</h2>
-      <p>Usein apua haetaan vasta, kun tapahtuu onnettomuus, kuten kaatuminen. Famulan kaltainen yksityinen kotipalvelu voi astua kuvaan paljon aikaisemmin. Emme korvaa lääkinnällistä sairaanhoitoa, mutta tarjoamme sen puuttuvan palasen: <strong>aikaa, seuraa ja arjen turvaa</strong>.</p>
+      <p>Usein apua haetaan vasta, kun tapahtuu onnettomuus, kuten kaatuminen. Famulan kaltainen yksityinen kotipalvelu voi astua kuvaan paljon aikaisemmin. Kotihoidon tukipalvelu ei korvaa lääkinnällistä sairaanhoitoa, mutta se tarjoaa sen puuttuvan palasen: <strong>aikaa, seuraa ja arjen turvaa</strong>.</p>
     `
   },
   {
@@ -100,9 +100,9 @@ export const articles: Article[] = [
     excerpt: 'Avaamme rehellisesti kotipalvelun hinnoittelua. Kerromme, miksi Famulalla on selkeä tuntihinta ilman yllättäviä piilokuluja.',
     icon: 'Calculator',
     content: `
-      <h2>Yksi tuntihinta – ei ikäviä yllätyksiä</h2>
+      <h2>Selkeä perushinta – ei ikäviä yllätyksiä</h2>
       <p>Monella palveluntarjoajalla laskutus perustuu monimutkaisiin hinnastoihin: viikonloppulisät, kilometrikorvaukset, laskutuslisät ja toimistomaksut nostavat lopullista summaa huomattavasti.</p>
-      <p>Famulalla uskomme reiluuteen ja läpinäkyvyyteen. Sosiaalihuollon tukipalveluina myytävä kotipalvelumme ja yksityinen kotihoidon tukipalvelumme on <strong>arvonlisäverotonta (ALV 0 %)</strong>, ja hinta on kiinteä <strong>42,50 € / tunti</strong>.</p>
+      <p>Famulalla uskomme reiluuteen ja läpinäkyvyyteen. Sosiaalihuollon tukipalveluina myytävä kotipalvelumme ja yksityinen kotihoidon tukipalvelumme on <strong>arvonlisäverotonta (ALV 0 %)</strong>, ja perushinta on <strong>42,50 € / tunti</strong>. Tarkka hinta sovitaan aina ennen palvelun aloittamista.</p>
       
       <h3>Kuinka edullista apu todellisuudessa on?</h3>
       <p>Verottajan myöntämä kotitalousvähennys (40 % vuonna 2026) tarkoittaa, että todellinen kustannus asiakkaalle on merkittävästi pienempi. Jos ostat palvelua esimerkiksi kahdeksi tunniksi viikossa:</p>
@@ -150,7 +150,7 @@ export const articles: Article[] = [
       <p>Luotettava kotipalvelu on aina rekisteröity valtakunnalliseen Soteri-rekisteriin, ja se on Lupa- ja valvontaviraston hyväksymä ja valvoma sosiaalipalvelujen tuottaja. Rekisteröinti on lakisääteinen, eikä sosiaalipalveluja saa tuottaa ilman sitä. Tämä tarkoittaa, että yrityksellä on vastuuhenkilöt ja ajantasainen omavalvontasuunnitelma. Kysy lisäksi, millaiset vakuutukset yrityksellä on.</p>
 
       <h3>3. Maksetaanko matka-ajoista tai piilokuluista?</h3>
-      <p>Tarkista, mitä tuntihinta oikeasti pitää sisällään. Alkavatko työtunnit juosta siitä, kun hoitaja astuu sisään, vai maksetaanko myös matka-ajasta? Famulalla hinnoittelu on täysin läpinäkyvää, eikä ikäviä yllätyslaskuja tule.</p>
+      <p>Tarkista, mitä tuntihinta oikeasti pitää sisällään. Alkavatko työtunnit juosta siitä, kun hoitaja astuu sisään, vai maksetaanko myös matka-ajasta? Famulalla hinta sovitaan ennen palvelun aloittamista, joten ikäviä yllätyslaskuja ei tule.</p>
     `
   },
   {
