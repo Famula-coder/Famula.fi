@@ -20,8 +20,8 @@ export const pricingExamples = [
       { label: 'Yhteisölliset aamukahvit', text: 'Tarjoamme mahdollisuuden tavata muita ja nauttia lämminhenkisestä yhdessäolosta.' },
     ],
     priceBase: '127,50 € / viikko',
-    priceAfter: '82,88 € / viikko',
-    priceNote: '(sisältää 35% kotitalousvähennyksen, omavastuu 65%)',
+    priceAfter: '76,50 € / viikko',
+    priceNote: '(sisältää 40% kotitalousvähennyksen, omavastuu 60%)',
   },
   {
     number: '2',
@@ -39,8 +39,8 @@ export const pricingExamples = [
       { label: 'Digiapu ja asiointi', text: 'Autamme pankkiasioissa ja yhteydenpidossa läheisiin.' },
     ],
     priceBase: '255,00 € / viikko',
-    priceAfter: '165,75 € / viikko',
-    priceNote: '(sisältää 35% kotitalousvähennyksen, omavastuu 65%)',
+    priceAfter: '153,00 € / viikko',
+    priceNote: '(sisältää 40% kotitalousvähennyksen, omavastuu 60%)',
   },
   {
     number: '3',
@@ -58,8 +58,8 @@ export const pricingExamples = [
       { label: 'Ympärivuorokautinen turvaverkko', text: 'Yhteistyö turvapuhelinpalvelun kanssa ja tiivis, ennakoiva yhteydenpito omaisiin.' },
     ],
     priceBase: '425,00 € / viikko',
-    priceAfter: '276,25 € / viikko',
-    priceNote: '(sisältää 35% kotitalousvähennyksen, omavastuu 65%)',
+    priceAfter: '255,00 € / viikko',
+    priceNote: '(sisältää 40% kotitalousvähennyksen, omavastuu 60%)',
   },
 ];
 
@@ -166,7 +166,7 @@ export const PricingAccordion = ({ example }: { example: typeof pricingExamples[
               </div>
             )}
             <div style={{ color: 'var(--color-primary)', fontSize: '1.2rem', fontWeight: '700', marginBottom: '0.2rem' }}>
-              {example.priceBase ? 'Hinta kotitalousvähennyksen (35%) jälkeen:' : 'Hinta-arvio:'}
+              {example.priceBase ? 'Hinta kotitalousvähennyksen (40%) jälkeen:' : 'Hinta-arvio:'}
             </div>
             <div style={{ fontSize: '1.6rem', fontWeight: '800', color: example.borderColor, marginBottom: '0.5rem' }}>
               {example.priceAfter}

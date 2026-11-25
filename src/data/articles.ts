@@ -104,9 +104,9 @@ export const articles: Article[] = [
       <p>Famulalla uskomme reiluuteen ja läpinäkyvyyteen. Sosiaalihuollon tukipalveluina myytävä kotipalvelumme ja yksityinen kotihoidon tukipalvelumme on <strong>arvonlisäverotonta (ALV 0 %)</strong>, ja hinta on kiinteä <strong>42,50 € / tunti</strong>.</p>
       
       <h3>Kuinka edullista apu todellisuudessa on?</h3>
-      <p>Verottajan myöntämä kotitalousvähennys (35 % vuonna 2025) tarkoittaa, että todellinen kustannus asiakkaalle on merkittävästi pienempi. Jos ostat palvelua esimerkiksi kahdeksi tunniksi viikossa:</p>
+      <p>Verottajan myöntämä kotitalousvähennys (40 % vuonna 2026) tarkoittaa, että todellinen kustannus asiakkaalle on merkittävästi pienempi. Jos ostat palvelua esimerkiksi kahdeksi tunniksi viikossa:</p>
       <p><strong>Bruttohinta:</strong> 340,00 € / kuukausi<br/>
-      <strong>Todellinen hinta kotitalousvähennyksen jälkeen:</strong> 221,00 € / kuukausi</p>
+      <strong>Todellinen hinta kotitalousvähennyksen jälkeen:</strong> 204,00 € / kuukausi</p>
       <p>Mielenrauha, turvallinen koti ja tutun ystävän seura ovat asioita, joille on vaikea laskea hintaa, mutta olemme halunneet tehdä avun hankkimisesta mahdollisimman saavutettavaa.</p>
     `
   },
@@ -344,7 +344,7 @@ export const articles: Article[] = [
         <li>Kirjaudu OmaVeroon pankkitunnuksillasi.</li>
         <li>Valitse etusivulta kohta <em>"Verokortit ja ennakkovero"</em> ja sieltä <em>"Kotitalousvähennys"</em>.</li>
         <li>Ilmoita palvelun tuottaneen yrityksen (Famulan) Y-tunnus.</li>
-        <li>Kirjaa laskun loppusumma ja siitä eritelty työn osuus. Järjestelmä laskee 35 % vähennyksen ja 150 euron omavastuun puolestasi täysin automaattisesti!</li>
+        <li>Kirjaa laskun loppusumma ja siitä eritelty työn osuus. Järjestelmä laskee 40 % vähennyksen ja 150 euron omavastuun puolestasi täysin automaattisesti!</li>
       </ol>
       <p><em>Vinkki:</em> Voit ilmoittaa kulut pitkin vuotta aina, kun olet maksanut laskun, jolloin veroprosenttisi pienenee heti loppuvuodeksi. Voit myös ilmoittaa kaikki kerralla keväällä esitäytetyn veroilmoituksen tarkistamisen yhteydessä, jolloin saat rahat takaisin veronpalautuksena.</p>
       
@@ -374,7 +374,7 @@ export const articles: Article[] = [
       <p>Tällöin <strong>sinä toimit työn tilaajana ja laskun maksajana</strong>, mutta itse työ suoritetaan läheistesi kodissa. Famula toimittaa laskut suoraan sinulle, jolloin voit helposti ilmoittaa ne omassa OmaVero-palvelussasi aivan kuten ilmoittaisit omaankin kotiin ostetut palvelut.</p>
 
       <h3>Miksi tämä on niin kannattavaa?</h3>
-      <p>Ikäihmisillä itsellään on usein pienet eläkkeet, ja heidän vuotuinen tuloveronsa saattaa olla niin pieni, etteivät he pysty hyödyntämään täyttä kotitalousvähennystä. Työssäkäyvä lapsi sen sijaan maksaa todennäköisesti riittävästi veroja saadakseen koko 35 % vähennyksen (vuonna 2025) hyödynnettyä.</p>
+      <p>Ikäihmisillä itsellään on usein pienet eläkkeet, ja heidän vuotuinen tuloveronsa saattaa olla niin pieni, etteivät he pysty hyödyntämään täyttä kotitalousvähennystä. Työssäkäyvä lapsi sen sijaan maksaa todennäköisesti riittävästi veroja saadakseen koko 40 % vähennyksen (vuonna 2026) hyödynnettyä.</p>
       <p>Tämä on erinomainen tapa tarjota turvaa ja seuraa omille vanhemmille, ja samalla saada merkittävä taloudellinen hyöty yhteiskunnalta. Älä siis epäröi hankkia apua ajoissa!</p>
     `
   },
