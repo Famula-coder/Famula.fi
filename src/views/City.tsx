@@ -32,6 +32,14 @@ const City = () => {
     <>
       <RegionTags region={region} />
       <RegionHero region={region} heading={city.h1} paragraphs={city.paragraphs} badge={city.name} />
+      {city.testimonial && (
+        <figure className="container" style={{ maxWidth: '800px', padding: '3rem 1.5rem 0', textAlign: 'center' }}>
+          <blockquote style={{ fontSize: '1.2rem', fontStyle: 'italic', marginBottom: '0.75rem' }}>
+            &ldquo;{city.testimonial.text}&rdquo;
+          </blockquote>
+          <figcaption style={{ color: '#64748b', fontSize: '0.9rem', fontWeight: '600' }}>{city.testimonial.author}</figcaption>
+        </figure>
+      )}
       <RegionServices locative={city.locative} />
       <RegionPricing locative={city.locative} />
       <RegionTrust region={region} />

@@ -53,10 +53,10 @@ export default function RootLayout({
             </div>
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: '0.25rem 2rem', marginBottom: '0.75rem', flexWrap: 'wrap' }}>
-              <Link href="/keski-suomi/" style={{ display: 'inline-block', padding: '0.4rem 0', color: 'white', textDecoration: 'none' }}>Kotipalvelu Jyväskylä ja Keski-Suomi</Link>
-              <Link href="/pohjois-savo/" style={{ display: 'inline-block', padding: '0.4rem 0', color: 'white', textDecoration: 'none' }}>Kotipalvelu Kuopio ja Pohjois-Savo</Link>
+              <Link href="/keski-suomi/" style={{ display: 'inline-block', padding: '0.4rem 0', color: 'white', textDecoration: 'none' }}>Kotipalvelu Keski-Suomi</Link>
+              <Link href="/pohjois-savo/" style={{ display: 'inline-block', padding: '0.4rem 0', color: 'white', textDecoration: 'none' }}>Kotipalvelu Pohjois-Savo</Link>
               <Link href="/oulu/" style={{ display: 'inline-block', padding: '0.4rem 0', color: 'white', textDecoration: 'none' }}>Kotipalvelu Oulu</Link>
-              <Link href="/etela-karjala/" style={{ display: 'inline-block', padding: '0.4rem 0', color: 'white', textDecoration: 'none' }}>Kotipalvelu Lappeenranta ja Etelä-Karjala</Link>
+              <Link href="/etela-karjala/" style={{ display: 'inline-block', padding: '0.4rem 0', color: 'white', textDecoration: 'none' }}>Kotipalvelu Etelä-Karjala</Link>
               {/* <Link href="/uusimaa/" style={{ color: 'white', textDecoration: 'none' }}>Uusimaa</Link> */}
               {/* Uusimaa piilotettu toistaiseksi - hidden: true regions.ts tiedostossa */}
             </div>

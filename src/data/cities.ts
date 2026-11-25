@@ -9,9 +9,29 @@ export interface CityPage {
   metaDescription: string;
   h1: string;
   paragraphs: string[];
+  testimonial?: { text: string; author: string };
 }
 
 export const cities: CityPage[] = [
+  {
+    id: 'kuopio',
+    regionId: 'pohjois-savo',
+    name: 'Kuopio',
+    locative: 'Kuopiossa',
+    seoTitle: 'Kotihoito ja kotipalvelu Kuopio',
+    metaDescription:
+      'Yksityinen kotipalvelu ja kotihoito ikäihmisille Kuopiossa. Kuopiolainen Famula, aina sama tuttu hoitaja, 42,50 €/h (alv 0 %), kotitalousvähennys 40 %. Soita Julialle: 044 246 0147.',
+    h1: 'Kotipalvelu ja kotihoito Kuopiossa',
+    paragraphs: [
+      'Famulan kotipalvelu auttaa kuopiolaisia ikäihmisiä asumaan omassa kodissaan. Tulemme kotiin sovittuna päivänä ja teemme sen, mikä arjessa on käynyt raskaaksi: siivoamme, käymme kaupassa ja apteekissa, laitamme ruokaa ja lähdemme yhdessä ulkoilemaan.',
+      'Famula on kuopiolainen yritys. Vuonna 2025 Suomen Uusyrityskeskukset palkitsi Famulan valtakunnallisena Vuoden Uusyrittäjänä. Kotikaupungissamme haluamme olla se tuttu ja turvallinen apu, jonka puoleen on helppo kääntyä.',
+      'Luonasi käy aina sama hoitaja, joten sinun ei tarvitse tutustua uuteen ihmiseen joka kerta. Palvelu oikeuttaa kotitalousvähennykseen, ja myös muualla asuva omainen voi tilata sen vanhemmalleen Kuopioon.',
+    ],
+    testimonial: {
+      text: 'Minä aina odotan näitä päiviä, kun sinä tulet. Siitä tulee niin hyvä mieli, että hykerryttää! Sinä et hoida pelkästään minun kotia, vaan myös minun mieltä.',
+      author: 'Omainen, Kuopio',
+    },
+  },
   {
     id: 'siilinjarvi',
     regionId: 'pohjois-savo',
@@ -28,6 +48,25 @@ export const cities: CityPage[] = [
     ],
   },
   {
+    id: 'jyvaskyla',
+    regionId: 'keski-suomi',
+    name: 'Jyväskylä',
+    locative: 'Jyväskylässä',
+    seoTitle: 'Kotihoito ja kotipalvelu Jyväskylä',
+    metaDescription:
+      'Yksityinen kotipalvelu ja kotihoito ikäihmisille Jyväskylässä. Aina sama tuttu hoitaja, 42,50 €/h (alv 0 %), palveluseteli ja kotitalousvähennys 40 %. Soita Leenalle: 050 466 9574.',
+    h1: 'Kotipalvelu ja kotihoito Jyväskylässä',
+    paragraphs: [
+      'Famula tuo kotipalvelun ja kotihoidon jyväskyläläisen ikäihmisen kotiin. Autamme kodin töissä, asioinnissa ja ruoanlaitossa ja olemme seurana, jotta arki sujuu ja kotona on hyvä olla.',
+      'Jyväskylässä palvelun voi maksaa myös palvelusetelillä. Famula on palvelusetelituottaja, ja setelin myöntää Keski-Suomen hyvinvointialue palvelutarpeen arvioinnin perusteella. Ilman seteliä palvelun voi ostaa suoraan meiltä ja hyödyntää kotitalousvähennyksen.',
+      'Hoitaja on aina sama. Hän tulee sovittuna päivänä, ja hänellä on aikaa pysähtyä. Käyntien määrä sovitaan sinun tarpeesi mukaan, ja sitä voi muuttaa myöhemmin.',
+    ],
+    testimonial: {
+      text: 'Oot sinä melkoinen epeli, kun vesilukonkin korjasit! Olet minun enkelini.',
+      author: 'Asiakas, Jyväskylä',
+    },
+  },
+  {
     id: 'kempele',
     regionId: 'oulu',
     name: 'Kempele',
@@ -41,6 +80,25 @@ export const cities: CityPage[] = [
       'Säännöllinen käynti helpottaa kotona asumista: viikkosiivous, kauppa-asiat ja seura hoituvat samalla kertaa. Lähdemme tarvittaessa myös saattajaksi lääkäriin tai muille asioille Ouluun.',
       'Hinta on sama kuin Oulussa, ja palvelu oikeuttaa kotitalousvähennykseen. Tunnit sovitaan aina sinun tarpeesi mukaan.',
     ],
+  },
+  {
+    id: 'lappeenranta',
+    regionId: 'etela-karjala',
+    name: 'Lappeenranta',
+    locative: 'Lappeenrannassa',
+    seoTitle: 'Kotihoito ja kotipalvelu Lappeenranta',
+    metaDescription:
+      'Yksityinen kotipalvelu ja kotihoito ikäihmisille Lappeenrannassa. Aina sama tuttu hoitaja, 42,50 €/h (alv 0 %), kotitalousvähennys 40 %. Soita Paulalle: 040 417 9978.',
+    h1: 'Kotipalvelu ja kotihoito Lappeenrannassa',
+    paragraphs: [
+      'Famula tarjoaa kotipalvelua ja kotihoitoa ikäihmisille Lappeenrannassa. Tulemme kotiin ja autamme siinä, missä apua tarvitaan: kodin siisteydessä, kauppa- ja apteekkiasioissa, ruoanlaitossa ja ulkoilussa.',
+      'Usein pyyntö alkaa yhdestä asiasta, vaikka asiointiavusta, ja samalla käynnillä hoituu moni muukin. Käynnillä ei ole kiire, ja hoitaja on aina sama tuttu ihminen.',
+      'Palvelu oikeuttaa kotitalousvähennykseen. Käymme Lappeenrannan lisäksi Taipalsaarella, Imatralla ja Ruokolahdella.',
+    ],
+    testimonial: {
+      text: 'Pyysin teitä asiointiapuun, mutta sainkin samalla apua ihan kaikkeen, mitä keksinkään!',
+      author: 'Asiakas, Lappeenranta',
+    },
   },
   {
     id: 'imatra',
