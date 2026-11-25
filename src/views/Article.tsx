@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { articles } from '../data/articles';
 import { visibleRegions } from '../data/regions';
 import { regionContent } from '../data/regionContent';
+import { cities } from '../data/cities';
+import { getPagesForArticle } from '../data/pageAngles';
 import { ArrowLeft, Play, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
@@ -32,6 +34,13 @@ const Article = () => {
       </div>
     );
   }
+
+  const relatedPages = getPagesForArticle(article.slug).map((page) => {
+    const [regionId, cityId] = page.key.split('/');
+    const city = cities.find((c) => c.regionId === regionId && c.id === cityId);
+    const label = city ? `Kotipalvelu ${city.locative}` : regionContent[regionId]?.linkLabel ?? 'Kotipalvelu';
+    return { href: page.href, label };
+  });
 
   return (
     <>
@@ -195,6 +204,18 @@ const Article = () => {
         )}
 
         <div dangerouslySetInnerHTML={{ __html: article.content }} />
+
+        {relatedPages.length > 0 && (
+          <p style={{ marginTop: '2rem', padding: '1.25rem 1.5rem', background: 'white', borderRadius: '12px', borderLeft: '5px solid var(--color-secondary)' }}>
+            Famula tarjoaa tätä apua osana kotihoidon tukipalveluja. Lue lisää:{' '}
+            {relatedPages.map((page, index) => (
+              <span key={page.href}>
+                {index > 0 && ', '}
+                <Link href={page.href} style={{ display: 'inline-block', padding: '0.5rem 0', color: 'var(--color-primary)', fontWeight: 600 }}>{page.label}</Link>
+              </span>
+            ))}
+          </p>
+        )}
 
         <div className="article-cta">
           <h3>Heräsikö kysyttävää?</h3>

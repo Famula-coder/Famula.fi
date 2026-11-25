@@ -9,7 +9,7 @@ const steps = [
   'Tutustut omaan hoitajaasi, ja sovimme käyntien ajat.',
 ];
 
-const RegionStart = ({ region }: { region: RegionData }) => (
+const RegionStart = ({ region, showRecruit = true }: { region: RegionData; showRecruit?: boolean }) => (
   <section className="container" style={{ padding: '4rem 1.5rem', maxWidth: '800px' }}>
     <h2 className="text-center" style={{ fontSize: 'clamp(1.5rem, 5vw, 2.25rem)', marginBottom: '2rem' }}>
       Näin pääset alkuun
@@ -31,12 +31,14 @@ const RegionStart = ({ region }: { region: RegionData }) => (
         icon={<Phone size={20} />}
         className="btn btn-primary btn-with-icon"
       />
-      <p style={{ color: '#475569', fontSize: '0.95rem', marginTop: '2.5rem', marginBottom: 0 }}>
-        Etsimme myös lisää välittäviä tekijöitä tiimiimme {region.locativeName}.{' '}
-        <Link href="/toihin-meille/" style={{ display: 'inline-block', padding: '0.6rem 0', color: 'var(--color-primary)', fontWeight: '600' }}>
-          Katso, millaista meillä on olla töissä
-        </Link>
-      </p>
+      {showRecruit && (
+        <p style={{ color: '#475569', fontSize: '0.95rem', marginTop: '2.5rem', marginBottom: 0 }}>
+          Etsimme myös lisää välittäviä tekijöitä tiimiimme {region.locativeName}.{' '}
+          <Link href="/toihin-meille/" style={{ display: 'inline-block', padding: '0.6rem 0', color: 'var(--color-primary)', fontWeight: '600' }}>
+            Katso, millaista meillä on olla töissä
+          </Link>
+        </p>
+      )}
     </div>
   </section>
 );
