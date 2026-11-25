@@ -9,6 +9,8 @@ interface RegionHeroProps {
   paragraphs: string[];
   /** Näytetään merkissä otsikon yllä, esim. alueen tai paikkakunnan nimi. */
   badge: string;
+  /** Oma kuva sivulle; oletuksena aluevetäjän kuva. */
+  photo?: { src: string; alt: string };
 }
 
 const contactLinkStyle = {
@@ -22,7 +24,7 @@ const contactLinkStyle = {
   overflowWrap: 'anywhere',
 } as const;
 
-const RegionHero = ({ region, heading, paragraphs, badge }: RegionHeroProps) => (
+const RegionHero = ({ region, heading, paragraphs, badge, photo }: RegionHeroProps) => (
   <div className="bg-light" style={{ padding: '4rem 0' }}>
     <div className="container">
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '3rem', alignItems: 'center' }}>
@@ -83,11 +85,12 @@ const RegionHero = ({ region, heading, paragraphs, badge }: RegionHeroProps) => 
 
         <div style={{ flex: '1 1 400px', minWidth: 0 }}>
           <Image
-            src={region.image}
-            alt={region.altText}
+            src={photo?.src ?? region.image}
+            alt={photo?.alt ?? region.altText}
             style={{ borderRadius: '20px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)', maxWidth: '100%', height: 'auto' }}
-            width={800}
+            width={photo ? 1200 : 800}
             height={800}
+            priority={Boolean(photo)}
           />
         </div>
       </div>

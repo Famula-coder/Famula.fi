@@ -1,0 +1,151 @@
+import type { PageAngle } from './pageAngles';
+
+/** Avain muotoa "alue/kaupunki". Jokaisella kaupunkisivulla on oma painotuksensa, mutta kaikki kotihoidon tukipalvelut ovat saatavilla joka paikkakunnalla. */
+export const cityAngles: Record<string, PageAngle> = {
+  'pohjois-savo/kuopio': {
+    layout: 'B',
+    heading: 'Seuraa ja läsnäoloa kuopiolaisen arkeen',
+    paragraphs: [
+      'Kotihoidon tukipalveluissa ei ole kyse vain imuroinnista tai tiskikoneen tyhjentämisestä. Kyse on siitä, että kotiin tulee ihminen, jolla on aikaa istahtaa alas, juoda kuppi kahvia ja vaihtaa kuulumiset.',
+      'Moni ikäihminen on päivät yksin: puoliso on voinut menehtyä, lapset asuvat toisella paikkakunnalla ja liikkuminen kodin ulkopuolelle on vaikeutunut. Säännöllinen käynti tuo viikkoon päivän, jota odotetaan. Voimme muistella, lukea lehteä, katsella valokuvia tai lähteä yhdessä kahville.',
+    ],
+    image: '/images/kahvihetki.webp',
+    imageAlt: 'Famulan hoitaja juttelee asiakkaiden kanssa kahvipöydän ääressä',
+    sameCarer: 'Ystävyys ei synny, jos ovesta tulee joka viikko eri ihminen. Siksi meiltä tulee aina sama.',
+    articleSlugs: ['yksinaisyyden-torjunta', 'kotiutuminen-sairaalasta'],
+    articlesHeading: 'Lue lisää: seura ja toipuminen',
+    priceHeading: 'Kotipalvelun hinta Kuopiossa',
+    priceExample: 'Esimerkiksi neljä tuntia viikossa on kotitalousvähennyksen jälkeen 102,00 € viikossa.',
+  },
+  'pohjois-savo/siilinjarvi': {
+    layout: 'C',
+    heading: 'Tiedät, miten vanhemmallasi menee, vaikka asut muualla',
+    paragraphs: [
+      'Kun vanhempi asuu Siilinjärvellä ja sinä toisella paikkakunnalla, huoli kulkee mukana. Puhelimessa vastaus on usein "kyllä minä täällä pärjäilen", vaikka arki olisi käynyt raskaaksi.',
+      'Kotihoidon tukipalveluihimme kuuluu aina avoin yhteydenpito omaisiin. Sovimme kanssasi, miten ja kuinka usein kerromme kuulumiset. Voit tilata palvelun itse ja saada kotitalousvähennyksen omaan verotukseesi.',
+    ],
+    image: '/images/keskustelu.webp',
+    imageAlt: 'Famulan hoitaja ja asiakas keskustelevat keittiön pöydän ääressä',
+    tips: {
+      heading: 'Näin pidämme sinut ajan tasalla',
+      items: [
+        'Sinulla on aluevetäjän ja nimetyn hoitajan suora puhelinnumero',
+        'Lähetämme viestin tai soitamme sovituin välein ja kerromme, miten viikko on mennyt',
+        'Otamme yhteyttä heti, jos muisti, ruokahalu tai vointi muuttuu',
+      ],
+    },
+    sameCarer: 'Kun soitat ja kysyt, miten isällä menee, vastaa ihminen, joka on oikeasti käynyt hänen luonaan.',
+    articleSlugs: ['ikantyvan-vanhemman-kotiapu', 'kotitalousvahennys-vanhemmille', 'saannollinen-yhteydenpito-omaisiin'],
+    articlesHeading: 'Lue lisää: omaisen opas',
+    priceHeading: 'Mitä vanhemman kotipalvelu maksaa omaiselle',
+    priceExample: 'Esimerkiksi kolme tuntia viikossa on kotitalousvähennyksen jälkeen 76,50 € viikossa.',
+  },
+  'keski-suomi/jyvaskyla': {
+    layout: 'C',
+    heading: 'Palveluseteli tai oma maksu: sama palvelu, sama hoitaja',
+    paragraphs: [
+      'Jyväskylässä Famula on palvelusetelituottaja. Jos Keski-Suomen hyvinvointialue on myöntänyt sinulle palvelusetelin, voit valita Famulan tuottamaan kotihoidon tukipalvelusi.',
+      'Jos seteliä ei ole, ostat palvelun suoraan meiltä ja voit hakea kotitalousvähennystä. Palvelusetelillä hankitusta palvelusta vähennystä ei saa, mutta itse ostamistasi lisätunneista sen voi saada. Palvelun sisältö ja hoitaja ovat samat kummassakin tapauksessa.',
+    ],
+    image: '/images/leenajakukkakimppu.webp',
+    imageAlt: 'Hymyilevä Famulan hoitaja kukkakimppu kädessään',
+    tips: {
+      heading: 'Palvelusetelillä näin',
+      items: [
+        'Pyydä hyvinvointialueen asiakasohjauksesta palvelutarpeen arviointi',
+        'Kun saat setelin, valitse palveluntuottajaksi Famula',
+        'Soita aluevetäjälle, niin sovimme ensimmäisen käynnin',
+      ],
+    },
+    sameCarer: 'Valitsitpa palvelusetelin tai maksat itse, hoitajasi on sama joka käynnillä.',
+    articleSlugs: ['nain-haet-kotitalousvahennysta'],
+    articlesHeading: 'Lue lisää: jos maksat itse',
+    priceHeading: 'Hinta ilman palveluseteliä',
+    priceExample: 'Esimerkiksi kuusi tuntia viikossa on kotitalousvähennyksen jälkeen 153,00 € viikossa.',
+  },
+  'keski-suomi/laukaa': {
+    layout: 'A',
+    heading: 'Kauppareissu voi olla viikon kohokohta',
+    paragraphs: [
+      'Ruokaostokset saa nykyään tilattua kotiovelle, mutta monelle ikäihmiselle kauppareissu on viikon tärkein meno. Se pitää yllä liikkumista, antaa virikkeitä ja tuo tuttuja vastaan.',
+      'Asiointiapu on kotihoidon tukipalveluistamme se, josta yhteistyö usein alkaa. Jos yksin lähteminen jännittää huimauksen tai muistin vuoksi, Famulan tuttu hoitaja lähtee mukaan, kantaa ostokset ja on tukena. Samaan reissuun mahtuu apteekki ja vaikka lounas kahvilassa.',
+    ],
+    image: '/images/kauppa2.jpg',
+    imageAlt: 'Hoitaja ja rollaattorilla kulkeva asiakas ruokakaupan käytävällä',
+    sameCarer: 'Tuttu hoitaja tietää, mistä kaupasta leipä ostetaan ja mitä apteekista haetaan.',
+    articleSlugs: ['asiointiapu-ikaihmisille'],
+    articlesHeading: 'Lue lisää: asiointiapu',
+    priceHeading: 'Mitä asiointiapu ja kotipalvelu maksaa Laukaassa',
+    priceExample: 'Esimerkiksi neljä tuntia kuukaudessa on kotitalousvähennyksen jälkeen 102,00 € kuukaudessa.',
+  },
+  'oulu/kempele': {
+    layout: 'A',
+    heading: 'Siivousapu, joka tehdään sinun tavallasi',
+    paragraphs: [
+      'Puhdas koti on turvallinen koti. Kun imurointi ja lattioiden pesu alkavat tuntua raskailta, ne jäävät helposti tekemättä, ja lattialle jäänyt tavara on kaatumisriski.',
+      'Kodin siisteys on yksi kysytyimmistä kotihoidon tukipalveluistamme. Teemme työn siinä järjestyksessä ja sillä tavalla kuin sinä olet tottunut, ja jos haluat, teemme sen yhdessä. Pyykkien viikkaaminen yhdessä pitää yllä sorminäppäryyttä.',
+    ],
+    image: '/images/siivous.webp',
+    imageAlt: 'Famulan hoitaja pyyhkii pöytää asiakkaan kotona',
+    tips: {
+      heading: 'Samalla käynnillä voimme',
+      items: [
+        'imuroida ja pestä lattiat',
+        'vaihtaa lakanat ja laittaa pyykit pyörimään',
+        'valmistaa lounaan',
+        'lukea yhdessä päivän lehden',
+      ],
+    },
+    sameCarer: 'Sama hoitaja oppii, miten sinä haluat kotisi siivottavan, eikä sitä tarvitse neuvoa joka kerta.',
+    articleSlugs: ['kevyt-siivous-ja-pyykkihuolto', 'luotettava-siivousapu-ikaihmiselle'],
+    articlesHeading: 'Lue lisää: kodin siisteys',
+    priceHeading: 'Mitä siivousapu ja kotipalvelu maksaa Kempeleessä',
+    priceExample: 'Esimerkiksi kaksi tuntia viikossa on kotitalousvähennyksen jälkeen 51,00 € viikossa.',
+  },
+  'etela-karjala/lappeenranta': {
+    layout: 'A',
+    heading: 'Ruoka maistuu paremmin seurassa',
+    paragraphs: [
+      'Yksin asuvalla ruokahalu hiipuu helposti. Kun ravitsemus heikkenee, myös lihasvoima ja mieliala laskevat, ja kotona pärjääminen vaikeutuu.',
+      'Ruoanlaitto kuuluu kotihoidon tukipalveluihimme. Emme vain tuo ruokaa ovelle, vaan laitamme sen asiakkaan omassa keittiössä, jolloin tuttu tuoksu herättää ruokahalun. Hoitaja istuu pöytään ja syö yhdessä asiakkaan kanssa. Hän huomaa myös, jos ruoka ei maistu, ja kertoo siitä omaisille.',
+    ],
+    image: '/images/pilkotaanomenia.webp',
+    imageAlt: 'Hoitaja ja asiakas pilkkovat omenia yhdessä keittiössä',
+    tips: {
+      heading: 'Kun ruoka ei maistu',
+      items: [
+        'Tarjoa 5–6 pientä ateriaa suurten annosten sijaan',
+        'Suosi pehmeitä ruokia, kuten keittoja ja uunikalaa',
+        'Mausta reilummin, koska makuaisti heikkenee iän myötä',
+      ],
+    },
+    sameCarer: 'Tuttu hoitaja muistaa, mistä ruoista pidät ja mitä et syö.',
+    articleSlugs: ['ikaihmisen-huono-ruokahalu-ja-ravitsemus'],
+    articlesHeading: 'Lue lisää: ravitsemus',
+    priceHeading: 'Hinta ja kotitalousvähennys Lappeenrannassa',
+    priceExample: 'Esimerkiksi viisi tuntia viikossa on kotitalousvähennyksen jälkeen 127,50 € viikossa.',
+  },
+  'etela-karjala/imatra': {
+    layout: 'B',
+    heading: 'Seuraa myös kodin ulkopuolelle',
+    paragraphs: [
+      'Kotihoidon tukipalvelumme eivät rajoitu neljän seinän sisälle. Lähdemme mukaan kävelylle, saatamme lääkäriin ja asioille ja olemme seurana menoissa, joihin ei tule lähdettyä yksin.',
+      'Käymme myös sairaalassa tai hoivakodissa asuvan läheisesi luona. Emme puutu hoitoon, vaan tuomme sitä, mistä laitoksissa on pulaa: aikaa ja läsnäoloa.',
+    ],
+    image: '/images/harrastus.webp',
+    imageAlt: 'Famulan hoitaja ja asiakas kävelyllä kesäisellä tiellä',
+    tips: {
+      heading: 'Vierailulla voimme',
+      items: [
+        'lukea lehteä, jutella ja kuunnella musiikkia',
+        'ulkoilla pihalla pyörätuolin tai rollaattorin kanssa',
+        'hakea kahvit ja pitää seuraa kahvihetken ajan',
+      ],
+    },
+    sameCarer: 'Kävelylle on mukavampi lähteä tutun ihmisen kanssa.',
+    articleSlugs: ['seuraa-sairaalaan-tai-hoivakotiin', 'muistisairaan-kotihoito'],
+    articlesHeading: 'Lue lisää: seura ja muistisairaan arki',
+    priceHeading: 'Näin hinta muodostuu Imatralla',
+    priceExample: 'Esimerkiksi kymmenen tuntia kuukaudessa on kotitalousvähennyksen jälkeen 255,00 € kuukaudessa.',
+  },
+};

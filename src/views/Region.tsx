@@ -3,6 +3,7 @@ import { useParams, useRouter } from 'next/navigation';
 import { regions } from '../data/regions';
 import { regionContent } from '../data/regionContent';
 import { getCitiesForRegion } from '../data/cities';
+import { regionAngles } from '../data/pageAngles';
 import RegionTags from '../components/region/RegionTags';
 import RegionHero from '../components/region/RegionHero';
 import RegionVideo from '../components/region/RegionVideo';
@@ -13,6 +14,8 @@ import RegionWhy from '../components/region/RegionWhy';
 import RegionTrust from '../components/region/RegionTrust';
 import RegionFaq from '../components/region/RegionFaq';
 import RegionStart from '../components/region/RegionStart';
+import RegionFeature from '../components/region/RegionFeature';
+import RegionArticles from '../components/region/RegionArticles';
 
 const Region = () => {
   const params = useParams();
@@ -25,6 +28,7 @@ const Region = () => {
   }
 
   const content = regionContent[region.id];
+  const angle = regionAngles[region.id];
   const locative = content?.cityLocative ?? region.locativeName;
   const heading = content?.h1 ?? region.descriptionTitle ?? `Lämminhenkistä kotihoitoa ${region.locativeName}`;
   const paragraphs = content?.intro ?? (region.descriptionText ? region.descriptionText.split('\n\n') : []);
@@ -81,12 +85,14 @@ const Region = () => {
       )}
 
       <RegionHero region={region} heading={heading} paragraphs={paragraphs} badge={region.name} />
-      <RegionVideo />
+      {angle && <RegionFeature angle={angle} />}
       <RegionServices locative={locative} />
       <RegionPricing locative={locative} />
       <RegionTrust region={region} />
       {content && <RegionLocal content={content} cityPages={getCitiesForRegion(region.id)} />}
       {content && <RegionFaq heading={content.faqHeading} items={content.faq} />}
+      {angle && <RegionArticles heading={angle.articlesHeading} slugs={angle.articleSlugs} />}
+      <RegionVideo />
       <RegionWhy locative={locative} />
       <RegionStart region={region} />
     </>

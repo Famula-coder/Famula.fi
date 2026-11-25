@@ -4,7 +4,7 @@ import PricingPackagesList from '../PricingPackages';
 const linkStyle = { display: 'inline-block', padding: '0.6rem 0.25rem', color: 'var(--color-primary)', fontWeight: '600' } as const;
 
 const RegionPricing = ({ locative }: { locative: string }) => (
-  <section className="container" style={{ padding: '2rem 1.5rem 4rem' }}>
+  <section id="hinnat" className="container" style={{ padding: '2rem 1.5rem 4rem', scrollMarginTop: '6rem' }}>
     <h2 className="text-center" style={{ fontSize: 'clamp(1.5rem, 5vw, 2.25rem)', marginBottom: '0.75rem' }}>
       Kotipalvelun hinta {locative} ja kotitalousvähennys
     </h2>
