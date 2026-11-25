@@ -48,11 +48,11 @@ export default function RootLayout({
               <span style={{ fontFamily: 'var(--font-caveat)', fontSize: '1.75rem', color: 'white' }}>Famula</span>
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
-              <Link href="/keski-suomi/" style={{ color: 'white', textDecoration: 'none' }}>Keski-Suomi</Link>
-              <Link href="/pohjois-savo/" style={{ color: 'white', textDecoration: 'none' }}>Pohjois-Savo</Link>
-              <Link href="/oulu/" style={{ color: 'white', textDecoration: 'none' }}>Oulu</Link>
-              <Link href="/etela-karjala/" style={{ color: 'white', textDecoration: 'none' }}>Etelä-Karjala</Link>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '0.75rem 2rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+              <Link href="/keski-suomi/" style={{ color: 'white', textDecoration: 'none' }}>Kotipalvelu Jyväskylä ja Keski-Suomi</Link>
+              <Link href="/pohjois-savo/" style={{ color: 'white', textDecoration: 'none' }}>Kotipalvelu Kuopio ja Pohjois-Savo</Link>
+              <Link href="/oulu/" style={{ color: 'white', textDecoration: 'none' }}>Kotipalvelu Oulu</Link>
+              <Link href="/etela-karjala/" style={{ color: 'white', textDecoration: 'none' }}>Kotipalvelu Lappeenranta ja Etelä-Karjala</Link>
               {/* <Link href="/uusimaa/" style={{ color: 'white', textDecoration: 'none' }}>Uusimaa</Link> */}
               {/* Uusimaa piilotettu toistaiseksi - hidden: true regions.ts tiedostossa */}
             </div>
