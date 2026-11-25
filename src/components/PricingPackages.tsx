@@ -19,9 +19,9 @@ export const pricingExamples = [
       { label: 'Asiointiapu kodin ulkopuolella', text: 'Turvallinen saattaja kauppaan, apteekkiin tai terveydenhuollon käynneille.' },
       { label: 'Yhteisölliset aamukahvit', text: 'Tarjoamme mahdollisuuden tavata muita ja nauttia lämminhenkisestä yhdessäolosta.' },
     ],
-    priceBase: '119,85 € / viikko',
-    priceAfter: '77,90 € / viikko',
-    priceNote: '(sisältää 35% kotitalousvähennyksen, omavastuu 65%)',
+    priceBase: '127,50 € / viikko',
+    priceAfter: '76,50 € / viikko',
+    priceNote: '(sisältää 40% kotitalousvähennyksen, omavastuu 60%)',
   },
   {
     number: '2',
@@ -38,9 +38,9 @@ export const pricingExamples = [
       { label: 'Pyykkihuolto ja kodin säännöllinen siivous', text: 'Huolehdimme puhtaista vaatteista ja raikkaasta kodista.' },
       { label: 'Digiapu ja asiointi', text: 'Autamme pankkiasioissa ja yhteydenpidossa läheisiin.' },
     ],
-    priceBase: '239,70 € / viikko',
-    priceAfter: '155,81 € / viikko',
-    priceNote: '(sisältää 35% kotitalousvähennyksen, omavastuu 65%)',
+    priceBase: '255,00 € / viikko',
+    priceAfter: '153,00 € / viikko',
+    priceNote: '(sisältää 40% kotitalousvähennyksen, omavastuu 60%)',
   },
   {
     number: '3',
@@ -57,9 +57,9 @@ export const pricingExamples = [
       { label: 'Iloa harrastuksista ja ulkoilusta', text: 'Lähdemme mukaan tapahtumiin, teatteriin tai kävelylle ja ylläpidämme elämänlaatua.' },
       { label: 'Ympärivuorokautinen turvaverkko', text: 'Yhteistyö turvapuhelinpalvelun kanssa ja tiivis, ennakoiva yhteydenpito omaisiin.' },
     ],
-    priceBase: '399,50 € / viikko',
-    priceAfter: '259,68 € / viikko',
-    priceNote: '(sisältää 35% kotitalousvähennyksen, omavastuu 65%)',
+    priceBase: '425,00 € / viikko',
+    priceAfter: '255,00 € / viikko',
+    priceNote: '(sisältää 40% kotitalousvähennyksen, omavastuu 60%)',
   },
 ];
 
@@ -166,7 +166,7 @@ export const PricingAccordion = ({ example }: { example: typeof pricingExamples[
               </div>
             )}
             <div style={{ color: 'var(--color-primary)', fontSize: '1.2rem', fontWeight: '700', marginBottom: '0.2rem' }}>
-              {example.priceBase ? 'Hinta kotitalousvähennyksen (35%) jälkeen:' : 'Hinta-arvio:'}
+              {example.priceBase ? 'Hinta kotitalousvähennyksen (40%) jälkeen:' : 'Hinta-arvio:'}
             </div>
             <div style={{ fontSize: '1.6rem', fontWeight: '800', color: example.borderColor, marginBottom: '0.5rem' }}>
               {example.priceAfter}

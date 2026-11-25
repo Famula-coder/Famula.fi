@@ -28,13 +28,13 @@ export const articles: Article[] = [
       <p>Kotitalousvähennyksen vuotuinen enimmäismäärä on 2 100 euroa henkilöä kohden. Omavastuu on 150 euroa vuodessa. Jos ostat palvelun yhdessä puolisosi kanssa, voitte saada yhteensä jopa 4 200 euron vähennyksen, jos molempien verot riittävät vähennyksen tekemiseen.</p>
 
       <h2>Esimerkkilaskelma Famulan palveluista</h2>
-      <p>Famulan kiireetön kotipalvelu maksaa sosiaalihuollon asiakkaille (ALV 0 %) 39,95 €/tunti. Jos tilaat läheisellesi säännöllistä apua esimerkiksi <strong>8 tuntia kuukaudessa (96 tuntia vuodessa)</strong>, laskelma näyttää tältä:</p>
+      <p>Famulan kiireetön kotipalvelu maksaa sosiaalihuollon asiakkaille (ALV 0 %) 42,50 €/tunti. Jos tilaat läheisellesi säännöllistä apua esimerkiksi <strong>8 tuntia kuukaudessa (96 tuntia vuodessa)</strong>, laskelma näyttää tältä:</p>
       <ul>
-        <li><strong>Normaali hinta vuodessa:</strong> 96 h × 39,95 € = 3 835,20 €</li>
-        <li><strong>Kotitalousvähennys (40 %):</strong> - 1 534,08 € (Tämä alittaa 2 100 € maksimikaton, joten saat sen kokonaisuudessaan!)</li>
-        <li><strong>Vuoden todelliseksi hinnaksi jää:</strong> <strong>2 301,12 €</strong></li>
+        <li><strong>Normaali hinta vuodessa:</strong> 96 h × 42,50 € = 4 080,00 €</li>
+        <li><strong>Kotitalousvähennys (40 %):</strong> - 1 632,00 € (Tämä alittaa 2 100 € maksimikaton, joten saat sen kokonaisuudessaan!)</li>
+        <li><strong>Vuoden todelliseksi hinnaksi jää:</strong> <strong>2 448,00 €</strong></li>
       </ul>
-      <p>Kuukausitasolla tämä tarkoittaa siis alle 200 euroa säännöllisestä, luotettavasta seurasta ja avusta!</p>
+      <p>Kuukausitasolla tämä tarkoittaa siis noin 204 euroa säännöllisestä, luotettavasta seurasta ja avusta!</p>
 
       <h3>Miten ilmoitan kulut OmaVerossa?</h3>
       <p>Famula toimittaa sinulle selkeät laskut ja yhteenvedon vuoden aikana ostetuista palveluista. Voit ilmoittaa vähennyksen helposti Verohallinnon OmaVero-palvelussa. Autamme sinua tarvittaessa vähennyksen hakemisessa ja lomakkeiden täytössä.</p>
@@ -101,12 +101,12 @@ export const articles: Article[] = [
     content: `
       <h2>Yksi tuntihinta – ei ikäviä yllätyksiä</h2>
       <p>Monella palveluntarjoajalla laskutus perustuu monimutkaisiin hinnastoihin: viikonloppulisät, kilometrikorvaukset, laskutuslisät ja toimistomaksut nostavat lopullista summaa huomattavasti.</p>
-      <p>Famulalla uskomme reiluuteen ja läpinäkyvyyteen. Sosiaalihuollon tukipalveluina myytävä kotipalvelumme ja yksityinen kotihoidon tukipalvelumme on <strong>arvonlisäverotonta (ALV 0 %)</strong>, ja hinta on kiinteä <strong>39,95 € / tunti</strong>.</p>
+      <p>Famulalla uskomme reiluuteen ja läpinäkyvyyteen. Sosiaalihuollon tukipalveluina myytävä kotipalvelumme ja yksityinen kotihoidon tukipalvelumme on <strong>arvonlisäverotonta (ALV 0 %)</strong>, ja hinta on kiinteä <strong>42,50 € / tunti</strong>.</p>
       
       <h3>Kuinka edullista apu todellisuudessa on?</h3>
-      <p>Verottajan myöntämä kotitalousvähennys (35 % vuonna 2025) tarkoittaa, että todellinen kustannus asiakkaalle on merkittävästi pienempi. Jos ostat palvelua esimerkiksi kahdeksi tunniksi viikossa:</p>
-      <p><strong>Bruttohinta:</strong> 319,60 € / kuukausi<br/>
-      <strong>Todellinen hinta kotitalousvähennyksen jälkeen:</strong> 207,74 € / kuukausi</p>
+      <p>Verottajan myöntämä kotitalousvähennys (40 % vuonna 2026) tarkoittaa, että todellinen kustannus asiakkaalle on merkittävästi pienempi. Jos ostat palvelua esimerkiksi kahdeksi tunniksi viikossa:</p>
+      <p><strong>Bruttohinta:</strong> 340,00 € / kuukausi<br/>
+      <strong>Todellinen hinta kotitalousvähennyksen jälkeen:</strong> 204,00 € / kuukausi</p>
       <p>Mielenrauha, turvallinen koti ja tutun ystävän seura ovat asioita, joille on vaikea laskea hintaa, mutta olemme halunneet tehdä avun hankkimisesta mahdollisimman saavutettavaa.</p>
     `
   },
@@ -344,7 +344,7 @@ export const articles: Article[] = [
         <li>Kirjaudu OmaVeroon pankkitunnuksillasi.</li>
         <li>Valitse etusivulta kohta <em>"Verokortit ja ennakkovero"</em> ja sieltä <em>"Kotitalousvähennys"</em>.</li>
         <li>Ilmoita palvelun tuottaneen yrityksen (Famulan) Y-tunnus.</li>
-        <li>Kirjaa laskun loppusumma ja siitä eritelty työn osuus. Järjestelmä laskee 35 % vähennyksen ja 150 euron omavastuun puolestasi täysin automaattisesti!</li>
+        <li>Kirjaa laskun loppusumma ja siitä eritelty työn osuus. Järjestelmä laskee 40 % vähennyksen ja 150 euron omavastuun puolestasi täysin automaattisesti!</li>
       </ol>
       <p><em>Vinkki:</em> Voit ilmoittaa kulut pitkin vuotta aina, kun olet maksanut laskun, jolloin veroprosenttisi pienenee heti loppuvuodeksi. Voit myös ilmoittaa kaikki kerralla keväällä esitäytetyn veroilmoituksen tarkistamisen yhteydessä, jolloin saat rahat takaisin veronpalautuksena.</p>
       
@@ -374,7 +374,7 @@ export const articles: Article[] = [
       <p>Tällöin <strong>sinä toimit työn tilaajana ja laskun maksajana</strong>, mutta itse työ suoritetaan läheistesi kodissa. Famula toimittaa laskut suoraan sinulle, jolloin voit helposti ilmoittaa ne omassa OmaVero-palvelussasi aivan kuten ilmoittaisit omaankin kotiin ostetut palvelut.</p>
 
       <h3>Miksi tämä on niin kannattavaa?</h3>
-      <p>Ikäihmisillä itsellään on usein pienet eläkkeet, ja heidän vuotuinen tuloveronsa saattaa olla niin pieni, etteivät he pysty hyödyntämään täyttä kotitalousvähennystä. Työssäkäyvä lapsi sen sijaan maksaa todennäköisesti riittävästi veroja saadakseen koko 35 % vähennyksen (vuonna 2025) hyödynnettyä.</p>
+      <p>Ikäihmisillä itsellään on usein pienet eläkkeet, ja heidän vuotuinen tuloveronsa saattaa olla niin pieni, etteivät he pysty hyödyntämään täyttä kotitalousvähennystä. Työssäkäyvä lapsi sen sijaan maksaa todennäköisesti riittävästi veroja saadakseen koko 40 % vähennyksen (vuonna 2026) hyödynnettyä.</p>
       <p>Tämä on erinomainen tapa tarjota turvaa ja seuraa omille vanhemmille, ja samalla saada merkittävä taloudellinen hyöty yhteiskunnalta. Älä siis epäröi hankkia apua ajoissa!</p>
     `
   },

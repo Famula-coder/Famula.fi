@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Region from '../../views/Region';
 import { regions, visibleRegions } from '../../data/regions';
+import { regionContent } from '../../data/regionContent';
 
 export function generateStaticParams() {
   return visibleRegions.map((region) => ({
@@ -20,11 +21,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: 'Famula' };
   }
 
-  const title = region.descriptionTitle
-    ? `${region.descriptionTitle} | Famula`
+  const content = regionContent[region.id];
+  const title = content
+    ? `${content.seoTitle} | Famula`
     : `Kotihoito ja kotipalvelu ${region.name} | Famula`;
-  const description = region.descriptionText
-    ? region.descriptionText.split('\n\n')[0]
+  const description = content
+    ? content.metaDescription
     : `Famulan luotettava ja kiireetön kotipalvelu alueella ${region.name}. Tutustu paikalliseen tiimiimme.`;
 
   return {

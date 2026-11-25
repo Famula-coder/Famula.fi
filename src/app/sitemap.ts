@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { visibleRegions } from '../data/regions';
 import { articles } from '../data/articles';
+import { getCitiesForRegion } from '../data/cities';
 
 const BASE_URL = 'https://famula.fi';
 
@@ -17,6 +18,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const pages = [{ url: `${BASE_URL}/${region.id}/`, lastModified: new Date() }];
     if (region.hasOmavalvonta) {
       pages.push({ url: `${BASE_URL}/${region.id}/omavalvonta/`, lastModified: new Date() });
+    }
+    for (const city of getCitiesForRegion(region.id)) {
+      pages.push({ url: `${BASE_URL}/${region.id}/${city.id}/`, lastModified: new Date() });
     }
     return pages;
   });

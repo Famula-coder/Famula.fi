@@ -2,6 +2,8 @@
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { articles } from '../data/articles';
+import { visibleRegions } from '../data/regions';
+import { regionContent } from '../data/regionContent';
 import { ArrowLeft, Play, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
@@ -229,6 +231,13 @@ const Article = () => {
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
             </div>
           </div>
+          <nav aria-label="Famulan palvelualueet" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.25rem 1.5rem', marginTop: '1.5rem' }}>
+            {visibleRegions.map((region) => (
+              <Link key={region.id} href={`/${region.id}/`} style={{ display: 'inline-block', padding: '0.5rem 0', color: 'var(--color-primary)', fontWeight: '600', fontSize: '0.95rem' }}>
+                {regionContent[region.id]?.linkLabel ?? region.name}
+              </Link>
+            ))}
+          </nav>
         </div>
       </div>
 

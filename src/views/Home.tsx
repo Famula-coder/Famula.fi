@@ -9,13 +9,14 @@ import TrustBar from '../components/TrustBar';
 import { useState, useRef } from 'react';
 import { Heart, ExternalLink, ArrowRight, ChevronDown, ShoppingCart, UtensilsCrossed, Sparkles, HandHeart, Footprints, Music2, Phone, Coffee, User, Star, ChevronLeft, ChevronRight, Quote, Play, X, Stethoscope, ShieldCheck } from 'lucide-react';
 import PricingPackagesList from '../components/PricingPackages';
+import { regionContent } from '../data/regionContent';
 
 const testimonials = [
-  { text: "Minä aina odotan näitä päiviä, kun sinä tulet. Siitä tulee niin hyvä mieli, että hykerryttää! Sinä et hoida pelkästään minun kotia, vaan myös minun mieltä.", author: "Omainen", city: "Kuopio", tag: "Kotipalvelu ja Seura", icon: <Heart size={20} color="white" /> },
-  { text: "Saatiin niin monta asiaa hoidettua! Nyt on taas vapaampi hengittää.", author: "Asiakas", city: "Laukaa", tag: "Asiointiapu", icon: <Sparkles size={20} color="white" /> },
-  { text: "Oot sinä melkoinen epeli, kun vesilukonkin korjasit! Olet minun enkelini.", author: "Asiakas", city: "Jyväskylä", tag: "Apumiespalvelu", icon: <Star size={20} color="white" /> },
-  { text: "Pyysin teitä asiointiapuun, mutta sainkin samalla apua ihan kaikkeen, mitä keksinkään!", author: "Asiakas", city: "Lappeenranta", tag: "Kotihoito", icon: <User size={20} color="white" /> },
-  { text: "Voi että, huolisin sinut tänne vaikka joka päivä minua piristämään!", author: "Asiakas", city: "Oulu", tag: "Seura", icon: <Coffee size={20} color="white" /> },
+  { text: "Minä aina odotan näitä päiviä, kun sinä tulet. Siitä tulee niin hyvä mieli, että hykerryttää! Sinä et hoida pelkästään minun kotia, vaan myös minun mieltä.", author: "Omainen", city: "Kuopio", regionId: "pohjois-savo", tag: "Kotipalvelu ja Seura", icon: <Heart size={20} color="white" /> },
+  { text: "Saatiin niin monta asiaa hoidettua! Nyt on taas vapaampi hengittää.", author: "Asiakas", city: "Laukaa", regionId: "keski-suomi", tag: "Asiointiapu", icon: <Sparkles size={20} color="white" /> },
+  { text: "Oot sinä melkoinen epeli, kun vesilukonkin korjasit! Olet minun enkelini.", author: "Asiakas", city: "Jyväskylä", regionId: "keski-suomi", tag: "Apumiespalvelu", icon: <Star size={20} color="white" /> },
+  { text: "Pyysin teitä asiointiapuun, mutta sainkin samalla apua ihan kaikkeen, mitä keksinkään!", author: "Asiakas", city: "Lappeenranta", regionId: "etela-karjala", tag: "Kotihoito", icon: <User size={20} color="white" /> },
+  { text: "Voi että, huolisin sinut tänne vaikka joka päivä minua piristämään!", author: "Asiakas", city: "Oulu", regionId: "oulu", tag: "Seura", icon: <Coffee size={20} color="white" /> },
 ];
 
 /* ── Tiimiläiset ── */
@@ -654,6 +655,9 @@ const Home = () => {
                       <span className="testimonial-city">{t.city}</span>
                     </div>
                   </div>
+                  <Link href={`/${t.regionId}/`} style={{ display: 'inline-block', padding: '0.75rem 0 0.4rem', color: 'var(--color-primary)', fontWeight: '600', fontSize: '0.95rem' }}>
+                    {regionContent[t.regionId]?.linkLabel ?? 'Tutustu alueen palveluun'} →
+                  </Link>
                 </div>
               ))}
             </div>
@@ -868,7 +872,7 @@ const Home = () => {
 
         {/* Kompakti hintahuomautus */}
         <p style={{ textAlign: 'center', color: '#475569', fontSize: '0.95rem', marginTop: '2rem' }}>
-          Sosiaalihuollon asiakkaille tuntihinta on kiinteästi <strong>39,95 € (alv 0 %)</strong>. Yksityisasiakkaana voit hyödyntää kotitalousvähennyksen —{' '}
+          Sosiaalihuollon asiakkaille tuntihinta on kiinteästi <strong>42,50 € (alv 0 %)</strong>. Yksityisasiakkaana voit hyödyntää kotitalousvähennyksen —{' '}
           <a
             href="https://www.vero.fi/henkiloasiakkaat/vahennykset/kotitalousvahennys/"
             target="_blank"
