@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { ChevronDown, Clock, CheckCircle2 } from 'lucide-react';
+import './PricingPackages.css';
 
 export const pricingExamples = [
   {
