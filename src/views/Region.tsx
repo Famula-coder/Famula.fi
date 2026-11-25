@@ -74,6 +74,29 @@ const Region = () => {
           />
         </>
       )}
+      {region.googleAdsId && (
+        <>
+          <Script id="gads-init" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+              });
+              gtag('js', new Date());
+              gtag('config', '${region.googleAdsId}');
+            `}
+          </Script>
+          <Script
+            id="gads-script"
+            strategy="afterInteractive"
+            src={`https://www.googletagmanager.com/gtag/js?id=${region.googleAdsId}`}
+          />
+        </>
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
