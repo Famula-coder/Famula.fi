@@ -34,7 +34,7 @@ export interface RegionContent {
 }
 
 const PRICE_ANSWER =
-  'Sosiaalihuollon asiakkaille tuntihinta on kiinteästi 42,50 € (alv 0 %). Kotitalousvähennyksen (40 %) jälkeen maksettavaksi jää noin 25,50 € tunnilta.';
+  'Sosiaalihuollon asiakkaille perushinta on 42,50 € tunnilta (alv 0 %). Kotitalousvähennyksen (40 %) jälkeen maksettavaksi jää noin 25,50 € tunnilta. Iltaisin, viikonloppuisin ja pyhäpäivinä hintaan lisätään työehtosopimuksen mukaiset lisät samassa suhteessa. Tarkka hinta sovitaan aina ennen palvelun aloittamista.';
 
 const RELATIVE_ANSWER =
   'Kyllä. Sovimme käynnit puhelimessa ja pidämme sinut ajan tasalla läheisesi kuulumisista. Kun maksat palvelun itse, voit saada kotitalousvähennyksen omaan verotukseesi.';
@@ -79,7 +79,7 @@ export const regionContent: Record<string, RegionContent> = {
     h1: 'Yksityinen kotihoito ja kotipalvelu Jyväskylässä ja lähikunnissa',
     intro: [
       'Famula auttaa ikäihmisiä asumaan kotona Jyväskylässä, Laukaassa, Muuramessa ja Äänekoskella. Teemme kotitöitä, käymme asioilla, laitamme ruokaa ja olemme seurana, aina sen mukaan mitä juuri sinä tai läheisesi tarvitsee.',
-      'Jokaisella asiakkaalla on oma hoitaja, joka tulee sovittuna päivänä ja jolla on aikaa pysähtyä. Kun ihminen on tuttu, avun vastaanottaminen on helpompaa ja pienetkin muutokset voinnissa huomataan.',
+      'Jokaisella asiakkaalla on oma hoitaja, joka tulee sovittuna päivänä ja jolla on aikaa pysähtyä. Kun ihminen on tuttu, avun vastaanottaminen on helpompaa ja pienetkin muutokset voinnissa huomataan. Jyväskylässä teemme tukipalvelujen lisäksi myös kotisairaanhoitoa.',
       'Jyväskylässä palvelumme voi maksaa myös Keski-Suomen hyvinvointialueen palvelusetelillä. Jos sinulle on myönnetty seteli, voit valita Famulan palveluntuottajaksi.',
     ],
     cityLocative: 'Jyväskylässä',
@@ -126,7 +126,7 @@ export const regionContent: Record<string, RegionContent> = {
     h1: 'Yksityinen kotihoito ja kotipalvelu Oulussa ja Oulun seudulla',
     intro: [
       'Famula tarjoaa kotipalvelua ja kotihoitoa ikäihmisille Oulussa, Kempeleessä, Limingassa ja Muhoksella. Tulemme kotiin sovittuna päivänä ja teemme sen, mikä arjessa juuri nyt auttaa eniten: siivoamme, käymme kaupassa, laitamme ruokaa tai lähdemme yhdessä ulos.',
-      'Oulun seudulla välimatkat ovat pitkiä, ja omaiset asuvat usein kaukana. Siksi pidämme huolen, että luonasi käy aina sama tuttu ihminen ja että läheisesi tietävät, miten sinulla menee.',
+      'Oulun seudulla välimatkat ovat pitkiä, ja omaiset asuvat usein kaukana. Siksi pidämme huolen, että luonasi käy aina sama tuttu ihminen ja että läheisesi tietävät, miten sinulla menee. Oulussa teemme tukipalvelujen lisäksi myös kotisairaanhoitoa.',
       'Palvelu sopii yksin tai yhdessä Pohjois-Pohjanmaan hyvinvointialueen kotihoidon kanssa. Me tuomme lisää aikaa ja käsiä silloin, kun julkisen puolen käynnit eivät riitä kaikkeen.',
     ],
     cityLocative: 'Oulussa',

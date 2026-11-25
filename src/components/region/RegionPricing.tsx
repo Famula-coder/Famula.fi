@@ -9,8 +9,8 @@ const RegionPricing = ({ locative }: { locative: string }) => (
       Kotipalvelun hinta {locative} ja kotitalousvähennys
     </h2>
     <p className="text-center" style={{ color: '#475569', maxWidth: '720px', margin: '0 auto 2rem' }}>
-      Sosiaalihuollon asiakkaille tuntihinta on kiinteästi <strong>42,50 € (alv 0 %)</strong>. Kotitalousvähennyksen (40 %) jälkeen
-      maksettavaksi jää noin 25,50 € tunnilta. Alla kolme esimerkkiä – tunnit ja sisältö sovitaan aina yhdessä.
+      Sosiaalihuollon asiakkaille perushinta on <strong>42,50 € (alv 0 %)</strong>. Kotitalousvähennyksen (40 %) jälkeen
+      maksettavaksi jää noin 25,50 € tunnilta. Alla kolme esimerkkiä – tunnit, sisältö ja tarkka hinta sovitaan aina yhdessä ennen aloitusta. Iltaisin, viikonloppuisin ja pyhäpäivinä hintaan lisätään työehtosopimuksen mukaiset lisät.
     </p>
 
     <PricingPackagesList />

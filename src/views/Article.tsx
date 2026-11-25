@@ -6,8 +6,14 @@ import { visibleRegions } from '../data/regions';
 import { regionContent } from '../data/regionContent';
 import { cities } from '../data/cities';
 import { getPagesForArticle } from '../data/pageAngles';
+import { articleMeta } from '../data/articleMeta';
 import { ArrowLeft, Play, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
+
+const formatDate = (iso: string) => {
+  const [year, month, day] = iso.split('-').map(Number);
+  return `${day}.${month}.${year}`;
+};
 
 const Article = () => {
   const params = useParams();
@@ -35,6 +41,7 @@ const Article = () => {
     );
   }
 
+  const meta = articleMeta[article.slug];
   const relatedPages = getPagesForArticle(article.slug).map((page) => {
     const [regionId, cityId] = page.key.split('/');
     const city = cities.find((c) => c.regionId === regionId && c.id === cityId);
@@ -68,7 +75,9 @@ const Article = () => {
         }
 
         .article-title {
-          font-size: 2.5rem;
+          font-size: clamp(1.6rem, 7vw, 2.5rem);
+          overflow-wrap: break-word;
+          hyphens: auto;
           line-height: 1.2;
           color: var(--color-primary);
           margin-bottom: 1.5rem;
@@ -150,6 +159,11 @@ const Article = () => {
           </div>
           <div className="article-category">{article.category}</div>
           <h1 className="article-title">{article.title}</h1>
+          {meta && (
+            <p style={{ color: '#64748b', fontSize: '0.95rem', margin: '1rem 0 0' }}>
+              {meta.author}, Famula Group Oy · Julkaistu {formatDate(article.publishedDate)} · Tiedot tarkistettu {formatDate(meta.reviewedDate)}
+            </p>
+          )}
         </div>
       </div>
 
@@ -204,6 +218,21 @@ const Article = () => {
         )}
 
         <div dangerouslySetInnerHTML={{ __html: article.content }} />
+
+        {meta && meta.sources.length > 0 && (
+          <section style={{ marginTop: '2.5rem' }}>
+            <h2 style={{ fontSize: '1.25rem' }}>Lähteet</h2>
+            <ul style={{ paddingLeft: '1.25rem' }}>
+              {meta.sources.map((source) => (
+                <li key={source.url} style={{ marginBottom: '0.25rem' }}>
+                  <a href={source.url} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', padding: '0.4rem 0', color: 'var(--color-primary)', overflowWrap: 'anywhere' }}>
+                    {source.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {relatedPages.length > 0 && (
           <p style={{ marginTop: '2rem', padding: '1.25rem 1.5rem', background: 'white', borderRadius: '12px', borderLeft: '5px solid var(--color-secondary)' }}>

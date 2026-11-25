@@ -26,7 +26,7 @@ const CitySummary = ({ region, locative, priceHeading, priceExample }: CitySumma
     <div style={cardStyle}>
       <h2 style={{ fontSize: 'clamp(1.3rem, 4.5vw, 1.75rem)' }}>{priceHeading}</h2>
       <p style={{ color: '#475569' }}>
-        Sosiaalihuollon asiakkaille tuntihinta on kiinteästi <strong>42,50 € (alv 0 %)</strong>, kotitalousvähennyksen (40 %)
+        Sosiaalihuollon asiakkaille perushinta on <strong>42,50 € (alv 0 %)</strong>, kotitalousvähennyksen (40 %)
         jälkeen noin 25,50 €. {priceExample}
       </p>
       <Link href={`/${region.id}/#hinnat`} style={linkStyle}>Katso hintaesimerkit ja paketit →</Link>

@@ -838,7 +838,7 @@ const Home = () => {
 
         {/* Kompakti hintahuomautus */}
         <p style={{ textAlign: 'center', color: '#475569', fontSize: '0.95rem', marginTop: '2rem' }}>
-          Sosiaalihuollon asiakkaille tuntihinta on kiinteästi <strong>42,50 € (alv 0 %)</strong>. Yksityisasiakkaana voit hyödyntää kotitalousvähennyksen —{' '}
+          Sosiaalihuollon asiakkaille perushinta on <strong>42,50 € (alv 0 %)</strong>. Yksityisasiakkaana voit hyödyntää kotitalousvähennyksen —{' '}
           <a
             href="https://www.vero.fi/henkiloasiakkaat/vahennykset/kotitalousvahennys/"
             target="_blank"

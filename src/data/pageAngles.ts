@@ -41,7 +41,7 @@ export const regionAngles: Record<string, PageAngle> = {
     heading: 'Kaksi tapaa maksaa kotihoidon tukipalvelut',
     paragraphs: [
       'Keski-Suomessa kotihoidon tukipalvelut voi maksaa kahdella tavalla, ja palvelu sekä hoitaja ovat molemmissa samat.',
-      'Jyväskylässä Famula on palvelusetelituottaja. Jos hyvinvointialue on myöntänyt sinulle palvelusetelin, voit valita meidät palveluntuottajaksi. Ilman seteliä ostat palvelun suoraan meiltä ja voit hakea kotitalousvähennystä. Palvelusetelillä hankitusta palvelusta kotitalousvähennystä ei saa, mutta itse ostamistasi lisätunneista sen voi saada.',
+      'Jyväskylässä Famula on palvelusetelituottaja. Jos hyvinvointialue on myöntänyt sinulle palvelusetelin, voit valita meidät palveluntuottajaksi. Ilman seteliä ostat palvelun suoraan meiltä ja voit hakea kotitalousvähennystä. Palvelusetelillä hankitusta palvelusta kotitalousvähennystä ei saa, ei myöskään setelin omavastuuosuudesta. Erikseen ostamistasi ja kokonaan itse maksamistasi lisäpalveluista vähennyksen voi saada.',
     ],
     image: '/images/kahvihetki3.webp',
     imageAlt: 'Famulan hoitaja istuu kahvipöydässä asiakkaiden kanssa',
@@ -50,7 +50,7 @@ export const regionAngles: Record<string, PageAngle> = {
       items: [
         'Sinulla on palveluseteli: valitse Famula tuottajaksi ja soita aluevetäjälle',
         'Sinulla ei ole seteliä: osta palvelu suoraan ja hae kotitalousvähennystä',
-        'Tarvitset enemmän kuin seteli kattaa: lisätunnit voi ostaa itse',
+        'Tarvitset muutakin kuin seteli kattaa: lisäpalvelut voi ostaa itse',
       ],
     },
     articleSlugs: ['kotitalousvahennys-2025', 'mita-kotipalvelu-maksaa'],

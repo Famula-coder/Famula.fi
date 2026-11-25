@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Article from '../../../views/Article';
+import { articleMeta } from '../../../data/articleMeta';
 import { articles } from '../../../data/articles';
 
 export function generateStaticParams() {
@@ -30,6 +31,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: 'article',
       description: article.excerpt,
       publishedTime: article.publishedDate,
+      modifiedTime: articleMeta[article.slug]?.reviewedDate,
+      authors: articleMeta[article.slug] ? [articleMeta[article.slug].author] : undefined,
       images: ['/images/famulasydan.png'],
     },
   };
@@ -45,16 +48,15 @@ export default async function ArticlePage({ params }: PageProps) {
     "headline": article.title,
     "description": article.excerpt,
     "datePublished": article.publishedDate,
-    "dateModified": article.publishedDate,
+    "dateModified": articleMeta[article.slug]?.reviewedDate ?? article.publishedDate,
     "image": "https://famula.fi/images/famulasydan.png",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `https://famula.fi/tietopankki/${slug}/`,
     },
-    "author": {
-      "@type": "Organization",
-      "name": "Famula Oy",
-    },
+    "author": articleMeta[article.slug]
+      ? { "@type": "Person", "name": articleMeta[article.slug].author, "worksFor": { "@type": "Organization", "name": "Famula Group Oy" } }
+      : { "@type": "Organization", "name": "Famula Oy" },
     "publisher": {
       "@type": "Organization",
       "name": "Famula Oy",

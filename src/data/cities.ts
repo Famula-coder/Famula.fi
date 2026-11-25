@@ -44,7 +44,7 @@ export const cities: CityPage[] = [
     paragraphs: [
       'Famulan kotipalvelu tuo avun arkeen myös Siilinjärvellä. Autamme ikäihmisiä siivouksessa, asioinnissa, ruoanlaitossa ja ulkoilussa, ja olemme seurana silloin, kun päivät tuntuvat pitkiltä.',
       'Käynnit sovitaan niin, että samalla kerralla hoituu se, mikä juuri sillä viikolla on tarpeen: kauppa ja apteekki, pyykit ja siivous tai rauhallinen kahvihetki ja kävely. Luonasi käy aina sama hoitaja Kuopion seudun tiimistämme.',
-      'Hinta on sama kuin Kuopiossa, ja palvelu oikeuttaa kotitalousvähennykseen. Myös muualla asuva omainen voi tilata palvelun vanhemmalleen Siilinjärvelle.',
+      'Perushinta on sama kuin Kuopiossa, ja palvelu oikeuttaa kotitalousvähennykseen. Myös muualla asuva omainen voi tilata palvelun vanhemmalleen Siilinjärvelle.',
     ],
   },
   {
@@ -59,7 +59,7 @@ export const cities: CityPage[] = [
     paragraphs: [
       'Famula tuo kotipalvelun ja kotihoidon jyväskyläläisen ikäihmisen kotiin. Autamme kodin töissä, asioinnissa ja ruoanlaitossa ja olemme seurana, jotta arki sujuu ja kotona on hyvä olla.',
       'Jyväskylässä palvelun voi maksaa myös palvelusetelillä. Famula on palvelusetelituottaja, ja setelin myöntää Keski-Suomen hyvinvointialue palvelutarpeen arvioinnin perusteella. Ilman seteliä palvelun voi ostaa suoraan meiltä ja hyödyntää kotitalousvähennyksen.',
-      'Hoitaja on aina sama. Hän tulee sovittuna päivänä, ja hänellä on aikaa pysähtyä. Käyntien määrä sovitaan sinun tarpeesi mukaan, ja sitä voi muuttaa myöhemmin.',
+      'Hoitaja on aina sama. Hän tulee sovittuna päivänä, ja hänellä on aikaa pysähtyä. Tukipalvelujen lisäksi teemme Jyväskylässä myös kotisairaanhoitoa. Käyntien määrä sovitaan sinun tarpeesi mukaan, ja sitä voi muuttaa myöhemmin.',
     ],
     testimonial: {
       text: 'Oot sinä melkoinen epeli, kun vesilukonkin korjasit! Olet minun enkelini.',
@@ -97,7 +97,7 @@ export const cities: CityPage[] = [
     paragraphs: [
       'Famulan tuttu hoitaja tulee kotiin myös Kempeleessä. Autamme ikäihmisiä siivouksessa, ruoanlaitossa, asioinnissa ja ulkoilussa, ja teemme sen kiireettä.',
       'Säännöllinen käynti helpottaa kotona asumista: viikkosiivous, kauppa-asiat ja seura hoituvat samalla kertaa. Lähdemme tarvittaessa myös saattajaksi lääkäriin tai muille asioille Ouluun.',
-      'Hinta on sama kuin Oulussa, ja palvelu oikeuttaa kotitalousvähennykseen. Tunnit sovitaan aina sinun tarpeesi mukaan.',
+      'Perushinta on sama kuin Oulussa, ja palvelu oikeuttaa kotitalousvähennykseen. Tunnit sovitaan aina sinun tarpeesi mukaan.',
     ],
   },
   {
@@ -131,7 +131,7 @@ export const cities: CityPage[] = [
     paragraphs: [
       'Famula tarjoaa kotipalvelua ja kotihoitoa ikäihmisille Imatralla. Tulemme kotiin sovittuna päivänä ja autamme siinä, mikä arjessa on käynyt raskaaksi.',
       'Säännöllinen käynti tuo päiviin rytmiä ja seuraa: laitetaan koti kuntoon, käydään kaupassa ja apteekissa ja lähdetään hyvällä säällä kävelylle Vuoksen varteen. Hoitaja on aina sama.',
-      'Hinta on sama kuin Lappeenrannassa, ja palvelu oikeuttaa kotitalousvähennykseen. Käymme myös Ruokolahden puolella.',
+      'Perushinta on sama kuin Lappeenrannassa, ja palvelu oikeuttaa kotitalousvähennykseen. Käymme myös Ruokolahden puolella.',
     ],
   },
 ];
