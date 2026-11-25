@@ -67,6 +67,25 @@ export const cities: CityPage[] = [
     },
   },
   {
+    id: 'laukaa',
+    regionId: 'keski-suomi',
+    name: 'Laukaa',
+    locative: 'Laukaassa',
+    seoTitle: 'Kotihoito ja kotipalvelu Laukaa',
+    metaDescription:
+      'Yksityinen kotipalvelu ja kotihoito ikäihmisille Laukaassa. Aina sama tuttu hoitaja, 42,50 €/h (alv 0 %), kotitalousvähennys 40 %. Soita Leenalle: 050 466 9574.',
+    h1: 'Kotipalvelu ja kotihoito Laukaassa',
+    paragraphs: [
+      'Famulan kotipalvelu tulee kotiin myös Laukaassa. Autamme ikäihmisiä asioinnissa, kodin töissä ja ruoanlaitossa ja olemme seurana arjessa.',
+      'Asiointiapu on usein se, mistä yhteistyö alkaa. Käymme yhdessä kaupassa, apteekissa ja terveysasemalla tai hoidamme asiat puolestasi, ja samalla käynnillä ehditään laittaa kotona kuntoon se, mikä on jäänyt tekemättä.',
+      'Hoitaja on aina sama tuttu ihminen Keski-Suomen tiimistämme. Palvelu oikeuttaa kotitalousvähennykseen, ja myös muualla asuva omainen voi tilata sen vanhemmalleen Laukaaseen.',
+    ],
+    testimonial: {
+      text: 'Saatiin niin monta asiaa hoidettua! Nyt on taas vapaampi hengittää.',
+      author: 'Asiakas, Laukaa',
+    },
+  },
+  {
     id: 'kempele',
     regionId: 'oulu',
     name: 'Kempele',
