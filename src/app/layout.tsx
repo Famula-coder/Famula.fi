@@ -9,6 +9,10 @@ import { Heart } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import CookieBanner from '../components/CookieBanner';
 import MobileCtaBar from '../components/MobileCtaBar';
+import { cities } from '../data/cities';
+import { visibleRegions } from '../data/regions';
+
+const footerCities = cities.filter((city) => visibleRegions.some((region) => region.id === city.regionId));
 
 const inter = Inter({
   variable: "--font-inter",
@@ -48,13 +52,21 @@ export default function RootLayout({
               <span style={{ fontFamily: 'var(--font-caveat)', fontSize: '1.75rem', color: 'white' }}>Famula</span>
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '0.75rem 2rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
-              <Link href="/keski-suomi/" style={{ color: 'white', textDecoration: 'none' }}>Kotipalvelu Jyväskylä ja Keski-Suomi</Link>
-              <Link href="/pohjois-savo/" style={{ color: 'white', textDecoration: 'none' }}>Kotipalvelu Kuopio ja Pohjois-Savo</Link>
-              <Link href="/oulu/" style={{ color: 'white', textDecoration: 'none' }}>Kotipalvelu Oulu</Link>
-              <Link href="/etela-karjala/" style={{ color: 'white', textDecoration: 'none' }}>Kotipalvelu Lappeenranta ja Etelä-Karjala</Link>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '0.25rem 2rem', marginBottom: '0.75rem', flexWrap: 'wrap' }}>
+              <Link href="/keski-suomi/" style={{ display: 'inline-block', padding: '0.4rem 0', color: 'white', textDecoration: 'none' }}>Kotipalvelu Jyväskylä ja Keski-Suomi</Link>
+              <Link href="/pohjois-savo/" style={{ display: 'inline-block', padding: '0.4rem 0', color: 'white', textDecoration: 'none' }}>Kotipalvelu Kuopio ja Pohjois-Savo</Link>
+              <Link href="/oulu/" style={{ display: 'inline-block', padding: '0.4rem 0', color: 'white', textDecoration: 'none' }}>Kotipalvelu Oulu</Link>
+              <Link href="/etela-karjala/" style={{ display: 'inline-block', padding: '0.4rem 0', color: 'white', textDecoration: 'none' }}>Kotipalvelu Lappeenranta ja Etelä-Karjala</Link>
               {/* <Link href="/uusimaa/" style={{ color: 'white', textDecoration: 'none' }}>Uusimaa</Link> */}
               {/* Uusimaa piilotettu toistaiseksi - hidden: true regions.ts tiedostossa */}
+            </div>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '0.25rem 1.5rem', marginBottom: '2rem', flexWrap: 'wrap', fontSize: '0.95rem' }}>
+              {footerCities.map((city) => (
+                <Link key={city.id} href={`/${city.regionId}/${city.id}/`} style={{ display: 'inline-block', padding: '0.5rem 0', color: 'rgba(255,255,255,0.9)', textDecoration: 'none' }}>
+                  Kotipalvelu {city.name}
+                </Link>
+              ))}
             </div>
 
             <div style={{

@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { Phone, Menu, X, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { visibleRegions } from '../data/regions';
+import { getCitiesForRegion } from '../data/cities';
 import { GENERAL_PHONE, getRegionFromPathname } from '../lib/phone';
 import CallCtaButton from './CallCtaButton';
 import './Navbar.css';
@@ -39,9 +40,12 @@ const Navbar = () => {
               Alueet <ChevronDown size={16} />
             </button>
             <div className="dropdown-content">
-              {visibleRegions.map(region => (
-                <Link key={region.id} href={`/${region.id}/`} onClick={() => { closeMenu(); closeRegions(); }}>{region.name}</Link>
-              ))}
+              {visibleRegions.flatMap(region => [
+                <Link key={region.id} href={`/${region.id}/`} onClick={() => { closeMenu(); closeRegions(); }}>{region.name}</Link>,
+                ...getCitiesForRegion(region.id).map(city => (
+                  <Link key={`${region.id}-${city.id}`} href={`/${region.id}/${city.id}/`} className="dropdown-sublink" onClick={() => { closeMenu(); closeRegions(); }}>{city.name}</Link>
+                )),
+              ])}
             </div>
           </div>
           <Link href="/#palvelut" onClick={closeMenu}>Palvelumme</Link>
