@@ -36,10 +36,10 @@ export const regions: RegionData[] = [
     locativeName: 'Keski-Suomessa',
     genitiveName: 'Keski-Suomen',
     descriptionTitle: 'Luotettava yksityinen kotipalvelu ja kotihoito – Keski-Suomi',
-    descriptionText: 'Famula Keski-Suomi tarjoaa kiireetöntä ja sydämellistä kotihoidon tukipalvelua Jyväskylässä, Jämsässä, Laukaassa, Muuramessa, Äänekoskella ja näiden lähialueilla. Olipa tarpeenasi ikäihmisten arjen apu, siivousapu tai kokonaisvaltainen yksityinen kotihoito, ammattilaisemme ovat tukenasi.\n\nMeille tärkeintä on aito kohtaaminen ja turvallinen olo. Kuljemme rinnallasi luotettavasti ja ihmistä kunnioittaen.',
+    descriptionText: 'Famula Keski-Suomi tarjoaa kiireetöntä ja sydämellistä kotihoidon tukipalvelua Jyväskylässä, Laukaassa, Muuramessa, Äänekoskella ja näiden lähialueilla. Olipa tarpeenasi ikäihmisten arjen apu, siivousapu tai kokonaisvaltainen yksityinen kotihoito, ammattilaisemme ovat tukenasi.\n\nMeille tärkeintä on aito kohtaaminen ja turvallinen olo. Kuljemme rinnallasi luotettavasti ja ihmistä kunnioittaen.',
     hasOmavalvonta: true,
     mainCity: 'Jyväskylä',
-    areaServed: ['Jyväskylä', 'Jämsä', 'Laukaa', 'Muurame', 'Äänekoski'],
+    areaServed: ['Jyväskylä', 'Laukaa', 'Muurame', 'Äänekoski'],
     googleAdsId: 'AW-17890084641',
   },
   {

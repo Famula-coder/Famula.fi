@@ -28,21 +28,6 @@ export const cities: CityPage[] = [
     ],
   },
   {
-    id: 'jamsa',
-    regionId: 'keski-suomi',
-    name: 'Jämsä',
-    locative: 'Jämsässä',
-    seoTitle: 'Kotihoito ja kotipalvelu Jämsä',
-    metaDescription:
-      'Yksityinen kotipalvelu ja kotihoito ikäihmisille Jämsässä. Aina sama tuttu hoitaja, 39,95 €/h (alv 0 %), kotitalousvähennys 35 %. Soita Leenalle: 050 466 9574.',
-    h1: 'Kotipalvelu ja kotihoito Jämsässä',
-    paragraphs: [
-      'Famula tarjoaa kotipalvelua ja kotihoitoa ikäihmisille Jämsässä. Autamme kodin töissä, asioinnissa ja arjen pienissä ja isoissa asioissa, jotta omassa kodissa asuminen sujuu turvallisesti.',
-      'Kun lapset ja lapsenlapset asuvat toisella paikkakunnalla, tieto läheisen voinnista on tärkeää. Pidämme omaiset ajan tasalla sovitulla tavalla, ja hoitaja on aina sama, joten hän huomaa, jos jokin muuttuu.',
-      'Omainen voi tilata palvelun vanhemmalleen Jämsään ja saada kotitalousvähennyksen omaan verotukseensa. Käyntien määrä sovitaan tarpeen mukaan.',
-    ],
-  },
-  {
     id: 'kempele',
     regionId: 'oulu',
     name: 'Kempele',

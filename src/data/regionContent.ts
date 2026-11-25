@@ -75,10 +75,10 @@ export const regionContent: Record<string, RegionContent> = {
   'keski-suomi': {
     seoTitle: 'Kotihoito ja kotipalvelu Jyväskylä',
     metaDescription:
-      'Yksityinen kotihoito ja kotipalvelu Jyväskylässä, Jämsässä, Laukaassa ja Muuramessa. Tuttu hoitaja, 39,95 €/h (alv 0 %), palveluseteli ja kotitalousvähennys. Soita Leenalle: 050 466 9574.',
+      'Yksityinen kotihoito ja kotipalvelu Jyväskylässä, Laukaassa, Muuramessa ja Äänekoskella. Tuttu hoitaja, 39,95 €/h (alv 0 %), palveluseteli ja kotitalousvähennys. Soita Leenalle: 050 466 9574.',
     h1: 'Yksityinen kotihoito ja kotipalvelu Jyväskylässä ja lähikunnissa',
     intro: [
-      'Famula auttaa ikäihmisiä asumaan kotona Jyväskylässä, Jämsässä, Laukaassa, Muuramessa ja Äänekoskella. Teemme kotitöitä, käymme asioilla, laitamme ruokaa ja olemme seurana, aina sen mukaan mitä juuri sinä tai läheisesi tarvitsee.',
+      'Famula auttaa ikäihmisiä asumaan kotona Jyväskylässä, Laukaassa, Muuramessa ja Äänekoskella. Teemme kotitöitä, käymme asioilla, laitamme ruokaa ja olemme seurana, aina sen mukaan mitä juuri sinä tai läheisesi tarvitsee.',
       'Jokaisella asiakkaalla on oma hoitaja, joka tulee sovittuna päivänä ja jolla on aikaa pysähtyä. Kun ihminen on tuttu, avun vastaanottaminen on helpompaa ja pienetkin muutokset voinnissa huomataan.',
       'Jyväskylässä palvelumme voi maksaa myös Keski-Suomen hyvinvointialueen palvelusetelillä. Jos sinulle on myönnetty seteli, voit valita Famulan palveluntuottajaksi.',
     ],
@@ -86,7 +86,7 @@ export const regionContent: Record<string, RegionContent> = {
     linkLabel: 'Kotipalvelu Jyväskylässä',
     areaHeading: 'Missä päin Keski-Suomea palvelemme',
     areaText:
-      'Käymme kotikäynneillä Jyväskylässä, Jämsässä, Laukaassa, Muuramessa ja Äänekoskella. Toimistoa emme tarvitse, koska apu tulee aina sinun kotiisi. Kysy aluevetäjältä, jos et ole varma, kuuluuko osoitteesi palvelualueeseemme.',
+      'Käymme kotikäynneillä Jyväskylässä, Laukaassa, Muuramessa ja Äänekoskella. Toimistoa emme tarvitse, koska apu tulee aina sinun kotiisi. Kysy aluevetäjältä, jos et ole varma, kuuluuko osoitteesi palvelualueeseemme.',
     testimonials: [
       {
         text: 'Oot sinä melkoinen epeli, kun vesilukonkin korjasit! Olet minun enkelini.',
