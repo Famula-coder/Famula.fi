@@ -31,10 +31,10 @@ export const articles: Article[] = [
       <p>Famulan kiireetön kotipalvelu maksaa sosiaalihuollon asiakkaille (ALV 0 %) 42,50 €/tunti. Jos tilaat läheisellesi säännöllistä apua esimerkiksi <strong>8 tuntia kuukaudessa (96 tuntia vuodessa)</strong>, laskelma näyttää tältä:</p>
       <ul>
         <li><strong>Normaali hinta vuodessa:</strong> 96 h × 42,50 € = 4 080,00 €</li>
-        <li><strong>Kotitalousvähennys (40 %):</strong> - 1 632,00 € (Tämä alittaa 2 100 € maksimikaton, joten saat sen kokonaisuudessaan!)</li>
-        <li><strong>Vuoden todelliseksi hinnaksi jää:</strong> <strong>2 448,00 €</strong></li>
+        <li><strong>Kotitalousvähennys (40 %):</strong> 40 % × 4 080,00 € = 1 632,00 €, josta vähennetään 150 € omavastuu = 1 482,00 € (alittaa 2 100 € enimmäismäärän)</li>
+        <li><strong>Vuoden todelliseksi hinnaksi jää:</strong> <strong>2 598,00 €</strong></li>
       </ul>
-      <p>Kuukausitasolla tämä tarkoittaa siis noin 204 euroa säännöllisestä, luotettavasta seurasta ja avusta!</p>
+      <p>Kuukausitasolla tämä tarkoittaa noin 217 euroa säännöllisestä, luotettavasta seurasta ja avusta. Korotettu 40 prosentin vähennys ja 2 100 euron enimmäismäärä ovat voimassa verovuosina 2026 ja 2027.</p>
 
       <h3>Miten ilmoitan kulut OmaVerossa?</h3>
       <p>Famula toimittaa sinulle selkeät laskut ja yhteenvedon vuoden aikana ostetuista palveluista. Voit ilmoittaa vähennyksen helposti Verohallinnon OmaVero-palvelussa. Autamme sinua tarvittaessa vähennyksen hakemisessa ja lomakkeiden täytössä.</p>
@@ -76,6 +76,7 @@ export const articles: Article[] = [
     content: `
       <h2>Kaksi erilaista, toisiaan täydentävää palvelua</h2>
       <p>Kun avun tarve herää, moni miettii ensimmäisenä kunnan tarjoamaa kotihoitoa. Kunnallinen kotihoito on yhteiskuntamme tukipilari, mutta sen resurssit on usein kohdennettu tarkasti määriteltyihin, lääketieteellisiin tai välttämättömiin perushoidon tarpeisiin.</p>
+      <p>Julkisen kotihoidon järjestää nykyisin hyvinvointialue, ennen vuotta 2023 kunta. Puhekielessä siitä käytetään edelleen nimeä kunnallinen kotihoito.</p>
 
       <h3>Kunnallinen kotihoito: Välttämätön perushoiva</h3>
       <p>Kunnallinen kotihoito keskittyy asioihin, jotka ovat hengissä säilymisen ja perusterveyden kannalta välttämättömiä. Näitä ovat esimerkiksi lääkkeiden jako, haavahoidot ja perushygieniasta huolehtiminen. Koska resursseja on vähän, käynnit saattavat olla vain 10–15 minuutin mittaisia, ja hoitaja saattaa vaihtua päivittäin.</p>
@@ -106,7 +107,8 @@ export const articles: Article[] = [
       <h3>Kuinka edullista apu todellisuudessa on?</h3>
       <p>Verottajan myöntämä kotitalousvähennys (40 % vuonna 2026) tarkoittaa, että todellinen kustannus asiakkaalle on merkittävästi pienempi. Jos ostat palvelua esimerkiksi kahdeksi tunniksi viikossa:</p>
       <p><strong>Bruttohinta:</strong> 340,00 € / kuukausi<br/>
-      <strong>Todellinen hinta kotitalousvähennyksen jälkeen:</strong> 204,00 € / kuukausi</p>
+      <strong>Hinta kotitalousvähennyksen (40 %) jälkeen:</strong> 204,00 € / kuukausi</p>
+      <p>Lisäksi vähennyksestä vähennetään 150 euron omavastuu kerran vuodessa. Vähennystä ei saa työstä, johon on myönnetty palveluseteli.</p>
       <p>Mielenrauha, turvallinen koti ja tutun ystävän seura ovat asioita, joille on vaikea laskea hintaa, mutta olemme halunneet tehdä avun hankkimisesta mahdollisimman saavutettavaa.</p>
     `
   },
@@ -145,7 +147,7 @@ export const articles: Article[] = [
       <p>Ikäihmiselle jatkuva uusien ihmisten kohtaaminen omassa kodissa voi olla ahdistavaa ja stressaavaa. Kysy suoraan, pystyykö yritys takaamaan, että asiakkaan luona käy pääsääntöisesti aina yksi ja sama, nimetty hoitaja. Famulalla tämä on toimintamme peruskivi.</p>
 
       <h3>2. Ovatko luvat ja omavalvonta kunnossa?</h3>
-      <p>Luotettava kotipalvelu on aina rekisteröity valtakunnalliseen Soteri-rekisteriin, ja se on Lupa- ja valvontaviraston hyväksymä ja valvoma sosiaalipalvelujen tuottaja. Tämä tarkoittaa, että yrityksellä on vastuuhenkilöt, ajantasainen omavalvontasuunnitelma ja vaadittavat vakuutukset kunnossa.</p>
+      <p>Luotettava kotipalvelu on aina rekisteröity valtakunnalliseen Soteri-rekisteriin, ja se on Lupa- ja valvontaviraston hyväksymä ja valvoma sosiaalipalvelujen tuottaja. Rekisteröinti on lakisääteinen, eikä sosiaalipalveluja saa tuottaa ilman sitä. Tämä tarkoittaa, että yrityksellä on vastuuhenkilöt ja ajantasainen omavalvontasuunnitelma. Kysy lisäksi, millaiset vakuutukset yrityksellä on.</p>
 
       <h3>3. Maksetaanko matka-ajoista tai piilokuluista?</h3>
       <p>Tarkista, mitä tuntihinta oikeasti pitää sisällään. Alkavatko työtunnit juosta siitä, kun hoitaja astuu sisään, vai maksetaanko myös matka-ajasta? Famulalla hinnoittelu on täysin läpinäkyvää, eikä ikäviä yllätyslaskuja tule.</p>
@@ -160,11 +162,11 @@ export const articles: Article[] = [
     excerpt: 'Yksinäisyys on merkittävä terveysriski ikääntyessä. Säännöllinen ystävän kohtaaminen pitää mielen virkeänä.',
     icon: 'Users',
     content: `
-      <h2>Yksinäisyys on Suomen suurin kansansairaus</h2>
-      <p>Tilastojen mukaan valtava osa suomalaisista vanhuksista kokee itsensä jatkuvasti yksinäiseksi. Puoliso on saattanut menehtyä, lapset asuvat toisella paikkakunnalla ja oma liikkuminen kodin ulkopuolelle on vaikeutunut.</p>
+      <h2>Yksinäisyys on ikäihmisten arjessa yleistä</h2>
+      <p>THL:n väestötutkimuksen mukaan noin joka kymmenes 65 vuotta täyttänyt kokee itsensä yksinäiseksi, ja kotihoidon asiakkaista yksinäisyydestä kärsii usein tai jatkuvasti noin joka viides. Puoliso on saattanut menehtyä, lapset asuvat toisella paikkakunnalla ja oma liikkuminen kodin ulkopuolelle on vaikeutunut.</p>
       
       <h3>Seuran merkitys terveydelle</h3>
-      <p>Tutkimukset osoittavat yksiselitteisesti, että pitkittynyt yksinäisyys nostaa verenpainetta, altistaa masennukselle ja voi jopa nopeuttaa muistisairauksien etenemistä. Ihmisen aivot tarvitsevat sosiaalisia virikkeitä, keskustelua ja naurua pysyäkseen virkeinä.</p>
+      <p>Tutkimusten mukaan pitkittynyt yksinäisyys ja sosiaalinen eristyneisyys ovat yhteydessä masennukseen, kohonneeseen verenpaineeseen, muistin heikkenemiseen ja ennenaikaiseen kuolleisuuteen. Ihmisen aivot tarvitsevat sosiaalisia virikkeitä, keskustelua ja naurua pysyäkseen virkeinä.</p>
 
       <p>Famulan kotipalvelussa ei ole kyse vain imuroinnista tai tiskikoneen tyhjentämisestä. Kyse on siitä, että kotiin tulee ihminen, jolla on aikaa istahtaa alas, juoda kuppi kahvia ja vaihtaa kuulumiset. Monelle asiakkaallemme Famulan hoitajan viikoittainen käynti on se päivä, jota odotetaan kaikkein eniten.</p>
     `
@@ -267,7 +269,7 @@ export const articles: Article[] = [
     icon: 'Heart',
     content: `
       <h2>Omaishoitajan vapaapäivä on elintärkeä</h2>
-      <p>Omaishoitajan työ on sitovaa, ja usein vuorokauden ympäri jatkuva huoli läheisestä uuvuttaa vahvimmankin ihmisen. Kunnalliset vapaapäivät ovat tärkeitä, mutta aina ne eivät riitä, tai niitä on vaikea saada järjestymään joustavasti.</p>
+      <p>Omaishoitajan työ on sitovaa, ja usein vuorokauden ympäri jatkuva huoli läheisestä uuvuttaa vahvimmankin ihmisen. Omaishoitosopimuksen tehneellä omaishoitajalla on oikeus vähintään kahteen vapaavuorokauteen kuukaudessa, ja sitovassa hoidossa kolmeen. Lakisääteiset vapaat ovat tärkeitä, mutta aina ne eivät riitä, tai niitä on vaikea saada järjestymään joustavasti.</p>
       
       <h3>Famula sijaistaa luotettavasti omassa kodissa</h3>
       <p>Yksityinen omaishoidon lomitus tarjoaa ratkaisun, kun kaipaat omaa aikaa – olipa kyse sitten muutaman tunnin asiointireissusta, teatteri-illasta tai kokonaisesta viikonloppu-vapaasta. Toimimme näin:</p>
@@ -311,7 +313,7 @@ export const articles: Article[] = [
     icon: 'Activity',
     content: `
       <h2>Kotiinpaluu on iloinen, mutta jännittävä asia</h2>
-      <p>Esimerkiksi lonkkaleikkauksen, infektion tai sairauskohtauksen jälkeen sairaalasta kotiutuminen on usein ikäihmiselle sekava vaihe. Sairaalassa apu on ollut napin painalluksen päässä, mutta kotona on pärjättävä jälleen itse. Tilastojen mukaan juuri kotiutumisen jälkeiset viikot ovat suurimman kaatumis- ja tapaturmariskin aikaa.</p>
+      <p>Esimerkiksi lonkkaleikkauksen, infektion tai sairauskohtauksen jälkeen sairaalasta kotiutuminen on usein ikäihmiselle sekava vaihe. Sairaalassa apu on ollut napin painalluksen päässä, mutta kotona on pärjättävä jälleen itse. Kotiutumisen jälkeisinä viikkoina kaatumisia sattuu tavallista enemmän, ja kaatumisvammat ovat yksi yleisimmistä syistä joutua uudelleen sairaalaan.</p>
       
       <h3>Väliaikainen tehotuki Famulalta</h3>
       <p>Kaiken kotiavun ei tarvitse olla vuosikausia kestävää sopimusta. Voit tilata Famulan hoitajan tueksi juuri sairaalasta kotiutumisen jälkeisiksi kriittisiksi viikoiksi:</p>
@@ -342,7 +344,7 @@ export const articles: Article[] = [
       <p>Helpoin tapa ilmoittaa kulut on Verohallinnon sähköinen <strong>OmaVero</strong>-palvelu:</p>
       <ol>
         <li>Kirjaudu OmaVeroon pankkitunnuksillasi.</li>
-        <li>Valitse etusivulta kohta <em>"Verokortit ja ennakkovero"</em> ja sieltä <em>"Kotitalousvähennys"</em>.</li>
+        <li>Jos haluat hyödyn heti, tilaa uusi verokortti ja ilmoita kotitalousvähennys sen yhteydessä. Voit myös ilmoittaa vähennyksen keväällä täydentämällä esitäytettyä veroilmoitusta.</li>
         <li>Ilmoita palvelun tuottaneen yrityksen (Famulan) Y-tunnus.</li>
         <li>Kirjaa laskun loppusumma ja siitä eritelty työn osuus. Järjestelmä laskee 40 % vähennyksen ja 150 euron omavastuun puolestasi täysin automaattisesti!</li>
       </ol>
@@ -365,7 +367,7 @@ export const articles: Article[] = [
       <p>Kun ikääntyvien vanhempien tai isovanhempien arki alkaa vaatia tukea, lapset haluavat usein auttaa palkkaamalla ammattilaisen avuksi. Monelle tulee kuitenkin yllätyksenä, että tällöin <strong>työn tilaaja voi hyödyntää kotitalousvähennyksen omassa verotuksessaan</strong>.</p>
       
       <h3>Kuinka tämä toimii käytännössä?</h3>
-      <p>Laki kotitalousvähennyksestä mahdollistaa sen, että voit saada vähennyksen, kun maksat kotihoitoa, kotipalvelua tai siivousta:</p>
+      <p>Tuloverolain mukaan voit saada kotitalousvähennyksen, kun maksat tavanomaista kotitalous-, hoiva- tai hoitotyötä, kuten kotipalvelua tai siivousta:</p>
       <ul>
         <li>Omien vanhempiesi kotiin</li>
         <li>Puolisosi vanhempien kotiin</li>
@@ -441,7 +443,7 @@ export const articles: Article[] = [
 
       <h3>Vinkkejä ikäihmisen ravitsemuksen tukemiseen:</h3>
       <ul>
-        <li><strong>Pienet, energiatiheät ateriat:</strong> Suuret annokset voivat viedä ruokahalun jo pelkällä koollaan. Tarjoa 5–6 pientä, mutta energia- ja proteiinipitoista ateriaa päivän aikana.</li>
+        <li><strong>Pienet, energiatiheät ateriat:</strong> Suuret annokset voivat viedä ruokahalun jo pelkällä koollaan. Tarjoa päivän mittaan useita pieniä, mutta energia- ja proteiinipitoisia aterioita ja välipaloja.</li>
         <li><strong>Helppo purtava:</strong> Suosi pehmeitä, helposti pureskeltavia ja nieltäviä ruokia (esim. keitot, soseet, uunikalat).</li>
         <li><strong>Makujen voimistaminen:</strong> Koska ikääntyessä makuaisti heikkenee, ruoan maustamiseen (kuten yrttien käyttöön) kannattaa kiinnittää erityistä huomiota.</li>
       </ul>

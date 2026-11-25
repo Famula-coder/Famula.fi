@@ -45,7 +45,7 @@ export const cityAngles: Record<string, PageAngle> = {
     heading: 'Palveluseteli tai oma maksu: sama palvelu, sama hoitaja',
     paragraphs: [
       'Jyväskylässä Famula on palvelusetelituottaja. Jos Keski-Suomen hyvinvointialue on myöntänyt sinulle palvelusetelin, voit valita Famulan tuottamaan kotihoidon tukipalvelusi.',
-      'Jos seteliä ei ole, ostat palvelun suoraan meiltä ja voit hakea kotitalousvähennystä. Palvelusetelillä hankitusta palvelusta vähennystä ei saa, mutta itse ostamistasi lisätunneista sen voi saada. Palvelun sisältö ja hoitaja ovat samat kummassakin tapauksessa.',
+      'Jos seteliä ei ole, ostat palvelun suoraan meiltä ja voit hakea kotitalousvähennystä. Palvelusetelillä hankitusta palvelusta vähennystä ei saa, ei myöskään setelin omavastuuosuudesta. Erikseen ostamistasi ja kokonaan itse maksamistasi lisäpalveluista vähennyksen voi saada. Palvelun sisältö ja hoitaja ovat samat kummassakin tapauksessa.',
     ],
     image: '/images/leenajakukkakimppu.webp',
     imageAlt: 'Hymyilevä Famulan hoitaja kukkakimppu kädessään',
@@ -114,7 +114,7 @@ export const cityAngles: Record<string, PageAngle> = {
     tips: {
       heading: 'Kun ruoka ei maistu',
       items: [
-        'Tarjoa 5–6 pientä ateriaa suurten annosten sijaan',
+        'Tarjoa useita pieniä aterioita suurten annosten sijaan',
         'Suosi pehmeitä ruokia, kuten keittoja ja uunikalaa',
         'Mausta reilummin, koska makuaisti heikkenee iän myötä',
       ],
