@@ -102,7 +102,7 @@ export const articles: Article[] = [
     content: `
       <h2>Selkeä perushinta – ei ikäviä yllätyksiä</h2>
       <p>Monella palveluntarjoajalla laskutus perustuu monimutkaisiin hinnastoihin: viikonloppulisät, kilometrikorvaukset, laskutuslisät ja toimistomaksut nostavat lopullista summaa huomattavasti.</p>
-      <p>Famulalla uskomme reiluuteen ja läpinäkyvyyteen. Sosiaalihuollon tukipalveluina myytävä kotipalvelumme ja yksityinen kotihoidon tukipalvelumme on <strong>arvonlisäverotonta (ALV 0 %)</strong>, ja perushinta on <strong>42,50 € / tunti</strong>. Tarkka hinta sovitaan aina ennen palvelun aloittamista.</p>
+      <p>Famulalla uskomme reiluuteen ja läpinäkyvyyteen. Sosiaalihuollon tukipalveluina myytävä kotipalvelumme ja yksityinen kotihoidon tukipalvelumme on <strong>arvonlisäverotonta (ALV 0 %)</strong>, ja perushinta on <strong>42,50 € / tunti</strong>. Iltaisin, viikonloppuisin ja pyhäpäivinä hintaan lisätään työehtosopimuksen mukaiset lisät samassa suhteessa. Tarkka hinta sovitaan aina ennen palvelun aloittamista.</p>
       
       <h3>Kuinka edullista apu todellisuudessa on?</h3>
       <p>Verottajan myöntämä kotitalousvähennys (40 % vuonna 2026) tarkoittaa, että todellinen kustannus asiakkaalle on merkittävästi pienempi. Jos ostat palvelua esimerkiksi kahdeksi tunniksi viikossa:</p>

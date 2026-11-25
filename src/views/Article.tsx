@@ -161,7 +161,7 @@ const Article = () => {
           <h1 className="article-title">{article.title}</h1>
           {meta && (
             <p style={{ color: '#64748b', fontSize: '0.95rem', margin: '1rem 0 0' }}>
-              {meta.author}, Famula Oy · Julkaistu {formatDate(article.publishedDate)} · Tiedot tarkistettu {formatDate(meta.reviewedDate)}
+              {meta.author}, Famula Group Oy · Julkaistu {formatDate(article.publishedDate)} · Tiedot tarkistettu {formatDate(meta.reviewedDate)}
             </p>
           )}
         </div>

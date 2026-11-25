@@ -55,7 +55,7 @@ export default async function ArticlePage({ params }: PageProps) {
       "@id": `https://famula.fi/tietopankki/${slug}/`,
     },
     "author": articleMeta[article.slug]
-      ? { "@type": "Person", "name": articleMeta[article.slug].author, "worksFor": { "@type": "Organization", "name": "Famula Oy" } }
+      ? { "@type": "Person", "name": articleMeta[article.slug].author, "worksFor": { "@type": "Organization", "name": "Famula Group Oy" } }
       : { "@type": "Organization", "name": "Famula Oy" },
     "publisher": {
       "@type": "Organization",

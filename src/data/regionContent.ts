@@ -34,7 +34,7 @@ export interface RegionContent {
 }
 
 const PRICE_ANSWER =
-  'Sosiaalihuollon asiakkaille perushinta on 42,50 € tunnilta (alv 0 %). Kotitalousvähennyksen (40 %) jälkeen maksettavaksi jää noin 25,50 € tunnilta. Tarkka hinta sovitaan aina ennen palvelun aloittamista.';
+  'Sosiaalihuollon asiakkaille perushinta on 42,50 € tunnilta (alv 0 %). Kotitalousvähennyksen (40 %) jälkeen maksettavaksi jää noin 25,50 € tunnilta. Iltaisin, viikonloppuisin ja pyhäpäivinä hintaan lisätään työehtosopimuksen mukaiset lisät samassa suhteessa. Tarkka hinta sovitaan aina ennen palvelun aloittamista.';
 
 const RELATIVE_ANSWER =
   'Kyllä. Sovimme käynnit puhelimessa ja pidämme sinut ajan tasalla läheisesi kuulumisista. Kun maksat palvelun itse, voit saada kotitalousvähennyksen omaan verotukseesi.';
