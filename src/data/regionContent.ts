@@ -34,7 +34,7 @@ export interface RegionContent {
 }
 
 const PRICE_ANSWER =
-  'Sosiaalihuollon asiakkaille tuntihinta on kiinteästi 39,95 € (alv 0 %). Kotitalousvähennyksen (35 %) jälkeen maksettavaksi jää noin 25,97 € tunnilta.';
+  'Sosiaalihuollon asiakkaille tuntihinta on kiinteästi 42,50 € (alv 0 %). Kotitalousvähennyksen (35 %) jälkeen maksettavaksi jää noin 27,63 € tunnilta.';
 
 const RELATIVE_ANSWER =
   'Kyllä. Sovimme käynnit puhelimessa ja pidämme sinut ajan tasalla läheisesi kuulumisista. Kun maksat palvelun itse, voit saada kotitalousvähennyksen omaan verotukseesi.';
@@ -46,7 +46,7 @@ export const regionContent: Record<string, RegionContent> = {
   'pohjois-savo': {
     seoTitle: 'Kotihoito ja kotipalvelu Kuopio ja Siilinjärvi',
     metaDescription:
-      'Yksityinen kotihoito ja kotipalvelu Kuopiossa ja Siilinjärvellä. Aina sama tuttu hoitaja, 39,95 €/h (alv 0 %), kotitalousvähennys 35 %. Soita Julialle: 044 246 0147.',
+      'Yksityinen kotihoito ja kotipalvelu Kuopiossa ja Siilinjärvellä. Aina sama tuttu hoitaja, 42,50 €/h (alv 0 %), kotitalousvähennys 35 %. Soita Julialle: 044 246 0147.',
     h1: 'Yksityinen kotihoito ja kotipalvelu Kuopiossa ja Siilinjärvellä',
     intro: [
       'Famula tuo kiireettömän kotipalvelun ja kotihoidon ikäihmisen kotiin Kuopiossa ja Siilinjärvellä. Autamme arjessa silloin, kun siivous, kauppareissu tai ruoanlaitto alkaa käydä raskaaksi, tai kun päiviin kaivataan seuraa ja turvaa.',
@@ -75,7 +75,7 @@ export const regionContent: Record<string, RegionContent> = {
   'keski-suomi': {
     seoTitle: 'Kotihoito ja kotipalvelu Jyväskylä',
     metaDescription:
-      'Yksityinen kotihoito ja kotipalvelu Jyväskylässä, Laukaassa, Muuramessa ja Äänekoskella. Tuttu hoitaja, 39,95 €/h (alv 0 %), palveluseteli ja kotitalousvähennys. Soita Leenalle: 050 466 9574.',
+      'Yksityinen kotihoito ja kotipalvelu Jyväskylässä, Laukaassa, Muuramessa ja Äänekoskella. Tuttu hoitaja, 42,50 €/h (alv 0 %), palveluseteli ja kotitalousvähennys. Soita Leenalle: 050 466 9574.',
     h1: 'Yksityinen kotihoito ja kotipalvelu Jyväskylässä ja lähikunnissa',
     intro: [
       'Famula auttaa ikäihmisiä asumaan kotona Jyväskylässä, Laukaassa, Muuramessa ja Äänekoskella. Teemme kotitöitä, käymme asioilla, laitamme ruokaa ja olemme seurana, aina sen mukaan mitä juuri sinä tai läheisesi tarvitsee.',
@@ -122,7 +122,7 @@ export const regionContent: Record<string, RegionContent> = {
   oulu: {
     seoTitle: 'Kotihoito ja kotipalvelu Oulu, Kempele ja Liminka',
     metaDescription:
-      'Yksityinen kotihoito ja kotipalvelu ikäihmisille Oulussa, Kempeleessä, Limingassa ja Muhoksella. Aina sama hoitaja, 39,95 €/h (alv 0 %), kotitalousvähennys 35 %. Soita Almalle: 050 338 7735.',
+      'Yksityinen kotihoito ja kotipalvelu ikäihmisille Oulussa, Kempeleessä, Limingassa ja Muhoksella. Aina sama hoitaja, 42,50 €/h (alv 0 %), kotitalousvähennys 35 %. Soita Almalle: 050 338 7735.',
     h1: 'Yksityinen kotihoito ja kotipalvelu Oulussa ja Oulun seudulla',
     intro: [
       'Famula tarjoaa kotipalvelua ja kotihoitoa ikäihmisille Oulussa, Kempeleessä, Limingassa ja Muhoksella. Tulemme kotiin sovittuna päivänä ja teemme sen, mikä arjessa juuri nyt auttaa eniten: siivoamme, käymme kaupassa, laitamme ruokaa tai lähdemme yhdessä ulos.',
@@ -155,7 +155,7 @@ export const regionContent: Record<string, RegionContent> = {
   'etela-karjala': {
     seoTitle: 'Kotihoito ja kotipalvelu Lappeenranta ja Imatra',
     metaDescription:
-      'Yksityinen kotihoito ja kotipalvelu Lappeenrannassa, Imatralla, Taipalsaarella ja Ruokolahdella. Tuttu hoitaja, 39,95 €/h (alv 0 %), kotitalousvähennys 35 %. Soita Paulalle: 040 417 9978.',
+      'Yksityinen kotihoito ja kotipalvelu Lappeenrannassa, Imatralla, Taipalsaarella ja Ruokolahdella. Tuttu hoitaja, 42,50 €/h (alv 0 %), kotitalousvähennys 35 %. Soita Paulalle: 040 417 9978.',
     h1: 'Yksityinen kotihoito ja kotipalvelu Lappeenrannassa ja Imatralla',
     intro: [
       'Famula tuo kotipalvelun ja kotihoidon ikäihmisen kotiin Lappeenrannassa, Imatralla, Taipalsaarella ja Ruokolahdella. Autamme kodin töissä, asioinnissa ja ruoanlaitossa ja olemme seurana, jotta kotona asuminen on turvallista ja mukavaa mahdollisimman pitkään.',

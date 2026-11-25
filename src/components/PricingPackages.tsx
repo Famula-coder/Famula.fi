@@ -19,8 +19,8 @@ export const pricingExamples = [
       { label: 'Asiointiapu kodin ulkopuolella', text: 'Turvallinen saattaja kauppaan, apteekkiin tai terveydenhuollon käynneille.' },
       { label: 'Yhteisölliset aamukahvit', text: 'Tarjoamme mahdollisuuden tavata muita ja nauttia lämminhenkisestä yhdessäolosta.' },
     ],
-    priceBase: '119,85 € / viikko',
-    priceAfter: '77,90 € / viikko',
+    priceBase: '127,50 € / viikko',
+    priceAfter: '82,88 € / viikko',
     priceNote: '(sisältää 35% kotitalousvähennyksen, omavastuu 65%)',
   },
   {
@@ -38,8 +38,8 @@ export const pricingExamples = [
       { label: 'Pyykkihuolto ja kodin säännöllinen siivous', text: 'Huolehdimme puhtaista vaatteista ja raikkaasta kodista.' },
       { label: 'Digiapu ja asiointi', text: 'Autamme pankkiasioissa ja yhteydenpidossa läheisiin.' },
     ],
-    priceBase: '239,70 € / viikko',
-    priceAfter: '155,81 € / viikko',
+    priceBase: '255,00 € / viikko',
+    priceAfter: '165,75 € / viikko',
     priceNote: '(sisältää 35% kotitalousvähennyksen, omavastuu 65%)',
   },
   {
@@ -57,8 +57,8 @@ export const pricingExamples = [
       { label: 'Iloa harrastuksista ja ulkoilusta', text: 'Lähdemme mukaan tapahtumiin, teatteriin tai kävelylle ja ylläpidämme elämänlaatua.' },
       { label: 'Ympärivuorokautinen turvaverkko', text: 'Yhteistyö turvapuhelinpalvelun kanssa ja tiivis, ennakoiva yhteydenpito omaisiin.' },
     ],
-    priceBase: '399,50 € / viikko',
-    priceAfter: '259,68 € / viikko',
+    priceBase: '425,00 € / viikko',
+    priceAfter: '276,25 € / viikko',
     priceNote: '(sisältää 35% kotitalousvähennyksen, omavastuu 65%)',
   },
 ];

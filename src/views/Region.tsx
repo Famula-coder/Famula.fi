@@ -38,7 +38,7 @@ const Region = () => {
     "url": `https://famula.fi/${region.id}/`,
     "telephone": region.phone,
     "email": region.email,
-    "priceRange": "39,95 €/h",
+    "priceRange": "42,50 €/h",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": region.mainCity || region.name,

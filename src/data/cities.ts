@@ -19,7 +19,7 @@ export const cities: CityPage[] = [
     locative: 'Siilinjärvellä',
     seoTitle: 'Kotihoito ja kotipalvelu Siilinjärvi',
     metaDescription:
-      'Yksityinen kotipalvelu ja kotihoito ikäihmisille Siilinjärvellä. Aina sama tuttu hoitaja, 39,95 €/h (alv 0 %), kotitalousvähennys 35 %. Soita Julialle: 044 246 0147.',
+      'Yksityinen kotipalvelu ja kotihoito ikäihmisille Siilinjärvellä. Aina sama tuttu hoitaja, 42,50 €/h (alv 0 %), kotitalousvähennys 35 %. Soita Julialle: 044 246 0147.',
     h1: 'Kotipalvelu ja kotihoito Siilinjärvellä',
     paragraphs: [
       'Famulan kotipalvelu tuo avun arkeen myös Siilinjärvellä. Autamme ikäihmisiä siivouksessa, asioinnissa, ruoanlaitossa ja ulkoilussa, ja olemme seurana silloin, kun päivät tuntuvat pitkiltä.',
@@ -34,7 +34,7 @@ export const cities: CityPage[] = [
     locative: 'Kempeleessä',
     seoTitle: 'Kotihoito ja kotipalvelu Kempele',
     metaDescription:
-      'Yksityinen kotipalvelu ja kotihoito ikäihmisille Kempeleessä. Aina sama tuttu hoitaja, 39,95 €/h (alv 0 %), kotitalousvähennys 35 %. Soita Almalle: 050 338 7735.',
+      'Yksityinen kotipalvelu ja kotihoito ikäihmisille Kempeleessä. Aina sama tuttu hoitaja, 42,50 €/h (alv 0 %), kotitalousvähennys 35 %. Soita Almalle: 050 338 7735.',
     h1: 'Kotipalvelu ja kotihoito Kempeleessä',
     paragraphs: [
       'Famulan tuttu hoitaja tulee kotiin myös Kempeleessä. Autamme ikäihmisiä siivouksessa, ruoanlaitossa, asioinnissa ja ulkoilussa, ja teemme sen kiireettä.',
@@ -49,7 +49,7 @@ export const cities: CityPage[] = [
     locative: 'Imatralla',
     seoTitle: 'Kotihoito ja kotipalvelu Imatra',
     metaDescription:
-      'Yksityinen kotipalvelu ja kotihoito ikäihmisille Imatralla. Aina sama tuttu hoitaja, 39,95 €/h (alv 0 %), kotitalousvähennys 35 %. Soita Paulalle: 040 417 9978.',
+      'Yksityinen kotipalvelu ja kotihoito ikäihmisille Imatralla. Aina sama tuttu hoitaja, 42,50 €/h (alv 0 %), kotitalousvähennys 35 %. Soita Paulalle: 040 417 9978.',
     h1: 'Kotipalvelu ja kotihoito Imatralla',
     paragraphs: [
       'Famula tarjoaa kotipalvelua ja kotihoitoa ikäihmisille Imatralla. Tulemme kotiin sovittuna päivänä ja autamme siinä, mikä arjessa on käynyt raskaaksi.',
